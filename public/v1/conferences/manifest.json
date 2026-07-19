@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "dataset": "apaper.conferences",
-  "generated_at": "2026-07-20T00:00:00Z",
+  "generated_at": "2026-07-20T19:30:00Z",
   "canonical_origin": "https://cloud.apaper.ai",
   "temporary_origin": "https://yocilam.github.io/apaper-cloud",
   "maximum_selected_records": 20000,
@@ -13,7 +13,7 @@
     {"id":"cvpr","short_name":"CVPR","name":"Conference on Computer Vision and Pattern Recognition","cadence":"annual","editions":[{"id":"cvpr:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"cvpr:2025","year":2025,"paper_count":2871,"state":"cataloged","pack":null},{"id":"cvpr:2024","year":2024,"paper_count":2716,"state":"cataloged","pack":null}]},
     {"id":"eccv","short_name":"ECCV","name":"European Conference on Computer Vision","cadence":"biennial","editions":[{"id":"eccv:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"eccv:2024","year":2024,"paper_count":2387,"state":"cataloged","pack":null}]},
     {"id":"ijcai","short_name":"IJCAI","name":"International Joint Conference on Artificial Intelligence","cadence":"annual","editions":[{"id":"ijcai:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"ijcai:2025","year":2025,"paper_count":1280,"state":"cataloged","pack":null},{"id":"ijcai:2024","year":2024,"paper_count":1048,"state":"cataloged","pack":null}]},
-    {"id":"acl","short_name":"ACL","name":"Annual Meeting of the Association for Computational Linguistics","cadence":"annual","editions":[{"id":"acl:2026","year":2026,"paper_count":4459,"state":"cataloged","pack":null},{"id":"acl:2025","year":2025,"paper_count":3086,"state":"cataloged","pack":null},{"id":"acl:2024","year":2024,"paper_count":1915,"state":"cataloged","pack":null}]},
+    {"id":"acl","short_name":"ACL","name":"Annual Meeting of the Association for Computational Linguistics","cadence":"annual","editions":[{"id":"acl:2026","year":2026,"paper_count":4459,"state":"cataloged","pack":null},{"id":"acl:2025","year":2025,"paper_count":3353,"state":"published","pack":{"path":"packs/acl/2025.jsonl.zst","sha256":"c367478898b5b613c1a09ad169a04053e389b44d6af88a2efcb84a637a0ef898","compressed_bytes":1382216,"record_count":3353}},{"id":"acl:2024","year":2024,"paper_count":1915,"state":"cataloged","pack":null}]},
     {"id":"emnlp","short_name":"EMNLP","name":"Conference on Empirical Methods in Natural Language Processing","cadence":"annual","editions":[{"id":"emnlp:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"emnlp:2025","year":2025,"paper_count":3214,"state":"cataloged","pack":null},{"id":"emnlp:2024","year":2024,"paper_count":2271,"state":"cataloged","pack":null}]},
     {"id":"osdi","short_name":"OSDI","name":"USENIX Symposium on Operating Systems Design and Implementation","cadence":"annual","editions":[{"id":"osdi:2026","year":2026,"paper_count":8,"state":"partial","pack":null},{"id":"osdi:2025","year":2025,"paper_count":53,"state":"cataloged","pack":null},{"id":"osdi:2024","year":2024,"paper_count":53,"state":"cataloged","pack":null}]},
     {"id":"sosp","short_name":"SOSP","name":"ACM Symposium on Operating Systems Principles","cadence":"biennial","editions":[{"id":"sosp:2025","year":2025,"paper_count":66,"state":"cataloged","pack":null},{"id":"sosp:2024","year":2024,"paper_count":43,"state":"cataloged","pack":null}]},
