@@ -3,7 +3,7 @@
   "dataset": "apaper.conferences",
   "generated_at": "2026-07-20T00:00:00Z",
   "canonical_origin": "https://cloud.apaper.ai",
-  "temporary_origin": "https://yocilam.github.io/aPaper",
+  "temporary_origin": "https://yocilam.github.io/apaper-cloud",
   "maximum_selected_records": 20000,
   "venues": [
     {"id":"iclr","short_name":"ICLR","name":"International Conference on Learning Representations","cadence":"annual","editions":[{"id":"iclr:2026","year":2026,"paper_count":5359,"state":"cataloged","pack":null},{"id":"iclr:2025","year":2025,"paper_count":3708,"state":"cataloged","pack":null},{"id":"iclr:2024","year":2024,"paper_count":2261,"state":"cataloged","pack":null}]},
