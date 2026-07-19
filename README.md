@@ -1,6 +1,6 @@
 # aPaper Cloud
 
-`apaper-cloud` is a static, versioned distribution project for public aPaper
+`aPaper Cloud` is a static, versioned distribution project for public aPaper
 metadata. It does not store user profiles, reading history, recommendations,
 credentials, PDFs, or other private workspace data.
 
