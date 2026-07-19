@@ -16,7 +16,7 @@ public/
       packs/<venue>/<year>.jsonl.zst
 ```
 
-The temporary origin is `https://yocilam.github.io/apaper-cloud`. The
+The temporary origin is `https://yocilam.github.io/aPaper-Cloud`. The
 production origin will be `https://cloud.apaper.ai`. Pack paths in the manifest
 are relative, so moving between origins does not change the app protocol or
 require rebuilding packs.
