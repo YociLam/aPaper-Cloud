@@ -40,6 +40,12 @@ Only editions whose public metadata and paper PDFs were verified are marked
 ACL, EMNLP, ICML, NeurIPS, AAAI, CVPR, ECCV, IJCAI, OSDI, IEEE S&P and NDSS.
 Each record retains the official landing page and PDF URL as provenance.
 
+ICLR 2023–2025 and SOSP 2023/2025 are currently published as `partial`
+editions. Their packs contain only accepted papers for which an independently
+downloadable arXiv PDF could be verified; papers whose only PDF endpoint is an
+OpenReview or ACM browser-challenge page remain excluded until a stable direct
+download boundary is available.
+
 Source-native groups are preserved when the proceedings expose them: ACL and
 EMNLP volumes, AAAI technical tracks, NeurIPS tracks and IJCAI subject areas are
 examples. These labels are publication metadata, not inferred research topics.
