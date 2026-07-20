@@ -34,8 +34,29 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. The dire
 - The app has a bounded selection cap of 20,000 records; do not remove that guard.
 - Conference editions are selected by exact venue/year, not by a rolling date window.
 - Source groups describe the publisher's own track or collection. They are not inferred research topics.
+- A venue name, edition label, or broad conference domain is not a paper category. Do not publish values such as `CVPR-2025`, `icml`, or a shared `security` label as per-paper subject evidence.
 - Leave ISSN empty when the proceedings series has no verified ISSN. Do not copy an ISSN from a related journal, newsletter, or operating-systems review series.
 - Do not commit PDFs to the metadata repository; packs contain metadata and validated public PDF URLs only.
+
+## Source-native category refreshes
+
+- AAAI 2023–2024 expose per-paper subjects as `DC.Subject` metadata. Decompress the existing pack to JSONL, run `scripts/enrich_aaai_subjects.py`, then repack it. AAAI 2025 does not expose the same field; retain its verified OJS technical-track group instead of treating missing subjects as an error in the published pack.
+- OSDI technical-session names are an exact official paper grouping. Run `scripts/enrich_osdi_sessions.py --year <year>` against a decompressed OSDI JSONL pack, and require every paper URL to map before repacking.
+- If an official proceedings source has no complete per-paper topic, track, or session mapping, leave `source_group` empty. Never infer a display category from the title, abstract, conference name, or an LLM.
+
+## Temporary reference Supabase channel
+
+`scripts/import_reference_supabase_temporary.py` is a removable build-time
+bridge for ICLR/SOSP metadata. It must never become an App runtime dependency.
+Every imported record is marked with
+`metadata_channel=temporary_reference_supabase_v1`; preserve that marker until
+the edition is replaced from a publisher-owned source. Read
+`TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md` before using or removing the bridge.
+
+Do not copy the reference project's Supabase credentials into this repository.
+The importer reads its local `config.yaml` only while generating a pack. It
+must not copy OpenReview/ACM challenge URLs into `pdf_url`; preserve only URLs
+from an existing pack that have already passed aPaper's PDF validation.
 
 ## Release checklist
 

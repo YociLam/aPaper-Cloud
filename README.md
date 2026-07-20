@@ -21,6 +21,13 @@ production origin will be `https://cloud.apaper.ai`. Pack paths in the manifest
 are relative, so moving between origins does not change the app protocol or
 require rebuilding packs.
 
+Some ICLR/SOSP catalog gaps are temporarily filled at build time from the
+public Supabase configured by the bundled `daily-paper-reader-main` reference
+project. This is not an App runtime dependency. Such records carry
+`metadata_channel=temporary_reference_supabase_v1`; the importer, limitations,
+and removal checklist live in
+`skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`.
+
 ## Boundary
 
 - The app reads a bounded manifest and selected immutable metadata packs.
@@ -40,11 +47,13 @@ Only editions whose public metadata and paper PDFs were verified are marked
 ACL, EMNLP, ICML, NeurIPS, AAAI, CVPR, ECCV, IJCAI, OSDI, IEEE S&P and NDSS.
 Each record retains the official landing page and PDF URL as provenance.
 
-ICLR 2023–2025 and SOSP 2023/2025 are currently published as `partial`
-editions. Their packs contain only accepted papers for which an independently
-downloadable arXiv PDF could be verified; papers whose only PDF endpoint is an
-OpenReview or ACM browser-challenge page remain excluded until a stable direct
-download boundary is available.
+ICLR 2023 and SOSP 2023 remain independently verified arXiv-backed subsets.
+ICLR 2024–2026 and SOSP 2024–2025 are `partial` editions assembled through the
+temporary reference Supabase channel: accepted-paper metadata is searchable,
+while only direct PDF URLs inherited from an already validated aPaper pack are
+retained. Records whose only PDF endpoint is an OpenReview or ACM
+browser-challenge page keep their publisher landing page but do not claim a
+working direct PDF.
 
 Source-native groups are preserved when the proceedings expose them: ACL and
 EMNLP volumes, AAAI technical tracks, NeurIPS tracks and IJCAI subject areas are

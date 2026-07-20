@@ -72,6 +72,8 @@ struct ConferencePaperRecord {
     updated_at: String,
     acceptance_status: String,
     provenance_url: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    metadata_channel: Option<String>,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -265,6 +267,7 @@ fn import_json(arguments: ImportJsonArguments) -> Result<(), String> {
                 .unwrap_or(published_at),
             acceptance_status: "published".to_string(),
             provenance_url: imported.link,
+            metadata_channel: None,
         };
         serde_json::to_writer(&mut writer, &record)
             .map_err(|error| format!("could not encode imported record: {error}"))?;
@@ -478,6 +481,7 @@ fn acl_paper_record(
         updated_at: updated_at.to_string(),
         acceptance_status: "published".to_string(),
         provenance_url: landing_url,
+        metadata_channel: None,
     }))
 }
 
