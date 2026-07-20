@@ -27,6 +27,9 @@ project. This is not an App runtime dependency. Such records carry
 `metadata_channel=temporary_reference_supabase_v1`; the importer, limitations,
 and removal checklist live in
 `skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`.
+The App temporarily pins the distribution commit through jsDelivr to avoid a
+stale `@main` cache; this pin is removed when `cloud.apaper.ai` becomes the
+production origin.
 
 ## Boundary
 
