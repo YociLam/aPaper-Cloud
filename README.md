@@ -1,6 +1,6 @@
 # aPaper Cloud
 
-`aPaper Cloud` is a static, versioned distribution project for public aPaper
+`apaper-cloud` is a static, versioned distribution project for public aPaper
 metadata. It does not store user profiles, reading history, recommendations,
 credentials, PDFs, or other private workspace data.
 
@@ -35,11 +35,16 @@ require rebuilding packs.
 
 ## Published sources
 
-ACL 2025 is built from the official ACL Anthology XML collections. The pack
-contains the main ACL volumes and the ACL edition of Findings. Its source-native
-groups include Long Papers, Short Papers, Findings, Industry Track, System
-Demonstrations, Student Research Workshop and Tutorials. Every record retains
-its ACL Anthology landing page as provenance.
+Only editions whose public metadata and paper PDFs were verified are marked
+`published` in the manifest. The current catalog includes official metadata for
+ACL, EMNLP, ICML, NeurIPS, AAAI, CVPR, ECCV, IJCAI, OSDI, IEEE S&P and NDSS.
+Each record retains the official landing page and PDF URL as provenance.
+
+Source-native groups are preserved when the proceedings expose them: ACL and
+EMNLP volumes, AAAI technical tracks, NeurIPS tracks and IJCAI subject areas are
+examples. These labels are publication metadata, not inferred research topics.
+Editions that cannot yet provide a stable public PDF boundary remain cataloged
+but unavailable for selection.
 
 ## Tooling
 

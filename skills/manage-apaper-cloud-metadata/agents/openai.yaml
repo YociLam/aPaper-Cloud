@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain aPaper Cloud Metadata"
+  short_description: "Validate and publish aPaper conference metadata."
+  default_prompt: "Use $manage-apaper-cloud-metadata to update, validate, or publish aPaper conference metadata."

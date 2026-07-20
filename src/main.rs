@@ -8,14 +8,24 @@ use std::io::{BufRead, BufReader, BufWriter, Write};
 use std::path::{Path, PathBuf};
 
 const MANIFEST_PATH: &str = "v1/conferences/manifest.json";
+const VERSION_PATH: &str = "v1/conferences/version.json";
 const MAX_PACK_RECORDS: usize = 30_000;
 const MAX_PACK_COMPRESSED_BYTES: u64 = 128 * 1024 * 1024;
 
 #[derive(Debug, Deserialize)]
 struct Manifest {
     schema_version: u32,
+    manifest_version: u64,
     dataset: String,
     venues: Vec<Venue>,
+}
+
+#[derive(Debug, Deserialize)]
+struct ManifestVersion {
+    schema_version: u32,
+    dataset: String,
+    manifest_version: u64,
+    manifest_sha256: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -93,11 +103,193 @@ fn run() -> Result<(), String> {
         }
         Some("pack") => pack(parse_pack_arguments(args.collect())?),
         Some("ingest-acl") => ingest_acl(parse_ingest_acl_arguments(args.collect())?),
+        Some("import-json") => import_json(parse_import_json_arguments(args.collect())?),
         _ => Err(
-            "usage: apaper-cloud validate-site <public-dir> | pack --input <jsonl> --output <jsonl.zst> | ingest-acl --input <xml> [--input <xml>] --venue <id> --edition <id:year> --year <yyyy> --output <jsonl>"
+            "usage: apaper-cloud validate-site <public-dir> | pack --input <jsonl> --output <jsonl.zst> | ingest-acl --input <xml> [--input <xml>] --venue <id> --edition <id:year> --year <yyyy> --output <jsonl> | import-json --input <json> --venue <id> --edition <id:year> --year <yyyy> --output <jsonl>"
                 .to_string(),
         ),
     }
+}
+
+#[derive(Debug)]
+struct ImportJsonArguments {
+    input: PathBuf,
+    venue_id: String,
+    edition_id: String,
+    year: u16,
+    output: PathBuf,
+}
+
+#[derive(Debug, Deserialize)]
+struct ImportedPaperRecord {
+    id: String,
+    #[serde(default)]
+    source_paper_id: String,
+    #[serde(default)]
+    doi: String,
+    title: String,
+    #[serde(rename = "abstract", default)]
+    abstract_text: String,
+    #[serde(default)]
+    authors: Vec<String>,
+    #[serde(default)]
+    categories: Vec<String>,
+    #[serde(default)]
+    source_group: Option<ConferenceSourceGroup>,
+    #[serde(default)]
+    published: Option<String>,
+    link: String,
+    #[serde(default)]
+    pdf_url: Option<String>,
+    #[serde(default)]
+    updated_at: Option<String>,
+}
+
+fn parse_import_json_arguments(args: Vec<String>) -> Result<ImportJsonArguments, String> {
+    let mut input = None;
+    let mut venue_id = None;
+    let mut edition_id = None;
+    let mut year = None;
+    let mut output = None;
+    let mut index = 0;
+    while index < args.len() {
+        let value = args
+            .get(index + 1)
+            .ok_or_else(|| format!("{} requires a value", args[index]))?;
+        match args[index].as_str() {
+            "--input" => input = Some(PathBuf::from(value)),
+            "--venue" => venue_id = Some(value.to_string()),
+            "--edition" => edition_id = Some(value.to_string()),
+            "--year" => {
+                year = Some(
+                    value
+                        .parse::<u16>()
+                        .map_err(|_| format!("invalid import year {value}"))?,
+                )
+            }
+            "--output" => output = Some(PathBuf::from(value)),
+            option => return Err(format!("unsupported import-json option {option}")),
+        }
+        index += 2;
+    }
+    let venue_id = venue_id.ok_or_else(|| "import-json requires --venue".to_string())?;
+    let edition_id = edition_id.ok_or_else(|| "import-json requires --edition".to_string())?;
+    let year = year.ok_or_else(|| "import-json requires --year".to_string())?;
+    if edition_id != format!("{venue_id}:{year}") {
+        return Err("import-json edition must match venue:year".to_string());
+    }
+    Ok(ImportJsonArguments {
+        input: input.ok_or_else(|| "import-json requires --input".to_string())?,
+        venue_id,
+        edition_id,
+        year,
+        output: output.ok_or_else(|| "import-json requires --output".to_string())?,
+    })
+}
+
+fn import_json(arguments: ImportJsonArguments) -> Result<(), String> {
+    let input = File::open(&arguments.input)
+        .map_err(|error| format!("could not open {}: {error}", arguments.input.display()))?;
+    let imported: Vec<ImportedPaperRecord> = serde_json::from_reader(input).map_err(|error| {
+        format!(
+            "invalid imported JSON {}: {error}",
+            arguments.input.display()
+        )
+    })?;
+    if let Some(parent) = arguments.output.parent() {
+        fs::create_dir_all(parent)
+            .map_err(|error| format!("could not create {}: {error}", parent.display()))?;
+    }
+    let output = File::create(&arguments.output)
+        .map_err(|error| format!("could not create {}: {error}", arguments.output.display()))?;
+    let mut writer = BufWriter::new(output);
+    let mut seen_ids = BTreeSet::new();
+    let mut record_count = 0;
+    let mut skipped_incomplete = 0;
+    for imported in imported {
+        let id = nonempty(imported.source_paper_id).unwrap_or(imported.id);
+        let title = imported
+            .title
+            .split_whitespace()
+            .collect::<Vec<_>>()
+            .join(" ");
+        let abstract_text = normalize_imported_abstract(&imported.abstract_text);
+        let authors = imported
+            .authors
+            .into_iter()
+            .map(|author| author.split_whitespace().collect::<Vec<_>>().join(" "))
+            .filter(|author| !author.is_empty())
+            .collect::<Vec<_>>();
+        if id.trim().is_empty()
+            || title.is_empty()
+            || abstract_text.is_empty()
+            || authors.is_empty()
+            || imported.link.trim().is_empty()
+        {
+            skipped_incomplete += 1;
+            continue;
+        }
+        if !seen_ids.insert(id.clone()) {
+            return Err(format!("duplicate imported paper {id}"));
+        }
+        let published_at = imported
+            .published
+            .filter(|value| !value.trim().is_empty())
+            .unwrap_or_else(|| format!("{:04}-01-01T00:00:00Z", arguments.year));
+        let record = ConferencePaperRecord {
+            schema_version: 1,
+            id,
+            venue_id: arguments.venue_id.clone(),
+            edition_id: arguments.edition_id.clone(),
+            year: arguments.year,
+            title,
+            authors,
+            abstract_text,
+            landing_url: imported.link.clone(),
+            pdf_url: imported.pdf_url.filter(|value| !value.trim().is_empty()),
+            doi: nonempty(imported.doi),
+            categories: imported
+                .categories
+                .into_iter()
+                .filter(|value| !value.trim().is_empty())
+                .collect(),
+            source_group: imported.source_group.filter(|group| {
+                !group.id.trim().is_empty()
+                    && !group.name.trim().is_empty()
+                    && !group.kind.trim().is_empty()
+            }),
+            published_at: published_at.clone(),
+            updated_at: imported
+                .updated_at
+                .filter(|value| !value.trim().is_empty())
+                .unwrap_or(published_at),
+            acceptance_status: "published".to_string(),
+            provenance_url: imported.link,
+        };
+        serde_json::to_writer(&mut writer, &record)
+            .map_err(|error| format!("could not encode imported record: {error}"))?;
+        writer
+            .write_all(b"\n")
+            .map_err(|error| format!("could not write imported records: {error}"))?;
+        record_count += 1;
+    }
+    writer
+        .flush()
+        .map_err(|error| format!("could not finish imported records: {error}"))?;
+    println!("record_count={record_count}");
+    println!("skipped_incomplete={skipped_incomplete}");
+    Ok(())
+}
+
+fn normalize_imported_abstract(value: &str) -> String {
+    let words = value.split_whitespace().collect::<Vec<_>>();
+    if words.len() % 2 == 0 {
+        let midpoint = words.len() / 2;
+        if words[..midpoint] == words[midpoint..] {
+            return words[..midpoint].join(" ");
+        }
+    }
+    words.join(" ")
 }
 
 #[derive(Debug)]
@@ -164,6 +356,7 @@ fn ingest_acl(arguments: IngestAclArguments) -> Result<(), String> {
     let mut writer = BufWriter::new(output);
     let mut seen_ids = BTreeSet::new();
     let mut record_count = 0;
+    let mut skipped_incomplete = 0;
 
     for input_path in &arguments.inputs {
         let xml = fs::read_to_string(input_path)
@@ -205,8 +398,12 @@ fn ingest_acl(arguments: IngestAclArguments) -> Result<(), String> {
             );
 
             for paper in volume.children().filter(|node| node.has_tag_name("paper")) {
-                let record =
-                    acl_paper_record(&arguments, paper, &source_group, &published_at, &updated_at)?;
+                let Some(record) =
+                    acl_paper_record(&arguments, paper, &source_group, &published_at, &updated_at)?
+                else {
+                    skipped_incomplete += 1;
+                    continue;
+                };
                 if !seen_ids.insert(record.id.clone()) {
                     return Err(format!("duplicate ACL paper {}", record.id));
                 }
@@ -223,6 +420,7 @@ fn ingest_acl(arguments: IngestAclArguments) -> Result<(), String> {
         .flush()
         .map_err(|error| format!("could not finish ACL records: {error}"))?;
     println!("record_count={record_count}");
+    println!("skipped_incomplete={skipped_incomplete}");
     Ok(())
 }
 
@@ -232,15 +430,12 @@ fn acl_paper_record(
     source_group: &ConferenceSourceGroup,
     published_at: &str,
     updated_at: &str,
-) -> Result<ConferencePaperRecord, String> {
+) -> Result<Option<ConferencePaperRecord>, String> {
     let title = child_markup_text(paper, "title");
     let abstract_text = child_markup_text(paper, "abstract");
     let anthology_id = child_markup_text(paper, "url");
     if title.is_empty() || abstract_text.is_empty() || anthology_id.is_empty() {
-        return Err(format!(
-            "ACL paper {} is missing title, abstract, or URL",
-            paper.attribute("id").unwrap_or("unknown")
-        ));
+        return Ok(None);
     }
     let authors = paper
         .children()
@@ -258,10 +453,10 @@ fn acl_paper_record(
         .filter(|author| !author.is_empty())
         .collect::<Vec<_>>();
     if authors.is_empty() {
-        return Err(format!("ACL paper {anthology_id} has no authors"));
+        return Ok(None);
     }
     let landing_url = format!("https://aclanthology.org/{anthology_id}/");
-    Ok(ConferencePaperRecord {
+    Ok(Some(ConferencePaperRecord {
         schema_version: 1,
         id: anthology_id.clone(),
         venue_id: arguments.venue_id.clone(),
@@ -283,7 +478,7 @@ fn acl_paper_record(
         updated_at: updated_at.to_string(),
         acceptance_status: "published".to_string(),
         provenance_url: landing_url,
-    })
+    }))
 }
 
 fn acl_source_group(venue_id: &str, volume_id: &str, is_findings: bool) -> ConferenceSourceGroup {
@@ -382,13 +577,29 @@ fn parse_pack_arguments(args: Vec<String>) -> Result<PackArguments, String> {
 
 fn validate_site(root: &Path) -> Result<(), String> {
     let manifest_path = root.join(MANIFEST_PATH);
-    let manifest: Manifest = serde_json::from_reader(
-        File::open(&manifest_path)
-            .map_err(|error| format!("could not open {}: {error}", manifest_path.display()))?,
-    )
-    .map_err(|error| format!("invalid {}: {error}", manifest_path.display()))?;
-    if manifest.schema_version != 1 || manifest.dataset != "apaper.conferences" {
+    let manifest_bytes = fs::read(&manifest_path)
+        .map_err(|error| format!("could not open {}: {error}", manifest_path.display()))?;
+    let manifest: Manifest = serde_json::from_reader(manifest_bytes.as_slice())
+        .map_err(|error| format!("invalid {}: {error}", manifest_path.display()))?;
+    if manifest.schema_version != 1
+        || manifest.manifest_version == 0
+        || manifest.dataset != "apaper.conferences"
+    {
         return Err("conference manifest uses an unsupported contract".to_string());
+    }
+    let version_path = root.join(VERSION_PATH);
+    let version: ManifestVersion = serde_json::from_reader(
+        File::open(&version_path)
+            .map_err(|error| format!("could not open {}: {error}", version_path.display()))?,
+    )
+    .map_err(|error| format!("invalid {}: {error}", version_path.display()))?;
+    let manifest_digest = format!("{:x}", Sha256::digest(&manifest_bytes));
+    if version.schema_version != manifest.schema_version
+        || version.dataset != manifest.dataset
+        || version.manifest_version != manifest.manifest_version
+        || version.manifest_sha256 != manifest_digest
+    {
+        return Err("conference version metadata does not match the manifest".to_string());
     }
     if manifest.venues.is_empty() {
         return Err("conference manifest contains no venues".to_string());
@@ -573,5 +784,81 @@ mod tests {
     fn acl_tracks_are_source_native_groups() {
         assert_eq!(acl_source_group("acl", "long", false).id, "acl.long");
         assert_eq!(acl_source_group("acl", "acl", true).id, "acl.findings");
+    }
+
+    #[test]
+    fn acl_records_without_abstracts_are_skipped_without_aborting_the_edition() {
+        let document = Document::parse(
+            "<paper id=\"1\"><title>Incomplete paper</title><url>2024.acl-long.1</url><author><first>Ada</first><last>Lovelace</last></author></paper>",
+        )
+        .unwrap();
+        let arguments = IngestAclArguments {
+            inputs: Vec::new(),
+            venue_id: "acl".to_string(),
+            edition_id: "acl:2024".to_string(),
+            year: 2024,
+            output: PathBuf::new(),
+        };
+        let group = acl_source_group("acl", "long", false);
+
+        assert!(acl_paper_record(
+            &arguments,
+            document.root_element(),
+            &group,
+            "2024-01-01T00:00:00Z",
+            "2024-01-01T00:00:00Z",
+        )
+        .unwrap()
+        .is_none());
+    }
+
+    #[test]
+    fn imported_records_keep_only_complete_searchable_metadata() {
+        let root = std::env::temp_dir().join(format!(
+            "apaper-cloud-import-{}-{}",
+            std::process::id(),
+            std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH)
+                .unwrap()
+                .as_nanos()
+        ));
+        fs::create_dir_all(&root).unwrap();
+        let input = root.join("papers.json");
+        let output = root.join("papers.jsonl");
+        fs::write(
+            &input,
+            r#"[
+                {"id":"complete","title":"A complete paper","abstract":"Useful abstract","authors":["Ada Lovelace"],"link":"https://example.com/complete"},
+                {"id":"missing-abstract","title":"Incomplete","authors":["Grace Hopper"],"link":"https://example.com/incomplete"}
+            ]"#,
+        )
+        .unwrap();
+
+        import_json(ImportJsonArguments {
+            input,
+            venue_id: "cvpr".to_string(),
+            edition_id: "cvpr:2025".to_string(),
+            year: 2025,
+            output: output.clone(),
+        })
+        .unwrap();
+
+        let lines = fs::read_to_string(output).unwrap();
+        assert_eq!(lines.lines().count(), 1);
+        assert!(lines.contains("complete"));
+        assert!(!lines.contains("missing-abstract"));
+        fs::remove_dir_all(root).unwrap();
+    }
+
+    #[test]
+    fn imported_abstracts_collapse_exact_upstream_duplication() {
+        assert_eq!(
+            normalize_imported_abstract("A complete abstract. A complete abstract."),
+            "A complete abstract."
+        );
+        assert_eq!(
+            normalize_imported_abstract("A complete abstract with a distinct conclusion."),
+            "A complete abstract with a distinct conclusion."
+        );
     }
 }
