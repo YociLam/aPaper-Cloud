@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import time
 from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 
@@ -32,7 +33,17 @@ def read_bounded(response, limit: int, label: str) -> bytes:
 
 def fetch(origin: str, path: str, limit: int, timeout: float) -> bytes:
     url = urljoin(origin.rstrip("/") + "/", path)
-    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/octet-stream"})
+    separator = "&" if "?" in url else "?"
+    url = f"{url}{separator}release-check={time.time_ns()}"
+    request = Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "application/octet-stream",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+        },
+    )
     with urlopen(request, timeout=timeout) as response:
         status = getattr(response, "status", 200)
         if status != 200:
