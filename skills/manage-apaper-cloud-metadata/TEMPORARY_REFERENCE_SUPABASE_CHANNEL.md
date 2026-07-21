@@ -21,12 +21,9 @@ reference Supabase -> temporary importer -> normalized JSONL -> aPaper Cloud pac
 The macOS app does not receive the Supabase URL or anon key and does not query
 Supabase at runtime.
 
-While the temporary GitHub Pages origin is available, the App's default
-metadata origin is pinned to the release commit through jsDelivr. This avoids
-the stale `@main` cache observed during migration. When `cloud.apaper.ai` is
-ready, replace the single `DEFAULT_ORIGIN` constant in
-`rust/crates/discovery/src/sources/conference.rs` and remove the temporary
-commit pin.
+The App downloads the generated packs from `https://cloud.apaper.ai`. Supabase
+remains only a temporary build-time input and is never exposed as an App
+runtime origin.
 
 ## Deliberate limitations
 

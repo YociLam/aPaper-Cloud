@@ -17,6 +17,7 @@ struct Manifest {
     schema_version: u32,
     manifest_version: u64,
     dataset: String,
+    generated_at: String,
     venues: Vec<Venue>,
 }
 
@@ -25,6 +26,7 @@ struct ManifestVersion {
     schema_version: u32,
     dataset: String,
     manifest_version: u64,
+    updated_at: String,
     manifest_sha256: String,
 }
 
@@ -601,6 +603,7 @@ fn validate_site(root: &Path) -> Result<(), String> {
     if version.schema_version != manifest.schema_version
         || version.dataset != manifest.dataset
         || version.manifest_version != manifest.manifest_version
+        || version.updated_at != manifest.generated_at
         || version.manifest_sha256 != manifest_digest
     {
         return Err("conference version metadata does not match the manifest".to_string());

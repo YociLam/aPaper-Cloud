@@ -1,10 +1,9 @@
 {
   "schema_version": 1,
-  "manifest_version": 7,
+  "manifest_version": 8,
   "dataset": "apaper.conferences",
-  "generated_at": "2026-07-21T13:22:04Z",
+  "generated_at": "2026-07-21T14:06:33Z",
   "canonical_origin": "https://cloud.apaper.ai",
-  "temporary_origin": "https://yocilam.github.io/aPaper-Cloud",
   "maximum_selected_records": 20000,
   "venues": [
     {"id":"iclr","short_name":"ICLR","name":"International Conference on Learning Representations","cadence":"annual","editions":[{"id":"iclr:2026","year":2026,"paper_count":5359,"state":"partial","pack":{"path":"packs/iclr/2026.jsonl.zst","sha256":"a29d1157dada6efca9d712af7f97dc6538fba9589f87505218233860763c65a8","compressed_bytes":2782692,"record_count":5359}},{"id":"iclr:2025","year":2025,"paper_count":3708,"state":"partial","pack":{"path":"packs/iclr/2025.jsonl.zst","sha256":"38dd125b24d0cedcb3ae4e58f4f0d051c0689003ab2e9780ed7e60f91bd6c160","compressed_bytes":1871696,"record_count":3708}},{"id":"iclr:2024","year":2024,"paper_count":2261,"state":"partial","pack":{"path":"packs/iclr/2024.jsonl.zst","sha256":"6f2ff54614dd9fd2324ed02c7cd5655a81dec96e08bd3276d66355360ea9ccf8","compressed_bytes":1118113,"record_count":2261}},{"id":"iclr:2023","year":2023,"paper_count":435,"state":"partial","pack":{"path":"packs/iclr/2023.jsonl.zst","sha256":"489cf05dd50bc60808a95dac427c391e3114aaa6d6df8300cc4d54947a929f73","compressed_bytes":209726,"record_count":435}}]},

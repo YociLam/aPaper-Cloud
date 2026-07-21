@@ -19,4 +19,4 @@ description: Extract, normalize, verify, and publish one CVPR year to aPaper Clo
 3. Normalize official metadata to `venue_id=cvpr` and `edition_id=cvpr:<year>` with empty categories unless CVF adds an official paper-level taxonomy.
 4. Verify a deterministic PDF sample, pack, update exact manifest metadata, update `version.json`, and run all validations from the management skill.
 
-Never infer CVPR categories from titles, abstracts, community subsets, or the conference name.
+Never infer CVPR categories from titles, abstracts, or the conference name.

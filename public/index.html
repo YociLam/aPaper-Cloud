@@ -4,11 +4,93 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>aPaper Cloud</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: Canvas;
+        color: CanvasText;
+      }
+
+      main {
+        width: min(34rem, calc(100vw - 3rem));
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 7vw, 3.5rem);
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        margin: 0.75rem 0 1.75rem;
+        color: color-mix(in srgb, CanvasText 62%, transparent);
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 0.6rem 1rem;
+        margin: 0;
+        padding-top: 1.25rem;
+        border-top: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+        font-size: 0.875rem;
+      }
+
+      dt {
+        color: color-mix(in srgb, CanvasText 52%, transparent);
+      }
+
+      dd {
+        margin: 0;
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
   </head>
   <body>
     <main>
       <h1>aPaper Cloud</h1>
       <p>Versioned public metadata for aPaper.</p>
+      <dl aria-label="Deployment status">
+        <dt>Version</dt>
+        <dd id="version">Checking…</dd>
+        <dt>Updated</dt>
+        <dd><time id="updated">Checking…</time></dd>
+      </dl>
     </main>
+    <script>
+      const versionElement = document.querySelector("#version");
+      const updatedElement = document.querySelector("#updated");
+
+      fetch(`/v1/conferences/version.json?check=${Date.now()}`, { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((release) => {
+          versionElement.textContent = `v${release.manifest_version}`;
+          const updatedAt = new Date(release.updated_at);
+          if (Number.isNaN(updatedAt.getTime())) {
+            updatedElement.textContent = release.updated_at || "Unavailable";
+            return;
+          }
+          updatedElement.dateTime = release.updated_at;
+          updatedElement.textContent = new Intl.DateTimeFormat(undefined, {
+            dateStyle: "medium",
+            timeStyle: "medium",
+          }).format(updatedAt);
+        })
+        .catch(() => {
+          versionElement.textContent = "Unavailable";
+          updatedElement.textContent = "Unavailable";
+        });
+    </script>
   </body>
 </html>

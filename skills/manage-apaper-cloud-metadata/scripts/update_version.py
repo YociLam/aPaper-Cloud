@@ -22,6 +22,7 @@ def main() -> None:
         "schema_version": manifest["schema_version"],
         "dataset": manifest["dataset"],
         "manifest_version": manifest["manifest_version"],
+        "updated_at": manifest["generated_at"],
         "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
     }
     version_path.write_text(

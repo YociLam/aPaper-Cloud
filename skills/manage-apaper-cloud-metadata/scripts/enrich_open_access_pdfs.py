@@ -23,7 +23,7 @@ from urllib.request import Request, urlopen
 
 
 OPENALEX_URL = "https://api.openalex.org/works"
-USER_AGENT = "aPaper metadata publisher (https://github.com/YociLam/aPaper-Cloud)"
+USER_AGENT = "aPaper metadata publisher (https://cloud.apaper.ai)"
 TRUSTED_HOSTS = {
     "aclanthology.org",
     "arxiv.org",

@@ -16,11 +16,9 @@ public/
       packs/<venue>/<year>.jsonl.zst
 ```
 
-The production origin is `https://cloud.apaper.ai`. The former GitHub Pages
-origin, `https://yocilam.github.io/aPaper-Cloud`, remains a read-only fallback
-until DNS and the custom domain have been verified in production. Pack paths in
-the manifest are relative, so moving between origins does not change the app
-protocol or require rebuilding packs.
+The production origin is `https://cloud.apaper.ai`. Pack paths in the manifest
+are relative to this origin, so metadata updates do not require rebuilding the
+App.
 
 Some ICLR/SOSP catalog gaps are temporarily filled at build time from the
 public Supabase configured by the bundled `daily-paper-reader-main` reference
@@ -28,8 +26,7 @@ project. This is not an App runtime dependency. Such records carry
 `metadata_channel=temporary_reference_supabase_v1`; the importer, limitations,
 and removal checklist live in
 `skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`.
-The App no longer pins the distribution through jsDelivr; the custom domain is
-the canonical origin and GitHub Pages is only a temporary fallback.
+The App reads the distribution exclusively through the custom domain.
 
 ## Boundary
 

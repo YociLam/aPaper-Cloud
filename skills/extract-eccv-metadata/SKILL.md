@@ -20,4 +20,4 @@ description: Extract, normalize, verify, and publish one ECCV year to aPaper Clo
 4. Validate the ECVA HTML-to-PDF mapping and a deterministic PDF sample.
 5. Pack, update manifest/version metadata, and run all validations from the management skill.
 
-Never infer ECCV categories from titles, abstracts, community subsets, or the conference name.
+Never infer ECCV categories from titles, abstracts, or the conference name.
