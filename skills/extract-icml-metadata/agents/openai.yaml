@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract ICML Metadata"
+  short_description: "Publish a verified ICML PMLR year"

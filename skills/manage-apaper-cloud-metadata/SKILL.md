@@ -58,6 +58,13 @@ The importer reads its local `config.yaml` only while generating a pack. It
 must not copy OpenReview/ACM challenge URLs into `pdf_url`; preserve only URLs
 from an existing pack that have already passed aPaper's PDF validation.
 
+When a temporary ICLR or SOSP pack is missing public PDF URLs, run
+`scripts/enrich_open_access_pdfs.py` on the decoded or compressed pack before
+publishing it. The script accepts only exact-title OpenAlex matches on aPaper's
+trusted HTTPS hosts and verifies the `%PDF-` header. Keep its lookup cache
+outside the repository so interrupted runs can resume without committing API
+responses.
+
 ## Release checklist
 
 - Confirm at least one sample PDF per source/track returns `%PDF-`.

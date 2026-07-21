@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract IJCAI Metadata"
+  short_description: "Publish IJCAI metadata with subject hierarchy"

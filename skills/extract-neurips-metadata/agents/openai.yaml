@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract NeurIPS Metadata"
+  short_description: "Publish a verified NeurIPS proceedings year"

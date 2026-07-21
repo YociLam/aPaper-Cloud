@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract ECCV Metadata"
+  short_description: "Publish official ECCV metadata and curated topics"

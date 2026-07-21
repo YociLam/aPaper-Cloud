@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract NDSS Metadata"
+  short_description: "Publish verified NDSS proceedings metadata"

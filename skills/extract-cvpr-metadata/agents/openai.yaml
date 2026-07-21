@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract CVPR Metadata"
+  short_description: "Publish official CVPR metadata and curated topics"

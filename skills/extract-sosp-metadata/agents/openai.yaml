@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract SOSP Metadata"
+  short_description: "Publish verified SOSP proceedings metadata"

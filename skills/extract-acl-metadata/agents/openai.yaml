@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract ACL Metadata"
+  short_description: "Publish ACL Anthology annual-meeting metadata"

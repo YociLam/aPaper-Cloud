@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract IEEE S&P Metadata"
+  short_description: "Publish IEEE S&P proceedings metadata"

@@ -16,10 +16,11 @@ public/
       packs/<venue>/<year>.jsonl.zst
 ```
 
-The temporary origin is `https://yocilam.github.io/aPaper-Cloud`. The
-production origin will be `https://cloud.apaper.ai`. Pack paths in the manifest
-are relative, so moving between origins does not change the app protocol or
-require rebuilding packs.
+The production origin is `https://cloud.apaper.ai`. The former GitHub Pages
+origin, `https://yocilam.github.io/aPaper-Cloud`, remains a read-only fallback
+until DNS and the custom domain have been verified in production. Pack paths in
+the manifest are relative, so moving between origins does not change the app
+protocol or require rebuilding packs.
 
 Some ICLR/SOSP catalog gaps are temporarily filled at build time from the
 public Supabase configured by the bundled `daily-paper-reader-main` reference
@@ -27,9 +28,8 @@ project. This is not an App runtime dependency. Such records carry
 `metadata_channel=temporary_reference_supabase_v1`; the importer, limitations,
 and removal checklist live in
 `skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`.
-The App temporarily pins the distribution commit through jsDelivr to avoid a
-stale `@main` cache; this pin is removed when `cloud.apaper.ai` becomes the
-production origin.
+The App no longer pins the distribution through jsDelivr; the custom domain is
+the canonical origin and GitHub Pages is only a temporary fallback.
 
 ## Boundary
 
@@ -63,6 +63,11 @@ EMNLP volumes, AAAI technical tracks, NeurIPS tracks and IJCAI subject areas are
 examples. These labels are publication metadata, not inferred research topics.
 Editions that cannot yet provide a stable public PDF boundary remain cataloged
 but unavailable for selection.
+
+The `skills/` directory contains one extraction skill per supported conference
+plus the shared publishing/validation skill. Annual refreshes should invoke the
+venue skill first and then follow `manage-apaper-cloud-metadata` for packing,
+manifest updates, validation, and publication.
 
 ## Tooling
 

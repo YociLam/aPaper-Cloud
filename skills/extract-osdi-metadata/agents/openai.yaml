@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract OSDI Metadata"
+  short_description: "Publish OSDI metadata with official sessions"

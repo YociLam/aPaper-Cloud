@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract ICLR Metadata"
+  short_description: "Publish a verified ICLR year to aPaper Cloud"

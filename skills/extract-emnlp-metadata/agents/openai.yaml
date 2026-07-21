@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract EMNLP Metadata"
+  short_description: "Publish EMNLP metadata from ACL Anthology"

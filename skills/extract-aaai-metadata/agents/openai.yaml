@@ -1,0 +1,3 @@
+interface:
+  display_name: "Extract AAAI Metadata"
+  short_description: "Publish a verified AAAI OJS year"
