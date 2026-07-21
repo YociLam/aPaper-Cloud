@@ -16,8 +16,17 @@ description: Extract, normalize, verify, and publish one AAAI proceedings year t
 ## Workflow
 
 1. Read `../manage-apaper-cloud-metadata/SKILL.md`.
-2. Confirm all proceedings issues/sections belonging to the requested AAAI year; exclude workshops and unrelated journal issues unless requested.
-3. Crawl issue pagination with a resume cache, then parse citation metadata, abstract, PDF, DOI, OJS section, and dates.
+2. Confirm all OAI sets belonging to the requested AAAI year; the standard aPaper AAAI pack includes only `AAAI Technical Track` records, matching prior years, and excludes IAAI, EAAI, demonstrations, student abstracts, consortium, journal, and special-track records unless the catalog scope is explicitly changed.
+3. Fetch the official OAI-PMH sets with the resumable extractor. It requests each technical track independently so one long OJS pagination failure cannot invalidate the whole edition:
+
+   ```sh
+   python3 skills/extract-aaai-metadata/scripts/fetch_aaai_oai.py \
+     --year <year> \
+     --output /tmp/aaai-<year>.json \
+     --cache-dir /tmp/apaper-aaai-<year>-oai
+   ```
+
+   The extractor parses abstract, PDF, DOI, official track, subjects, and dates directly from OAI-PMH. Keep the cache outside the repository.
 4. Normalize to `venue_id=aaai` and `edition_id=aaai:<year>`; enrich exact OJS subjects when available.
 5. Verify counts, unique IDs, required fields, and a deterministic PDF sample.
 6. Pack, update manifest and version files, and run all validations from the management skill.

@@ -29,7 +29,8 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
    - use `published` only when metadata and public PDF links have been verified;
    - keep unavailable or unverified editions `cataloged`, `partial`, or `announced` with `pack: null`.
 5. Run `python3 skills/manage-apaper-cloud-metadata/scripts/update_version.py public` to rewrite `version.json` with the manifest SHA-256.
-6. Validate before publishing:
+6. Update the catalog summary near the top of `README.md` from the final manifest: current version, UTC update time, every listed venue/year count, and non-published state labels must match exactly. Do not present `cataloged`, `partial`, or `announced` editions as downloadable packs.
+7. Validate before publishing:
 
    ```sh
    cargo run --quiet --manifest-path Cargo.toml -- validate-site public
@@ -37,8 +38,8 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
    cargo test --manifest-path ../rust/Cargo.toml -p apaper_discovery --lib
    ```
 
-7. Publish `apaper-cloud/public` to the existing production deployment behind `https://cloud.apaper.ai` only after validation succeeds. Never publish a pack with a guessed checksum or a source URL that has not been tested.
-8. After deployment, verify the live release and every pack changed by this release. Pass each changed or newly added edition explicitly; venue IDs are resolved from the manifest, so this command also supports future conferences without script changes:
+8. Publish `apaper-cloud/public` to the existing production deployment behind `https://cloud.apaper.ai` only after validation succeeds. Never publish a pack with a guessed checksum or a source URL that has not been tested.
+9. After deployment, verify the live release and every pack changed by this release. Pass each changed or newly added edition explicitly; venue IDs are resolved from the manifest, so this command also supports future conferences without script changes:
 
    ```sh
    python3 skills/manage-apaper-cloud-metadata/scripts/verify_published_release.py \
@@ -96,6 +97,7 @@ responses.
 - Confirm `record_count`, `paper_count`, compressed byte size, and SHA-256.
 - Run the validator and tests from the repository root.
 - Increment `manifest_version` only once per release and regenerate `version.json` after the final manifest edit.
+- Confirm the README catalog table, displayed manifest version, and UTC update time match the final manifest.
 - Deploy, then run `verify_published_release.py` with every changed edition.
 - Confirm the live version endpoint differs from the preceding release and exactly matches the new local version and manifest SHA-256.
 - When adding a new venue, add and validate its venue-specific extraction Skill, manifest entry, pack directory, official source provenance, localized App presentation where required, and release verification arguments.
