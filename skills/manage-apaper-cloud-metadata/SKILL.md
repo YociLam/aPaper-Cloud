@@ -29,7 +29,7 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
    - use `published` only when metadata and public PDF links have been verified;
    - keep unavailable or unverified editions `cataloged`, `partial`, or `announced` with `pack: null`.
 5. Run `python3 skills/manage-apaper-cloud-metadata/scripts/update_version.py public` to rewrite `version.json` with the manifest SHA-256.
-6. Update the catalog summary near the top of `README.md` from the final manifest: current version, UTC update time, every listed venue/year count, and non-published state labels must match exactly. Do not present `cataloged`, `partial`, or `announced` editions as downloadable packs.
+6. Update the catalog summaries near the top of both `README.md` (default English) and `README.zh-CN.md` from the final manifest: current version, UTC update time, every listed venue/year count, and non-published state labels must match exactly. Keep the language switch and shared `assets/aPaper.png` header intact. Do not present `cataloged`, `partial`, or `announced` editions as downloadable packs.
 7. Validate before publishing:
 
    ```sh
@@ -97,7 +97,7 @@ responses.
 - Confirm `record_count`, `paper_count`, compressed byte size, and SHA-256.
 - Run the validator and tests from the repository root.
 - Advance `manifest_version` only once per release and regenerate `version.json` after the final manifest edit.
-- Confirm the README catalog table, displayed manifest version, and UTC update time match the final manifest.
+- Confirm both README catalog tables, displayed manifest versions, and UTC update times match the final manifest.
 - Deploy, then run `verify_published_release.py` with every changed edition.
 - Confirm the live version endpoint differs from the preceding release and exactly matches the new local version and manifest SHA-256.
 - When adding a new venue, add and validate its venue-specific extraction Skill, manifest entry, pack directory, official source provenance, localized App presentation where required, and release verification arguments.

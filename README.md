@@ -1,46 +1,59 @@
+<div align="center">
+  <img src="./assets/aPaper.png" alt="aPaper Cloud" width="750">
+  <p><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
+</div>
+
 # aPaper Cloud
 
-`aPaper Cloud` 是一个静态、版本化的 aPaper 公共元数据分发项目。它不存储用户资料、
-阅读历史、推荐内容、账户凭据、PDF 文件或其他私有工作区数据。
+`aPaper Cloud` is a static, versioned distribution repository for public aPaper metadata. It does
+not store user profiles, reading history, recommendations, account credentials, PDF files, or any
+other private workspace data.
 
-首个发布的数据集为各类学术会议论文集目录。会议元数据按具体会议及举办年份独立划分，
-因此 App 只会下载用户所选会议年份对应的数据包。
+The first published dataset is a catalog of academic conference proceedings. Conference metadata
+is partitioned by venue and edition year, allowing the App to download only the exact editions it
+needs.
 
-- 正式地址：`https://cloud.apaper.ai`
-- 当前 Manifest：`v0.9`
-- 目录更新时间：`2026-07-21 16:03:41 UTC`
+- Production origin: `https://cloud.apaper.ai`
+- Current manifest: `v0.9`
+- Catalog updated: `2026-07-21 16:03:41 UTC`
 
-## 收录概览
+## Catalog overview
 
-下表来自 `public/v1/conferences/manifest.json`。数字表示该会议年份当前收录的论文数；
-没有状态后缀的数字表示数据包已经发布并可由 App 同步。
+The table below is generated from `public/v1/conferences/manifest.json`. A number without a status
+suffix means that the edition pack has been fully published, has passed release validation, and is
+available for App synchronization.
 
-| 会议 | 2022 | 2023 | 2024 | 2025 | 2026 |
+| Venue | 2022 | 2023 | 2024 | 2025 | 2026 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| ICLR | — | 435（部分） | 2,261（部分） | 3,708（部分） | 5,359（部分） |
-| ICML | — | 1,828 | 2,610 | 3,330 | 6,341（已编目） |
-| NeurIPS | — | 3,540 | 4,493 | 5,823 | 已公布 |
+| ICLR | — | 435 (partial) | 2,261 (partial) | 3,708 (partial) | 5,359 (partial) |
+| ICML | — | 1,828 | 2,610 | 3,330 | 6,341 (cataloged) |
+| NeurIPS | — | 3,540 | 4,493 | 5,823 | announced |
 | AAAI | — | 1,578 | 2,331 | 3,028 | 4,149 |
 | CVPR | — | 2,352 | 2,710 | 2,871 | 4,068 |
-| ECCV | 1,645 | — | 2,387 | — | 已公布 |
-| IJCAI | — | 850 | 1,047 | 1,279 | 已公布 |
+| ECCV | 1,645 | — | 2,387 | — | announced |
+| IJCAI | — | 850 | 1,047 | 1,279 | announced |
 | ACL | — | 2,150 | 1,982 | 3,353 | 4,806 |
-| EMNLP | — | 2,241 | 2,388 | 3,488 | 已公布 |
+| EMNLP | — | 2,241 | 2,388 | 3,488 | announced |
 | OSDI | — | 55 | 53 | 53 | 136 |
-| SOSP | — | 9（部分） | 43（部分） | 65（部分） | — |
-| IEEE S&P | — | 已编目 | 261 | 65 | 254（部分） |
+| SOSP | — | 9 (partial) | 43 (partial) | 65 (partial) | — |
+| IEEE S&P | — | cataloged | 261 | 65 | 254 (partial) |
 | NDSS | — | 94 | 140 | 211 | 265 |
 
-状态说明：
+Status definitions:
 
-- **已发布**：元数据包已生成并通过记录数、体积和 SHA-256 校验，可供 App 同步。
-- **部分**：已有可检索数据包，但元数据或公开 PDF 覆盖仍不完整。
-- **已编目**：已确认会议年份或论文数量，但尚未发布可下载的数据包。
-- **已公布**：会议年份已进入目录，正式论文集尚未达到发布条件。
+- **Published**: the pack has passed record-count, compressed-size, and SHA-256 validation and is
+  available for App synchronization.
+- **Partial**: a searchable pack exists, but metadata completeness or public PDF coverage remains
+  incomplete.
+- **Cataloged**: the edition or paper count has been confirmed, but no downloadable pack has been
+  published.
+- **Announced**: the edition is listed in the catalog, but the final proceedings are not yet ready
+  for publication.
 
-目录表按每次 Manifest 发布统一更新时间；项目目前不为单个会议年份维护独立更新时间。
+The catalog table uses the release-wide manifest timestamp. Per-edition update timestamps are not
+currently maintained.
 
-## 数据结构
+## Repository layout
 
 ```text
 public/
@@ -51,60 +64,73 @@ public/
       packs/<venue>/<year>.jsonl.zst
 ```
 
-- `version.json` 是 App 启动时首先访问的轻量版本入口。
-- `manifest.json` 记录会议、年份、状态、论文数量、数据包大小和 SHA-256。
-- `packs/<venue>/<year>.jsonl.zst` 是按会议年份拆分的只读元数据包。
-- 数据包只保存元数据和经过验证的来源链接，不保存 PDF 文件。
+- `version.json` is the lightweight endpoint checked first when the App starts.
+- `manifest.json` records venues, editions, publication states, paper counts, pack sizes, and
+  SHA-256 checksums.
+- `packs/<venue>/<year>.jsonl.zst` contains read-only metadata for one exact conference edition.
+- Packs contain metadata and validated source links only. They do not contain PDF files.
 
-生产环境的规范来源始终是 `https://cloud.apaper.ai`。Manifest 中的数据包路径均为相对路径，
-更新元数据不需要重新构建 App。
+The canonical production origin is always `https://cloud.apaper.ai`. Pack paths in the manifest are
+relative, so metadata can be updated without rebuilding the App.
 
-## App 同步约定
+## App synchronization contract
 
-1. App 启动时请求 `version.json`，只比较远端与本地的两段式 `manifest_version`。
-2. 版本相同则停止，不重复下载 Manifest 或会议数据包。
-3. 版本不同才下载 `manifest.json`，并使用 `version.json` 中的 SHA-256 校验内容。
-4. Manifest 校验通过后，App 通过有界后台队列逐个同步会议年份包，避免集中请求服务器。
-5. 用户勾选会议年份时，如果本地数据包缺失或损坏，仍会触发一次按需恢复下载。
+1. On startup, the App requests `version.json` and compares the remote two-segment
+   `manifest_version` with its locally persisted version.
+2. If the versions match, synchronization stops without downloading the manifest or conference
+   packs again.
+3. If the versions differ, the App downloads `manifest.json` and verifies it using the SHA-256 in
+   `version.json`.
+4. After validation, a bounded background queue synchronizes edition packs one at a time to avoid
+   concentrated server requests.
+5. If a user selects an edition whose local pack is missing or corrupt, the App performs an
+   on-demand recovery download.
 
-## 数据边界
+## Data boundaries
 
-- Rust 会校验 Schema、记录数、压缩体积和 SHA-256。
-- Swift 不负责下载、解析或索引会议元数据。
-- App 的本地缓存位于 `~/Documents/aPaper`，不写入源码仓库。
-- PDF 保留在论文来源网站，仅在用户打开或导入论文时访问。
-- `source_group` 只能保存出版方提供的 track、session、subject 或 collection，不能根据标题、
-  摘要、会议名称或模型推断。
-- 没有可靠逐论文分类时，`categories` 和 `source_group` 保持为空。
+- Rust validates the schema, record count, compressed size, and SHA-256 checksum.
+- Swift does not download, parse, or index conference metadata.
+- App-owned local caches live under `~/Documents/aPaper`; they are never written into the source
+  repository.
+- PDFs remain on publisher or conference websites and are accessed only when the user opens or
+  imports a paper.
+- `source_group` may contain only a publisher-provided track, session, subject, or collection. It
+  must not be inferred from a title, abstract, venue name, or language model.
+- When no reliable per-paper classification exists, `categories` and `source_group` remain empty.
 
-## 数据来源
+## Data sources
 
-已发布或已编目的会议包括 ICLR、ICML、NeurIPS、AAAI、CVPR、ECCV、IJCAI、ACL、
-EMNLP、OSDI、SOSP、IEEE S&P 和 NDSS。每条记录保留其官方 landing URL、PDF URL、
-DOI（如有）和 provenance URL。
+Published or cataloged venues currently include ICLR, ICML, NeurIPS, AAAI, CVPR, ECCV, IJCAI,
+ACL, EMNLP, OSDI, SOSP, IEEE S&P, and NDSS. Each record preserves its official landing URL, PDF
+URL, DOI when available, and provenance URL.
 
-ICLR 2024–2026 与 SOSP 2024–2025 目前仍包含通过参考项目 Supabase 导入的临时构建期数据。
-这些记录带有 `metadata_channel=temporary_reference_supabase_v1`，App 不会在运行时访问
-Supabase。迁移边界和拆除清单见
-`skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`。
+ICLR 2024–2026 and SOSP 2024–2025 currently include metadata imported through the reference
+project's temporary Supabase build-time channel. These records carry
+`metadata_channel=temporary_reference_supabase_v1`; the App never connects to Supabase at runtime.
+The migration boundary and removal checklist are documented in
+`skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`.
 
-## 维护流程
+## Maintenance workflow
 
-`skills/` 中为每个会议提供独立提取 Skill，并由
-`skills/manage-apaper-cloud-metadata/SKILL.md` 统一约束打包、版本升级、校验和发布流程。
+Each conference has a dedicated extraction Skill under `skills/`. Packaging, release versioning,
+validation, and publication are governed by
+`skills/manage-apaper-cloud-metadata/SKILL.md`.
 
-一次标准更新包含：
+A standard update consists of:
 
-1. 读取对应的 `skills/extract-<venue>-metadata/SKILL.md`，从官方来源提取数据。
-2. 规范化为 aPaper 会议记录格式，并核对数量、必填字段、重复 ID 和来源分组。
-3. 生成对应会议年份的 `.jsonl.zst` 数据包。
-4. 更新 Manifest；一次发布只推进一次两段式版本号，例如 `0.9` → `0.10`。
-5. 重新生成 `version.json`，执行本地校验和 Rust 测试。
-6. 发布到 GitHub 与 Cloudflare，并逐个核对线上数据包的大小和 SHA-256。
+1. Read `skills/extract-<venue>-metadata/SKILL.md` and extract records from the verified official
+   source.
+2. Normalize records to the aPaper conference schema and verify counts, required fields, duplicate
+   IDs, and source-native groups.
+3. Build the corresponding `.jsonl.zst` edition pack.
+4. Update the manifest and advance the two-segment release version once, for example `0.9` →
+   `0.10`.
+5. Regenerate `version.json`, then run local validation and Rust tests.
+6. Publish to GitHub and Cloudflare, and verify the byte size and SHA-256 of every changed pack.
 
-## 通用工具
+## General-purpose tools
 
-从出版方提取出的 JSON 数组可以先通过通用导入器规范化：
+Normalize a publisher-exported JSON array with the shared importer:
 
 ```bash
 cargo run --manifest-path apaper-cloud/Cargo.toml -- import-json \
@@ -115,7 +141,7 @@ cargo run --manifest-path apaper-cloud/Cargo.toml -- import-json \
   --output /tmp/<venue>-<year>.jsonl
 ```
 
-将规范化 JSONL 打包为发布文件：
+Package normalized JSONL for publication:
 
 ```bash
 cargo run --manifest-path apaper-cloud/Cargo.toml -- pack \
@@ -123,14 +149,14 @@ cargo run --manifest-path apaper-cloud/Cargo.toml -- pack \
   --output apaper-cloud/public/v1/conferences/packs/<venue>/<year>.jsonl.zst
 ```
 
-在最终修改 Manifest 后更新轻量版本入口：
+Regenerate the lightweight version endpoint after the final manifest edit:
 
 ```bash
 python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/update_version.py \
   apaper-cloud/public
 ```
 
-发布前执行完整本地校验：
+Run the complete local release validation:
 
 ```bash
 cargo run --quiet --manifest-path apaper-cloud/Cargo.toml -- \
@@ -139,7 +165,7 @@ cargo test --manifest-path apaper-cloud/Cargo.toml
 cargo test --manifest-path rust/Cargo.toml -p apaper_discovery --lib
 ```
 
-部署后核对版本、Manifest 和本次变化的每个会议年份包：
+Verify the release control plane and every changed edition after deployment:
 
 ```bash
 python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/verify_published_release.py \
@@ -149,5 +175,5 @@ python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/verify_publishe
   --pack <venue>:<year>
 ```
 
-ACL Anthology XML、AAAI OAI-PMH、CVF Open Access 等来源具有各自的专用提取器；它们属于
-会议 Skill 的采集适配层，不是整个项目唯一的导入方式。
+Sources such as ACL Anthology XML, AAAI OAI-PMH, and CVF Open Access use venue-specific extractors.
+They are acquisition adapters within each conference Skill, not the project's only import path.
