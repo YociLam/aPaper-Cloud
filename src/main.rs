@@ -36,6 +36,8 @@ struct Venue {
     short_name: String,
     name: String,
     localized_names: BTreeMap<String, String>,
+    #[serde(default)]
+    localized_tag: BTreeMap<String, String>,
     editions: Vec<Edition>,
 }
 
@@ -631,6 +633,15 @@ fn validate_site(root: &Path) -> Result<(), String> {
                     || value.trim().is_empty()
                     || value.len() > 256
             })
+            || venue.localized_tag.iter().any(|(language, value)| {
+                language.trim().is_empty()
+                    || language.len() > 32
+                    || value.trim().is_empty()
+                    || value.len() > 96
+            })
+            || (!venue.localized_tag.is_empty()
+                && (!venue.localized_tag.contains_key("en")
+                    || !venue.localized_tag.contains_key("zh-Hans")))
         {
             return Err("conference venue identifiers and names are required".to_string());
         }

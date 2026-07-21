@@ -14,8 +14,8 @@ is partitioned by venue and edition year, allowing the App to download only the 
 needs.
 
 - Production origin: `https://cloud.apaper.ai`
-- Current manifest: `v0.10`
-- Catalog updated: `2026-07-21 18:02:36 UTC`
+- Current manifest: `v0.11`
+- Catalog updated: `2026-07-21 19:04:07 UTC`
 
 ## Catalog overview
 
@@ -25,26 +25,26 @@ available for App synchronization.
 
 | Venue | 2022 | 2023 | 2024 | 2025 | 2026 |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| ICLR | — | 435 (partial) | 2,261 (partial) | 3,708 (partial) | 5,359 (partial) |
-| ICML | — | 1,828 | 2,610 | 3,330 | 6,341 (cataloged) |
 | NeurIPS | — | 3,540 | 4,493 | 5,823 | announced |
-| AAAI | — | 1,578 | 2,331 | 3,028 | 4,149 |
+| ICML | — | 1,828 | 2,610 | 3,330 | 6,341 (cataloged) |
+| ICLR | — | 435 (partial) | 2,261 (partial) | 3,708 (partial) | 5,359 (partial) |
 | CVPR | — | 2,352 | 2,710 | 2,871 | 4,068 |
-| ECCV | 1,645 | — | 2,387 | — | announced |
-| IJCAI | — | 850 | 1,047 | 1,279 | announced |
 | ACL | — | 2,150 | 1,982 | 3,353 | 4,806 |
+| AAAI | — | 1,578 | 2,331 | 3,028 | 4,149 |
+| IJCAI | — | 850 | 1,047 | 1,279 | announced |
 | EMNLP | — | 2,241 | 2,388 | 3,488 | announced |
+| ICCV | — | 2,156 | — | 949 | — |
+| ECCV | 1,645 | — | 2,387 | — | announced |
+| AISTATS | — | — | 547 | 583 | — |
+| COLT | — | — | — | 181 | 196 |
+| AAMAS | — | — | — | 479 | 639 (partial) |
+| CoRL | — | — | 264 (partial) | 263 | — |
+| RSS | — | — | 134 | 163 | — |
 | OSDI | — | 55 | 53 | 53 | 136 |
 | SOSP | — | 9 (partial) | 43 (partial) | 65 (partial) | — |
 | IEEE S&P | — | cataloged | 261 | 65 | 254 (partial) |
 | NDSS | — | 94 | 140 | 211 | 265 |
-| AISTATS | — | — | 547 | 583 | — |
-| COLT | — | — | — | 181 | 196 |
-| CoRL | — | — | 264 (partial) | 263 | — |
-| RSS | — | — | 134 | 163 | — |
-| ICCV | — | 2,156 | — | 949 | — |
 | ACCV | 277 | — | 269 | — | — |
-| AAMAS | — | — | — | 479 | 639 (partial) |
 
 Status definitions:
 
@@ -72,8 +72,9 @@ public/
 ```
 
 - `version.json` is the lightweight endpoint checked first when the App starts.
-- `manifest.json` records the complete venue catalog, localized venue names, editions,
-  publication states, paper counts, pack sizes, and SHA-256 checksums.
+- `manifest.json` records the complete venue catalog in App display order, localized venue names,
+  optional localized venue tags, editions, publication states, paper counts, pack sizes, and
+  SHA-256 checksums.
 - `packs/<venue>/<year>.jsonl.zst` contains read-only metadata for one exact conference edition.
 - Packs contain metadata and validated source links only. They do not contain PDF files.
 
@@ -111,8 +112,8 @@ not require rebuilding the App.
 
 ## Data sources
 
-Published or cataloged venues currently include ICLR, ICML, NeurIPS, AAAI, CVPR, ECCV, IJCAI,
-ACL, EMNLP, OSDI, SOSP, IEEE S&P, NDSS, AISTATS, COLT, CoRL, RSS, ICCV, ACCV, and AAMAS. Each
+Published or cataloged venues currently include NeurIPS, ICML, ICLR, CVPR, ACL, AAAI, IJCAI,
+EMNLP, ICCV, ECCV, AISTATS, COLT, AAMAS, CoRL, RSS, OSDI, SOSP, IEEE S&P, NDSS, and ACCV. Each
 record preserves its official landing URL, PDF URL, DOI when available, and provenance URL.
 
 ICLR 2024–2026 and SOSP 2024–2025 currently include metadata imported through the reference

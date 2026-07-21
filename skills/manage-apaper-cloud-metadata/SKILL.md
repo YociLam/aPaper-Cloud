@@ -16,6 +16,8 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
 - Selection-time recovery for a missing or corrupt pack remains a fallback; it does not replace startup synchronization.
 - The verified remote Manifest is the complete conference-source catalog. The production App must not bundle a conference catalog fallback: a first launch without a successful Manifest synchronization exposes only arXiv and bioRxiv and leaves the conference list empty.
 - Every venue must provide `name` as the canonical English name plus a `localized_names` map containing at least `en` and `zh-Hans`. Add future languages to this map without changing the App catalog code.
+- The `venues` array order is the App display order. Preserve the curated ordering when refreshing editions, and place newly added venues deliberately instead of sorting by ID.
+- `localized_tag` is an optional localized single-badge map. When present, provide at least `en` and `zh-Hans`; omit the field entirely for venues that should not show a badge.
 
 ## Workflow
 
