@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/aPaper.png" alt="aPaper Cloud" width="750">
+  <img src="./assets/aPaper.png" alt="aPaper Cloud" width="980">
   <p><a href="./README.md">English</a> · <strong>简体中文</strong></p>
 </div>
 
@@ -12,8 +12,8 @@
 因此 App 只会下载用户所选会议年份对应的数据包。
 
 - 正式地址：`https://cloud.apaper.ai`
-- 当前 Manifest：`v0.9`
-- 目录更新时间：`2026-07-21 16:03:41 UTC`
+- 当前 Manifest：`v0.10`
+- 目录更新时间：`2026-07-21 18:02:36 UTC`
 
 ## 收录概览
 
@@ -35,6 +35,13 @@
 | SOSP | — | 9（部分） | 43（部分） | 65（部分） | — |
 | IEEE S&P | — | 已编目 | 261 | 65 | 254（部分） |
 | NDSS | — | 94 | 140 | 211 | 265 |
+| AISTATS | — | — | 547 | 583 | — |
+| COLT | — | — | — | 181 | 196 |
+| CoRL | — | — | 264（部分） | 263 | — |
+| RSS | — | — | 134 | 163 | — |
+| ICCV | — | 2,156 | — | 949 | — |
+| ACCV | 277 | — | 269 | — | — |
+| AAMAS | — | — | — | 479 | 639（部分） |
 
 状态说明：
 
@@ -57,20 +64,23 @@ public/
 ```
 
 - `version.json` 是 App 启动时首先访问的轻量版本入口。
-- `manifest.json` 记录会议、年份、状态、论文数量、数据包大小和 SHA-256。
+- `manifest.json` 记录完整会议目录、会议多语言名称、年份、状态、论文数量、数据包大小和
+  SHA-256。
 - `packs/<venue>/<year>.jsonl.zst` 是按会议年份拆分的只读元数据包。
 - 数据包只保存元数据和经过验证的来源链接，不保存 PDF 文件。
 
-生产环境的规范来源始终是 `https://cloud.apaper.ai`。Manifest 中的数据包路径均为相对路径，
-更新元数据不需要重新构建 App。
+生产环境的规范来源始终是 `https://cloud.apaper.ai`。Manifest 中的数据包路径均为相对路径。
+新增会议、修改会议多语言名称或发布新年份时，都不需要重新构建 App。
 
 ## App 同步约定
 
 1. App 启动时请求 `version.json`，只比较远端与本地的两段式 `manifest_version`。
 2. 版本相同则停止，不重复下载 Manifest 或会议数据包。
 3. 版本不同才下载 `manifest.json`，并使用 `version.json` 中的 SHA-256 校验内容。
-4. Manifest 校验通过后，App 通过有界后台队列逐个同步会议年份包，避免集中请求服务器。
-5. 用户勾选会议年份时，如果本地数据包缺失或损坏，仍会触发一次按需恢复下载。
+4. App 根据已校验的 Manifest 动态生成会议来源列表及其本地化名称。首次启动若尚未成功同步
+   Manifest，则会议列表为空，只保留独立的 arXiv 与 bioRxiv 来源。
+5. Manifest 校验通过后，App 通过有界后台队列逐个同步会议年份包，避免集中请求服务器。
+6. 用户勾选会议年份时，如果本地数据包缺失或损坏，仍会触发一次按需恢复下载。
 
 ## 数据边界
 
@@ -85,8 +95,8 @@ public/
 ## 数据来源
 
 已发布或已编目的会议包括 ICLR、ICML、NeurIPS、AAAI、CVPR、ECCV、IJCAI、ACL、
-EMNLP、OSDI、SOSP、IEEE S&P 和 NDSS。每条记录保留其官方 landing URL、PDF URL、
-DOI（如有）和 provenance URL。
+EMNLP、OSDI、SOSP、IEEE S&P、NDSS、AISTATS、COLT、CoRL、RSS、ICCV、ACCV 和
+AAMAS。每条记录保留其官方 landing URL、PDF URL、DOI（如有）和 provenance URL。
 
 ICLR 2024–2026 与 SOSP 2024–2025 目前仍包含通过参考项目 Supabase 导入的临时构建期数据。
 这些记录带有 `metadata_channel=temporary_reference_supabase_v1`，App 不会在运行时访问

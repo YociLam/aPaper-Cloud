@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/aPaper.png" alt="aPaper Cloud" width="750">
+  <img src="./assets/aPaper.png" alt="aPaper Cloud" width="980">
   <p><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
 </div>
 
@@ -14,8 +14,8 @@ is partitioned by venue and edition year, allowing the App to download only the 
 needs.
 
 - Production origin: `https://cloud.apaper.ai`
-- Current manifest: `v0.9`
-- Catalog updated: `2026-07-21 16:03:41 UTC`
+- Current manifest: `v0.10`
+- Catalog updated: `2026-07-21 18:02:36 UTC`
 
 ## Catalog overview
 
@@ -38,6 +38,13 @@ available for App synchronization.
 | SOSP | — | 9 (partial) | 43 (partial) | 65 (partial) | — |
 | IEEE S&P | — | cataloged | 261 | 65 | 254 (partial) |
 | NDSS | — | 94 | 140 | 211 | 265 |
+| AISTATS | — | — | 547 | 583 | — |
+| COLT | — | — | — | 181 | 196 |
+| CoRL | — | — | 264 (partial) | 263 | — |
+| RSS | — | — | 134 | 163 | — |
+| ICCV | — | 2,156 | — | 949 | — |
+| ACCV | 277 | — | 269 | — | — |
+| AAMAS | — | — | — | 479 | 639 (partial) |
 
 Status definitions:
 
@@ -65,13 +72,14 @@ public/
 ```
 
 - `version.json` is the lightweight endpoint checked first when the App starts.
-- `manifest.json` records venues, editions, publication states, paper counts, pack sizes, and
-  SHA-256 checksums.
+- `manifest.json` records the complete venue catalog, localized venue names, editions,
+  publication states, paper counts, pack sizes, and SHA-256 checksums.
 - `packs/<venue>/<year>.jsonl.zst` contains read-only metadata for one exact conference edition.
 - Packs contain metadata and validated source links only. They do not contain PDF files.
 
 The canonical production origin is always `https://cloud.apaper.ai`. Pack paths in the manifest are
-relative, so metadata can be updated without rebuilding the App.
+relative. Adding a venue, changing its localized name, or publishing a new edition therefore does
+not require rebuilding the App.
 
 ## App synchronization contract
 
@@ -81,9 +89,12 @@ relative, so metadata can be updated without rebuilding the App.
    packs again.
 3. If the versions differ, the App downloads `manifest.json` and verifies it using the SHA-256 in
    `version.json`.
-4. After validation, a bounded background queue synchronizes edition packs one at a time to avoid
+4. The source selector is rebuilt from the verified Manifest, including its localized venue names.
+   A first launch with no successful Manifest synchronization shows no conference sources; arXiv
+   and bioRxiv remain available independently.
+5. After validation, a bounded background queue synchronizes edition packs one at a time to avoid
    concentrated server requests.
-5. If a user selects an edition whose local pack is missing or corrupt, the App performs an
+6. If a user selects an edition whose local pack is missing or corrupt, the App performs an
    on-demand recovery download.
 
 ## Data boundaries
@@ -101,8 +112,8 @@ relative, so metadata can be updated without rebuilding the App.
 ## Data sources
 
 Published or cataloged venues currently include ICLR, ICML, NeurIPS, AAAI, CVPR, ECCV, IJCAI,
-ACL, EMNLP, OSDI, SOSP, IEEE S&P, and NDSS. Each record preserves its official landing URL, PDF
-URL, DOI when available, and provenance URL.
+ACL, EMNLP, OSDI, SOSP, IEEE S&P, NDSS, AISTATS, COLT, CoRL, RSS, ICCV, ACCV, and AAMAS. Each
+record preserves its official landing URL, PDF URL, DOI when available, and provenance URL.
 
 ICLR 2024–2026 and SOSP 2024–2025 currently include metadata imported through the reference
 project's temporary Supabase build-time channel. These records carry

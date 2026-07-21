@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract COLT Metadata"
+  short_description: "Build verified COLT proceedings packs."
+  default_prompt: "Extract and validate a requested COLT proceedings year for aPaper Cloud."

@@ -1,23 +1,983 @@
 {
   "schema_version": 1,
-  "manifest_version": "0.9",
+  "manifest_version": "0.10",
   "dataset": "apaper.conferences",
-  "generated_at": "2026-07-21T16:03:41Z",
+  "generated_at": "2026-07-21T18:02:36Z",
   "canonical_origin": "https://cloud.apaper.ai",
   "maximum_selected_records": 20000,
   "venues": [
-    {"id":"iclr","short_name":"ICLR","name":"International Conference on Learning Representations","cadence":"annual","editions":[{"id":"iclr:2026","year":2026,"paper_count":5359,"state":"partial","pack":{"path":"packs/iclr/2026.jsonl.zst","sha256":"a29d1157dada6efca9d712af7f97dc6538fba9589f87505218233860763c65a8","compressed_bytes":2782692,"record_count":5359}},{"id":"iclr:2025","year":2025,"paper_count":3708,"state":"partial","pack":{"path":"packs/iclr/2025.jsonl.zst","sha256":"38dd125b24d0cedcb3ae4e58f4f0d051c0689003ab2e9780ed7e60f91bd6c160","compressed_bytes":1871696,"record_count":3708}},{"id":"iclr:2024","year":2024,"paper_count":2261,"state":"partial","pack":{"path":"packs/iclr/2024.jsonl.zst","sha256":"6f2ff54614dd9fd2324ed02c7cd5655a81dec96e08bd3276d66355360ea9ccf8","compressed_bytes":1118113,"record_count":2261}},{"id":"iclr:2023","year":2023,"paper_count":435,"state":"partial","pack":{"path":"packs/iclr/2023.jsonl.zst","sha256":"489cf05dd50bc60808a95dac427c391e3114aaa6d6df8300cc4d54947a929f73","compressed_bytes":209726,"record_count":435}}]},
-    {"id":"icml","short_name":"ICML","name":"International Conference on Machine Learning","cadence":"annual","editions":[{"id":"icml:2026","year":2026,"paper_count":6341,"state":"cataloged","pack":null},{"id":"icml:2025","year":2025,"paper_count":3330,"state":"published","pack":{"path":"packs/icml/2025.jsonl.zst","sha256":"bcc813ca68d7fe3f20456df624a3782644ed10fb44b7e3a366f5d7835adfc6a2","compressed_bytes":1401586,"record_count":3330}},{"id":"icml:2024","year":2024,"paper_count":2610,"state":"published","pack":{"path":"packs/icml/2024.jsonl.zst","sha256":"b46e17f747ca0e699b3106a6e3eb90caa3bbc3d7376f50047409abc287046036","compressed_bytes":1069929,"record_count":2610}},{"id":"icml:2023","year":2023,"paper_count":1828,"state":"published","pack":{"path":"packs/icml/2023.jsonl.zst","sha256":"30adfe0474664aa19e70b053485c2c0431d742fe2fa5e7ecd9d58fbf76127535","compressed_bytes":729834,"record_count":1828}}]},
-    {"id":"neurips","short_name":"NeurIPS","name":"Conference on Neural Information Processing Systems","cadence":"annual","editions":[{"id":"neurips:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"neurips:2025","year":2025,"paper_count":5823,"state":"published","pack":{"path":"packs/neurips/2025.jsonl.zst","sha256":"7ed54d855889142ea7969db809ebfa8b11a9e8a43e8165a6899093b43c4a3042","compressed_bytes":2873547,"record_count":5823}},{"id":"neurips:2024","year":2024,"paper_count":4493,"state":"published","pack":{"path":"packs/neurips/2024.jsonl.zst","sha256":"f66907759742c71d8e8a0478e7c334b27f3da439eca19e7121aa7f4d3e0ae68a","compressed_bytes":2193131,"record_count":4493}},{"id":"neurips:2023","year":2023,"paper_count":3540,"state":"published","pack":{"path":"packs/neurips/2023.jsonl.zst","sha256":"fcdc795f2e5f0d52b6dfffe40e9a745ad6be50e6dc060217b855bc49579bb145","compressed_bytes":1671034,"record_count":3540}}]},
-    {"id":"aaai","short_name":"AAAI","name":"AAAI Conference on Artificial Intelligence","cadence":"annual","editions":[{"id":"aaai:2026","year":2026,"paper_count":4149,"state":"published","pack":{"path":"packs/aaai/2026.jsonl.zst","sha256":"a565d5b295187a799f15f1f5ed31504c1910027e90ac41d558be3982fdc807e8","compressed_bytes":1889596,"record_count":4149}},{"id":"aaai:2025","year":2025,"paper_count":3028,"state":"published","pack":{"path":"packs/aaai/2025.jsonl.zst","sha256":"df33bde4558fe71639249209c2faaca81fb42041f72246ee789d1948a708076f","compressed_bytes":1341420,"record_count":3028}},{"id":"aaai:2024","year":2024,"paper_count":2331,"state":"published","pack":{"path":"packs/aaai/2024.jsonl.zst","sha256":"19bd6f8217f461b094787495591b5fa92a28876d41b07e69177b1fb8fd2fd71a","compressed_bytes":1093193,"record_count":2331}},{"id":"aaai:2023","year":2023,"paper_count":1578,"state":"published","pack":{"path":"packs/aaai/2023.jsonl.zst","sha256":"8ac66ff7ab3743999cf194e8be3719dbce70ab0e835c0fae0bb1eb4bf8cc8924","compressed_bytes":729983,"record_count":1578}}]},
-    {"id":"cvpr","short_name":"CVPR","name":"Conference on Computer Vision and Pattern Recognition","cadence":"annual","editions":[{"id":"cvpr:2026","year":2026,"paper_count":4068,"state":"published","pack":{"path":"packs/cvpr/2026.jsonl.zst","sha256":"4546bac49842003b11490d3ccb088b5bc53a60ba0a2fe85c58e26906e9a81dd1","compressed_bytes":1995487,"record_count":4068}},{"id":"cvpr:2025","year":2025,"paper_count":2871,"state":"published","pack":{"path":"packs/cvpr/2025.jsonl.zst","sha256":"33964217f8f1ac896e488c6be878763c0bb6ef69db1ec0ce9036d56f4dbf63eb","compressed_bytes":1424246,"record_count":2871}},{"id":"cvpr:2024","year":2024,"paper_count":2710,"state":"published","pack":{"path":"packs/cvpr/2024.jsonl.zst","sha256":"de4ecbc11954d9e497e991f668fbff7a2d038c2d8215b272eb0c84ddd2f3a352","compressed_bytes":1310676,"record_count":2710}},{"id":"cvpr:2023","year":2023,"paper_count":2352,"state":"published","pack":{"path":"packs/cvpr/2023.jsonl.zst","sha256":"13b27223ce56a91a8c70054a18ec67fc43d72ff275b9f20f51ddae0e3389e7f6","compressed_bytes":1136976,"record_count":2352}}]},
-    {"id":"eccv","short_name":"ECCV","name":"European Conference on Computer Vision","cadence":"biennial","editions":[{"id":"eccv:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"eccv:2024","year":2024,"paper_count":2387,"state":"published","pack":{"path":"packs/eccv/2024.jsonl.zst","sha256":"6c3bea68460c5d4c46475930c9d70ec4c1b44f835f499c8177fd15a90255faf1","compressed_bytes":1048975,"record_count":2387}},{"id":"eccv:2022","year":2022,"paper_count":1645,"state":"published","pack":{"path":"packs/eccv/2022.jsonl.zst","sha256":"3a265d43f0a39b51630ae1ca7549a4c3f03a4e50bbde64d8b7bbfd822a6b7f7b","compressed_bytes":698496,"record_count":1645}}]},
-    {"id":"ijcai","short_name":"IJCAI","name":"International Joint Conference on Artificial Intelligence","cadence":"annual","editions":[{"id":"ijcai:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"ijcai:2025","year":2025,"paper_count":1279,"state":"published","pack":{"path":"packs/ijcai/2025.jsonl.zst","sha256":"4a581ac199e3c5ead3360a2c4793addecb5a35e403e934338b318a9b379d3288","compressed_bytes":562803,"record_count":1279}},{"id":"ijcai:2024","year":2024,"paper_count":1047,"state":"published","pack":{"path":"packs/ijcai/2024.jsonl.zst","sha256":"c49ba7a164d01b5fa3b179c7bf4dc92256a9e342d121ba09e72d085cb797c447","compressed_bytes":458661,"record_count":1047}},{"id":"ijcai:2023","year":2023,"paper_count":850,"state":"published","pack":{"path":"packs/ijcai/2023.jsonl.zst","sha256":"393dc5af1fabdcb7442fa1a3102ccca28b749671179eafae7e310810b0fe8399","compressed_bytes":364711,"record_count":850}}]},
-    {"id":"acl","short_name":"ACL","name":"Annual Meeting of the Association for Computational Linguistics","cadence":"annual","editions":[{"id":"acl:2026","year":2026,"paper_count":4806,"state":"published","pack":{"path":"packs/acl/2026.jsonl.zst","sha256":"92a897b6bc048b572a961735fb65e3665536c62e0e9b3de5dc089d98bced8bf6","compressed_bytes":2098204,"record_count":4806}},{"id":"acl:2025","year":2025,"paper_count":3353,"state":"published","pack":{"path":"packs/acl/2025.jsonl.zst","sha256":"c367478898b5b613c1a09ad169a04053e389b44d6af88a2efcb84a637a0ef898","compressed_bytes":1382216,"record_count":3353}},{"id":"acl:2024","year":2024,"paper_count":1982,"state":"published","pack":{"path":"packs/acl/2024.jsonl.zst","sha256":"5b7894f531e3081415893be3c391c15bbd425f104fca252ee93524a3db2e292a","compressed_bytes":807735,"record_count":1982}},{"id":"acl:2023","year":2023,"paper_count":2150,"state":"published","pack":{"path":"packs/acl/2023.jsonl.zst","sha256":"a00fc8ae990ef2f42149e27d9c778f20ad40814254831c2bf7d653acfa1e8b60","compressed_bytes":840481,"record_count":2150}}]},
-    {"id":"emnlp","short_name":"EMNLP","name":"Conference on Empirical Methods in Natural Language Processing","cadence":"annual","editions":[{"id":"emnlp:2026","year":2026,"paper_count":0,"state":"announced","pack":null},{"id":"emnlp:2025","year":2025,"paper_count":3488,"state":"published","pack":{"path":"packs/emnlp/2025.jsonl.zst","sha256":"edfa1021c6e372b6f977b1faf522a2e531ab03e6dafbb7138ab7fddd1add3a2a","compressed_bytes":1435365,"record_count":3488}},{"id":"emnlp:2024","year":2024,"paper_count":2388,"state":"published","pack":{"path":"packs/emnlp/2024.jsonl.zst","sha256":"03a5a50ae21c847472ba3283a852588e954c52defffb6f2167fbd4a1bb7e999f","compressed_bytes":963805,"record_count":2388}},{"id":"emnlp:2023","year":2023,"paper_count":2241,"state":"published","pack":{"path":"packs/emnlp/2023.jsonl.zst","sha256":"70fae89292ba454a4b109941e1ea2d62d50d54d31e5c0cd15a4c133e316e21ea","compressed_bytes":895287,"record_count":2241}}]},
-    {"id":"osdi","short_name":"OSDI","name":"USENIX Symposium on Operating Systems Design and Implementation","cadence":"annual","editions":[{"id":"osdi:2026","year":2026,"paper_count":136,"state":"published","pack":{"path":"packs/osdi/2026.jsonl.zst","sha256":"2adacf0e3e6493e5845594ed02cab50a0d817467699b7433ae68700ca3b2b113","compressed_bytes":81715,"record_count":136}},{"id":"osdi:2025","year":2025,"paper_count":53,"state":"published","pack":{"path":"packs/osdi/2025.jsonl.zst","sha256":"07840252c64b4be43323b557574b9f8c9eaf864c34bff8b7a6fa172dd63523bf","compressed_bytes":31080,"record_count":53}},{"id":"osdi:2024","year":2024,"paper_count":53,"state":"published","pack":{"path":"packs/osdi/2024.jsonl.zst","sha256":"3856f07f0d080e6d1b40f7818ab29a92093b6cbdb90e92e569c804c388fbf501","compressed_bytes":33630,"record_count":53}},{"id":"osdi:2023","year":2023,"paper_count":55,"state":"published","pack":{"path":"packs/osdi/2023.jsonl.zst","sha256":"bf189d7004e88cca516fc85149125ed3ec85e69f02d1d7efdc14ac7932b537b2","compressed_bytes":33518,"record_count":55}}]},
-    {"id":"sosp","short_name":"SOSP","name":"ACM Symposium on Operating Systems Principles","cadence":"annual","editions":[{"id":"sosp:2025","year":2025,"paper_count":65,"state":"partial","pack":{"path":"packs/sosp/2025.jsonl.zst","sha256":"c533ae77983e0c937c31ff15305ec159b32827e4b657c1a4052cdfab338e2f88","compressed_bytes":37009,"record_count":65}},{"id":"sosp:2024","year":2024,"paper_count":43,"state":"partial","pack":{"path":"packs/sosp/2024.jsonl.zst","sha256":"e20fba81b28734872e6c607f739d160a4172c27bbc0b0618749167f009559332","compressed_bytes":26604,"record_count":43}},{"id":"sosp:2023","year":2023,"paper_count":9,"state":"partial","pack":{"path":"packs/sosp/2023.jsonl.zst","sha256":"840004a134efa7a1869b5edb9bee8473501ddfa7a4867077282733279345d461","compressed_bytes":6380,"record_count":9}}]},
-    {"id":"ieee_sp","short_name":"IEEE S&P","name":"IEEE Symposium on Security and Privacy","cadence":"annual","editions":[{"id":"ieee_sp:2026","year":2026,"paper_count":254,"state":"partial","pack":null},{"id":"ieee_sp:2025","year":2025,"paper_count":65,"state":"published","pack":{"path":"packs/ieee_sp/2025.jsonl.zst","sha256":"6f804569d2ed7d03d7bf22772faff3d149174c24765898a8fdde05516f1a0862","compressed_bytes":41626,"record_count":65}},{"id":"ieee_sp:2024","year":2024,"paper_count":261,"state":"published","pack":{"path":"packs/ieee_sp/2024.jsonl.zst","sha256":"2f537e3f53eb72b2bd439079f7d3e4221a1cfc0a553d1685c5ce65d2b55dcb19","compressed_bytes":159406,"record_count":261}},{"id":"ieee_sp:2023","year":2023,"paper_count":0,"state":"cataloged","pack":null}]},
-    {"id":"ndss","short_name":"NDSS","name":"Network and Distributed System Security Symposium","cadence":"annual","editions":[{"id":"ndss:2026","year":2026,"paper_count":265,"state":"published","pack":{"path":"packs/ndss/2026.jsonl.zst","sha256":"cd486f371fc7c6ee26f1423391344d759822707bbb7cac6e897b79d8ed75664f","compressed_bytes":165834,"record_count":265}},{"id":"ndss:2025","year":2025,"paper_count":211,"state":"published","pack":{"path":"packs/ndss/2025.jsonl.zst","sha256":"2995cce09aa33a678e4ba33303642b998fdaafa9b4a4ec7edfdd72aff003c8c1","compressed_bytes":134344,"record_count":211}},{"id":"ndss:2024","year":2024,"paper_count":140,"state":"published","pack":{"path":"packs/ndss/2024.jsonl.zst","sha256":"a67c3fa7e28a7c89103831b5c5e6699ed1848d15c6f623f7eff4110558a3a190","compressed_bytes":88459,"record_count":140}},{"id":"ndss:2023","year":2023,"paper_count":94,"state":"published","pack":{"path":"packs/ndss/2023.jsonl.zst","sha256":"a45730f2e032056734f8629b97da4cf91e47eb446da1849a9d229d0e878fbc4b","compressed_bytes":63301,"record_count":94}}]}
+    {
+      "id": "iclr",
+      "short_name": "ICLR",
+      "name": "International Conference on Learning Representations",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "iclr:2026",
+          "year": 2026,
+          "paper_count": 5359,
+          "state": "partial",
+          "pack": {
+            "path": "packs/iclr/2026.jsonl.zst",
+            "sha256": "a29d1157dada6efca9d712af7f97dc6538fba9589f87505218233860763c65a8",
+            "compressed_bytes": 2782692,
+            "record_count": 5359
+          }
+        },
+        {
+          "id": "iclr:2025",
+          "year": 2025,
+          "paper_count": 3708,
+          "state": "partial",
+          "pack": {
+            "path": "packs/iclr/2025.jsonl.zst",
+            "sha256": "38dd125b24d0cedcb3ae4e58f4f0d051c0689003ab2e9780ed7e60f91bd6c160",
+            "compressed_bytes": 1871696,
+            "record_count": 3708
+          }
+        },
+        {
+          "id": "iclr:2024",
+          "year": 2024,
+          "paper_count": 2261,
+          "state": "partial",
+          "pack": {
+            "path": "packs/iclr/2024.jsonl.zst",
+            "sha256": "6f2ff54614dd9fd2324ed02c7cd5655a81dec96e08bd3276d66355360ea9ccf8",
+            "compressed_bytes": 1118113,
+            "record_count": 2261
+          }
+        },
+        {
+          "id": "iclr:2023",
+          "year": 2023,
+          "paper_count": 435,
+          "state": "partial",
+          "pack": {
+            "path": "packs/iclr/2023.jsonl.zst",
+            "sha256": "489cf05dd50bc60808a95dac427c391e3114aaa6d6df8300cc4d54947a929f73",
+            "compressed_bytes": 209726,
+            "record_count": 435
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "International Conference on Learning Representations",
+        "zh-Hans": "表征学习国际会议"
+      }
+    },
+    {
+      "id": "icml",
+      "short_name": "ICML",
+      "name": "International Conference on Machine Learning",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "icml:2026",
+          "year": 2026,
+          "paper_count": 6341,
+          "state": "cataloged",
+          "pack": null
+        },
+        {
+          "id": "icml:2025",
+          "year": 2025,
+          "paper_count": 3330,
+          "state": "published",
+          "pack": {
+            "path": "packs/icml/2025.jsonl.zst",
+            "sha256": "bcc813ca68d7fe3f20456df624a3782644ed10fb44b7e3a366f5d7835adfc6a2",
+            "compressed_bytes": 1401586,
+            "record_count": 3330
+          }
+        },
+        {
+          "id": "icml:2024",
+          "year": 2024,
+          "paper_count": 2610,
+          "state": "published",
+          "pack": {
+            "path": "packs/icml/2024.jsonl.zst",
+            "sha256": "b46e17f747ca0e699b3106a6e3eb90caa3bbc3d7376f50047409abc287046036",
+            "compressed_bytes": 1069929,
+            "record_count": 2610
+          }
+        },
+        {
+          "id": "icml:2023",
+          "year": 2023,
+          "paper_count": 1828,
+          "state": "published",
+          "pack": {
+            "path": "packs/icml/2023.jsonl.zst",
+            "sha256": "30adfe0474664aa19e70b053485c2c0431d742fe2fa5e7ecd9d58fbf76127535",
+            "compressed_bytes": 729834,
+            "record_count": 1828
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "International Conference on Machine Learning",
+        "zh-Hans": "国际机器学习大会"
+      }
+    },
+    {
+      "id": "neurips",
+      "short_name": "NeurIPS",
+      "name": "Conference on Neural Information Processing Systems",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "neurips:2026",
+          "year": 2026,
+          "paper_count": 0,
+          "state": "announced",
+          "pack": null
+        },
+        {
+          "id": "neurips:2025",
+          "year": 2025,
+          "paper_count": 5823,
+          "state": "published",
+          "pack": {
+            "path": "packs/neurips/2025.jsonl.zst",
+            "sha256": "7ed54d855889142ea7969db809ebfa8b11a9e8a43e8165a6899093b43c4a3042",
+            "compressed_bytes": 2873547,
+            "record_count": 5823
+          }
+        },
+        {
+          "id": "neurips:2024",
+          "year": 2024,
+          "paper_count": 4493,
+          "state": "published",
+          "pack": {
+            "path": "packs/neurips/2024.jsonl.zst",
+            "sha256": "f66907759742c71d8e8a0478e7c334b27f3da439eca19e7121aa7f4d3e0ae68a",
+            "compressed_bytes": 2193131,
+            "record_count": 4493
+          }
+        },
+        {
+          "id": "neurips:2023",
+          "year": 2023,
+          "paper_count": 3540,
+          "state": "published",
+          "pack": {
+            "path": "packs/neurips/2023.jsonl.zst",
+            "sha256": "fcdc795f2e5f0d52b6dfffe40e9a745ad6be50e6dc060217b855bc49579bb145",
+            "compressed_bytes": 1671034,
+            "record_count": 3540
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "Conference on Neural Information Processing Systems",
+        "zh-Hans": "神经信息处理系统大会"
+      }
+    },
+    {
+      "id": "aaai",
+      "short_name": "AAAI",
+      "name": "AAAI Conference on Artificial Intelligence",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "aaai:2026",
+          "year": 2026,
+          "paper_count": 4149,
+          "state": "published",
+          "pack": {
+            "path": "packs/aaai/2026.jsonl.zst",
+            "sha256": "a565d5b295187a799f15f1f5ed31504c1910027e90ac41d558be3982fdc807e8",
+            "compressed_bytes": 1889596,
+            "record_count": 4149
+          }
+        },
+        {
+          "id": "aaai:2025",
+          "year": 2025,
+          "paper_count": 3028,
+          "state": "published",
+          "pack": {
+            "path": "packs/aaai/2025.jsonl.zst",
+            "sha256": "df33bde4558fe71639249209c2faaca81fb42041f72246ee789d1948a708076f",
+            "compressed_bytes": 1341420,
+            "record_count": 3028
+          }
+        },
+        {
+          "id": "aaai:2024",
+          "year": 2024,
+          "paper_count": 2331,
+          "state": "published",
+          "pack": {
+            "path": "packs/aaai/2024.jsonl.zst",
+            "sha256": "19bd6f8217f461b094787495591b5fa92a28876d41b07e69177b1fb8fd2fd71a",
+            "compressed_bytes": 1093193,
+            "record_count": 2331
+          }
+        },
+        {
+          "id": "aaai:2023",
+          "year": 2023,
+          "paper_count": 1578,
+          "state": "published",
+          "pack": {
+            "path": "packs/aaai/2023.jsonl.zst",
+            "sha256": "8ac66ff7ab3743999cf194e8be3719dbce70ab0e835c0fae0bb1eb4bf8cc8924",
+            "compressed_bytes": 729983,
+            "record_count": 1578
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "AAAI Conference on Artificial Intelligence",
+        "zh-Hans": "AAAI 人工智能会议"
+      }
+    },
+    {
+      "id": "cvpr",
+      "short_name": "CVPR",
+      "name": "Conference on Computer Vision and Pattern Recognition",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "cvpr:2026",
+          "year": 2026,
+          "paper_count": 4068,
+          "state": "published",
+          "pack": {
+            "path": "packs/cvpr/2026.jsonl.zst",
+            "sha256": "4546bac49842003b11490d3ccb088b5bc53a60ba0a2fe85c58e26906e9a81dd1",
+            "compressed_bytes": 1995487,
+            "record_count": 4068
+          }
+        },
+        {
+          "id": "cvpr:2025",
+          "year": 2025,
+          "paper_count": 2871,
+          "state": "published",
+          "pack": {
+            "path": "packs/cvpr/2025.jsonl.zst",
+            "sha256": "33964217f8f1ac896e488c6be878763c0bb6ef69db1ec0ce9036d56f4dbf63eb",
+            "compressed_bytes": 1424246,
+            "record_count": 2871
+          }
+        },
+        {
+          "id": "cvpr:2024",
+          "year": 2024,
+          "paper_count": 2710,
+          "state": "published",
+          "pack": {
+            "path": "packs/cvpr/2024.jsonl.zst",
+            "sha256": "de4ecbc11954d9e497e991f668fbff7a2d038c2d8215b272eb0c84ddd2f3a352",
+            "compressed_bytes": 1310676,
+            "record_count": 2710
+          }
+        },
+        {
+          "id": "cvpr:2023",
+          "year": 2023,
+          "paper_count": 2352,
+          "state": "published",
+          "pack": {
+            "path": "packs/cvpr/2023.jsonl.zst",
+            "sha256": "13b27223ce56a91a8c70054a18ec67fc43d72ff275b9f20f51ddae0e3389e7f6",
+            "compressed_bytes": 1136976,
+            "record_count": 2352
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "Conference on Computer Vision and Pattern Recognition",
+        "zh-Hans": "计算机视觉与模式识别会议"
+      }
+    },
+    {
+      "id": "eccv",
+      "short_name": "ECCV",
+      "name": "European Conference on Computer Vision",
+      "cadence": "biennial",
+      "editions": [
+        {
+          "id": "eccv:2026",
+          "year": 2026,
+          "paper_count": 0,
+          "state": "announced",
+          "pack": null
+        },
+        {
+          "id": "eccv:2024",
+          "year": 2024,
+          "paper_count": 2387,
+          "state": "published",
+          "pack": {
+            "path": "packs/eccv/2024.jsonl.zst",
+            "sha256": "6c3bea68460c5d4c46475930c9d70ec4c1b44f835f499c8177fd15a90255faf1",
+            "compressed_bytes": 1048975,
+            "record_count": 2387
+          }
+        },
+        {
+          "id": "eccv:2022",
+          "year": 2022,
+          "paper_count": 1645,
+          "state": "published",
+          "pack": {
+            "path": "packs/eccv/2022.jsonl.zst",
+            "sha256": "3a265d43f0a39b51630ae1ca7549a4c3f03a4e50bbde64d8b7bbfd822a6b7f7b",
+            "compressed_bytes": 698496,
+            "record_count": 1645
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "European Conference on Computer Vision",
+        "zh-Hans": "欧洲计算机视觉会议"
+      }
+    },
+    {
+      "id": "ijcai",
+      "short_name": "IJCAI",
+      "name": "International Joint Conference on Artificial Intelligence",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "ijcai:2026",
+          "year": 2026,
+          "paper_count": 0,
+          "state": "announced",
+          "pack": null
+        },
+        {
+          "id": "ijcai:2025",
+          "year": 2025,
+          "paper_count": 1279,
+          "state": "published",
+          "pack": {
+            "path": "packs/ijcai/2025.jsonl.zst",
+            "sha256": "4a581ac199e3c5ead3360a2c4793addecb5a35e403e934338b318a9b379d3288",
+            "compressed_bytes": 562803,
+            "record_count": 1279
+          }
+        },
+        {
+          "id": "ijcai:2024",
+          "year": 2024,
+          "paper_count": 1047,
+          "state": "published",
+          "pack": {
+            "path": "packs/ijcai/2024.jsonl.zst",
+            "sha256": "c49ba7a164d01b5fa3b179c7bf4dc92256a9e342d121ba09e72d085cb797c447",
+            "compressed_bytes": 458661,
+            "record_count": 1047
+          }
+        },
+        {
+          "id": "ijcai:2023",
+          "year": 2023,
+          "paper_count": 850,
+          "state": "published",
+          "pack": {
+            "path": "packs/ijcai/2023.jsonl.zst",
+            "sha256": "393dc5af1fabdcb7442fa1a3102ccca28b749671179eafae7e310810b0fe8399",
+            "compressed_bytes": 364711,
+            "record_count": 850
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "International Joint Conference on Artificial Intelligence",
+        "zh-Hans": "国际人工智能联合会议"
+      }
+    },
+    {
+      "id": "acl",
+      "short_name": "ACL",
+      "name": "Annual Meeting of the Association for Computational Linguistics",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "acl:2026",
+          "year": 2026,
+          "paper_count": 4806,
+          "state": "published",
+          "pack": {
+            "path": "packs/acl/2026.jsonl.zst",
+            "sha256": "92a897b6bc048b572a961735fb65e3665536c62e0e9b3de5dc089d98bced8bf6",
+            "compressed_bytes": 2098204,
+            "record_count": 4806
+          }
+        },
+        {
+          "id": "acl:2025",
+          "year": 2025,
+          "paper_count": 3353,
+          "state": "published",
+          "pack": {
+            "path": "packs/acl/2025.jsonl.zst",
+            "sha256": "c367478898b5b613c1a09ad169a04053e389b44d6af88a2efcb84a637a0ef898",
+            "compressed_bytes": 1382216,
+            "record_count": 3353
+          }
+        },
+        {
+          "id": "acl:2024",
+          "year": 2024,
+          "paper_count": 1982,
+          "state": "published",
+          "pack": {
+            "path": "packs/acl/2024.jsonl.zst",
+            "sha256": "5b7894f531e3081415893be3c391c15bbd425f104fca252ee93524a3db2e292a",
+            "compressed_bytes": 807735,
+            "record_count": 1982
+          }
+        },
+        {
+          "id": "acl:2023",
+          "year": 2023,
+          "paper_count": 2150,
+          "state": "published",
+          "pack": {
+            "path": "packs/acl/2023.jsonl.zst",
+            "sha256": "a00fc8ae990ef2f42149e27d9c778f20ad40814254831c2bf7d653acfa1e8b60",
+            "compressed_bytes": 840481,
+            "record_count": 2150
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "Annual Meeting of the Association for Computational Linguistics",
+        "zh-Hans": "计算语言学协会年会"
+      }
+    },
+    {
+      "id": "emnlp",
+      "short_name": "EMNLP",
+      "name": "Conference on Empirical Methods in Natural Language Processing",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "emnlp:2026",
+          "year": 2026,
+          "paper_count": 0,
+          "state": "announced",
+          "pack": null
+        },
+        {
+          "id": "emnlp:2025",
+          "year": 2025,
+          "paper_count": 3488,
+          "state": "published",
+          "pack": {
+            "path": "packs/emnlp/2025.jsonl.zst",
+            "sha256": "edfa1021c6e372b6f977b1faf522a2e531ab03e6dafbb7138ab7fddd1add3a2a",
+            "compressed_bytes": 1435365,
+            "record_count": 3488
+          }
+        },
+        {
+          "id": "emnlp:2024",
+          "year": 2024,
+          "paper_count": 2388,
+          "state": "published",
+          "pack": {
+            "path": "packs/emnlp/2024.jsonl.zst",
+            "sha256": "03a5a50ae21c847472ba3283a852588e954c52defffb6f2167fbd4a1bb7e999f",
+            "compressed_bytes": 963805,
+            "record_count": 2388
+          }
+        },
+        {
+          "id": "emnlp:2023",
+          "year": 2023,
+          "paper_count": 2241,
+          "state": "published",
+          "pack": {
+            "path": "packs/emnlp/2023.jsonl.zst",
+            "sha256": "70fae89292ba454a4b109941e1ea2d62d50d54d31e5c0cd15a4c133e316e21ea",
+            "compressed_bytes": 895287,
+            "record_count": 2241
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "Conference on Empirical Methods in Natural Language Processing",
+        "zh-Hans": "自然语言处理经验方法会议"
+      }
+    },
+    {
+      "id": "osdi",
+      "short_name": "OSDI",
+      "name": "USENIX Symposium on Operating Systems Design and Implementation",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "osdi:2026",
+          "year": 2026,
+          "paper_count": 136,
+          "state": "published",
+          "pack": {
+            "path": "packs/osdi/2026.jsonl.zst",
+            "sha256": "2adacf0e3e6493e5845594ed02cab50a0d817467699b7433ae68700ca3b2b113",
+            "compressed_bytes": 81715,
+            "record_count": 136
+          }
+        },
+        {
+          "id": "osdi:2025",
+          "year": 2025,
+          "paper_count": 53,
+          "state": "published",
+          "pack": {
+            "path": "packs/osdi/2025.jsonl.zst",
+            "sha256": "07840252c64b4be43323b557574b9f8c9eaf864c34bff8b7a6fa172dd63523bf",
+            "compressed_bytes": 31080,
+            "record_count": 53
+          }
+        },
+        {
+          "id": "osdi:2024",
+          "year": 2024,
+          "paper_count": 53,
+          "state": "published",
+          "pack": {
+            "path": "packs/osdi/2024.jsonl.zst",
+            "sha256": "3856f07f0d080e6d1b40f7818ab29a92093b6cbdb90e92e569c804c388fbf501",
+            "compressed_bytes": 33630,
+            "record_count": 53
+          }
+        },
+        {
+          "id": "osdi:2023",
+          "year": 2023,
+          "paper_count": 55,
+          "state": "published",
+          "pack": {
+            "path": "packs/osdi/2023.jsonl.zst",
+            "sha256": "bf189d7004e88cca516fc85149125ed3ec85e69f02d1d7efdc14ac7932b537b2",
+            "compressed_bytes": 33518,
+            "record_count": 55
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "USENIX Symposium on Operating Systems Design and Implementation",
+        "zh-Hans": "USENIX 操作系统设计与实现研讨会"
+      }
+    },
+    {
+      "id": "sosp",
+      "short_name": "SOSP",
+      "name": "ACM Symposium on Operating Systems Principles",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "sosp:2025",
+          "year": 2025,
+          "paper_count": 65,
+          "state": "partial",
+          "pack": {
+            "path": "packs/sosp/2025.jsonl.zst",
+            "sha256": "c533ae77983e0c937c31ff15305ec159b32827e4b657c1a4052cdfab338e2f88",
+            "compressed_bytes": 37009,
+            "record_count": 65
+          }
+        },
+        {
+          "id": "sosp:2024",
+          "year": 2024,
+          "paper_count": 43,
+          "state": "partial",
+          "pack": {
+            "path": "packs/sosp/2024.jsonl.zst",
+            "sha256": "e20fba81b28734872e6c607f739d160a4172c27bbc0b0618749167f009559332",
+            "compressed_bytes": 26604,
+            "record_count": 43
+          }
+        },
+        {
+          "id": "sosp:2023",
+          "year": 2023,
+          "paper_count": 9,
+          "state": "partial",
+          "pack": {
+            "path": "packs/sosp/2023.jsonl.zst",
+            "sha256": "840004a134efa7a1869b5edb9bee8473501ddfa7a4867077282733279345d461",
+            "compressed_bytes": 6380,
+            "record_count": 9
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "ACM Symposium on Operating Systems Principles",
+        "zh-Hans": "ACM 操作系统原理研讨会"
+      }
+    },
+    {
+      "id": "ieee_sp",
+      "short_name": "IEEE S&P",
+      "name": "IEEE Symposium on Security and Privacy",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "ieee_sp:2026",
+          "year": 2026,
+          "paper_count": 254,
+          "state": "partial",
+          "pack": null
+        },
+        {
+          "id": "ieee_sp:2025",
+          "year": 2025,
+          "paper_count": 65,
+          "state": "published",
+          "pack": {
+            "path": "packs/ieee_sp/2025.jsonl.zst",
+            "sha256": "6f804569d2ed7d03d7bf22772faff3d149174c24765898a8fdde05516f1a0862",
+            "compressed_bytes": 41626,
+            "record_count": 65
+          }
+        },
+        {
+          "id": "ieee_sp:2024",
+          "year": 2024,
+          "paper_count": 261,
+          "state": "published",
+          "pack": {
+            "path": "packs/ieee_sp/2024.jsonl.zst",
+            "sha256": "2f537e3f53eb72b2bd439079f7d3e4221a1cfc0a553d1685c5ce65d2b55dcb19",
+            "compressed_bytes": 159406,
+            "record_count": 261
+          }
+        },
+        {
+          "id": "ieee_sp:2023",
+          "year": 2023,
+          "paper_count": 0,
+          "state": "cataloged",
+          "pack": null
+        }
+      ],
+      "localized_names": {
+        "en": "IEEE Symposium on Security and Privacy",
+        "zh-Hans": "IEEE 安全与隐私研讨会"
+      }
+    },
+    {
+      "id": "ndss",
+      "short_name": "NDSS",
+      "name": "Network and Distributed System Security Symposium",
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "ndss:2026",
+          "year": 2026,
+          "paper_count": 265,
+          "state": "published",
+          "pack": {
+            "path": "packs/ndss/2026.jsonl.zst",
+            "sha256": "cd486f371fc7c6ee26f1423391344d759822707bbb7cac6e897b79d8ed75664f",
+            "compressed_bytes": 165834,
+            "record_count": 265
+          }
+        },
+        {
+          "id": "ndss:2025",
+          "year": 2025,
+          "paper_count": 211,
+          "state": "published",
+          "pack": {
+            "path": "packs/ndss/2025.jsonl.zst",
+            "sha256": "2995cce09aa33a678e4ba33303642b998fdaafa9b4a4ec7edfdd72aff003c8c1",
+            "compressed_bytes": 134344,
+            "record_count": 211
+          }
+        },
+        {
+          "id": "ndss:2024",
+          "year": 2024,
+          "paper_count": 140,
+          "state": "published",
+          "pack": {
+            "path": "packs/ndss/2024.jsonl.zst",
+            "sha256": "a67c3fa7e28a7c89103831b5c5e6699ed1848d15c6f623f7eff4110558a3a190",
+            "compressed_bytes": 88459,
+            "record_count": 140
+          }
+        },
+        {
+          "id": "ndss:2023",
+          "year": 2023,
+          "paper_count": 94,
+          "state": "published",
+          "pack": {
+            "path": "packs/ndss/2023.jsonl.zst",
+            "sha256": "a45730f2e032056734f8629b97da4cf91e47eb446da1849a9d229d0e878fbc4b",
+            "compressed_bytes": 63301,
+            "record_count": 94
+          }
+        }
+      ],
+      "localized_names": {
+        "en": "Network and Distributed System Security Symposium",
+        "zh-Hans": "网络与分布式系统安全研讨会"
+      }
+    },
+    {
+      "id": "aistats",
+      "short_name": "AISTATS",
+      "name": "International Conference on Artificial Intelligence and Statistics",
+      "localized_names": {
+        "en": "International Conference on Artificial Intelligence and Statistics",
+        "zh-Hans": "人工智能与统计国际会议"
+      },
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "aistats:2025",
+          "year": 2025,
+          "paper_count": 583,
+          "state": "published",
+          "pack": {
+            "path": "packs/aistats/2025.jsonl.zst",
+            "sha256": "59954e9ede2f76580f63523303f01b14691c3f73d1e120c7884ce50f43609700",
+            "compressed_bytes": 235012,
+            "record_count": 583
+          }
+        },
+        {
+          "id": "aistats:2024",
+          "year": 2024,
+          "paper_count": 547,
+          "state": "published",
+          "pack": {
+            "path": "packs/aistats/2024.jsonl.zst",
+            "sha256": "59b6ec6f5ff793f877cabc686261ec31cc577340ed800752f8e040f4126ef2a7",
+            "compressed_bytes": 220673,
+            "record_count": 547
+          }
+        }
+      ]
+    },
+    {
+      "id": "colt",
+      "short_name": "COLT",
+      "name": "Conference on Learning Theory",
+      "localized_names": {
+        "en": "Conference on Learning Theory",
+        "zh-Hans": "学习理论会议"
+      },
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "colt:2026",
+          "year": 2026,
+          "paper_count": 196,
+          "state": "published",
+          "pack": {
+            "path": "packs/colt/2026.jsonl.zst",
+            "sha256": "af93ca26a9f9c01c8772c4a44cd1b17de5a1cd6cebc1d7cd0f15dcab63eff128",
+            "compressed_bytes": 97757,
+            "record_count": 196
+          }
+        },
+        {
+          "id": "colt:2025",
+          "year": 2025,
+          "paper_count": 181,
+          "state": "published",
+          "pack": {
+            "path": "packs/colt/2025.jsonl.zst",
+            "sha256": "0d26d772871375d5d35c744c61c366d53b3901bba67e5a7814d1941275c6c80d",
+            "compressed_bytes": 90409,
+            "record_count": 181
+          }
+        }
+      ]
+    },
+    {
+      "id": "corl",
+      "short_name": "CoRL",
+      "name": "Conference on Robot Learning",
+      "localized_names": {
+        "en": "Conference on Robot Learning",
+        "zh-Hans": "机器人学习会议"
+      },
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "corl:2025",
+          "year": 2025,
+          "paper_count": 263,
+          "state": "published",
+          "pack": {
+            "path": "packs/corl/2025.jsonl.zst",
+            "sha256": "6cd13a71a0f1e3f96089c3fa2ae88a6c2d3c958324293119b6a0487803c7b3a0",
+            "compressed_bytes": 128208,
+            "record_count": 263
+          }
+        },
+        {
+          "id": "corl:2024",
+          "year": 2024,
+          "paper_count": 264,
+          "state": "partial",
+          "pack": {
+            "path": "packs/corl/2024.jsonl.zst",
+            "sha256": "c372fcc4de7a243343f3fdcf4ac010ad1ad00c3521f4b6861cfe474e6d2114b7",
+            "compressed_bytes": 119167,
+            "record_count": 264
+          }
+        }
+      ]
+    },
+    {
+      "id": "rss",
+      "short_name": "RSS",
+      "name": "Robotics: Science and Systems",
+      "localized_names": {
+        "en": "Robotics: Science and Systems",
+        "zh-Hans": "机器人学：科学与系统"
+      },
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "rss:2025",
+          "year": 2025,
+          "paper_count": 163,
+          "state": "published",
+          "pack": {
+            "path": "packs/rss/2025.jsonl.zst",
+            "sha256": "af6185969cba641b56bf65d6c4f3dfdd4a819c576e9757f585b1a2e2182eeac8",
+            "compressed_bytes": 88449,
+            "record_count": 163
+          }
+        },
+        {
+          "id": "rss:2024",
+          "year": 2024,
+          "paper_count": 134,
+          "state": "published",
+          "pack": {
+            "path": "packs/rss/2024.jsonl.zst",
+            "sha256": "af1abc0afb3c583e8bc2b5755e6c331a210ab3a0e24ee77aec10cffe2f299cc0",
+            "compressed_bytes": 72600,
+            "record_count": 134
+          }
+        }
+      ]
+    },
+    {
+      "id": "iccv",
+      "short_name": "ICCV",
+      "name": "International Conference on Computer Vision",
+      "localized_names": {
+        "en": "International Conference on Computer Vision",
+        "zh-Hans": "计算机视觉国际会议"
+      },
+      "cadence": "biennial",
+      "editions": [
+        {
+          "id": "iccv:2025",
+          "year": 2025,
+          "paper_count": 949,
+          "state": "published",
+          "pack": {
+            "path": "packs/iccv/2025.jsonl.zst",
+            "sha256": "bbe144fb5f88f113689ff9b9b27ec67e5512b806cc125af78ce6cd2e9d5193ec",
+            "compressed_bytes": 462826,
+            "record_count": 949
+          }
+        },
+        {
+          "id": "iccv:2023",
+          "year": 2023,
+          "paper_count": 2156,
+          "state": "published",
+          "pack": {
+            "path": "packs/iccv/2023.jsonl.zst",
+            "sha256": "41dd36d6c4054d0ad2fe38bbd0f7ea77ab8926546508bac080049ee8ab769a2f",
+            "compressed_bytes": 992308,
+            "record_count": 2156
+          }
+        }
+      ]
+    },
+    {
+      "id": "accv",
+      "short_name": "ACCV",
+      "name": "Asian Conference on Computer Vision",
+      "localized_names": {
+        "en": "Asian Conference on Computer Vision",
+        "zh-Hans": "亚洲计算机视觉会议"
+      },
+      "cadence": "biennial",
+      "editions": [
+        {
+          "id": "accv:2024",
+          "year": 2024,
+          "paper_count": 269,
+          "state": "published",
+          "pack": {
+            "path": "packs/accv/2024.jsonl.zst",
+            "sha256": "65cef6234da03d97112bd0f6b0955f60b3417e08af28eb0751bf3c4dea43b72b",
+            "compressed_bytes": 131427,
+            "record_count": 269
+          }
+        },
+        {
+          "id": "accv:2022",
+          "year": 2022,
+          "paper_count": 277,
+          "state": "published",
+          "pack": {
+            "path": "packs/accv/2022.jsonl.zst",
+            "sha256": "2fd9d0a38744227207c375126b09c95e88c5db4057ceb0886cdb307d65d9291a",
+            "compressed_bytes": 130840,
+            "record_count": 277
+          }
+        }
+      ]
+    },
+    {
+      "id": "aamas",
+      "short_name": "AAMAS",
+      "name": "International Conference on Autonomous Agents and Multiagent Systems",
+      "localized_names": {
+        "en": "International Conference on Autonomous Agents and Multiagent Systems",
+        "zh-Hans": "自主智能体与多智能体系统国际会议"
+      },
+      "cadence": "annual",
+      "editions": [
+        {
+          "id": "aamas:2026",
+          "year": 2026,
+          "paper_count": 639,
+          "state": "partial",
+          "pack": {
+            "path": "packs/aamas/2026.jsonl.zst",
+            "sha256": "c58df14b93a64fdaf74a004450782dd3c4c50116f3474c1a8d29583f6f8f55a8",
+            "compressed_bytes": 296816,
+            "record_count": 639
+          }
+        },
+        {
+          "id": "aamas:2025",
+          "year": 2025,
+          "paper_count": 479,
+          "state": "published",
+          "pack": {
+            "path": "packs/aamas/2025.jsonl.zst",
+            "sha256": "cb1449f8b80f57ec60610a201ba06da8d513d72dd321a34cc312562e10df004d",
+            "compressed_bytes": 198150,
+            "record_count": 479
+          }
+        }
+      ]
+    }
   ]
 }

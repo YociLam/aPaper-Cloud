@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract CoRL Metadata"
+  short_description: "Build verified CoRL proceedings packs."
+  default_prompt: "Extract and validate a requested CoRL proceedings year for aPaper Cloud."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract ACCV Metadata"
+  short_description: "Build verified ACCV proceedings packs."
+  default_prompt: "Extract and validate a requested ACCV proceedings year for aPaper Cloud."

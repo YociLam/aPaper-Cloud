@@ -5,7 +5,7 @@ description: Maintain and publish aPaper conference metadata packs, edition avai
 
 # Maintain aPaper Cloud Metadata
 
-Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate the repository checkout first and treat its `apaper-cloud` directory as `CLOUD_ROOT`; do not assume a fixed checkout path. The directory is the source of truth for conference editions exposed by DailyPaper; the macOS app embeds the catalog as a fallback and synchronizes it from the configured public origin only when the remote manifest version changes.
+Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate the repository checkout first and treat its `apaper-cloud` directory as `CLOUD_ROOT`; do not assume a fixed checkout path. The directory is the source of truth for conference editions exposed by DailyPaper; the macOS app synchronizes the catalog from the configured public origin only when the remote manifest version changes and reuses only a previously verified local cache when the network is unavailable.
 
 ## App startup synchronization contract
 
@@ -14,12 +14,15 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
 - If the versions differ, the App downloads `manifest.json`, verifies its SHA-256 against `version.json`, updates the catalog, and schedules edition-pack synchronization through the existing bounded background queue.
 - Store `manifest_version` as a two-segment numeric string such as `0.9` or `0.10`; never encode it as a JSON number. Advance the minor segment once per metadata release and reserve the major segment for an intentional catalog-protocol milestone. Never reuse a version for changed content, because the App treats exact equality as unchanged.
 - Selection-time recovery for a missing or corrupt pack remains a fallback; it does not replace startup synchronization.
+- The verified remote Manifest is the complete conference-source catalog. The production App must not bundle a conference catalog fallback: a first launch without a successful Manifest synchronization exposes only arXiv and bioRxiv and leaves the conference list empty.
+- Every venue must provide `name` as the canonical English name plus a `localized_names` map containing at least `en` and `zh-Hans`. Add future languages to this map without changing the App catalog code.
 
 ## Workflow
 
 1. Resolve the venue workflow:
    - read `skills/extract-<venue>-metadata/SKILL.md` when it exists;
    - for a new venue, create that Skill from verified publisher documentation, keep it venue-specific, and validate it before collecting data;
+   - add the venue itself, its cadence, localized names, and editions to the Manifest so the App can expose it without a new binary release;
    - never copy inferred category rules from another venue.
 2. Acquire metadata only from the conference or proceedings publisher. Keep the source URL and source-native track/category in every JSONL record.
 3. Add or update the compressed pack under `public/v1/conferences/packs/<venue>/<year>.jsonl.zst`. This path convention applies to existing and newly added venues without changing the publishing scripts.
@@ -58,6 +61,7 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
 - `canonical_origin` must remain `https://cloud.apaper.ai`; do not restore a GitHub Pages or raw-repository runtime fallback.
 - The app has a bounded selection cap of 20,000 records; do not remove that guard.
 - Conference editions are selected by exact venue/year, not by a rolling date window.
+- Conference venue availability, ordering, names, translations, cadence, and editions come from the remote Manifest rather than a hard-coded App list.
 - Source groups describe the publisher's own track or collection. They are not inferred research topics.
 - A venue name, edition label, or broad conference domain is not a paper category. Do not publish values such as `CVPR-2025`, `icml`, or a shared `security` label as per-paper subject evidence.
 - Leave ISSN empty when the proceedings series has no verified ISSN. Do not copy an ISSN from a related journal, newsletter, or operating-systems review series.

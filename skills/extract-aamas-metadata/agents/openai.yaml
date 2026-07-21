@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract AAMAS Metadata"
+  short_description: "Build verified AAMAS proceedings packs."
+  default_prompt: "Extract and validate a requested AAMAS proceedings year for aPaper Cloud."

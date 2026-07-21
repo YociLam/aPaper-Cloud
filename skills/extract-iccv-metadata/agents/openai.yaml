@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract ICCV Metadata"
+  short_description: "Build verified ICCV proceedings packs."
+  default_prompt: "Extract and validate a requested ICCV proceedings year for aPaper Cloud."

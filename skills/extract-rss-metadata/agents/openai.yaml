@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract RSS Metadata"
+  short_description: "Build verified RSS proceedings packs."
+  default_prompt: "Extract and validate a requested RSS proceedings year for aPaper Cloud."

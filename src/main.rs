@@ -1,7 +1,7 @@
 use roxmltree::{Document, Node};
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 use std::env;
 use std::fs::{self, File};
 use std::io::{BufRead, BufReader, BufWriter, Write};
@@ -34,6 +34,8 @@ struct ManifestVersion {
 struct Venue {
     id: String,
     short_name: String,
+    name: String,
+    localized_names: BTreeMap<String, String>,
     editions: Vec<Edition>,
 }
 
@@ -614,7 +616,22 @@ fn validate_site(root: &Path) -> Result<(), String> {
 
     let mut edition_ids = std::collections::BTreeSet::new();
     for venue in &manifest.venues {
-        if venue.id.trim().is_empty() || venue.short_name.trim().is_empty() {
+        if venue.id.trim().is_empty()
+            || venue.short_name.trim().is_empty()
+            || venue.name.trim().is_empty()
+            || venue.localized_names.len() < 2
+            || venue.localized_names.get("en").map(String::as_str) != Some(venue.name.as_str())
+            || venue
+                .localized_names
+                .get("zh-Hans")
+                .is_none_or(|value| value.trim().is_empty())
+            || venue.localized_names.iter().any(|(language, value)| {
+                language.trim().is_empty()
+                    || language.len() > 32
+                    || value.trim().is_empty()
+                    || value.len() > 256
+            })
+        {
             return Err("conference venue identifiers and names are required".to_string());
         }
         for edition in &venue.editions {

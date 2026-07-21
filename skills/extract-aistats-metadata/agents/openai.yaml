@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract AISTATS Metadata"
+  short_description: "Build verified AISTATS proceedings packs."
+  default_prompt: "Extract and validate a requested AISTATS proceedings year for aPaper Cloud."

@@ -10,10 +10,28 @@ import json
 import math
 from pathlib import Path
 import time
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
 
 USER_AGENT = "aPaper-Cloud-Metadata/1.0 (PDF sample verification)"
+
+
+def runtime_pdf_url(value: str) -> str:
+    """Mirror the App's narrow PMLR raw-GitHub normalization."""
+    parsed = urlsplit(value)
+    segments = [segment for segment in parsed.path.split("/") if segment]
+    if (
+        parsed.scheme == "https"
+        and parsed.hostname == "raw.githubusercontent.com"
+        and len(segments) >= 5
+        and segments[0] == "mlresearch"
+        and segments[2] == "main"
+    ):
+        repository = segments[1]
+        remainder = "/".join(segments[3:])
+        return f"https://cdn.jsdelivr.net/gh/mlresearch/{repository}@main/{remainder}"
+    return value
 
 
 def load_records(path: Path) -> list[dict[str, object]]:
@@ -35,7 +53,7 @@ def stable_sample(records: list[dict[str, object]], fraction: float) -> list[dic
 
 def verify(record: dict[str, object], timeout: int, retries: int) -> tuple[str, str]:
     paper_id = str(record.get("id", ""))
-    url = str(record.get("pdf_url", ""))
+    url = runtime_pdf_url(str(record.get("pdf_url", "")))
     if not url.startswith("https://"):
         return paper_id, "missing or non-HTTPS PDF URL"
     last_error = "unknown error"
