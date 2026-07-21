@@ -9,10 +9,10 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
 
 ## App startup synchronization contract
 
-- The App first requests `https://cloud.apaper.ai/v1/conferences/version.json` and compares its `manifest_version` with the locally persisted version.
+- The App first requests `https://cloud.apaper.ai/v1/conferences/version.json` and compares its two-segment string `manifest_version` with the locally persisted version.
 - If the versions are equal, the App must not download the manifest or resynchronize conference packs.
 - If the versions differ, the App downloads `manifest.json`, verifies its SHA-256 against `version.json`, updates the catalog, and schedules edition-pack synchronization through the existing bounded background queue.
-- Keep `manifest_version` strictly increasing. Never reuse, decrease, or publish a changed catalog under the previous version, because the App would correctly treat it as unchanged.
+- Store `manifest_version` as a two-segment numeric string such as `0.9` or `0.10`; never encode it as a JSON number. Advance the minor segment once per metadata release and reserve the major segment for an intentional catalog-protocol milestone. Never reuse a version for changed content, because the App treats exact equality as unchanged.
 - Selection-time recovery for a missing or corrupt pack remains a fallback; it does not replace startup synchronization.
 
 ## Workflow
@@ -24,7 +24,7 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
 2. Acquire metadata only from the conference or proceedings publisher. Keep the source URL and source-native track/category in every JSONL record.
 3. Add or update the compressed pack under `public/v1/conferences/packs/<venue>/<year>.jsonl.zst`. This path convention applies to existing and newly added venues without changing the publishing scripts.
 4. Update `manifest.json`:
-   - increment `manifest_version` for every catalog or pack change;
+   - advance the two-segment `manifest_version` once for every catalog or pack release;
    - set `paper_count` and pack `record_count` to the exact same value;
    - use `published` only when metadata and public PDF links have been verified;
    - keep unavailable or unverified editions `cataloged`, `partial`, or `announced` with `pack: null`.
@@ -96,7 +96,7 @@ responses.
 - Confirm every record has title, authors, landing URL, provenance URL, and publication year.
 - Confirm `record_count`, `paper_count`, compressed byte size, and SHA-256.
 - Run the validator and tests from the repository root.
-- Increment `manifest_version` only once per release and regenerate `version.json` after the final manifest edit.
+- Advance `manifest_version` only once per release and regenerate `version.json` after the final manifest edit.
 - Confirm the README catalog table, displayed manifest version, and UTC update time match the final manifest.
 - Deploy, then run `verify_published_release.py` with every changed edition.
 - Confirm the live version endpoint differs from the preceding release and exactly matches the new local version and manifest SHA-256.

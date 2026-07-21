@@ -7,8 +7,8 @@
 因此 App 只会下载用户所选会议年份对应的数据包。
 
 - 正式地址：`https://cloud.apaper.ai`
-- 当前 Manifest：`v9`
-- 目录更新时间：`2026-07-21 15:32:04 UTC`
+- 当前 Manifest：`v0.9`
+- 目录更新时间：`2026-07-21 16:03:41 UTC`
 
 ## 收录概览
 
@@ -61,7 +61,7 @@ public/
 
 ## App 同步约定
 
-1. App 启动时请求 `version.json`，只比较远端与本地的 `manifest_version`。
+1. App 启动时请求 `version.json`，只比较远端与本地的两段式 `manifest_version`。
 2. 版本相同则停止，不重复下载 Manifest 或会议数据包。
 3. 版本不同才下载 `manifest.json`，并使用 `version.json` 中的 SHA-256 校验内容。
 4. Manifest 校验通过后，App 通过有界后台队列逐个同步会议年份包，避免集中请求服务器。
@@ -98,7 +98,7 @@ Supabase。迁移边界和拆除清单见
 1. 读取对应的 `skills/extract-<venue>-metadata/SKILL.md`，从官方来源提取数据。
 2. 规范化为 aPaper 会议记录格式，并核对数量、必填字段、重复 ID 和来源分组。
 3. 生成对应会议年份的 `.jsonl.zst` 数据包。
-4. 更新 Manifest；一次发布只递增一次 `manifest_version`。
+4. 更新 Manifest；一次发布只推进一次两段式版本号，例如 `0.9` → `0.10`。
 5. 重新生成 `version.json`，执行本地校验和 Rust 测试。
 6. 发布到 GitHub 与 Cloudflare，并逐个核对线上数据包的大小和 SHA-256。
 

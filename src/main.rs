@@ -15,7 +15,7 @@ const MAX_PACK_COMPRESSED_BYTES: u64 = 128 * 1024 * 1024;
 #[derive(Debug, Deserialize)]
 struct Manifest {
     schema_version: u32,
-    manifest_version: u64,
+    manifest_version: String,
     dataset: String,
     generated_at: String,
     venues: Vec<Venue>,
@@ -25,7 +25,7 @@ struct Manifest {
 struct ManifestVersion {
     schema_version: u32,
     dataset: String,
-    manifest_version: u64,
+    manifest_version: String,
     updated_at: String,
     manifest_sha256: String,
 }
@@ -588,7 +588,7 @@ fn validate_site(root: &Path) -> Result<(), String> {
     let manifest: Manifest = serde_json::from_reader(manifest_bytes.as_slice())
         .map_err(|error| format!("invalid {}: {error}", manifest_path.display()))?;
     if manifest.schema_version != 1
-        || manifest.manifest_version == 0
+        || !valid_manifest_version(&manifest.manifest_version)
         || manifest.dataset != "apaper.conferences"
     {
         return Err("conference manifest uses an unsupported contract".to_string());
@@ -638,6 +638,19 @@ fn validate_site(root: &Path) -> Result<(), String> {
         edition_ids.len()
     );
     Ok(())
+}
+
+fn valid_manifest_version(version: &str) -> bool {
+    let Some((major, minor)) = version.split_once('.') else {
+        return false;
+    };
+    !major.is_empty()
+        && !minor.is_empty()
+        && !minor.contains('.')
+        && major.chars().all(|character| character.is_ascii_digit())
+        && minor.chars().all(|character| character.is_ascii_digit())
+        && (major == "0" || !major.starts_with('0'))
+        && (minor == "0" || !minor.starts_with('0'))
 }
 
 fn validate_pack_reference(
@@ -773,6 +786,16 @@ fn sha256_hex(bytes: &[u8]) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn manifest_version_requires_two_numeric_segments() {
+        assert!(valid_manifest_version("0.9"));
+        assert!(valid_manifest_version("0.10"));
+        assert!(valid_manifest_version("1.0"));
+        assert!(!valid_manifest_version("9"));
+        assert!(!valid_manifest_version("0.9.1"));
+        assert!(!valid_manifest_version("0.09"));
+    }
 
     #[test]
     fn acl_markup_text_preserves_inline_content_once() {
