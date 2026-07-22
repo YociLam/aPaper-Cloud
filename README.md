@@ -14,8 +14,8 @@ is partitioned by venue and edition year, allowing the App to download only the 
 needs.
 
 - Production origin: `https://cloud.apaper.ai`
-- Current manifest: `v0.11`
-- Catalog updated: `2026-07-21 19:04:07 UTC`
+- Current manifest: `v0.12`
+- Catalog updated: `2026-07-22 20:11:41 UTC`
 
 ## Catalog overview
 

@@ -216,11 +216,7 @@ fn import_json(arguments: ImportJsonArguments) -> Result<(), String> {
     let mut skipped_incomplete = 0;
     for imported in imported {
         let id = nonempty(imported.source_paper_id).unwrap_or(imported.id);
-        let title = imported
-            .title
-            .split_whitespace()
-            .collect::<Vec<_>>()
-            .join(" ");
+        let title = normalize_title_markup(&imported.title);
         let abstract_text = normalize_imported_abstract(&imported.abstract_text);
         let authors = imported
             .authors
@@ -440,7 +436,7 @@ fn acl_paper_record(
     published_at: &str,
     updated_at: &str,
 ) -> Result<Option<ConferencePaperRecord>, String> {
-    let title = child_markup_text(paper, "title");
+    let title = normalize_title_markup(&child_markup_text(paper, "title"));
     let abstract_text = child_markup_text(paper, "abstract");
     let anthology_id = child_markup_text(paper, "url");
     if title.is_empty() || abstract_text.is_empty() || anthology_id.is_empty() {
@@ -552,6 +548,412 @@ fn markup_text(node: Node<'_, '_>) -> String {
         .split_whitespace()
         .collect::<Vec<_>>()
         .join(" ")
+}
+
+fn normalize_title_markup(value: &str) -> String {
+    let normalized = normalize_title_fragment(value)
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ");
+    let trimmed = normalized.trim();
+    for quote in ['"', '\''] {
+        if let Some(unquoted) = trimmed
+            .strip_prefix(quote)
+            .and_then(|value| value.strip_suffix(quote))
+        {
+            return unquoted.trim().to_string();
+        }
+    }
+    normalized
+}
+
+fn normalize_title_fragment(value: &str) -> String {
+    let characters = value.chars().collect::<Vec<_>>();
+    let mut output = String::new();
+    let mut index = 0;
+    while index < characters.len() {
+        match characters[index] {
+            '\\' => normalize_title_command(&characters, &mut index, &mut output),
+            '{' => {
+                let (content, next) = title_group(&characters, index);
+                output.push_str(&normalize_title_fragment(&content));
+                index = next;
+            }
+            '}' => index += 1,
+            '$' => {
+                let start = index;
+                while index < characters.len() && characters[index] == '$' {
+                    index += 1;
+                }
+                if index - start >= 3 {
+                    output.extend(std::iter::repeat('$').take(index - start));
+                }
+            }
+            '^' => {
+                index += 1;
+                let content = if index < characters.len() && characters[index] == '{' {
+                    let (content, next) = title_group(&characters, index);
+                    index = next;
+                    content
+                } else if index < characters.len() {
+                    let content = characters[index].to_string();
+                    index += 1;
+                    content
+                } else {
+                    String::new()
+                };
+                output.push_str(&title_superscript(&normalize_title_fragment(&content)));
+            }
+            '_' => {
+                output.push('_');
+                index += 1;
+                if index < characters.len() && characters[index] == '{' {
+                    let (content, next) = title_group(&characters, index);
+                    output.push_str(&normalize_title_fragment(&content));
+                    index = next;
+                }
+            }
+            character => {
+                output.push(character);
+                index += 1;
+            }
+        }
+    }
+    output
+}
+
+fn normalize_title_command(characters: &[char], index: &mut usize, output: &mut String) {
+    while *index < characters.len() && characters[*index] == '\\' {
+        *index += 1;
+    }
+    if *index >= characters.len() {
+        return;
+    }
+    let escaped = characters[*index];
+    if matches!(escaped, '&' | '_' | '%' | '#' | '$' | '{' | '}') {
+        output.push(escaped);
+        *index += 1;
+        return;
+    }
+    if matches!(escaped, '(' | ')' | '[' | ']') {
+        *index += 1;
+        return;
+    }
+    if escaped.is_whitespace() || matches!(escaped, ',' | ';' | ':' | '!') {
+        output.push(' ');
+        *index += 1;
+        return;
+    }
+    if matches!(escaped, '"' | '\'' | '`' | '^' | '~') {
+        let accent = escaped;
+        *index += 1;
+        let base = title_command_argument(characters, index);
+        output.push_str(&apply_title_accent(accent, &base));
+        return;
+    }
+    if !escaped.is_ascii_alphabetic() {
+        output.push(' ');
+        return;
+    }
+
+    let start = *index;
+    while *index < characters.len() && characters[*index].is_ascii_alphabetic() {
+        *index += 1;
+    }
+    let command = characters[start..*index].iter().collect::<String>();
+    let formatting = [
+        "boldsymbol",
+        "underline",
+        "mathcal",
+        "mathbf",
+        "mathrm",
+        "mathtt",
+        "mathbb",
+        "textrm",
+        "texttt",
+        "textbf",
+        "textit",
+        "emph",
+        "text",
+        "widetilde",
+        "tilde",
+        "rm",
+        "it",
+        "bf",
+    ];
+    if let Some(prefix) = formatting
+        .iter()
+        .find(|candidate| command.starts_with(**candidate))
+    {
+        output.push_str(command.strip_prefix(prefix).unwrap_or_default());
+        if *index < characters.len() && characters[*index] == '{' {
+            let (content, next) = title_group(characters, *index);
+            output.push_str(&normalize_title_fragment(&content));
+            *index = next;
+        }
+        return;
+    }
+    if command.starts_with("frac") {
+        output.push_str(command.strip_prefix("frac").unwrap_or_default());
+        let numerator = title_command_argument(characters, index);
+        let denominator = title_command_argument(characters, index);
+        output.push_str(&normalize_title_fragment(&numerator));
+        if !denominator.is_empty() {
+            output.push('/');
+            output.push_str(&normalize_title_fragment(&denominator));
+        }
+        return;
+    }
+    if command.starts_with("sqrt") {
+        output.push('√');
+        output.push_str(command.strip_prefix("sqrt").unwrap_or_default());
+        let argument = title_command_argument(characters, index);
+        output.push_str(&normalize_title_fragment(&argument));
+        return;
+    }
+
+    let symbols = [
+        ("varepsilon", "ε"),
+        ("nrightarrow", "↛"),
+        ("Rightarrow", "⇒"),
+        ("boldsymbol", ""),
+        ("natural", "♮"),
+        ("partial", "∂"),
+        ("approx", "≈"),
+        ("oslash", "⊘"),
+        ("epsilon", "ε"),
+        ("lambda", "λ"),
+        ("varphi", "φ"),
+        ("infty", "∞"),
+        ("nabla", "∇"),
+        ("Theta", "Θ"),
+        ("Delta", "Δ"),
+        ("sigma", "σ"),
+        ("omega", "ω"),
+        ("alpha", "α"),
+        ("gamma", "γ"),
+        ("times", "×"),
+        ("exists", "∃"),
+        ("sharp", "♯"),
+        ("beta", "β"),
+        ("neq", "≠"),
+        ("star", "⋆"),
+        ("circ", "∘"),
+        ("Phi", "Φ"),
+        ("Psi", "Ψ"),
+        ("phi", "φ"),
+        ("psi", "ψ"),
+        ("tau", "τ"),
+        ("ell", "ℓ"),
+        ("mu", "μ"),
+        ("Pi", "Π"),
+        ("pi", "π"),
+        ("chi", "χ"),
+        ("log", "log"),
+    ];
+    if let Some((prefix, replacement)) = symbols
+        .iter()
+        .find(|(candidate, _)| command.starts_with(*candidate))
+    {
+        output.push_str(replacement);
+        output.push_str(command.strip_prefix(prefix).unwrap_or_default());
+    } else {
+        output.push('\\');
+        output.push_str(&command);
+    }
+}
+
+fn title_has_unsupported_markup(value: &str) -> bool {
+    let characters = value.chars().collect::<Vec<_>>();
+    let mut index = 0;
+    while index < characters.len() {
+        match characters[index] {
+            '\\' | '{' | '}' => return true,
+            '$' => {
+                let start = index;
+                while index < characters.len() && characters[index] == '$' {
+                    index += 1;
+                }
+                if index - start < 3 {
+                    return true;
+                }
+            }
+            _ => index += 1,
+        }
+    }
+    false
+}
+
+fn title_group(characters: &[char], start: usize) -> (String, usize) {
+    let mut depth = 0;
+    let mut index = start;
+    let mut content = String::new();
+    while index < characters.len() {
+        match characters[index] {
+            '{' => {
+                if depth > 0 {
+                    content.push('{');
+                }
+                depth += 1;
+            }
+            '}' => {
+                depth -= 1;
+                if depth == 0 {
+                    return (content, index + 1);
+                }
+                content.push('}');
+            }
+            character => content.push(character),
+        }
+        index += 1;
+    }
+    (content, index)
+}
+
+fn title_command_argument(characters: &[char], index: &mut usize) -> String {
+    while *index < characters.len() && characters[*index].is_whitespace() {
+        *index += 1;
+    }
+    if *index < characters.len() && characters[*index] == '{' {
+        let (content, next) = title_group(characters, *index);
+        *index = next;
+        content
+    } else if *index < characters.len() {
+        let content = characters[*index].to_string();
+        *index += 1;
+        content
+    } else {
+        String::new()
+    }
+}
+
+fn apply_title_accent(accent: char, value: &str) -> String {
+    let mut characters = value.chars();
+    let Some(base) = characters.next() else {
+        return String::new();
+    };
+    let accented = match (accent, base) {
+        ('"', 'a') => 'ä',
+        ('"', 'A') => 'Ä',
+        ('"', 'e') => 'ë',
+        ('"', 'E') => 'Ë',
+        ('"', 'i') => 'ï',
+        ('"', 'I') => 'Ï',
+        ('"', 'o') => 'ö',
+        ('"', 'O') => 'Ö',
+        ('"', 'u') => 'ü',
+        ('"', 'U') => 'Ü',
+        ('"', 'y') => 'ÿ',
+        ('\'', 'a') => 'á',
+        ('\'', 'A') => 'Á',
+        ('\'', 'e') => 'é',
+        ('\'', 'E') => 'É',
+        ('\'', 'i') => 'í',
+        ('\'', 'I') => 'Í',
+        ('\'', 'o') => 'ó',
+        ('\'', 'O') => 'Ó',
+        ('\'', 'u') => 'ú',
+        ('\'', 'U') => 'Ú',
+        ('`', 'a') => 'à',
+        ('`', 'e') => 'è',
+        ('`', 'i') => 'ì',
+        ('`', 'o') => 'ò',
+        ('`', 'u') => 'ù',
+        ('^', 'a') => 'â',
+        ('^', 'e') => 'ê',
+        ('^', 'i') => 'î',
+        ('^', 'o') => 'ô',
+        ('^', 'u') => 'û',
+        ('~', 'a') => 'ã',
+        ('~', 'n') => 'ñ',
+        ('~', 'o') => 'õ',
+        _ => base,
+    };
+    format!("{accented}{}", characters.collect::<String>())
+}
+
+fn title_superscript(value: &str) -> String {
+    let value = value.trim();
+    let mapped = value
+        .chars()
+        .map(|character| match character {
+            '0' => Some('⁰'),
+            '1' => Some('¹'),
+            '2' => Some('²'),
+            '3' => Some('³'),
+            '4' => Some('⁴'),
+            '5' => Some('⁵'),
+            '6' => Some('⁶'),
+            '7' => Some('⁷'),
+            '8' => Some('⁸'),
+            '9' => Some('⁹'),
+            '+' => Some('⁺'),
+            '-' => Some('⁻'),
+            '=' => Some('⁼'),
+            '(' => Some('⁽'),
+            ')' => Some('⁾'),
+            '/' => Some('ᐟ'),
+            '.' => Some('·'),
+            '*' => Some('⁎'),
+            'α' => Some('ᵅ'),
+            'π' => Some('π'),
+            '♮' => Some('♮'),
+            ' ' => Some(' '),
+            'a' => Some('ᵃ'),
+            'b' => Some('ᵇ'),
+            'c' => Some('ᶜ'),
+            'd' => Some('ᵈ'),
+            'e' => Some('ᵉ'),
+            'f' => Some('ᶠ'),
+            'g' => Some('ᵍ'),
+            'h' => Some('ʰ'),
+            'i' => Some('ⁱ'),
+            'j' => Some('ʲ'),
+            'k' => Some('ᵏ'),
+            'l' => Some('ˡ'),
+            'm' => Some('ᵐ'),
+            'n' => Some('ⁿ'),
+            'o' => Some('ᵒ'),
+            'p' => Some('ᵖ'),
+            'r' => Some('ʳ'),
+            's' => Some('ˢ'),
+            't' => Some('ᵗ'),
+            'u' => Some('ᵘ'),
+            'v' => Some('ᵛ'),
+            'w' => Some('ʷ'),
+            'x' => Some('ˣ'),
+            'y' => Some('ʸ'),
+            'z' => Some('ᶻ'),
+            'A' => Some('ᴬ'),
+            'B' => Some('ᴮ'),
+            'C' => Some('ᶜ'),
+            'D' => Some('ᴰ'),
+            'E' => Some('ᴱ'),
+            'F' => Some('ᶠ'),
+            'G' => Some('ᴳ'),
+            'H' => Some('ᴴ'),
+            'I' => Some('ᴵ'),
+            'J' => Some('ᴶ'),
+            'K' => Some('ᴷ'),
+            'L' => Some('ᴸ'),
+            'M' => Some('ᴹ'),
+            'N' => Some('ᴺ'),
+            'O' => Some('ᴼ'),
+            'P' => Some('ᴾ'),
+            'Q' => Some('Q'),
+            'R' => Some('ᴿ'),
+            'S' => Some('ˢ'),
+            'T' => Some('ᵀ'),
+            'U' => Some('ᵁ'),
+            'V' => Some('ⱽ'),
+            'W' => Some('ᵂ'),
+            'X' => Some('ˣ'),
+            'Y' => Some('ʸ'),
+            'Z' => Some('ᶻ'),
+            _ => None,
+        })
+        .collect::<Option<String>>();
+    mapped.unwrap_or_else(|| format!("↑{value}"))
 }
 
 fn nonempty(value: String) -> Option<String> {
@@ -742,13 +1144,19 @@ fn pack(arguments: PackArguments) -> Result<(), String> {
     let mut encoder = zstd::stream::write::Encoder::new(BufWriter::new(output), 9)
         .map_err(|error| format!("could not start zstd encoding: {error}"))?;
     let mut count = 0;
+    let mut normalized_title_count = 0;
     for line in BufReader::new(input).lines() {
         let line = line.map_err(|error| format!("could not read input: {error}"))?;
         if line.trim().is_empty() {
             continue;
         }
-        let paper: ConferencePaperRecord = serde_json::from_str(&line)
+        let mut paper: ConferencePaperRecord = serde_json::from_str(&line)
             .map_err(|error| format!("invalid normalized record: {error}"))?;
+        let normalized_title = normalize_title_markup(&paper.title);
+        if normalized_title != paper.title {
+            paper.title = normalized_title;
+            normalized_title_count += 1;
+        }
         validate_record(&paper, &paper.venue_id, &paper.edition_id, paper.year)?;
         serde_json::to_writer(&mut encoder, &paper)
             .map_err(|error| format!("could not encode normalized record: {error}"))?;
@@ -770,6 +1178,7 @@ fn pack(arguments: PackArguments) -> Result<(), String> {
     let bytes = fs::read(&arguments.output)
         .map_err(|error| format!("could not read {}: {error}", arguments.output.display()))?;
     println!("record_count={count}");
+    println!("normalized_title_count={normalized_title_count}");
     println!("compressed_bytes={}", bytes.len());
     println!("sha256={}", sha256_hex(&bytes));
     Ok(())
@@ -784,6 +1193,8 @@ fn validate_record(
     if paper.schema_version != 1
         || paper.id.trim().is_empty()
         || paper.title.trim().is_empty()
+        || normalize_title_markup(&paper.title) != paper.title
+        || title_has_unsupported_markup(&paper.title)
         || paper.authors.is_empty()
         || paper.landing_url.trim().is_empty()
         || paper.provenance_url.trim().is_empty()
@@ -836,6 +1247,71 @@ mod tests {
             child_markup_text(document.root_element(), "title"),
             "Learning LLM Systems"
         );
+    }
+
+    #[test]
+    fn conference_titles_remove_latex_formatting_without_losing_text() {
+        assert_eq!(
+            normalize_title_markup(r"\texttt{Droid}: A Resource Suite"),
+            "Droid: A Resource Suite"
+        );
+        assert_eq!(
+            normalize_title_markup(r"\textit{Do It Yourself (DIY)} Evaluation"),
+            "Do It Yourself (DIY) Evaluation"
+        );
+        assert_eq!(
+            normalize_title_markup(r"\mathrm{Wojood^{Relations}}: A Benchmark"),
+            "Wojoodᴿᵉˡᵃᵗⁱᵒⁿˢ: A Benchmark"
+        );
+    }
+
+    #[test]
+    fn conference_titles_render_math_and_escaped_characters_as_plain_unicode() {
+        assert_eq!(normalize_title_markup(r"$\\beta$-VAE"), "β-VAE");
+        assert_eq!(
+            normalize_title_markup(r"Memorization \neq Understanding"),
+            "Memorization ≠ Understanding"
+        );
+        assert_eq!(
+            normalize_title_markup(r"LLM\timesMapReduce-V3"),
+            "LLM×MapReduce-V3"
+        );
+        assert_eq!(normalize_title_markup(r"L\\_2-Norm"), "L_2-Norm");
+        assert_eq!(
+            normalize_title_markup(r"\\(\\varepsilon\\)-Optimally"),
+            "ε-Optimally"
+        );
+    }
+
+    #[test]
+    fn conference_titles_render_bibtex_accents() {
+        assert_eq!(normalize_title_markup(r#"Schr\\"{o}dinger"#), "Schrödinger");
+        assert_eq!(normalize_title_markup(r#"Nystr{\\"o}m"#), "Nyström");
+        assert_eq!(normalize_title_markup(r"Fr\\'{e}chet"), "Fréchet");
+    }
+
+    #[test]
+    fn conference_titles_preserve_semantic_superscripts_and_literal_currency() {
+        assert_eq!(normalize_title_markup(r"I$^2$SB"), "I²SB");
+        assert_eq!(normalize_title_markup(r"$O(1/k^3)$"), "O(1/k³)");
+        assert_eq!(normalize_title_markup(r"E$^{FWI}$"), "Eᶠᵂᴵ");
+        assert_eq!(normalize_title_markup(r"C$^*$"), "C⁎");
+        assert_eq!(
+            normalize_title_markup("DemoFusion With No $$$"),
+            "DemoFusion With No $$$"
+        );
+        assert_eq!(
+            normalize_title_markup("'Quoted upstream title'"),
+            "Quoted upstream title"
+        );
+    }
+
+    #[test]
+    fn conference_titles_reject_unknown_source_markup() {
+        let title = normalize_title_markup(r"An \unknown{Title}");
+        assert_eq!(title, r"An \unknownTitle");
+        assert!(title_has_unsupported_markup(&title));
+        assert!(!title_has_unsupported_markup("DemoFusion With No $$$"));
     }
 
     #[test]

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "manifest_version": "0.11",
+  "manifest_version": "0.12",
   "dataset": "apaper.conferences",
-  "generated_at": "2026-07-21T19:04:07Z",
+  "generated_at": "2026-07-22T20:11:41Z",
   "canonical_origin": "https://cloud.apaper.ai",
   "maximum_selected_records": 20000,
   "venues": [
@@ -26,8 +26,8 @@
           "state": "published",
           "pack": {
             "path": "packs/neurips/2025.jsonl.zst",
-            "sha256": "7ed54d855889142ea7969db809ebfa8b11a9e8a43e8165a6899093b43c4a3042",
-            "compressed_bytes": 2873547,
+            "sha256": "dc15d22b9ff8da959ec8417fffde6c13009734e5cd3c9d70b7702820f5bd5af3",
+            "compressed_bytes": 2873787,
             "record_count": 5823
           }
         },
@@ -38,8 +38,8 @@
           "state": "published",
           "pack": {
             "path": "packs/neurips/2024.jsonl.zst",
-            "sha256": "f66907759742c71d8e8a0478e7c334b27f3da439eca19e7121aa7f4d3e0ae68a",
-            "compressed_bytes": 2193131,
+            "sha256": "53751b8ca65f69fddc2d76f8031f2953a925371425924047ca0846b8571a90e4",
+            "compressed_bytes": 2193421,
             "record_count": 4493
           }
         },
@@ -50,8 +50,8 @@
           "state": "published",
           "pack": {
             "path": "packs/neurips/2023.jsonl.zst",
-            "sha256": "fcdc795f2e5f0d52b6dfffe40e9a745ad6be50e6dc060217b855bc49579bb145",
-            "compressed_bytes": 1671034,
+            "sha256": "1143c2bcc54c05b2925f48fdf8d84f68b7cbea34feac0d857c916787282ebb70",
+            "compressed_bytes": 1671355,
             "record_count": 3540
           }
         }
@@ -85,8 +85,8 @@
           "state": "published",
           "pack": {
             "path": "packs/icml/2025.jsonl.zst",
-            "sha256": "bcc813ca68d7fe3f20456df624a3782644ed10fb44b7e3a366f5d7835adfc6a2",
-            "compressed_bytes": 1401586,
+            "sha256": "16759218852294ead91dfde87c4489c4f59f70055ee38a98ab1a54fab5b20d6b",
+            "compressed_bytes": 1401562,
             "record_count": 3330
           }
         },
@@ -97,8 +97,8 @@
           "state": "published",
           "pack": {
             "path": "packs/icml/2024.jsonl.zst",
-            "sha256": "b46e17f747ca0e699b3106a6e3eb90caa3bbc3d7376f50047409abc287046036",
-            "compressed_bytes": 1069929,
+            "sha256": "87ce640ab066e5e3c296e7d9299040200d67d1ce35f16ecb3f62069537673811",
+            "compressed_bytes": 1069936,
             "record_count": 2610
           }
         },
@@ -109,8 +109,8 @@
           "state": "published",
           "pack": {
             "path": "packs/icml/2023.jsonl.zst",
-            "sha256": "30adfe0474664aa19e70b053485c2c0431d742fe2fa5e7ecd9d58fbf76127535",
-            "compressed_bytes": 729834,
+            "sha256": "6d51f645d3d53b3604a44d26fda0129d61fceaa67bc46032857f7fa27f69a878",
+            "compressed_bytes": 729889,
             "record_count": 1828
           }
         }
@@ -137,8 +137,8 @@
           "state": "partial",
           "pack": {
             "path": "packs/iclr/2026.jsonl.zst",
-            "sha256": "a29d1157dada6efca9d712af7f97dc6538fba9589f87505218233860763c65a8",
-            "compressed_bytes": 2782692,
+            "sha256": "efd0608975d8b96dfbd18a04f22e3c2363d66e0f797a163f389d039f59c25cb4",
+            "compressed_bytes": 2782846,
             "record_count": 5359
           }
         },
@@ -149,8 +149,8 @@
           "state": "partial",
           "pack": {
             "path": "packs/iclr/2025.jsonl.zst",
-            "sha256": "38dd125b24d0cedcb3ae4e58f4f0d051c0689003ab2e9780ed7e60f91bd6c160",
-            "compressed_bytes": 1871696,
+            "sha256": "60a7844ab61eb5861a576cdddee0909432b3f351cfb8e6c96159bd4087214a4c",
+            "compressed_bytes": 1871656,
             "record_count": 3708
           }
         },
@@ -161,8 +161,8 @@
           "state": "partial",
           "pack": {
             "path": "packs/iclr/2024.jsonl.zst",
-            "sha256": "6f2ff54614dd9fd2324ed02c7cd5655a81dec96e08bd3276d66355360ea9ccf8",
-            "compressed_bytes": 1118113,
+            "sha256": "1dd37253ae824184384b0aa042b434468ca7907a4c02c15e43cb4d327dde7328",
+            "compressed_bytes": 1118172,
             "record_count": 2261
           }
         },
@@ -173,8 +173,8 @@
           "state": "partial",
           "pack": {
             "path": "packs/iclr/2023.jsonl.zst",
-            "sha256": "489cf05dd50bc60808a95dac427c391e3114aaa6d6df8300cc4d54947a929f73",
-            "compressed_bytes": 209726,
+            "sha256": "c4edf77ab18a48bc1efaf3885ba8694619af3075477671001c1b1190ff45e4d8",
+            "compressed_bytes": 209721,
             "record_count": 435
           }
         }
@@ -201,8 +201,8 @@
           "state": "published",
           "pack": {
             "path": "packs/cvpr/2026.jsonl.zst",
-            "sha256": "4546bac49842003b11490d3ccb088b5bc53a60ba0a2fe85c58e26906e9a81dd1",
-            "compressed_bytes": 1995487,
+            "sha256": "d08085819b88f7096c2b751969353fe61a83f432773a270659c2b917abfb6cfc",
+            "compressed_bytes": 1995562,
             "record_count": 4068
           }
         },
@@ -213,8 +213,8 @@
           "state": "published",
           "pack": {
             "path": "packs/cvpr/2025.jsonl.zst",
-            "sha256": "33964217f8f1ac896e488c6be878763c0bb6ef69db1ec0ce9036d56f4dbf63eb",
-            "compressed_bytes": 1424246,
+            "sha256": "dd4f1979a756696377620ca05cf20cb577f297fd1d482b26a895d8b7a95147cd",
+            "compressed_bytes": 1424309,
             "record_count": 2871
           }
         },
@@ -225,8 +225,8 @@
           "state": "published",
           "pack": {
             "path": "packs/cvpr/2024.jsonl.zst",
-            "sha256": "de4ecbc11954d9e497e991f668fbff7a2d038c2d8215b272eb0c84ddd2f3a352",
-            "compressed_bytes": 1310676,
+            "sha256": "6ede4dc16b62a2a8aabf8925ee9333fb56474c89e50a2658657ea9b3ee885d27",
+            "compressed_bytes": 1310698,
             "record_count": 2710
           }
         },
@@ -237,8 +237,8 @@
           "state": "published",
           "pack": {
             "path": "packs/cvpr/2023.jsonl.zst",
-            "sha256": "13b27223ce56a91a8c70054a18ec67fc43d72ff275b9f20f51ddae0e3389e7f6",
-            "compressed_bytes": 1136976,
+            "sha256": "b0b00b8bd648dbca24fd86f868b14610d81a37d47e68b478a2bb9f2f4407c9e6",
+            "compressed_bytes": 1136944,
             "record_count": 2352
           }
         }
@@ -265,8 +265,8 @@
           "state": "published",
           "pack": {
             "path": "packs/acl/2026.jsonl.zst",
-            "sha256": "92a897b6bc048b572a961735fb65e3665536c62e0e9b3de5dc089d98bced8bf6",
-            "compressed_bytes": 2098204,
+            "sha256": "3363592a4db4fa6379a81b419f49b4af1711097e6e8780eee8d4e22eb1755710",
+            "compressed_bytes": 2098232,
             "record_count": 4806
           }
         },
@@ -277,8 +277,8 @@
           "state": "published",
           "pack": {
             "path": "packs/acl/2025.jsonl.zst",
-            "sha256": "c367478898b5b613c1a09ad169a04053e389b44d6af88a2efcb84a637a0ef898",
-            "compressed_bytes": 1382216,
+            "sha256": "bc0279fe6a8510f5f4f98f91f5db7f06273aa56639b6301cc274d473cddbbd06",
+            "compressed_bytes": 1382155,
             "record_count": 3353
           }
         },
@@ -289,8 +289,8 @@
           "state": "published",
           "pack": {
             "path": "packs/acl/2024.jsonl.zst",
-            "sha256": "5b7894f531e3081415893be3c391c15bbd425f104fca252ee93524a3db2e292a",
-            "compressed_bytes": 807735,
+            "sha256": "c17b441b65646e1ed1a6d7d82482fe8622e1a246cefe25843b2cba74965ec0b3",
+            "compressed_bytes": 807754,
             "record_count": 1982
           }
         },
@@ -301,8 +301,8 @@
           "state": "published",
           "pack": {
             "path": "packs/acl/2023.jsonl.zst",
-            "sha256": "a00fc8ae990ef2f42149e27d9c778f20ad40814254831c2bf7d653acfa1e8b60",
-            "compressed_bytes": 840481,
+            "sha256": "a8fe3593de160aa1477ced45459d835c6ce69377fe16bdaa175bcf64c28ffd65",
+            "compressed_bytes": 840490,
             "record_count": 2150
           }
         }
@@ -329,8 +329,8 @@
           "state": "published",
           "pack": {
             "path": "packs/aaai/2026.jsonl.zst",
-            "sha256": "a565d5b295187a799f15f1f5ed31504c1910027e90ac41d558be3982fdc807e8",
-            "compressed_bytes": 1889596,
+            "sha256": "d32f0f54a82fea176422da4b00a59ebb5327c4c74ebf74a29385ef63588a59ea",
+            "compressed_bytes": 1889587,
             "record_count": 4149
           }
         },
@@ -341,8 +341,8 @@
           "state": "published",
           "pack": {
             "path": "packs/aaai/2025.jsonl.zst",
-            "sha256": "df33bde4558fe71639249209c2faaca81fb42041f72246ee789d1948a708076f",
-            "compressed_bytes": 1341420,
+            "sha256": "b3bca4c1440d29481e301b60f13e61e6e6838b1bc425e11cb8419f14fd835c79",
+            "compressed_bytes": 1341442,
             "record_count": 3028
           }
         },
@@ -353,8 +353,8 @@
           "state": "published",
           "pack": {
             "path": "packs/aaai/2024.jsonl.zst",
-            "sha256": "19bd6f8217f461b094787495591b5fa92a28876d41b07e69177b1fb8fd2fd71a",
-            "compressed_bytes": 1093193,
+            "sha256": "c69523f2fae98208b6c93c4e01412361ffa1eef5fa5bd4a58b210365a8d0ef08",
+            "compressed_bytes": 1093196,
             "record_count": 2331
           }
         },
@@ -400,8 +400,8 @@
           "state": "published",
           "pack": {
             "path": "packs/ijcai/2025.jsonl.zst",
-            "sha256": "4a581ac199e3c5ead3360a2c4793addecb5a35e403e934338b318a9b379d3288",
-            "compressed_bytes": 562803,
+            "sha256": "fe21a72fedf63b782844b369e867f5a111de0f3e73d59cfd33cbe888850cf473",
+            "compressed_bytes": 562817,
             "record_count": 1279
           }
         },
@@ -459,8 +459,8 @@
           "state": "published",
           "pack": {
             "path": "packs/emnlp/2025.jsonl.zst",
-            "sha256": "edfa1021c6e372b6f977b1faf522a2e531ab03e6dafbb7138ab7fddd1add3a2a",
-            "compressed_bytes": 1435365,
+            "sha256": "0af1e17e7f31823264af5972017dd6e6295570b98c293263dccf610151f5ed6e",
+            "compressed_bytes": 1435400,
             "record_count": 3488
           }
         },
@@ -471,8 +471,8 @@
           "state": "published",
           "pack": {
             "path": "packs/emnlp/2024.jsonl.zst",
-            "sha256": "03a5a50ae21c847472ba3283a852588e954c52defffb6f2167fbd4a1bb7e999f",
-            "compressed_bytes": 963805,
+            "sha256": "6e28a6e12f5f391fcb09181a45522eb40234e22a17ec9b9d04fef658f5124c52",
+            "compressed_bytes": 963812,
             "record_count": 2388
           }
         },
@@ -483,8 +483,8 @@
           "state": "published",
           "pack": {
             "path": "packs/emnlp/2023.jsonl.zst",
-            "sha256": "70fae89292ba454a4b109941e1ea2d62d50d54d31e5c0cd15a4c133e316e21ea",
-            "compressed_bytes": 895287,
+            "sha256": "71817aa040ff14ce1cce6ea61b5934f0f63857754476e0565d340df87e76fd77",
+            "compressed_bytes": 895290,
             "record_count": 2241
           }
         }
@@ -527,8 +527,8 @@
           "state": "published",
           "pack": {
             "path": "packs/iccv/2023.jsonl.zst",
-            "sha256": "41dd36d6c4054d0ad2fe38bbd0f7ea77ab8926546508bac080049ee8ab769a2f",
-            "compressed_bytes": 992308,
+            "sha256": "5842cce5917490ba10abb4b8198d999be33eba98da64d3d0922f94d380a1d13a",
+            "compressed_bytes": 992331,
             "record_count": 2156
           }
         }
@@ -554,8 +554,8 @@
           "state": "published",
           "pack": {
             "path": "packs/eccv/2024.jsonl.zst",
-            "sha256": "6c3bea68460c5d4c46475930c9d70ec4c1b44f835f499c8177fd15a90255faf1",
-            "compressed_bytes": 1048975,
+            "sha256": "7b699f4c1bcda7581abe8a949cf6e0758a70faea260deeff796ad7e753307336",
+            "compressed_bytes": 1048734,
             "record_count": 2387
           }
         },
@@ -566,8 +566,8 @@
           "state": "published",
           "pack": {
             "path": "packs/eccv/2022.jsonl.zst",
-            "sha256": "3a265d43f0a39b51630ae1ca7549a4c3f03a4e50bbde64d8b7bbfd822a6b7f7b",
-            "compressed_bytes": 698496,
+            "sha256": "72cf674657c717c529f6f7725d6fe746ae1f567167d8fa9bf6326d2b906263c6",
+            "compressed_bytes": 698364,
             "record_count": 1645
           }
         }
@@ -594,8 +594,8 @@
           "state": "published",
           "pack": {
             "path": "packs/aistats/2025.jsonl.zst",
-            "sha256": "59954e9ede2f76580f63523303f01b14691c3f73d1e120c7884ce50f43609700",
-            "compressed_bytes": 235012,
+            "sha256": "20d53867bf25f020b14a3e1bd17d626b9cc540fd3c1c674295bc7196225bd0b3",
+            "compressed_bytes": 234853,
             "record_count": 583
           }
         },
@@ -606,8 +606,8 @@
           "state": "published",
           "pack": {
             "path": "packs/aistats/2024.jsonl.zst",
-            "sha256": "59b6ec6f5ff793f877cabc686261ec31cc577340ed800752f8e040f4126ef2a7",
-            "compressed_bytes": 220673,
+            "sha256": "1962fa65dbe2c3c99ea597c45a6685468a30c09e659c1457b5f18cd3b049a4bb",
+            "compressed_bytes": 220524,
             "record_count": 547
           }
         }
@@ -630,8 +630,8 @@
           "state": "published",
           "pack": {
             "path": "packs/colt/2026.jsonl.zst",
-            "sha256": "af93ca26a9f9c01c8772c4a44cd1b17de5a1cd6cebc1d7cd0f15dcab63eff128",
-            "compressed_bytes": 97757,
+            "sha256": "518feb1db9d02d1aaef7205460a02b25cae1db105ec1e475c6e5df5758c639b5",
+            "compressed_bytes": 97689,
             "record_count": 196
           }
         },
@@ -642,8 +642,8 @@
           "state": "published",
           "pack": {
             "path": "packs/colt/2025.jsonl.zst",
-            "sha256": "0d26d772871375d5d35c744c61c366d53b3901bba67e5a7814d1941275c6c80d",
-            "compressed_bytes": 90409,
+            "sha256": "a297b70c917f96899d53428ed9a2b32bf0543db7672afb75483b69bc7fdbc650",
+            "compressed_bytes": 90372,
             "record_count": 181
           }
         }
@@ -666,8 +666,8 @@
           "state": "partial",
           "pack": {
             "path": "packs/aamas/2026.jsonl.zst",
-            "sha256": "c58df14b93a64fdaf74a004450782dd3c4c50116f3474c1a8d29583f6f8f55a8",
-            "compressed_bytes": 296816,
+            "sha256": "e21b24871490ff5992558bad0931844028023568261e35f7f97b948a48f77a4c",
+            "compressed_bytes": 296817,
             "record_count": 639
           }
         },
@@ -678,8 +678,8 @@
           "state": "published",
           "pack": {
             "path": "packs/aamas/2025.jsonl.zst",
-            "sha256": "cb1449f8b80f57ec60610a201ba06da8d513d72dd321a34cc312562e10df004d",
-            "compressed_bytes": 198150,
+            "sha256": "5c101f037bfe219e3b2244c4b5afcf01f3663a5c553e8c91dba551899368dbbf",
+            "compressed_bytes": 198139,
             "record_count": 479
           }
         }
@@ -702,8 +702,8 @@
           "state": "published",
           "pack": {
             "path": "packs/corl/2025.jsonl.zst",
-            "sha256": "6cd13a71a0f1e3f96089c3fa2ae88a6c2d3c958324293119b6a0487803c7b3a0",
-            "compressed_bytes": 128208,
+            "sha256": "2e35a3ec06dfb93af89fe04cf6e25e2698be67a3844156ca3ff0e8f1b3e7e69b",
+            "compressed_bytes": 128070,
             "record_count": 263
           }
         },
@@ -714,8 +714,8 @@
           "state": "partial",
           "pack": {
             "path": "packs/corl/2024.jsonl.zst",
-            "sha256": "c372fcc4de7a243343f3fdcf4ac010ad1ad00c3521f4b6861cfe474e6d2114b7",
-            "compressed_bytes": 119167,
+            "sha256": "8d065ae36d8983fae02ffed1859bad63b3ccc3e72f568b1c051e02d1da617758",
+            "compressed_bytes": 119068,
             "record_count": 264
           }
         }
@@ -770,8 +770,8 @@
           "state": "published",
           "pack": {
             "path": "packs/osdi/2026.jsonl.zst",
-            "sha256": "2adacf0e3e6493e5845594ed02cab50a0d817467699b7433ae68700ca3b2b113",
-            "compressed_bytes": 81715,
+            "sha256": "69e4bccd541186d8472eb27c93bc4ad74fabdc3fc5e4a48a3125888747f82a9d",
+            "compressed_bytes": 81291,
             "record_count": 136
           }
         },
@@ -782,8 +782,8 @@
           "state": "published",
           "pack": {
             "path": "packs/osdi/2025.jsonl.zst",
-            "sha256": "07840252c64b4be43323b557574b9f8c9eaf864c34bff8b7a6fa172dd63523bf",
-            "compressed_bytes": 31080,
+            "sha256": "2f1ff0fe0065d544eede42555e4c6a68142ef0855153f007509c2256439f676b",
+            "compressed_bytes": 30944,
             "record_count": 53
           }
         },
@@ -794,8 +794,8 @@
           "state": "published",
           "pack": {
             "path": "packs/osdi/2024.jsonl.zst",
-            "sha256": "3856f07f0d080e6d1b40f7818ab29a92093b6cbdb90e92e569c804c388fbf501",
-            "compressed_bytes": 33630,
+            "sha256": "97add5ce437db442bb2cf1126a3c72b933672c769ddfdc508b5373dd0507ee8f",
+            "compressed_bytes": 33487,
             "record_count": 53
           }
         },
@@ -806,8 +806,8 @@
           "state": "published",
           "pack": {
             "path": "packs/osdi/2023.jsonl.zst",
-            "sha256": "bf189d7004e88cca516fc85149125ed3ec85e69f02d1d7efdc14ac7932b537b2",
-            "compressed_bytes": 33518,
+            "sha256": "69a218433a5631402125215ce5368f0c41fa17138a8302cfd19d930efa812f86",
+            "compressed_bytes": 33394,
             "record_count": 55
           }
         }
@@ -992,8 +992,8 @@
           "state": "published",
           "pack": {
             "path": "packs/accv/2024.jsonl.zst",
-            "sha256": "65cef6234da03d97112bd0f6b0955f60b3417e08af28eb0751bf3c4dea43b72b",
-            "compressed_bytes": 131427,
+            "sha256": "758ce06d4ff962627c20e5ae63a64194e442b3d2630b14ace7bc709eaabb7274",
+            "compressed_bytes": 131429,
             "record_count": 269
           }
         },
@@ -1004,8 +1004,8 @@
           "state": "published",
           "pack": {
             "path": "packs/accv/2022.jsonl.zst",
-            "sha256": "2fd9d0a38744227207c375126b09c95e88c5db4057ceb0886cdb307d65d9291a",
-            "compressed_bytes": 130840,
+            "sha256": "bafb72e3ac70dad8f84e73475ed0ed43e30bdb2cd9e010a0c6f2aeb0407af560",
+            "compressed_bytes": 130843,
             "record_count": 277
           }
         }

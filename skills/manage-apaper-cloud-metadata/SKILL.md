@@ -28,6 +28,7 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
    - never copy inferred category rules from another venue.
 2. Acquire metadata only from the conference or proceedings publisher. Keep the source URL and source-native track/category in every JSONL record.
 3. Add or update the compressed pack under `public/v1/conferences/packs/<venue>/<year>.jsonl.zst`. This path convention applies to existing and newly added venues without changing the publishing scripts.
+   - Before releasing refreshed packs, run `python3 skills/manage-apaper-cloud-metadata/scripts/normalize_conference_titles.py public`. The packer converts source LaTeX/BibTeX title markup to readable plain Unicode, and validation rejects any title that has not passed the same normalization contract.
 4. Update `manifest.json`:
    - advance the two-segment `manifest_version` once for every catalog or pack release;
    - set `paper_count` and pack `record_count` to the exact same value;
