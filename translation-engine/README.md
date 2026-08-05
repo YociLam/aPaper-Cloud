@@ -10,6 +10,8 @@ The source copy inside a complete environment archive is a self-contained bootst
 
 `cloud-route/` is a deliberately narrow Cloudflare Worker. It accepts only GET/HEAD for the two committed package paths and redirects them to immutable Translation Engine Release assets. Unknown paths, query strings, and mutating requests are rejected; it is not a general-purpose GitHub proxy. Its route is limited to the versioned Translation Engine asset prefix and leaves the Pages-hosted control manifest, the conference catalog paths, and the rest of `cloud.apaper.ai` untouched.
 
+Package URLs reserve a platform-first namespace: `/v1/translation/<environment-version>/assets/<platform>/<architecture>/...`. Environment `v0.1` publishes only `macos/arm64` and `macos/x86_64`; a client selects exactly one matching package and never downloads both. The sibling `windows/x86_64` and `windows/arm64` namespaces are reserved for future verified Windows distributions, but intentionally have no manifest entries, routes, or placeholder assets today and therefore cannot be selected by a current App. A future Windows release must add its own pinned runtime, dependency lock, compatibility metadata, health check, byte size, and SHA-256 before activating either namespace.
+
 To reproduce a package, download the exact runtime and build inputs recorded under `environment/`, download wheels using `requirements.lock` for CPython 3.12 and the target macOS architecture, and run:
 
 ```sh
