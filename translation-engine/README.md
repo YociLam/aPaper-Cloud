@@ -4,9 +4,11 @@ This directory defines and validates the architecture-specific aPaper Translatio
 
 The runtime never needs system Python, Homebrew, Conda, global `pip`, or an existing virtual environment. Build inputs are immutable by version and verified by SHA-256. GitHub Releases contain only final architecture packages and their release metadata; normal Git history contains only environment definitions, locks, schemas, build/validation scripts, checksums, provenance, and release metadata.
 
-Release `1.0.0` supports macOS `arm64` and `x86_64`, minimum macOS 13.0, worker protocol 1. The stable public control plane is `https://cloud.apaper.ai/v1/translation/1.0.0/manifest.json`; GitHub Release assets are deterministic fallbacks.
+Translator `v0.1` currently requires environment `v0.1`. Both use the two-component `vX.Y` product version format, but they are independent: changing only the translator version does not reinstall the environment. The environment supports macOS `arm64` and `x86_64`, minimum macOS 13.0, worker protocol 1. The stable public control plane is `https://cloud.apaper.ai/v1/translation/v0.1/manifest.json`; GitHub Release assets are deterministic fallbacks.
 
-`cloud-route/` is a deliberately narrow Cloudflare Worker. It accepts only GET/HEAD for the two committed package paths and redirects them to the immutable `translation-engine-v1.0.0` Release assets. Unknown paths, query strings, and mutating requests are rejected; it is not a general-purpose GitHub proxy. Its route is limited to the versioned Translation Engine asset prefix and leaves the Pages-hosted control manifest and the rest of `cloud.apaper.ai` untouched.
+The source copy inside a complete environment archive is a self-contained bootstrap baseline, not the active translator-version authority. At runtime aPaper verifies and atomically activates the translator source shipped by the current App under a separate content-addressed translator directory, then runs it with the selected environment's private Python, dependencies, model, and font. A translator-only App update therefore replaces only that translator directory; an environment download occurs only when `required_environment_version`, environment compatibility, integrity, or health requires it.
+
+`cloud-route/` is a deliberately narrow Cloudflare Worker. It accepts only GET/HEAD for the two committed package paths and redirects them to immutable Translation Engine Release assets. Unknown paths, query strings, and mutating requests are rejected; it is not a general-purpose GitHub proxy. Its route is limited to the versioned Translation Engine asset prefix and leaves the Pages-hosted control manifest, the conference catalog paths, and the rest of `cloud.apaper.ai` untouched.
 
 To reproduce a package, download the exact runtime and build inputs recorded under `environment/`, download wheels using `requirements.lock` for CPython 3.12 and the target macOS architecture, and run:
 
@@ -14,7 +16,8 @@ To reproduce a package, download the exact runtime and build inputs recorded und
 python3.12 scripts/build-translation-engine-environment.py \
   --engine-source-directory /absolute/path/to/AtomPaper/third_party/pdfmathtranslate \
   --architecture arm64 \
-  --engine-version 1.0.0 \
+  --translator-version v0.1 \
+  --environment-version v0.1 \
   --python-archive /absolute/path/to/python.tar.gz \
   --python-sha256 <sha256> \
   --wheelhouse /absolute/path/to/wheels \

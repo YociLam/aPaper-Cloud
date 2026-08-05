@@ -1,5 +1,6 @@
 schema_version: 1
-engine_version: "1.0.0"
+translator_version: "v0.1"
+required_environment_version: "v0.1"
 backend_id: "python_pdfmathtranslate"
 worker_protocol_version: 1
 minimum_macos_version: "13.0"
@@ -7,7 +8,7 @@ python_version: "3.12.13"
 pdfmathtranslate_version: "1.9.11"
 pdfmathtranslate_upstream_commit: "44c4d5b332705797c1df17fadde2022e7c49f5de"
 pdfmathtranslate_commitment: "9b28216ce7c74ee70d576cc4d1c1a69ba5bde789abf48a0b0f9c98d815d7ec99"
-dependency_lock_commitment: "b6791ab3c717d81e753db7d88735de2e887adb00f5436c8f00eb7fe37f605d37"
+dependency_lock_commitment: "e5401632c33890725f3888b72b52071c289e75d0dcda40bab0e198287b45df52"
 install_layout:
   python_root: "python"
   engine_root: "engine"
@@ -24,20 +25,20 @@ health_check:
 compatibility:
   allowed_worker_protocol_versions:
     - 1
-  require_exact_engine_version: true
+  require_exact_environment_version: true
 architectures:
   arm64:
     package:
-      name: "apaper-translation-engine-1.0.0-macos-arm64.tar.gz"
-      bytes: 251109278
-      sha256: "da9543260f3a1f9670ccd8eb6a0c7ad786afc0a195d729e70bf35a7c6f06f2cc"
+      name: "apaper-translation-engine-v0.1-macos-arm64.tar.gz"
+      bytes: 253742792
+      sha256: "62aa20d956367b0475f3a7af8b67fad99bf7b62a5562e50b90a5ceaa57459ff7"
       sources:
         -
           kind: "cloud_primary"
-          url: "https://cloud.apaper.ai/v1/translation/1.0.0/assets/macos/arm64/apaper-translation-engine-1.0.0-macos-arm64.tar.gz"
+          url: "https://cloud.apaper.ai/v1/translation/v0.1/assets/macos/arm64/apaper-translation-engine-v0.1-macos-arm64.tar.gz"
         -
           kind: "github_release"
-          url: "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0/apaper-translation-engine-1.0.0-macos-arm64.tar.gz"
+          url: "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v0.1/apaper-translation-engine-v0.1-macos-arm64.tar.gz"
     fallback:
       python_runtime:
         name: "cpython-3.12.13+20260602-aarch64-apple-darwin-install_only_stripped.tar.gz"
@@ -96,6 +97,14 @@ architectures:
             -
               kind: "official"
               url: "https://files.pythonhosted.org/packages/b8/25/155f9f080d5e4bc0082edfda032ea2bc2b8fab3f4d25d46c1e9dd22a1a89/flatbuffers-25.2.10-py2.py3-none-any.whl"
+        -
+          name: "fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
+          bytes: 2754082
+          sha256: "462211c0f37a278494e74267a994f6be9a2023d0557aaa9ecbcbfce0f403b5a6"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/04/3c/1d1792bfe91ef46f22a3d23b4deb514c325e73c17d4f196b385b5e2faf1c/fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
         -
           name: "humanfriendly-10.0-py2.py3-none-any.whl"
           bytes: 86794
@@ -235,13 +244,13 @@ architectures:
       native_dependencies:
         []
       layout_model:
-        name: "doclayout_yolo_docstructbench_imgsz1024.onnx"
+        name: "doclayout.onnx"
         bytes: 75324598
         sha256: "fece9af02f618b603ff7921ccec6861d13e7e1f9830e091dfb7e8ad9311e5b21"
         sources:
           -
             kind: "trusted_third_party"
-            url: "https://huggingface.co/wybxc/DocLayout-YOLO-DocStructBench-onnx/resolve/89c9fe92dd1384e26612846b4ab68a811dc98d61/doclayout_yolo_docstructbench_imgsz1024.onnx"
+            url: "https://huggingface.co/wybxc/DocLayout-YOLO-DocStructBench-onnx/resolve/89c9fe92dd1384e26612846b4ab68a811dc98d61/doclayout.onnx"
       target_font:
         name: "SourceHanSerifCN-Regular.ttf"
         bytes: 14047768
@@ -250,20 +259,20 @@ architectures:
           -
             kind: "trusted_third_party"
             url: "https://raw.githubusercontent.com/timelic/source-han-serif/94a655c189915c665552285013279ef762b46b7a/SourceHanSerifCN-Regular.ttf"
-      bundled_source_archive_bytes: 33471
-      bundled_source_archive_sha256: "a7a2e6cb84e7d320fa990fc4add0c810957ed6419940d18d65ea69b24b14e79b"
+      bundled_source_archive_bytes: 36844
+      bundled_source_archive_sha256: "5dc16f61740bd5a0e8da199d8b31384002d0df79f1baf78d203d290bf195b0dd"
   x86_64:
     package:
-      name: "apaper-translation-engine-1.0.0-macos-x86_64.tar.gz"
-      bytes: 277166803
-      sha256: "a5259d2ad3653d55091e6ee62644b224c78aeda14442841104ebee3108a44468"
+      name: "apaper-translation-engine-v0.1-macos-x86_64.tar.gz"
+      bytes: 279796873
+      sha256: "35b1fd43603b57ebdc3693e5bc7cae5fd25b8327c9233f667b97b73a0fea3e86"
       sources:
         -
           kind: "cloud_primary"
-          url: "https://cloud.apaper.ai/v1/translation/1.0.0/assets/macos/x86_64/apaper-translation-engine-1.0.0-macos-x86_64.tar.gz"
+          url: "https://cloud.apaper.ai/v1/translation/v0.1/assets/macos/x86_64/apaper-translation-engine-v0.1-macos-x86_64.tar.gz"
         -
           kind: "github_release"
-          url: "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0/apaper-translation-engine-1.0.0-macos-x86_64.tar.gz"
+          url: "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v0.1/apaper-translation-engine-v0.1-macos-x86_64.tar.gz"
     fallback:
       python_runtime:
         name: "cpython-3.12.13+20260602-x86_64-apple-darwin-install_only_stripped.tar.gz"
@@ -322,6 +331,14 @@ architectures:
             -
               kind: "official"
               url: "https://files.pythonhosted.org/packages/b8/25/155f9f080d5e4bc0082edfda032ea2bc2b8fab3f4d25d46c1e9dd22a1a89/flatbuffers-25.2.10-py2.py3-none-any.whl"
+        -
+          name: "fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
+          bytes: 2754082
+          sha256: "462211c0f37a278494e74267a994f6be9a2023d0557aaa9ecbcbfce0f403b5a6"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/04/3c/1d1792bfe91ef46f22a3d23b4deb514c325e73c17d4f196b385b5e2faf1c/fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
         -
           name: "humanfriendly-10.0-py2.py3-none-any.whl"
           bytes: 86794
@@ -461,13 +478,13 @@ architectures:
       native_dependencies:
         []
       layout_model:
-        name: "doclayout_yolo_docstructbench_imgsz1024.onnx"
+        name: "doclayout.onnx"
         bytes: 75324598
         sha256: "fece9af02f618b603ff7921ccec6861d13e7e1f9830e091dfb7e8ad9311e5b21"
         sources:
           -
             kind: "trusted_third_party"
-            url: "https://huggingface.co/wybxc/DocLayout-YOLO-DocStructBench-onnx/resolve/89c9fe92dd1384e26612846b4ab68a811dc98d61/doclayout_yolo_docstructbench_imgsz1024.onnx"
+            url: "https://huggingface.co/wybxc/DocLayout-YOLO-DocStructBench-onnx/resolve/89c9fe92dd1384e26612846b4ab68a811dc98d61/doclayout.onnx"
       target_font:
         name: "SourceHanSerifCN-Regular.ttf"
         bytes: 14047768
@@ -476,5 +493,5 @@ architectures:
           -
             kind: "trusted_third_party"
             url: "https://raw.githubusercontent.com/timelic/source-han-serif/94a655c189915c665552285013279ef762b46b7a/SourceHanSerifCN-Regular.ttf"
-      bundled_source_archive_bytes: 33471
-      bundled_source_archive_sha256: "a7a2e6cb84e7d320fa990fc4add0c810957ed6419940d18d65ea69b24b14e79b"
+      bundled_source_archive_bytes: 36844
+      bundled_source_archive_sha256: "5dc16f61740bd5a0e8da199d8b31384002d0df79f1baf78d203d290bf195b0dd"

@@ -14,8 +14,16 @@ is partitioned by venue and edition year, allowing the App to download only the 
 needs.
 
 - Production origin: `https://cloud.apaper.ai`
-- Current manifest: `v0.12`
-- Catalog updated: `2026-07-22 20:11:41 UTC`
+- Conference catalog manifest: `v0.12`
+- Conference catalog updated: `2026-07-22 20:11:41 UTC`
+- Translation Engine translator version: `v0.1`
+- Translation Engine environment version: `v0.1`
+- Translation Engine updated: `2026-08-05 20:59:43 UTC`
+
+The conference catalog, Translation Engine translator, and Translation Engine environment are
+independent version streams. A translator update does not require an environment download unless
+the required environment version also changes. Updating any stream leaves the conference paths,
+version, and timestamp untouched.
 
 ## Catalog overview
 
@@ -66,7 +74,8 @@ currently maintained.
 public/
   v1/
     translation/
-      <engine-version>/manifest.json
+      version.json
+      <environment-version>/manifest.json
       schemas/environment-manifest-v1.json
     conferences/
       version.json

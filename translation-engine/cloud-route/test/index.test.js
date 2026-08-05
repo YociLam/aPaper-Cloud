@@ -4,9 +4,9 @@ import test from "node:test";
 import worker from "../src/index.js";
 
 const ARM_PATH =
-  "/v1/translation/1.0.0/assets/macos/arm64/apaper-translation-engine-1.0.0-macos-arm64.tar.gz";
+  "/v1/translation/v0.1/assets/macos/arm64/apaper-translation-engine-v0.1-macos-arm64.tar.gz";
 const INTEL_PATH =
-  "/v1/translation/1.0.0/assets/macos/x86_64/apaper-translation-engine-1.0.0-macos-x86_64.tar.gz";
+  "/v1/translation/v0.1/assets/macos/x86_64/apaper-translation-engine-v0.1-macos-x86_64.tar.gz";
 
 for (const [architecture, path] of [
   ["arm64", ARM_PATH],
@@ -20,7 +20,7 @@ for (const [architecture, path] of [
       assert.equal(response.status, 307);
       assert.equal(
         response.headers.get("location"),
-        `https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0/apaper-translation-engine-1.0.0-macos-${architecture}.tar.gz`,
+        `https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v0.1/apaper-translation-engine-v0.1-macos-${architecture}.tar.gz`,
       );
     });
   }
@@ -28,7 +28,7 @@ for (const [architecture, path] of [
 
 test("unknown, queried, and mutating requests cannot use the asset route", async () => {
   const unknown = await worker.fetch(
-    new Request("https://cloud.apaper.ai/v1/translation/1.0.0/assets/macos/arm64/unknown"),
+    new Request("https://cloud.apaper.ai/v1/translation/v0.1/assets/macos/arm64/unknown"),
   );
   const queried = await worker.fetch(
     new Request(`https://cloud.apaper.ai${ARM_PATH}?target=other`),

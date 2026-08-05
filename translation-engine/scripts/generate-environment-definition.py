@@ -10,6 +10,13 @@ import json
 from pathlib import Path
 import time
 from typing import Any
+
+
+def valid_product_version(value: str) -> bool:
+    if not value.startswith("v"):
+        return False
+    components = value[1:].split(".")
+    return len(components) == 2 and all(component.isdigit() for component in components)
 from urllib.request import Request, urlopen
 import zipfile
 
@@ -147,7 +154,8 @@ def package_asset(path: Path, version: str, architecture: str, release_tag: str)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--engine-version", required=True)
+    parser.add_argument("--translator-version", required=True)
+    parser.add_argument("--environment-version", required=True)
     parser.add_argument("--release-tag", required=True)
     parser.add_argument("--package-arm64", type=Path, required=True)
     parser.add_argument("--package-x86-64", type=Path, required=True)
@@ -164,6 +172,13 @@ def main() -> int:
     parser.add_argument("--pdfmathtranslate-upstream-commit", required=True)
     parser.add_argument("--output", type=Path, required=True)
     arguments = parser.parse_args()
+
+    for label, value in [
+        ("translator", arguments.translator_version),
+        ("environment", arguments.environment_version),
+    ]:
+        if not valid_product_version(value):
+            raise RuntimeError(f"{label} version must use vX.Y format")
 
     runtimes = json.loads(arguments.python_runtimes.read_text("utf-8"))
     source_archive = asset(arguments.source_archive, [])
@@ -202,7 +217,7 @@ def main() -> int:
         architectures[architecture] = {
             "package": package_asset(
                 packages[architecture],
-                arguments.engine_version,
+                arguments.environment_version,
                 architecture,
                 arguments.release_tag,
             ),
@@ -224,7 +239,8 @@ def main() -> int:
 
     definition = {
         "schema_version": 1,
-        "engine_version": arguments.engine_version,
+        "translator_version": arguments.translator_version,
+        "required_environment_version": arguments.environment_version,
         "backend_id": "python_pdfmathtranslate",
         "worker_protocol_version": 1,
         "minimum_macos_version": "13.0",
@@ -249,7 +265,7 @@ def main() -> int:
         },
         "compatibility": {
             "allowed_worker_protocol_versions": [1],
-            "require_exact_engine_version": True,
+            "require_exact_environment_version": True,
         },
         "architectures": architectures,
     }

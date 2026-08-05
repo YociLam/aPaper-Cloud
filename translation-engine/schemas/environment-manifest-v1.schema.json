@@ -5,7 +5,8 @@
   "type": "object",
   "required": [
     "schema_version",
-    "engine_version",
+    "translator_version",
+    "environment_version",
     "backend",
     "architecture",
     "minimum_macos_version",
@@ -25,7 +26,8 @@
   ],
   "properties": {
     "schema_version": { "const": 1 },
-    "engine_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "translator_version": { "type": "string", "pattern": "^v[0-9]+\\.[0-9]+$" },
+    "environment_version": { "type": "string", "pattern": "^v[0-9]+\\.[0-9]+$" },
     "backend": { "const": "python_pdfmathtranslate" },
     "architecture": { "enum": ["arm64", "x86_64"] },
     "minimum_macos_version": { "type": "string" },

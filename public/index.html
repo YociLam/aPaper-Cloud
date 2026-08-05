@@ -34,6 +34,15 @@
         color: color-mix(in srgb, CanvasText 62%, transparent);
       }
 
+      section + section {
+        margin-top: 1.75rem;
+      }
+
+      h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1rem;
+      }
+
       dl {
         display: grid;
         grid-template-columns: max-content 1fr;
@@ -58,16 +67,43 @@
     <main>
       <h1>aPaper Cloud</h1>
       <p>Versioned public metadata for aPaper.</p>
-      <dl aria-label="Deployment status">
-        <dt>Version</dt>
-        <dd id="version">Checking…</dd>
-        <dt>Updated</dt>
-        <dd><time id="updated">Checking…</time></dd>
-      </dl>
+      <section aria-labelledby="conference-heading">
+        <h2 id="conference-heading">Conference catalog</h2>
+        <dl aria-label="Conference catalog status">
+          <dt>Manifest</dt>
+          <dd id="conference-version">Checking…</dd>
+          <dt>Updated</dt>
+          <dd><time id="conference-updated">Checking…</time></dd>
+        </dl>
+      </section>
+      <section aria-labelledby="translation-heading">
+        <h2 id="translation-heading">Translation Engine</h2>
+        <dl aria-label="Translation Engine status">
+          <dt>Translator</dt>
+          <dd id="translator-version">Checking…</dd>
+          <dt>Environment</dt>
+          <dd id="environment-version">Checking…</dd>
+          <dt>Updated</dt>
+          <dd><time id="translation-updated">Checking…</time></dd>
+        </dl>
+      </section>
     </main>
     <script>
-      const versionElement = document.querySelector("#version");
-      const updatedElement = document.querySelector("#updated");
+      function displayTime(element, value) {
+        const updatedAt = new Date(value);
+        if (Number.isNaN(updatedAt.getTime())) {
+          element.textContent = value || "Unavailable";
+          return;
+        }
+        element.dateTime = value;
+        element.textContent = new Intl.DateTimeFormat(undefined, {
+          dateStyle: "medium",
+          timeStyle: "medium",
+        }).format(updatedAt);
+      }
+
+      const conferenceVersion = document.querySelector("#conference-version");
+      const conferenceUpdated = document.querySelector("#conference-updated");
 
       fetch(`/v1/conferences/version.json?check=${Date.now()}`, { cache: "no-store" })
         .then((response) => {
@@ -75,21 +111,32 @@
           return response.json();
         })
         .then((release) => {
-          versionElement.textContent = `v${release.manifest_version}`;
-          const updatedAt = new Date(release.updated_at);
-          if (Number.isNaN(updatedAt.getTime())) {
-            updatedElement.textContent = release.updated_at || "Unavailable";
-            return;
-          }
-          updatedElement.dateTime = release.updated_at;
-          updatedElement.textContent = new Intl.DateTimeFormat(undefined, {
-            dateStyle: "medium",
-            timeStyle: "medium",
-          }).format(updatedAt);
+          conferenceVersion.textContent = `v${release.manifest_version}`;
+          displayTime(conferenceUpdated, release.updated_at);
         })
         .catch(() => {
-          versionElement.textContent = "Unavailable";
-          updatedElement.textContent = "Unavailable";
+          conferenceVersion.textContent = "Unavailable";
+          conferenceUpdated.textContent = "Unavailable";
+        });
+
+      const translatorVersion = document.querySelector("#translator-version");
+      const environmentVersion = document.querySelector("#environment-version");
+      const translationUpdated = document.querySelector("#translation-updated");
+
+      fetch(`/v1/translation/version.json?check=${Date.now()}`, { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((release) => {
+          translatorVersion.textContent = release.translator_version;
+          environmentVersion.textContent = release.environment_version;
+          displayTime(translationUpdated, release.updated_at);
+        })
+        .catch(() => {
+          translatorVersion.textContent = "Unavailable";
+          environmentVersion.textContent = "Unavailable";
+          translationUpdated.textContent = "Unavailable";
         });
     </script>
   </body>

@@ -12,7 +12,8 @@ from typing import Any
 
 SHARED_FIELDS = (
     "schema_version",
-    "engine_version",
+    "translator_version",
+    "environment_version",
     "backend",
     "worker_protocol_version",
     "minimum_macos_version",
@@ -75,7 +76,7 @@ def main() -> int:
                 "package": {
                     **package,
                     "cloud_url": (
-                        f"https://cloud.apaper.ai/v1/translation/{entry['engine_version']}"
+                        f"https://cloud.apaper.ai/v1/translation/{entry['environment_version']}"
                         f"/assets/macos/{architecture}/{name}"
                     ),
                     "github_release_url": (

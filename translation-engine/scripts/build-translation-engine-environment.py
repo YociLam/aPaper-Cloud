@@ -30,6 +30,13 @@ RUNTIME_PDF2ZH_FILES = (
 )
 
 
+def valid_product_version(value: str) -> bool:
+    if not value.startswith("v"):
+        return False
+    components = value[1:].split(".")
+    return len(components) == 2 and all(component.isdigit() for component in components)
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -238,7 +245,8 @@ def main() -> int:
     parser.add_argument("--engine-source-directory", type=Path, required=True)
     parser.add_argument("--architecture", choices=["arm64", "x86_64"], required=True)
     parser.add_argument("--minimum-macos", default="13.0")
-    parser.add_argument("--engine-version", required=True)
+    parser.add_argument("--translator-version", required=True)
+    parser.add_argument("--environment-version", required=True)
     parser.add_argument("--python-archive", type=Path, required=True)
     parser.add_argument("--python-sha256", required=True)
     parser.add_argument("--wheelhouse", type=Path, required=True)
@@ -251,6 +259,13 @@ def main() -> int:
     parser.add_argument("--upstream-commit", required=True)
     parser.add_argument("--output-directory", type=Path, required=True)
     arguments = parser.parse_args()
+
+    for label, value in [
+        ("translator", arguments.translator_version),
+        ("environment", arguments.environment_version),
+    ]:
+        if not valid_product_version(value):
+            raise RuntimeError(f"{label} version must use vX.Y format")
 
     for path in [arguments.engine_source_directory, arguments.wheelhouse]:
         if not path.is_absolute() or not path.is_dir():
@@ -282,7 +297,8 @@ def main() -> int:
         inventory = file_inventory(root, {"engine-manifest.json"})
         manifest = {
             "schema_version": SCHEMA_VERSION,
-            "engine_version": arguments.engine_version,
+            "translator_version": arguments.translator_version,
+            "environment_version": arguments.environment_version,
             "backend": "python_pdfmathtranslate",
             "architecture": arguments.architecture,
             "minimum_macos_version": arguments.minimum_macos,
@@ -304,7 +320,7 @@ def main() -> int:
             "utf-8",
         )
 
-        stem = f"apaper-translation-engine-{arguments.engine_version}-macos-{arguments.architecture}"
+        stem = f"apaper-translation-engine-{arguments.environment_version}-macos-{arguments.architecture}"
         full = arguments.output_directory / f"{stem}.tar.gz"
         deterministic_tar_gz(root, full)
 

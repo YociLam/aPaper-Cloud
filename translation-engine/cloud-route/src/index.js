@@ -1,14 +1,14 @@
 const RELEASE_ROOT =
-  "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0";
+  "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v0.1";
 
 const RELEASE_ASSETS = new Map([
   [
-    "/v1/translation/1.0.0/assets/macos/arm64/apaper-translation-engine-1.0.0-macos-arm64.tar.gz",
-    `${RELEASE_ROOT}/apaper-translation-engine-1.0.0-macos-arm64.tar.gz`,
+    "/v1/translation/v0.1/assets/macos/arm64/apaper-translation-engine-v0.1-macos-arm64.tar.gz",
+    `${RELEASE_ROOT}/apaper-translation-engine-v0.1-macos-arm64.tar.gz`,
   ],
   [
-    "/v1/translation/1.0.0/assets/macos/x86_64/apaper-translation-engine-1.0.0-macos-x86_64.tar.gz",
-    `${RELEASE_ROOT}/apaper-translation-engine-1.0.0-macos-x86_64.tar.gz`,
+    "/v1/translation/v0.1/assets/macos/x86_64/apaper-translation-engine-v0.1-macos-x86_64.tar.gz",
+    `${RELEASE_ROOT}/apaper-translation-engine-v0.1-macos-x86_64.tar.gz`,
   ],
 ]);
 
