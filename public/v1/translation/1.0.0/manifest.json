@@ -1,0 +1,66 @@
+{
+  "assets": [
+    {
+      "architecture": "arm64",
+      "compressed_size": 251109278,
+      "file_inventory": {
+        "bytes": 2694098,
+        "file_count": 11925,
+        "github_release_url": "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0/apaper-translation-engine-1.0.0-macos-arm64.release.json",
+        "name": "apaper-translation-engine-1.0.0-macos-arm64.release.json",
+        "sha256": "39496ec03f73cc6fb794da246f787ef1285cde3a26bf558a35d3115d5b4e97b5"
+      },
+      "installed_size": 613183046,
+      "minimum_macos_version": "13.0",
+      "package": {
+        "bytes": 251109278,
+        "cloud_url": "https://cloud.apaper.ai/v1/translation/1.0.0/assets/macos/arm64/apaper-translation-engine-1.0.0-macos-arm64.tar.gz",
+        "github_release_url": "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0/apaper-translation-engine-1.0.0-macos-arm64.tar.gz",
+        "name": "apaper-translation-engine-1.0.0-macos-arm64.tar.gz",
+        "sha256": "da9543260f3a1f9670ccd8eb6a0c7ad786afc0a195d729e70bf35a7c6f06f2cc"
+      }
+    },
+    {
+      "architecture": "x86_64",
+      "compressed_size": 277166803,
+      "file_inventory": {
+        "bytes": 2693704,
+        "file_count": 11923,
+        "github_release_url": "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0/apaper-translation-engine-1.0.0-macos-x86_64.release.json",
+        "name": "apaper-translation-engine-1.0.0-macos-x86_64.release.json",
+        "sha256": "bb675fcf8aef79db39e24ef759da2abdd8908b5d8585e1209b37f36384435861"
+      },
+      "installed_size": 729032376,
+      "minimum_macos_version": "13.0",
+      "package": {
+        "bytes": 277166803,
+        "cloud_url": "https://cloud.apaper.ai/v1/translation/1.0.0/assets/macos/x86_64/apaper-translation-engine-1.0.0-macos-x86_64.tar.gz",
+        "github_release_url": "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v1.0.0/apaper-translation-engine-1.0.0-macos-x86_64.tar.gz",
+        "name": "apaper-translation-engine-1.0.0-macos-x86_64.tar.gz",
+        "sha256": "a5259d2ad3653d55091e6ee62644b224c78aeda14442841104ebee3108a44468"
+      }
+    }
+  ],
+  "backend": "python_pdfmathtranslate",
+  "bundled_source_archive": {
+    "bytes": 33471,
+    "name": "pdfmathtranslate-source.tar.gz",
+    "sha256": "a7a2e6cb84e7d320fa990fc4add0c810957ed6419940d18d65ea69b24b14e79b"
+  },
+  "dependency_lock_commitment": "b6791ab3c717d81e753db7d88735de2e887adb00f5436c8f00eb7fe37f605d37",
+  "engine_version": "1.0.0",
+  "environment_definition": {
+    "bytes": 24027,
+    "name": "environment-v1.yaml",
+    "sha256": "3346c9870ecfe7746a71fa8afe696ffbea8be25b5177289d6a8840a576588211"
+  },
+  "minimum_macos_version": "13.0",
+  "pdfmathtranslate_commitment": "9b28216ce7c74ee70d576cc4d1c1a69ba5bde789abf48a0b0f9c98d815d7ec99",
+  "pdfmathtranslate_upstream_commit": "44c4d5b332705797c1df17fadde2022e7c49f5de",
+  "pdfmathtranslate_version": "1.9.11",
+  "python_build_release": "20260602",
+  "python_version": "3.12.13",
+  "release_tag": "translation-engine-v1.0.0",
+  "schema_version": 1,
+  "worker_protocol_version": 1
+}

@@ -1,0 +1,58 @@
+name: Validate aPaper Translation Engine Distribution
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "translation-engine/**"
+      - "public/v1/translation/**"
+      - ".github/workflows/translation-engine.yml"
+  push:
+    branches: [main]
+    paths:
+      - "translation-engine/**"
+      - "public/v1/translation/**"
+      - ".github/workflows/translation-engine.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: translation-engine/cloud-route/package-lock.json
+      - name: Validate source-controlled distribution metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile translation-engine/scripts/build-translation-engine-environment.py
+          python -m py_compile translation-engine/scripts/generate-environment-definition.py
+          python -m py_compile translation-engine/scripts/generate-release-index.py
+          python -m json.tool translation-engine/environment/python-runtimes.json >/dev/null
+          python -m json.tool translation-engine/environment/build-inputs.json >/dev/null
+          python -m json.tool translation-engine/schemas/environment-manifest-v1.schema.json >/dev/null
+          python -m json.tool translation-engine/schemas/environment-definition-v1.schema.json >/dev/null
+          python -m json.tool translation-engine/releases/translation-engine-v1.0.0.json >/dev/null
+          python -m json.tool public/v1/translation/1.0.0/manifest.json >/dev/null
+          cmp translation-engine/releases/translation-engine-v1.0.0.json public/v1/translation/1.0.0/manifest.json
+          ruby -ryaml -e 'definition = YAML.safe_load(File.read(ARGV.fetch(0))); abort unless definition.fetch("architectures").keys == ["arm64", "x86_64"]; definition.fetch("architectures").each_value { |entry| abort unless entry.fetch("package").fetch("sources").map { |source| source.fetch("kind") }.first(2) == ["cloud_primary", "github_release"]; abort unless entry.fetch("fallback").fetch("wheels").length == 23 }' translation-engine/environment/environment-v1.yaml
+          test ! -d translation-engine/third_party
+      - name: Validate immutable cloud route
+        working-directory: translation-engine/cloud-route
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --ignore-scripts
+          npm audit --audit-level=high
+          npm test
+          npm run types
+          npx wrangler deploy --dry-run --outdir .wrangler/dry-run

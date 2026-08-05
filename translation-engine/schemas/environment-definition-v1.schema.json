@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cloud.apaper.ai/v1/translation/schemas/environment-definition-v1.json",
+  "title": "aPaper Translation Engine fallback definition v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "engine_version",
+    "backend_id",
+    "worker_protocol_version",
+    "minimum_macos_version",
+    "python_version",
+    "pdfmathtranslate_version",
+    "pdfmathtranslate_upstream_commit",
+    "pdfmathtranslate_commitment",
+    "dependency_lock_commitment",
+    "install_layout",
+    "health_check",
+    "compatibility",
+    "architectures"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "engine_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "backend_id": { "const": "python_pdfmathtranslate" },
+    "worker_protocol_version": { "const": 1 },
+    "minimum_macos_version": { "type": "string" },
+    "python_version": { "const": "3.12.13" },
+    "pdfmathtranslate_version": { "const": "1.9.11" },
+    "pdfmathtranslate_upstream_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "pdfmathtranslate_commitment": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "dependency_lock_commitment": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "install_layout": { "type": "object" },
+    "health_check": { "type": "object" },
+    "compatibility": { "type": "object" },
+    "architectures": {
+      "type": "object",
+      "required": ["arm64", "x86_64"],
+      "properties": {
+        "arm64": { "$ref": "#/$defs/architecture" },
+        "x86_64": { "$ref": "#/$defs/architecture" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["kind", "url"],
+      "properties": {
+        "kind": { "enum": ["cloud_primary", "github_release", "trusted_mirror", "official", "trusted_third_party"] },
+        "url": { "type": "string", "pattern": "^https://" }
+      },
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": ["name", "bytes", "sha256", "sources"],
+      "properties": {
+        "name": { "type": "string" },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } }
+      },
+      "additionalProperties": false
+    },
+    "fallback": {
+      "type": "object",
+      "required": ["python_runtime", "wheels", "native_dependencies", "layout_model", "target_font", "bundled_source_archive_bytes", "bundled_source_archive_sha256"],
+      "properties": {
+        "python_runtime": { "$ref": "#/$defs/asset" },
+        "wheels": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/asset" } },
+        "native_dependencies": { "type": "array", "maxItems": 0 },
+        "layout_model": { "$ref": "#/$defs/asset" },
+        "target_font": { "$ref": "#/$defs/asset" },
+        "bundled_source_archive_bytes": { "type": "integer", "minimum": 1 },
+        "bundled_source_archive_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      },
+      "additionalProperties": false
+    },
+    "architecture": {
+      "type": "object",
+      "required": ["package", "fallback"],
+      "properties": {
+        "package": { "$ref": "#/$defs/asset" },
+        "fallback": { "$ref": "#/$defs/fallback" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

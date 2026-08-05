@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cloud.apaper.ai/v1/translation/schemas/environment-manifest-v1.json",
+  "title": "aPaper Translation Engine environment manifest v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "engine_version",
+    "backend",
+    "architecture",
+    "minimum_macos_version",
+    "worker_protocol_version",
+    "python_version",
+    "python_build_release",
+    "pdfmathtranslate_version",
+    "pdfmathtranslate_upstream_commit",
+    "pdfmathtranslate_commitment",
+    "dependency_lock_commitment",
+    "layout_model_sha256",
+    "target_font_sha256",
+    "installed_size",
+    "wheels",
+    "files",
+    "assets"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "engine_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "backend": { "const": "python_pdfmathtranslate" },
+    "architecture": { "enum": ["arm64", "x86_64"] },
+    "minimum_macos_version": { "type": "string" },
+    "worker_protocol_version": { "const": 1 },
+    "python_version": { "const": "3.12.13" },
+    "python_build_release": { "const": "20260602" },
+    "pdfmathtranslate_version": { "const": "1.9.11" },
+    "pdfmathtranslate_upstream_commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "pdfmathtranslate_commitment": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "dependency_lock_commitment": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "layout_model_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "target_font_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "installed_size": { "type": "integer", "minimum": 1 },
+    "wheels": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["path", "bytes", "sha256"],
+        "properties": {
+          "path": { "type": "string", "pattern": "^[^/].*$" },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "bytes", "sha256"],
+        "properties": {
+          "name": { "type": "string" },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
