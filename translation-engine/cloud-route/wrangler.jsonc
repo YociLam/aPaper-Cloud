@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "apaper-translation-engine-assets",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-05",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "cloud.apaper.ai/v1/translation/v0.1/assets/macos/*",
+      "zone_name": "apaper.ai"
+    }
+  ],
+  "observability": {
+    "enabled": false
+  }
+}

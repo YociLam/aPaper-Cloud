@@ -14,8 +14,16 @@ is partitioned by venue and edition year, allowing the App to download only the 
 needs.
 
 - Production origin: `https://cloud.apaper.ai`
-- Current manifest: `v0.12`
-- Catalog updated: `2026-07-22 20:11:41 UTC`
+- Conference catalog manifest: `v0.12`
+- Conference catalog updated: `2026-07-22 20:11:41 UTC`
+- Translation Engine translator version: `v0.1`
+- Translation Engine environment version: `v0.1`
+- Translation Engine updated: `2026-08-05 20:59:43 UTC`
+
+The conference catalog, Translation Engine translator, and Translation Engine environment are
+independent version streams. A translator update does not require an environment download unless
+the required environment version also changes. Updating any stream leaves the conference paths,
+version, and timestamp untouched.
 
 ## Catalog overview
 
@@ -65,11 +73,20 @@ currently maintained.
 ```text
 public/
   v1/
+    translation/
+      version.json
+      <environment-version>/manifest.json
+      schemas/environment-manifest-v1.json
     conferences/
       version.json
       manifest.json
       packs/<venue>/<year>.jsonl.zst
 ```
+
+The Translation Engine control plane is also versioned under `public/v1/translation`. Large,
+architecture-specific environment archives are immutable GitHub Release assets; the public
+manifest exposes stable `cloud.apaper.ai` primary URLs and direct Release fallbacks without
+coupling the App to this repository's internal layout.
 
 - `version.json` is the lightweight endpoint checked first when the App starts.
 - `manifest.json` records the complete venue catalog in App display order, localized venue names,

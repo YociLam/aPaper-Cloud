@@ -12,8 +12,15 @@
 因此 App 只会下载用户所选会议年份对应的数据包。
 
 - 正式地址：`https://cloud.apaper.ai`
-- 当前 Manifest：`v0.12`
-- 目录更新时间：`2026-07-22 20:11:41 UTC`
+- 会议产品目录 Manifest：`v0.12`
+- 会议产品目录更新时间：`2026-07-22 20:11:41 UTC`
+- Translation Engine 翻译器版本：`v0.1`
+- Translation Engine 环境版本：`v0.1`
+- Translation Engine 更新时间：`2026-08-05 20:59:43 UTC`
+
+会议产品目录、Translation Engine 翻译器和 Translation Engine 环境是三条独立版本线。
+仅更新翻译器不会触发环境下载，只有所需环境版本也发生变化时才会更新环境；任何一条
+发布线的更新都不会改变会议目录的路径、版本或更新时间。
 
 ## 收录概览
 
@@ -57,11 +64,19 @@
 ```text
 public/
   v1/
+    translation/
+      version.json
+      <environment-version>/manifest.json
+      schemas/environment-manifest-v1.json
     conferences/
       version.json
       manifest.json
       packs/<venue>/<year>.jsonl.zst
 ```
+
+Translation Engine 的控制面独立位于 `public/v1/translation`。双架构完整环境包作为不可变
+GitHub Release 资产发布；公开 Manifest 只提供稳定的 `cloud.apaper.ai` 主地址与 GitHub
+Release 回退地址，不改变既有会议目录路径。
 
 - `version.json` 是 App 启动时首先访问的轻量版本入口。
 - `manifest.json` 按 App 展示顺序记录完整会议目录、会议多语言名称、可选的多语言会议标签、

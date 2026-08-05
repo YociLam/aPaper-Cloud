@@ -1,0 +1,27 @@
+# Fully pinned Python 3.12 runtime closure. Architecture-specific wheel hashes
+# are emitted in each release manifest and verified again by the App package
+# commitment.
+certifi==2025.4.26
+cffi==1.17.1
+charset-normalizer==3.4.2
+coloredlogs==15.0.1
+cryptography==45.0.4
+flatbuffers==25.2.10
+fonttools==4.58.4
+humanfriendly==10.0
+idna==3.10
+mpmath==1.3.0
+numpy==2.2.6
+onnx==1.17.0
+onnxruntime==1.21.0
+opencv-python-headless==4.11.0.86
+packaging==25.0
+pdfminer-six==20250416
+protobuf==6.31.1
+pycparser==2.22
+PyMuPDF==1.25.2
+requests==2.32.3
+sympy==1.14.0
+tenacity==9.0.0
+tqdm==4.67.1
+urllib3==2.4.0

@@ -1,0 +1,497 @@
+schema_version: 1
+translator_version: "v0.1"
+required_environment_version: "v0.1"
+backend_id: "python_pdfmathtranslate"
+worker_protocol_version: 1
+minimum_macos_version: "13.0"
+python_version: "3.12.13"
+pdfmathtranslate_version: "1.9.11"
+pdfmathtranslate_upstream_commit: "44c4d5b332705797c1df17fadde2022e7c49f5de"
+pdfmathtranslate_commitment: "9b28216ce7c74ee70d576cc4d1c1a69ba5bde789abf48a0b0f9c98d815d7ec99"
+dependency_lock_commitment: "e5401632c33890725f3888b72b52071c289e75d0dcda40bab0e198287b45df52"
+install_layout:
+  python_root: "python"
+  engine_root: "engine"
+  models_root: "models"
+  fonts_root: "fonts"
+  mutable_cache_root: "cache"
+health_check:
+  executable: "python/bin/python3"
+  worker: "engine/worker/apaper_translation_worker.py"
+  arguments:
+    - "--health-check"
+  timeout_seconds: 30
+  offline_required: true
+compatibility:
+  allowed_worker_protocol_versions:
+    - 1
+  require_exact_environment_version: true
+architectures:
+  arm64:
+    package:
+      name: "apaper-translation-engine-v0.1-macos-arm64.tar.gz"
+      bytes: 253742792
+      sha256: "62aa20d956367b0475f3a7af8b67fad99bf7b62a5562e50b90a5ceaa57459ff7"
+      sources:
+        -
+          kind: "cloud_primary"
+          url: "https://cloud.apaper.ai/v1/translation/v0.1/assets/macos/arm64/apaper-translation-engine-v0.1-macos-arm64.tar.gz"
+        -
+          kind: "github_release"
+          url: "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v0.1/apaper-translation-engine-v0.1-macos-arm64.tar.gz"
+    fallback:
+      python_runtime:
+        name: "cpython-3.12.13+20260602-aarch64-apple-darwin-install_only_stripped.tar.gz"
+        bytes: 24984408
+        sha256: "7426b06a7ba06e2db637ace3a6658db55d357c6c2083d5b13e0d46a293a3d5ad"
+        sources:
+          -
+            kind: "official"
+            url: "https://github.com/astral-sh/python-build-standalone/releases/download/20260602/cpython-3.12.13%2B20260602-aarch64-apple-darwin-install_only_stripped.tar.gz"
+      wheels:
+        -
+          name: "certifi-2025.4.26-py3-none-any.whl"
+          bytes: 159618
+          sha256: "30350364dfe371162649852c63336a15c70c6510c2ad5015b21c2345311805f3"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/4a/7e/3db2bd1b1f9e95f7cddca6d6e75e2f2bd9f51b1246e546d88addca0106bd/certifi-2025.4.26-py3-none-any.whl"
+        -
+          name: "cffi-1.17.1-cp312-cp312-macosx_11_0_arm64.whl"
+          bytes: 178840
+          sha256: "733e99bc2df47476e3848417c5a4540522f234dfd4ef3ab7fafdf555b082ec0c"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/da/ee/fb72c2b48656111c4ef27f0f91da355e130a923473bf5ee75c5643d00cca/cffi-1.17.1-cp312-cp312-macosx_11_0_arm64.whl"
+        -
+          name: "charset_normalizer-3.4.2-cp312-cp312-macosx_10_13_universal2.whl"
+          bytes: 199936
+          sha256: "0c29de6a1a95f24b9a1aa7aefd27d2487263f00dfd55a77719b530788f75cff7"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/d7/a4/37f4d6035c89cac7930395a35cc0f1b872e652eaafb76a6075943754f095/charset_normalizer-3.4.2-cp312-cp312-macosx_10_13_universal2.whl"
+        -
+          name: "coloredlogs-15.0.1-py2.py3-none-any.whl"
+          bytes: 46018
+          sha256: "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl"
+        -
+          name: "cryptography-45.0.4-cp311-abi3-macosx_10_9_universal2.whl"
+          bytes: 7055712
+          sha256: "425a9a6ac2823ee6e46a76a21a4e8342d8fa5c01e08b823c1f19a8b74f096069"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/cc/1c/92637793de053832523b410dbe016d3f5c11b41d0cf6eef8787aabb51d41/cryptography-45.0.4-cp311-abi3-macosx_10_9_universal2.whl"
+        -
+          name: "flatbuffers-25.2.10-py2.py3-none-any.whl"
+          bytes: 30953
+          sha256: "ebba5f4d5ea615af3f7fd70fc310636fbb2bbd1f566ac0a23d98dd412de50051"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/b8/25/155f9f080d5e4bc0082edfda032ea2bc2b8fab3f4d25d46c1e9dd22a1a89/flatbuffers-25.2.10-py2.py3-none-any.whl"
+        -
+          name: "fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
+          bytes: 2754082
+          sha256: "462211c0f37a278494e74267a994f6be9a2023d0557aaa9ecbcbfce0f403b5a6"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/04/3c/1d1792bfe91ef46f22a3d23b4deb514c325e73c17d4f196b385b5e2faf1c/fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
+        -
+          name: "humanfriendly-10.0-py2.py3-none-any.whl"
+          bytes: 86794
+          sha256: "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl"
+        -
+          name: "idna-3.10-py3-none-any.whl"
+          bytes: 70442
+          sha256: "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl"
+        -
+          name: "mpmath-1.3.0-py3-none-any.whl"
+          bytes: 536198
+          sha256: "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl"
+        -
+          name: "numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
+          bytes: 14119362
+          sha256: "de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/66/ee/560deadcdde6c2f90200450d5938f63a34b37e27ebff162810f716f6a230/numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
+        -
+          name: "onnx-1.17.0-cp312-cp312-macosx_12_0_universal2.whl"
+          bytes: 16651271
+          sha256: "0e906e6a83437de05f8139ea7eaf366bf287f44ae5cc44b2850a30e296421f2f"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/b4/dd/c416a11a28847fafb0db1bf43381979a0f522eb9107b831058fde012dd56/onnx-1.17.0-cp312-cp312-macosx_12_0_universal2.whl"
+        -
+          name: "onnxruntime-1.21.0-cp312-cp312-macosx_13_0_universal2.whl"
+          bytes: 33658780
+          sha256: "893d67c68ca9e7a58202fa8d96061ed86a5815b0925b5a97aef27b8ba246a20b"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/ff/21/593c9bc56002a6d1ea7c2236f4a648e081ec37c8d51db2383a9e83a63325/onnxruntime-1.21.0-cp312-cp312-macosx_13_0_universal2.whl"
+        -
+          name: "opencv_python_headless-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl"
+          bytes: 37326460
+          sha256: "48128188ade4a7e517237c8e1e11a9cdf5c282761473383e77beb875bb1e61ca"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/dc/53/2c50afa0b1e05ecdb4603818e85f7d174e683d874ef63a6abe3ac92220c8/opencv_python_headless-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl"
+        -
+          name: "packaging-25.0-py3-none-any.whl"
+          bytes: 66469
+          sha256: "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl"
+        -
+          name: "pdfminer_six-20250416-py3-none-any.whl"
+          bytes: 5619271
+          sha256: "dd2a9ad7bc7dd6b62d009aaa9c101ac9d069a47937724569c375a6a9078da303"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/77/32/89749ba23e5020e89fb584c1b39d7da6d7c56a9048307de8a88eec79e2d3/pdfminer_six-20250416-py3-none-any.whl"
+        -
+          name: "protobuf-6.31.1-cp39-abi3-macosx_10_9_universal2.whl"
+          bytes: 425604
+          sha256: "6f1227473dc43d44ed644425268eb7c2e488ae245d51c6866d19fe158e207402"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/6a/c9/b9689a2a250264a84e66c46d8862ba788ee7a641cdca39bccf64f59284b7/protobuf-6.31.1-cp39-abi3-macosx_10_9_universal2.whl"
+        -
+          name: "pycparser-2.22-py3-none-any.whl"
+          bytes: 117552
+          sha256: "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl"
+        -
+          name: "pymupdf-1.25.2-cp39-abi3-macosx_11_0_arm64.whl"
+          bytes: 18570847
+          sha256: "e8b8a874497cd0deee89a6a4fb76a3a08173c8d39e88fc7cf715764ec5a243e9"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/4f/ec/c7f742f56ee42be27b3afdbf3364da12f03e309f6638e666a7816d9eef23/pymupdf-1.25.2-cp39-abi3-macosx_11_0_arm64.whl"
+        -
+          name: "requests-2.32.3-py3-none-any.whl"
+          bytes: 64928
+          sha256: "70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl"
+        -
+          name: "sympy-1.14.0-py3-none-any.whl"
+          bytes: 6299353
+          sha256: "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl"
+        -
+          name: "tenacity-9.0.0-py3-none-any.whl"
+          bytes: 28169
+          sha256: "93de0c98785b27fcf659856aa9f54bfbd399e29969b0621bc7f762bd441b4539"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/b6/cb/b86984bed139586d01532a587464b5805f12e397594f19f931c4c2fbfa61/tenacity-9.0.0-py3-none-any.whl"
+        -
+          name: "tqdm-4.67.1-py3-none-any.whl"
+          bytes: 78540
+          sha256: "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl"
+        -
+          name: "urllib3-2.4.0-py3-none-any.whl"
+          bytes: 128680
+          sha256: "4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/6b/11/cc635220681e93a0183390e26485430ca2c7b5f9d33b15c74c2861cb8091/urllib3-2.4.0-py3-none-any.whl"
+      native_dependencies:
+        []
+      layout_model:
+        name: "doclayout.onnx"
+        bytes: 75324598
+        sha256: "fece9af02f618b603ff7921ccec6861d13e7e1f9830e091dfb7e8ad9311e5b21"
+        sources:
+          -
+            kind: "trusted_third_party"
+            url: "https://huggingface.co/wybxc/DocLayout-YOLO-DocStructBench-onnx/resolve/89c9fe92dd1384e26612846b4ab68a811dc98d61/doclayout.onnx"
+      target_font:
+        name: "SourceHanSerifCN-Regular.ttf"
+        bytes: 14047768
+        sha256: "8ba5ec09db04b1d1599edeff3fb5627ca11eaaf85e339e5c32684cb94e806993"
+        sources:
+          -
+            kind: "trusted_third_party"
+            url: "https://raw.githubusercontent.com/timelic/source-han-serif/94a655c189915c665552285013279ef762b46b7a/SourceHanSerifCN-Regular.ttf"
+      bundled_source_archive_bytes: 36844
+      bundled_source_archive_sha256: "5dc16f61740bd5a0e8da199d8b31384002d0df79f1baf78d203d290bf195b0dd"
+  x86_64:
+    package:
+      name: "apaper-translation-engine-v0.1-macos-x86_64.tar.gz"
+      bytes: 279796873
+      sha256: "35b1fd43603b57ebdc3693e5bc7cae5fd25b8327c9233f667b97b73a0fea3e86"
+      sources:
+        -
+          kind: "cloud_primary"
+          url: "https://cloud.apaper.ai/v1/translation/v0.1/assets/macos/x86_64/apaper-translation-engine-v0.1-macos-x86_64.tar.gz"
+        -
+          kind: "github_release"
+          url: "https://github.com/YociLam/aPaper-Cloud/releases/download/translation-engine-v0.1/apaper-translation-engine-v0.1-macos-x86_64.tar.gz"
+    fallback:
+      python_runtime:
+        name: "cpython-3.12.13+20260602-x86_64-apple-darwin-install_only_stripped.tar.gz"
+        bytes: 24660572
+        sha256: "ed741cca5783263844e051cedbb9e0728a8e8c0a903038ac910a2664c36e532a"
+        sources:
+          -
+            kind: "official"
+            url: "https://github.com/astral-sh/python-build-standalone/releases/download/20260602/cpython-3.12.13%2B20260602-x86_64-apple-darwin-install_only_stripped.tar.gz"
+      wheels:
+        -
+          name: "certifi-2025.4.26-py3-none-any.whl"
+          bytes: 159618
+          sha256: "30350364dfe371162649852c63336a15c70c6510c2ad5015b21c2345311805f3"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/4a/7e/3db2bd1b1f9e95f7cddca6d6e75e2f2bd9f51b1246e546d88addca0106bd/certifi-2025.4.26-py3-none-any.whl"
+        -
+          name: "cffi-1.17.1-cp312-cp312-macosx_10_9_x86_64.whl"
+          bytes: 183178
+          sha256: "805b4371bf7197c329fcb3ead37e710d1bca9da5d583f5073b799d5c5bd1eee4"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/5a/84/e94227139ee5fb4d600a7a4927f322e1d4aea6fdc50bd3fca8493caba23f/cffi-1.17.1-cp312-cp312-macosx_10_9_x86_64.whl"
+        -
+          name: "charset_normalizer-3.4.2-cp312-cp312-macosx_10_13_universal2.whl"
+          bytes: 199936
+          sha256: "0c29de6a1a95f24b9a1aa7aefd27d2487263f00dfd55a77719b530788f75cff7"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/d7/a4/37f4d6035c89cac7930395a35cc0f1b872e652eaafb76a6075943754f095/charset_normalizer-3.4.2-cp312-cp312-macosx_10_13_universal2.whl"
+        -
+          name: "coloredlogs-15.0.1-py2.py3-none-any.whl"
+          bytes: 46018
+          sha256: "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl"
+        -
+          name: "cryptography-45.0.4-cp311-abi3-macosx_10_9_universal2.whl"
+          bytes: 7055712
+          sha256: "425a9a6ac2823ee6e46a76a21a4e8342d8fa5c01e08b823c1f19a8b74f096069"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/cc/1c/92637793de053832523b410dbe016d3f5c11b41d0cf6eef8787aabb51d41/cryptography-45.0.4-cp311-abi3-macosx_10_9_universal2.whl"
+        -
+          name: "flatbuffers-25.2.10-py2.py3-none-any.whl"
+          bytes: 30953
+          sha256: "ebba5f4d5ea615af3f7fd70fc310636fbb2bbd1f566ac0a23d98dd412de50051"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/b8/25/155f9f080d5e4bc0082edfda032ea2bc2b8fab3f4d25d46c1e9dd22a1a89/flatbuffers-25.2.10-py2.py3-none-any.whl"
+        -
+          name: "fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
+          bytes: 2754082
+          sha256: "462211c0f37a278494e74267a994f6be9a2023d0557aaa9ecbcbfce0f403b5a6"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/04/3c/1d1792bfe91ef46f22a3d23b4deb514c325e73c17d4f196b385b5e2faf1c/fonttools-4.58.4-cp312-cp312-macosx_10_13_universal2.whl"
+        -
+          name: "humanfriendly-10.0-py2.py3-none-any.whl"
+          bytes: 86794
+          sha256: "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl"
+        -
+          name: "idna-3.10-py3-none-any.whl"
+          bytes: 70442
+          sha256: "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl"
+        -
+          name: "mpmath-1.3.0-py3-none-any.whl"
+          bytes: 536198
+          sha256: "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl"
+        -
+          name: "numpy-2.2.6-cp312-cp312-macosx_10_13_x86_64.whl"
+          bytes: 20875348
+          sha256: "41c5a21f4a04fa86436124d388f6ed60a9343a6f767fced1a8a71c3fbca038ff"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/82/5d/c00588b6cf18e1da539b45d3598d3557084990dcc4331960c15ee776ee41/numpy-2.2.6-cp312-cp312-macosx_10_13_x86_64.whl"
+        -
+          name: "onnx-1.17.0-cp312-cp312-macosx_12_0_universal2.whl"
+          bytes: 16651271
+          sha256: "0e906e6a83437de05f8139ea7eaf366bf287f44ae5cc44b2850a30e296421f2f"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/b4/dd/c416a11a28847fafb0db1bf43381979a0f522eb9107b831058fde012dd56/onnx-1.17.0-cp312-cp312-macosx_12_0_universal2.whl"
+        -
+          name: "onnxruntime-1.21.0-cp312-cp312-macosx_13_0_universal2.whl"
+          bytes: 33658780
+          sha256: "893d67c68ca9e7a58202fa8d96061ed86a5815b0925b5a97aef27b8ba246a20b"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/ff/21/593c9bc56002a6d1ea7c2236f4a648e081ec37c8d51db2383a9e83a63325/onnxruntime-1.21.0-cp312-cp312-macosx_13_0_universal2.whl"
+        -
+          name: "opencv_python_headless-4.11.0.86-cp37-abi3-macosx_13_0_x86_64.whl"
+          bytes: 56723330
+          sha256: "a66c1b286a9de872c343ee7c3553b084244299714ebb50fbdcd76f07ebbe6c81"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/3b/43/68555327df94bb9b59a1fd645f63fafb0762515344d2046698762fc19d58/opencv_python_headless-4.11.0.86-cp37-abi3-macosx_13_0_x86_64.whl"
+        -
+          name: "packaging-25.0-py3-none-any.whl"
+          bytes: 66469
+          sha256: "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl"
+        -
+          name: "pdfminer_six-20250416-py3-none-any.whl"
+          bytes: 5619271
+          sha256: "dd2a9ad7bc7dd6b62d009aaa9c101ac9d069a47937724569c375a6a9078da303"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/77/32/89749ba23e5020e89fb584c1b39d7da6d7c56a9048307de8a88eec79e2d3/pdfminer_six-20250416-py3-none-any.whl"
+        -
+          name: "protobuf-6.31.1-cp39-abi3-macosx_10_9_universal2.whl"
+          bytes: 425604
+          sha256: "6f1227473dc43d44ed644425268eb7c2e488ae245d51c6866d19fe158e207402"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/6a/c9/b9689a2a250264a84e66c46d8862ba788ee7a641cdca39bccf64f59284b7/protobuf-6.31.1-cp39-abi3-macosx_10_9_universal2.whl"
+        -
+          name: "pycparser-2.22-py3-none-any.whl"
+          bytes: 117552
+          sha256: "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl"
+        -
+          name: "pymupdf-1.25.2-cp39-abi3-macosx_10_9_x86_64.whl"
+          bytes: 19336722
+          sha256: "59dea22b633cc4fc13670b4c5db50d71f8cd4f420814420f33ce47ddcb61e1f6"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/24/34/8c3d82719d118beb48fded78fcab7cbe9ac3bf1906dc87a9ca4fd950087d/pymupdf-1.25.2-cp39-abi3-macosx_10_9_x86_64.whl"
+        -
+          name: "requests-2.32.3-py3-none-any.whl"
+          bytes: 64928
+          sha256: "70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl"
+        -
+          name: "sympy-1.14.0-py3-none-any.whl"
+          bytes: 6299353
+          sha256: "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl"
+        -
+          name: "tenacity-9.0.0-py3-none-any.whl"
+          bytes: 28169
+          sha256: "93de0c98785b27fcf659856aa9f54bfbd399e29969b0621bc7f762bd441b4539"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/b6/cb/b86984bed139586d01532a587464b5805f12e397594f19f931c4c2fbfa61/tenacity-9.0.0-py3-none-any.whl"
+        -
+          name: "tqdm-4.67.1-py3-none-any.whl"
+          bytes: 78540
+          sha256: "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl"
+        -
+          name: "urllib3-2.4.0-py3-none-any.whl"
+          bytes: 128680
+          sha256: "4e16665048960a0900c702d4a66415956a584919c03361cac9f1df5c5dd7e813"
+          sources:
+            -
+              kind: "official"
+              url: "https://files.pythonhosted.org/packages/6b/11/cc635220681e93a0183390e26485430ca2c7b5f9d33b15c74c2861cb8091/urllib3-2.4.0-py3-none-any.whl"
+      native_dependencies:
+        []
+      layout_model:
+        name: "doclayout.onnx"
+        bytes: 75324598
+        sha256: "fece9af02f618b603ff7921ccec6861d13e7e1f9830e091dfb7e8ad9311e5b21"
+        sources:
+          -
+            kind: "trusted_third_party"
+            url: "https://huggingface.co/wybxc/DocLayout-YOLO-DocStructBench-onnx/resolve/89c9fe92dd1384e26612846b4ab68a811dc98d61/doclayout.onnx"
+      target_font:
+        name: "SourceHanSerifCN-Regular.ttf"
+        bytes: 14047768
+        sha256: "8ba5ec09db04b1d1599edeff3fb5627ca11eaaf85e339e5c32684cb94e806993"
+        sources:
+          -
+            kind: "trusted_third_party"
+            url: "https://raw.githubusercontent.com/timelic/source-han-serif/94a655c189915c665552285013279ef762b46b7a/SourceHanSerifCN-Regular.ttf"
+      bundled_source_archive_bytes: 36844
+      bundled_source_archive_sha256: "5dc16f61740bd5a0e8da199d8b31384002d0df79f1baf78d203d290bf195b0dd"

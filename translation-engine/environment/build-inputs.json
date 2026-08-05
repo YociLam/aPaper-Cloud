@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "layout_model": {
+    "name": "doclayout_yolo_docstructbench_imgsz1024.onnx",
+    "bytes": 75324598,
+    "sha256": "fece9af02f618b603ff7921ccec6861d13e7e1f9830e091dfb7e8ad9311e5b21",
+    "build_input": "local verified source",
+    "provenance": "wybxc/DocLayout-YOLO-DocStructBench-onnx:doclayout_yolo_docstructbench_imgsz1024.onnx"
+  },
+  "target_font": {
+    "name": "SourceHanSerifCN-Regular.ttf",
+    "bytes": 14047768,
+    "sha256": "8ba5ec09db04b1d1599edeff3fb5627ca11eaaf85e339e5c32684cb94e806993",
+    "build_input": "local verified source",
+    "provenance": "timelic/source-han-serif:main/SourceHanSerifCN-Regular.ttf"
+  }
+}
