@@ -23,6 +23,18 @@
         width: min(34rem, calc(100vw - 3rem));
       }
 
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .title img {
+        width: clamp(2.5rem, 6vw, 3.25rem);
+        height: clamp(2.5rem, 6vw, 3.25rem);
+        border-radius: 0.75rem;
+      }
+
       h1 {
         margin: 0;
         font-size: clamp(2rem, 7vw, 3.5rem);
@@ -61,11 +73,32 @@
         margin: 0;
         font-variant-numeric: tabular-nums;
       }
+
+      footer {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 2rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid color-mix(in srgb, CanvasText 16%, transparent);
+        font-size: 0.875rem;
+      }
+
+      footer span {
+        color: color-mix(in srgb, CanvasText 52%, transparent);
+      }
+
+      footer a {
+        color: inherit;
+        text-underline-offset: 0.2em;
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1>aPaper Cloud</h1>
+      <div class="title">
+        <img src="/assets/apaper-mark.png" width="126" height="126" alt="aPaper logo">
+        <h1>aPaper Cloud</h1>
+      </div>
       <p>Versioned public metadata for aPaper.</p>
       <section aria-labelledby="conference-heading">
         <h2 id="conference-heading">Conference catalog</h2>
@@ -87,6 +120,10 @@
           <dd><time id="translation-updated">Checking…</time></dd>
         </dl>
       </section>
+      <footer>
+        <span>Contact</span>
+        <a href="mailto:contact@apaper.ai">contact@apaper.ai</a>
+      </footer>
     </main>
     <script>
       function displayTime(element, value) {
