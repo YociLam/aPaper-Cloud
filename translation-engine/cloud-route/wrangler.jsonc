@@ -7,7 +7,7 @@
   "preview_urls": false,
   "routes": [
     {
-      "pattern": "cloud.apaper.ai/v1/translation/v0.1/assets/macos/*",
+      "pattern": "cloud.apaper.ai/v1/translation/v0.1/assets/*",
       "zone_name": "apaper.ai"
     }
   ],
