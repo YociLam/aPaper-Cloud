@@ -22,6 +22,10 @@
 仅更新翻译器不会触发环境下载，只有所需环境版本也发生变化时才会更新环境；任何一条
 发布线的更新都不会改变会议目录的路径、版本或更新时间。
 
+正式版 App 会将适配当前架构的 Translation Engine 环境与翻译器随 App 一起分发。App
+运行时不会读取本仓库、`cloud.apaper.ai`、GitHub Release 或第三方源来准备或维护环境。
+本仓库仍是公开发布与人工下载渠道，供维护者和需要独立取得不可变环境包的用户使用。
+
 ## 收录概览
 
 下表来自 `public/v1/conferences/manifest.json`。数字表示该会议年份当前收录的论文数；
@@ -74,9 +78,10 @@ public/
       packs/<venue>/<year>.jsonl.zst
 ```
 
-Translation Engine 的控制面独立位于 `public/v1/translation`。双架构完整环境包作为不可变
-GitHub Release 资产发布；公开 Manifest 只提供稳定的 `cloud.apaper.ai` 主地址与 GitHub
-Release 回退地址，不改变既有会议目录路径。
+Translation Engine 的发布控制面独立位于 `public/v1/translation`。双架构完整环境包继续
+作为不可变 GitHub Release 资产发布；公开 Manifest 提供稳定的 `cloud.apaper.ai` 与
+Release 地址，用于人工下载和发布核验，不改变既有会议目录路径。正式版 App 运行时不使用
+这些地址，也不依赖本仓库的内部布局。
 
 - `version.json` 是 App 启动时首先访问的轻量版本入口。
 - `manifest.json` 按 App 展示顺序记录完整会议目录、会议多语言名称、可选的多语言会议标签、
@@ -87,7 +92,13 @@ Release 回退地址，不改变既有会议目录路径。
 生产环境的规范来源始终是 `https://cloud.apaper.ai`。Manifest 中的数据包路径均为相对路径。
 新增会议、修改会议多语言名称或发布新年份时，都不需要重新构建 App。
 
-## App 同步约定
+## Translation Engine 人工分发约定
+
+Translation Engine 的 Manifest 与 Release 资产独立于 App Bundle 维护。维护者或用户可以
+下载与架构匹配的完整环境包，核对字节数和 SHA-256 后，将其作为本地构建输入；下一次 App
+构建会把它放入 `Contents/Resources/TranslationEngine`，运行时只允许使用 App 内置包。
+
+会议目录仍沿用原有 App 同步约定：
 
 1. App 启动时请求 `version.json`，只比较远端与本地的两段式 `manifest_version`。
 2. 版本相同则停止，不重复下载 Manifest 或会议数据包。

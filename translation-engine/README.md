@@ -4,7 +4,7 @@ This directory defines and validates the architecture-specific aPaper Translatio
 
 The runtime never needs system Python, Homebrew, Conda, global `pip`, or an existing virtual environment. Build inputs are immutable by version and verified by SHA-256. GitHub Releases contain only final architecture packages and their release metadata; normal Git history contains only environment definitions, locks, schemas, build/validation scripts, checksums, provenance, and release metadata.
 
-Translator `v0.1` currently requires environment `v0.1`. Both use the two-component `vX.Y` product version format, but they are independent: changing only the translator version does not reinstall the environment. The environment supports macOS `arm64` and `x86_64`, minimum macOS 13.0, worker protocol 1. The stable public control plane is `https://cloud.apaper.ai/v1/translation/v0.1/manifest.json`; GitHub Release assets are deterministic fallbacks.
+Translator `v0.1` currently requires environment `v0.1`. Both use the two-component `vX.Y` product version format, but they are independent: changing only the translator version does not reinstall the environment. The environment supports macOS `arm64` and `x86_64`, minimum macOS 13.0, worker protocol 1. The stable public control plane is `https://cloud.apaper.ai/v1/translation/v0.1/manifest.json`; its URLs are retained for release verification and manual downloads.
 
 The source copy inside a complete environment archive is a self-contained bootstrap baseline, not the active translator-version authority. At runtime aPaper verifies and atomically activates the translator source shipped by the current App under a separate content-addressed translator directory, then runs it with the selected environment's private Python, dependencies, model, and font. A translator-only App update therefore replaces only that translator directory; an environment download occurs only when `required_environment_version`, environment compatibility, integrity, or health requires it.
 
@@ -35,4 +35,10 @@ python3.12 scripts/build-translation-engine-environment.py \
 
 The package builder normalizes timestamps, owners, ordering, and gzip metadata. It writes a complete file inventory and SHA-256 commitments into the release metadata. Packaging and publication are separate: a verified local build is uploaded as an immutable GitHub Release, and no intermediate model/font/source asset release is created.
 
-The App resolves an already healthy local installation first, then the complete package at `cloud.apaper.ai`, the same immutable GitHub Release asset, and any later explicitly trusted aPaper mirror. Only after all complete-package sources fail does it provision the pinned standalone runtime, wheels, model, font, and App-bundled worker source from the YAML definition. Every network transfer uses the shared aPaper segmented downloader (maximum 12 workers), and every file is admitted by expected byte count plus SHA-256 before staged atomic activation.
+The production App does not resolve or download any package from this repository, `cloud.apaper.ai`,
+GitHub, or third-party URLs. It reads the architecture-matched environment archive, translator
+archive, and version manifests embedded in `Contents/Resources/TranslationEngine`; when the App
+needs to install or update the runtime, Rust/Core admits only those embedded files by expected byte
+count and SHA-256 before staged atomic activation. Users and maintainers may still download the
+immutable Cloud/GitHub assets manually and supply the exact package as a local input to the next
+App build.
