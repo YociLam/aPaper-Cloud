@@ -25,6 +25,12 @@ independent version streams. A translator update does not require an environment
 the required environment version also changes. Updating any stream leaves the conference paths,
 version, and timestamp untouched.
 
+The production App ships the architecture-matched Translation Engine environment and translator
+inside its own App Bundle. It does not consult this repository, `cloud.apaper.ai`, GitHub Release
+assets, or third-party source URLs to provision or maintain its runtime environment. This
+repository remains the authoritative public release and manual-download channel for maintainers
+and users who need to obtain an immutable package independently.
+
 ## Catalog overview
 
 The table below is generated from `public/v1/conferences/manifest.json`. A number without a status
@@ -83,10 +89,11 @@ public/
       packs/<venue>/<year>.jsonl.zst
 ```
 
-The Translation Engine control plane is also versioned under `public/v1/translation`. Large,
-architecture-specific environment archives are immutable GitHub Release assets; the public
-manifest exposes stable `cloud.apaper.ai` primary URLs and direct Release fallbacks without
-coupling the App to this repository's internal layout.
+The Translation Engine release control plane is also versioned under `public/v1/translation`.
+Large, architecture-specific environment archives remain immutable GitHub Release assets; the
+public manifest exposes stable `cloud.apaper.ai` and direct Release URLs for manual downloads and
+release verification. The production App does not use these URLs at runtime and does not depend on
+this repository's internal layout.
 
 - `version.json` is the lightweight endpoint checked first when the App starts.
 - `manifest.json` records the complete venue catalog in App display order, localized venue names,
@@ -99,7 +106,15 @@ The canonical production origin is always `https://cloud.apaper.ai`. Pack paths 
 relative. Adding a venue, changing its localized name, or publishing a new edition therefore does
 not require rebuilding the App.
 
-## App synchronization contract
+## Translation Engine manual distribution contract
+
+The Translation Engine manifest and release assets are maintained independently from the App
+Bundle. A maintainer may download the exact architecture package, verify its byte count and
+SHA-256, and provide it as a local build input. The next App build embeds that package under
+`Contents/Resources/TranslationEngine`; only the embedded package is eligible for runtime
+installation.
+
+The conference catalog retains its normal App synchronization contract:
 
 1. On startup, the App requests `version.json` and compares the remote two-segment
    `manifest_version` with its locally persisted version.
