@@ -116,8 +116,10 @@
           <dd id="translator-version">Checking…</dd>
           <dt>Environment</dt>
           <dd id="environment-version">Checking…</dd>
-          <dt>Updated</dt>
-          <dd><time id="translation-updated">Checking…</time></dd>
+          <dt>Translator updated</dt>
+          <dd><time id="translator-updated">Checking…</time></dd>
+          <dt>Environment updated</dt>
+          <dd><time id="environment-updated">Checking…</time></dd>
         </dl>
       </section>
       <footer>
@@ -158,7 +160,8 @@
 
       const translatorVersion = document.querySelector("#translator-version");
       const environmentVersion = document.querySelector("#environment-version");
-      const translationUpdated = document.querySelector("#translation-updated");
+      const translatorUpdated = document.querySelector("#translator-updated");
+      const environmentUpdated = document.querySelector("#environment-updated");
 
       fetch(`/v1/translation/version.json?check=${Date.now()}`, { cache: "no-store" })
         .then((response) => {
@@ -168,12 +171,20 @@
         .then((release) => {
           translatorVersion.textContent = release.translator_version;
           environmentVersion.textContent = release.environment_version;
-          displayTime(translationUpdated, release.updated_at);
+          displayTime(
+            translatorUpdated,
+            release.translator_updated_at || release.updated_at
+          );
+          displayTime(
+            environmentUpdated,
+            release.environment_updated_at || release.updated_at
+          );
         })
         .catch(() => {
           translatorVersion.textContent = "Unavailable";
           environmentVersion.textContent = "Unavailable";
-          translationUpdated.textContent = "Unavailable";
+          translatorUpdated.textContent = "Unavailable";
+          environmentUpdated.textContent = "Unavailable";
         });
     </script>
   </body>

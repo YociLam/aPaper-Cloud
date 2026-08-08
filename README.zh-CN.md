@@ -14,12 +14,13 @@
 - 正式地址：`https://cloud.apaper.ai`
 - 会议产品目录 Manifest：`v0.12`
 - 会议产品目录更新时间：`2026-07-22 20:11:41 UTC`
-- Translation Engine 翻译器版本：`v0.1`
+- Translation Engine 翻译器版本：`v0.3`
 - Translation Engine 环境版本：`v0.1`
-- Translation Engine 更新时间：`2026-08-05 20:59:43 UTC`
+- Translation Engine 翻译器更新时间：`2026-08-08 00:48:48 UTC`
+- Translation Engine 环境更新时间：`2026-08-05 20:59:43 UTC`
 
 会议产品目录、Translation Engine 翻译器和 Translation Engine 环境是三条独立版本线。
-仅更新翻译器不会触发环境下载，只有所需环境版本也发生变化时才会更新环境；任何一条
+仅更新翻译器不会触发环境包更新，只有所需环境版本也发生变化时才会更新环境；任何一条
 发布线的更新都不会改变会议目录的路径、版本或更新时间。
 
 ## App 运行边界
@@ -100,7 +101,10 @@ Release 回退地址，不改变既有会议目录路径。
 
 对于 Translation Engine 资源，该地址仅用于手动分发；会议目录同步与翻译环境发布彼此独立。
 
-## App 同步约定
+## 会议目录同步约定
+
+以下同步约定仅适用于会议元数据目录，不适用于 Translation Engine。已安装的 App 不会访问
+本仓库或任何 Translation Engine 地址来安装、修复或更新翻译器与环境。
 
 1. App 启动时请求 `version.json`，只比较远端与本地的两段式 `manifest_version`。
 2. 版本相同则停止，不重复下载 Manifest 或会议数据包。

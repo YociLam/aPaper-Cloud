@@ -16,13 +16,14 @@ needs.
 - Production origin: `https://cloud.apaper.ai`
 - Conference catalog manifest: `v0.12`
 - Conference catalog updated: `2026-07-22 20:11:41 UTC`
-- Translation Engine translator version: `v0.1`
+- Translation Engine translator version: `v0.3`
 - Translation Engine environment version: `v0.1`
-- Translation Engine updated: `2026-08-05 20:59:43 UTC`
+- Translation Engine translator updated: `2026-08-08 00:48:48 UTC`
+- Translation Engine environment updated: `2026-08-05 20:59:43 UTC`
 
 The conference catalog, Translation Engine translator, and Translation Engine environment are
-independent version streams. A translator update does not require an environment download unless
-the required environment version also changes. Updating any stream leaves the conference paths,
+independent version streams. A translator update does not require an environment package update
+unless the required environment version also changes. Updating any stream leaves the conference paths,
 version, and timestamp untouched.
 
 ## App runtime boundary
@@ -115,7 +116,11 @@ not require rebuilding the App.
 For Translation Engine assets, the origin is a manual distribution endpoint only. Conference
 catalog synchronization and Translation Engine package publication are separate concerns.
 
-## App synchronization contract
+## Conference catalog synchronization contract
+
+The following synchronization contract applies only to the conference metadata catalog. It does
+not apply to the Translation Engine: the installed App does not query this repository or any
+Translation Engine URL to install, repair, or update its translator or environment.
 
 1. On startup, the App requests `version.json` and compares the remote two-segment
    `manifest_version` with its locally persisted version.
