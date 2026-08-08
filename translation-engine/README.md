@@ -35,4 +35,11 @@ python3.12 scripts/build-translation-engine-environment.py \
 
 The package builder normalizes timestamps, owners, ordering, and gzip metadata. It writes a complete file inventory and SHA-256 commitments into the release metadata. Packaging and publication are separate: a verified local build is uploaded as an immutable GitHub Release, and no intermediate model/font/source asset release is created.
 
-The App resolves an already healthy local installation first, then the complete package at `cloud.apaper.ai`, the same immutable GitHub Release asset, and any later explicitly trusted aPaper mirror. Only after all complete-package sources fail does it provision the pinned standalone runtime, wheels, model, font, and App-bundled worker source from the YAML definition. Every network transfer uses the shared aPaper segmented downloader (maximum 12 workers), and every file is admitted by expected byte count plus SHA-256 before staged atomic activation.
+The installed App no longer resolves Translation Engine packages from `cloud.apaper.ai`, GitHub, or
+another mirror. It carries the matching translator and environment packages in its signed bundle,
+performs a lightweight startup check, and deploys only from those bundled resources. The URLs and
+release assets described above remain available for explicit manual downloads and for maintainers
+preparing the next App build; they are not an automatic runtime fallback. Conference catalog
+synchronization remains a separate App capability. Any manual package transfer still uses the
+shared aPaper segmented downloader (maximum 12 workers), and every package is admitted by expected
+byte count plus SHA-256 before staged atomic activation.

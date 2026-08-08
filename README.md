@@ -25,6 +25,19 @@ independent version streams. A translator update does not require an environment
 the required environment version also changes. Updating any stream leaves the conference paths,
 version, and timestamp untouched.
 
+## App runtime boundary
+
+The installed aPaper App does not use this repository, `cloud.apaper.ai`, GitHub, or another
+network source to maintain its Translation Engine at runtime. The App carries the matching
+translator and environment packages inside its signed bundle, performs a lightweight startup
+check, and deploys only from those bundled resources. This repository remains the public,
+versioned manual-download and release channel for maintainers and users who explicitly need an
+architecture-matched package. It is not an automatic runtime dependency of the App.
+
+Translation source remains maintained in the aPaper source repository; Cloud publishes distribution
+metadata and environment assets, not a second runtime source tree. The macOS `arm64` and `x86_64`
+package paths remain separate, and `windows/` namespaces stay reserved for a future release.
+
 ## Catalog overview
 
 The table below is generated from `public/v1/conferences/manifest.json`. A number without a status
@@ -98,6 +111,9 @@ coupling the App to this repository's internal layout.
 The canonical production origin is always `https://cloud.apaper.ai`. Pack paths in the manifest are
 relative. Adding a venue, changing its localized name, or publishing a new edition therefore does
 not require rebuilding the App.
+
+For Translation Engine assets, the origin is a manual distribution endpoint only. Conference
+catalog synchronization and Translation Engine package publication are separate concerns.
 
 ## App synchronization contract
 
@@ -206,3 +222,5 @@ python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/verify_publishe
 
 Sources such as ACL Anthology XML, AAAI OAI-PMH, and CVF Open Access use venue-specific extractors.
 They are acquisition adapters within each conference Skill, not the project's only import path.
+
+Questions: `contact@apaper.ai`

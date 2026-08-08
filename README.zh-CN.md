@@ -22,6 +22,17 @@
 仅更新翻译器不会触发环境下载，只有所需环境版本也发生变化时才会更新环境；任何一条
 发布线的更新都不会改变会议目录的路径、版本或更新时间。
 
+## App 运行边界
+
+已安装的 aPaper App 在运行时不会使用本仓库、`cloud.apaper.ai`、GitHub 或其他网络源维护
+Translation Engine。App 会在签名包内携带匹配的翻译器与环境包，启动时执行轻量检查，并且
+只从包内资源完成部署。本仓库仍是公开、版本化的手动下载与发布渠道，供维护者或确实需要
+手动获取对应架构资源的用户使用；它不是 App 的自动运行时依赖。
+
+翻译器源码继续维护在 aPaper 主源码仓库中；Cloud 发布的是分发元数据与环境资产，不再维护
+第二份运行时源码树。macOS `arm64` 与 `x86_64` 资源路径保持分离，`windows/` 路径为未来
+版本预留。
+
 ## 收录概览
 
 下表来自 `public/v1/conferences/manifest.json`。数字表示该会议年份当前收录的论文数；
@@ -86,6 +97,8 @@ Release 回退地址，不改变既有会议目录路径。
 
 生产环境的规范来源始终是 `https://cloud.apaper.ai`。Manifest 中的数据包路径均为相对路径。
 新增会议、修改会议多语言名称或发布新年份时，都不需要重新构建 App。
+
+对于 Translation Engine 资源，该地址仅用于手动分发；会议目录同步与翻译环境发布彼此独立。
 
 ## App 同步约定
 
@@ -181,3 +194,5 @@ python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/verify_publishe
 
 ACL Anthology XML、AAAI OAI-PMH、CVF Open Access 等来源具有各自的专用提取器；它们属于
 会议 Skill 的采集适配层，不是整个项目唯一的导入方式。
+
+联系方式：`contact@apaper.ai`
