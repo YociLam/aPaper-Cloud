@@ -30,9 +30,11 @@ version, and timestamp untouched.
 
 The installed aPaper App uses `https://cloud.apaper.ai` as the conference catalog authority at
 runtime. It requests the lightweight manifest version at startup, downloads a changed manifest
-only when needed, and downloads only the selected venue/year packs that are missing or outdated.
+only when needed, and downloads only the selected venue/year packs whose per-pack version is
+missing or outdated.
 Conference names, labels, years, availability, and pack versions therefore adapt without an App
 release. Translation Engine resources remain bundled and are unrelated to this catalog channel.
+Each pack carries its own two-segment `pack_version` and SHA-256 in the Manifest.
 
 Translation source remains maintained in the aPaper source repository; Cloud publishes distribution
 metadata and environment assets, not a second runtime source tree. The macOS `arm64` and `x86_64`

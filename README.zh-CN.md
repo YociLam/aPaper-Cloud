@@ -26,9 +26,11 @@
 ## App 运行边界
 
 aPaper App 运行时以 `https://cloud.apaper.ai` 作为会议目录权威来源。App 启动时先请求轻量
-版本入口，仅在 Manifest 版本变化时下载 Manifest，并只下载缺失或过期的所选会议/年份包。
+版本入口，仅在 Manifest 版本变化时下载 Manifest，并按每个包的 `pack_version` 只下载缺失或过期的
+所选会议/年份包。
 因此会议名称、标签、年份、可用状态和包版本可以在不更新 App 的情况下自适应变化。Translation
-Engine 资源仍随 App 分发，与会议目录同步链路相互独立。
+Engine 资源仍随 App 分发，与会议目录同步链路相互独立。Manifest 中每个包都带有独立的两段式
+`pack_version` 和 SHA-256。
 
 翻译器源码继续维护在 aPaper 主源码仓库中；Cloud 发布的是分发元数据与环境资产，不再维护
 第二份运行时源码树。macOS `arm64` 与 `x86_64` 资源路径保持分离，`windows/` 路径为未来
