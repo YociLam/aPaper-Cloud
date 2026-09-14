@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "manifest_version": "0.12",
+  "manifest_version": "0.13",
   "dataset": "apaper.conferences",
-  "generated_at": "2026-07-22T20:11:41Z",
+  "generated_at": "2026-09-14T10:00:17Z",
   "canonical_origin": "https://cloud.apaper.ai",
-  "maximum_selected_records": 20000,
+  "maximum_selected_records": 100000,
   "venues": [
     {
       "id": "neurips",
@@ -600,6 +600,18 @@
           }
         },
         {
+          "id": "aistats:2026",
+          "year": 2026,
+          "paper_count": 588,
+          "state": "published",
+          "pack": {
+            "path": "packs/aistats/2026.jsonl.zst",
+            "sha256": "227a521c7d39aae44f10b30daea9e534118f3eea4a5fa7175daa8912804c609e",
+            "compressed_bytes": 248050,
+            "record_count": 588
+          }
+        },
+        {
           "id": "aistats:2024",
           "year": 2024,
           "paper_count": 547,
@@ -741,6 +753,18 @@
             "sha256": "af6185969cba641b56bf65d6c4f3dfdd4a819c576e9757f585b1a2e2182eeac8",
             "compressed_bytes": 88449,
             "record_count": 163
+          }
+        },
+        {
+          "id": "rss:2026",
+          "year": 2026,
+          "paper_count": 210,
+          "state": "published",
+          "pack": {
+            "path": "packs/rss/2026.jsonl.zst",
+            "sha256": "d555ca19f2304fcc162babbac8ec86dda37f3781cdb09155865e9c23c1b4cb37",
+            "compressed_bytes": 112888,
+            "record_count": 210
           }
         },
         {

@@ -14,8 +14,8 @@ is partitioned by venue and edition year, allowing the App to download only the 
 needs.
 
 - Production origin: `https://cloud.apaper.ai`
-- Conference catalog manifest: `v0.12`
-- Conference catalog updated: `2026-07-22 20:11:41 UTC`
+- Conference catalog manifest: `v0.13`
+- Conference catalog updated: `2026-09-14 10:00:17 UTC`
 - Translation Engine translator version: `v0.3`
 - Translation Engine environment version: `v0.1`
 - Translation Engine translator updated: `2026-08-08 00:48:48 UTC`
@@ -57,11 +57,11 @@ available for App synchronization.
 | EMNLP | — | 2,241 | 2,388 | 3,488 | announced |
 | ICCV | — | 2,156 | — | 949 | — |
 | ECCV | 1,645 | — | 2,387 | — | announced |
-| AISTATS | — | — | 547 | 583 | — |
+| AISTATS | — | — | 547 | 583 | 588 |
 | COLT | — | — | — | 181 | 196 |
 | AAMAS | — | — | — | 479 | 639 (partial) |
 | CoRL | — | — | 264 (partial) | 263 | — |
-| RSS | — | — | 134 | 163 | — |
+| RSS | — | — | 134 | 163 | 210 |
 | OSDI | — | 55 | 53 | 53 | 136 |
 | SOSP | — | 9 (partial) | 43 (partial) | 65 (partial) | — |
 | IEEE S&P | — | cataloged | 261 | 65 | 254 (partial) |
