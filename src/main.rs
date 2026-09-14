@@ -52,6 +52,8 @@ struct Edition {
 #[derive(Debug, Deserialize)]
 struct PackReference {
     path: String,
+    #[serde(default = "default_pack_version")]
+    pack_version: String,
     sha256: String,
     compressed_bytes: u64,
     record_count: usize,
@@ -1083,13 +1085,20 @@ fn valid_manifest_version(version: &str) -> bool {
         && (minor == "0" || !minor.starts_with('0'))
 }
 
+fn default_pack_version() -> String {
+    "0.0".to_string()
+}
+
 fn validate_pack_reference(
     root: &Path,
     venue: &Venue,
     edition: &Edition,
     pack: &PackReference,
 ) -> Result<(), String> {
-    if pack.record_count != edition.paper_count || pack.record_count > MAX_PACK_RECORDS {
+    if pack.record_count != edition.paper_count
+        || pack.record_count > MAX_PACK_RECORDS
+        || !valid_manifest_version(&pack.pack_version)
+    {
         return Err(format!("{} has an invalid record count", edition.id));
     }
     if pack.compressed_bytes > MAX_PACK_COMPRESSED_BYTES {

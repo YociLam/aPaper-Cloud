@@ -14,8 +14,8 @@ is partitioned by venue and edition year, allowing the App to download only the 
 needs.
 
 - Production origin: `https://cloud.apaper.ai`
-- Conference catalog manifest: `v0.13`
-- Conference catalog updated: `2026-09-14 10:00:17 UTC`
+- Conference catalog manifest: `v0.14`
+- Conference catalog updated: `2026-09-14 12:00:00 UTC`
 - Translation Engine translator version: `v0.3`
 - Translation Engine environment version: `v0.1`
 - Translation Engine translator updated: `2026-08-08 00:48:48 UTC`
@@ -28,12 +28,11 @@ version, and timestamp untouched.
 
 ## App runtime boundary
 
-The installed aPaper App does not use this repository, `cloud.apaper.ai`, GitHub, or another
-network source to maintain its Translation Engine at runtime. The App carries the matching
-translator and environment packages inside its signed bundle, performs a lightweight startup
-check, and deploys only from those bundled resources. This repository remains the public,
-versioned manual-download and release channel for maintainers and users who explicitly need an
-architecture-matched package. It is not an automatic runtime dependency of the App.
+The installed aPaper App uses `https://cloud.apaper.ai` as the conference catalog authority at
+runtime. It requests the lightweight manifest version at startup, downloads a changed manifest
+only when needed, and downloads only the selected venue/year packs that are missing or outdated.
+Conference names, labels, years, availability, and pack versions therefore adapt without an App
+release. Translation Engine resources remain bundled and are unrelated to this catalog channel.
 
 Translation source remains maintained in the aPaper source repository; Cloud publishes distribution
 metadata and environment assets, not a second runtime source tree. The macOS `arm64` and `x86_64`

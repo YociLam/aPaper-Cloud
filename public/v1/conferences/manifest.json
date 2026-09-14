@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "manifest_version": "0.13",
+  "manifest_version": "0.14",
   "dataset": "apaper.conferences",
-  "generated_at": "2026-09-14T10:00:17Z",
+  "generated_at": "2026-09-14T12:00:00Z",
   "canonical_origin": "https://cloud.apaper.ai",
   "maximum_selected_records": 100000,
   "venues": [
@@ -28,7 +28,8 @@
             "path": "packs/neurips/2025.jsonl.zst",
             "sha256": "dc15d22b9ff8da959ec8417fffde6c13009734e5cd3c9d70b7702820f5bd5af3",
             "compressed_bytes": 2873787,
-            "record_count": 5823
+            "record_count": 5823,
+            "pack_version": "0.13"
           }
         },
         {
@@ -40,7 +41,8 @@
             "path": "packs/neurips/2024.jsonl.zst",
             "sha256": "53751b8ca65f69fddc2d76f8031f2953a925371425924047ca0846b8571a90e4",
             "compressed_bytes": 2193421,
-            "record_count": 4493
+            "record_count": 4493,
+            "pack_version": "0.13"
           }
         },
         {
@@ -52,7 +54,8 @@
             "path": "packs/neurips/2023.jsonl.zst",
             "sha256": "1143c2bcc54c05b2925f48fdf8d84f68b7cbea34feac0d857c916787282ebb70",
             "compressed_bytes": 1671355,
-            "record_count": 3540
+            "record_count": 3540,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -87,7 +90,8 @@
             "path": "packs/icml/2025.jsonl.zst",
             "sha256": "16759218852294ead91dfde87c4489c4f59f70055ee38a98ab1a54fab5b20d6b",
             "compressed_bytes": 1401562,
-            "record_count": 3330
+            "record_count": 3330,
+            "pack_version": "0.13"
           }
         },
         {
@@ -99,7 +103,8 @@
             "path": "packs/icml/2024.jsonl.zst",
             "sha256": "87ce640ab066e5e3c296e7d9299040200d67d1ce35f16ecb3f62069537673811",
             "compressed_bytes": 1069936,
-            "record_count": 2610
+            "record_count": 2610,
+            "pack_version": "0.13"
           }
         },
         {
@@ -111,7 +116,8 @@
             "path": "packs/icml/2023.jsonl.zst",
             "sha256": "6d51f645d3d53b3604a44d26fda0129d61fceaa67bc46032857f7fa27f69a878",
             "compressed_bytes": 729889,
-            "record_count": 1828
+            "record_count": 1828,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -139,7 +145,8 @@
             "path": "packs/iclr/2026.jsonl.zst",
             "sha256": "efd0608975d8b96dfbd18a04f22e3c2363d66e0f797a163f389d039f59c25cb4",
             "compressed_bytes": 2782846,
-            "record_count": 5359
+            "record_count": 5359,
+            "pack_version": "0.13"
           }
         },
         {
@@ -151,7 +158,8 @@
             "path": "packs/iclr/2025.jsonl.zst",
             "sha256": "60a7844ab61eb5861a576cdddee0909432b3f351cfb8e6c96159bd4087214a4c",
             "compressed_bytes": 1871656,
-            "record_count": 3708
+            "record_count": 3708,
+            "pack_version": "0.13"
           }
         },
         {
@@ -163,7 +171,8 @@
             "path": "packs/iclr/2024.jsonl.zst",
             "sha256": "1dd37253ae824184384b0aa042b434468ca7907a4c02c15e43cb4d327dde7328",
             "compressed_bytes": 1118172,
-            "record_count": 2261
+            "record_count": 2261,
+            "pack_version": "0.13"
           }
         },
         {
@@ -175,7 +184,8 @@
             "path": "packs/iclr/2023.jsonl.zst",
             "sha256": "c4edf77ab18a48bc1efaf3885ba8694619af3075477671001c1b1190ff45e4d8",
             "compressed_bytes": 209721,
-            "record_count": 435
+            "record_count": 435,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -203,7 +213,8 @@
             "path": "packs/cvpr/2026.jsonl.zst",
             "sha256": "d08085819b88f7096c2b751969353fe61a83f432773a270659c2b917abfb6cfc",
             "compressed_bytes": 1995562,
-            "record_count": 4068
+            "record_count": 4068,
+            "pack_version": "0.13"
           }
         },
         {
@@ -215,7 +226,8 @@
             "path": "packs/cvpr/2025.jsonl.zst",
             "sha256": "dd4f1979a756696377620ca05cf20cb577f297fd1d482b26a895d8b7a95147cd",
             "compressed_bytes": 1424309,
-            "record_count": 2871
+            "record_count": 2871,
+            "pack_version": "0.13"
           }
         },
         {
@@ -227,7 +239,8 @@
             "path": "packs/cvpr/2024.jsonl.zst",
             "sha256": "6ede4dc16b62a2a8aabf8925ee9333fb56474c89e50a2658657ea9b3ee885d27",
             "compressed_bytes": 1310698,
-            "record_count": 2710
+            "record_count": 2710,
+            "pack_version": "0.13"
           }
         },
         {
@@ -239,7 +252,8 @@
             "path": "packs/cvpr/2023.jsonl.zst",
             "sha256": "b0b00b8bd648dbca24fd86f868b14610d81a37d47e68b478a2bb9f2f4407c9e6",
             "compressed_bytes": 1136944,
-            "record_count": 2352
+            "record_count": 2352,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -267,7 +281,8 @@
             "path": "packs/acl/2026.jsonl.zst",
             "sha256": "3363592a4db4fa6379a81b419f49b4af1711097e6e8780eee8d4e22eb1755710",
             "compressed_bytes": 2098232,
-            "record_count": 4806
+            "record_count": 4806,
+            "pack_version": "0.13"
           }
         },
         {
@@ -279,7 +294,8 @@
             "path": "packs/acl/2025.jsonl.zst",
             "sha256": "bc0279fe6a8510f5f4f98f91f5db7f06273aa56639b6301cc274d473cddbbd06",
             "compressed_bytes": 1382155,
-            "record_count": 3353
+            "record_count": 3353,
+            "pack_version": "0.13"
           }
         },
         {
@@ -291,7 +307,8 @@
             "path": "packs/acl/2024.jsonl.zst",
             "sha256": "c17b441b65646e1ed1a6d7d82482fe8622e1a246cefe25843b2cba74965ec0b3",
             "compressed_bytes": 807754,
-            "record_count": 1982
+            "record_count": 1982,
+            "pack_version": "0.13"
           }
         },
         {
@@ -303,7 +320,8 @@
             "path": "packs/acl/2023.jsonl.zst",
             "sha256": "a8fe3593de160aa1477ced45459d835c6ce69377fe16bdaa175bcf64c28ffd65",
             "compressed_bytes": 840490,
-            "record_count": 2150
+            "record_count": 2150,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -331,7 +349,8 @@
             "path": "packs/aaai/2026.jsonl.zst",
             "sha256": "d32f0f54a82fea176422da4b00a59ebb5327c4c74ebf74a29385ef63588a59ea",
             "compressed_bytes": 1889587,
-            "record_count": 4149
+            "record_count": 4149,
+            "pack_version": "0.13"
           }
         },
         {
@@ -343,7 +362,8 @@
             "path": "packs/aaai/2025.jsonl.zst",
             "sha256": "b3bca4c1440d29481e301b60f13e61e6e6838b1bc425e11cb8419f14fd835c79",
             "compressed_bytes": 1341442,
-            "record_count": 3028
+            "record_count": 3028,
+            "pack_version": "0.13"
           }
         },
         {
@@ -355,7 +375,8 @@
             "path": "packs/aaai/2024.jsonl.zst",
             "sha256": "c69523f2fae98208b6c93c4e01412361ffa1eef5fa5bd4a58b210365a8d0ef08",
             "compressed_bytes": 1093196,
-            "record_count": 2331
+            "record_count": 2331,
+            "pack_version": "0.13"
           }
         },
         {
@@ -367,7 +388,8 @@
             "path": "packs/aaai/2023.jsonl.zst",
             "sha256": "8ac66ff7ab3743999cf194e8be3719dbce70ab0e835c0fae0bb1eb4bf8cc8924",
             "compressed_bytes": 729983,
-            "record_count": 1578
+            "record_count": 1578,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -402,7 +424,8 @@
             "path": "packs/ijcai/2025.jsonl.zst",
             "sha256": "fe21a72fedf63b782844b369e867f5a111de0f3e73d59cfd33cbe888850cf473",
             "compressed_bytes": 562817,
-            "record_count": 1279
+            "record_count": 1279,
+            "pack_version": "0.13"
           }
         },
         {
@@ -414,7 +437,8 @@
             "path": "packs/ijcai/2024.jsonl.zst",
             "sha256": "c49ba7a164d01b5fa3b179c7bf4dc92256a9e342d121ba09e72d085cb797c447",
             "compressed_bytes": 458661,
-            "record_count": 1047
+            "record_count": 1047,
+            "pack_version": "0.13"
           }
         },
         {
@@ -426,7 +450,8 @@
             "path": "packs/ijcai/2023.jsonl.zst",
             "sha256": "393dc5af1fabdcb7442fa1a3102ccca28b749671179eafae7e310810b0fe8399",
             "compressed_bytes": 364711,
-            "record_count": 850
+            "record_count": 850,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -461,7 +486,8 @@
             "path": "packs/emnlp/2025.jsonl.zst",
             "sha256": "0af1e17e7f31823264af5972017dd6e6295570b98c293263dccf610151f5ed6e",
             "compressed_bytes": 1435400,
-            "record_count": 3488
+            "record_count": 3488,
+            "pack_version": "0.13"
           }
         },
         {
@@ -473,7 +499,8 @@
             "path": "packs/emnlp/2024.jsonl.zst",
             "sha256": "6e28a6e12f5f391fcb09181a45522eb40234e22a17ec9b9d04fef658f5124c52",
             "compressed_bytes": 963812,
-            "record_count": 2388
+            "record_count": 2388,
+            "pack_version": "0.13"
           }
         },
         {
@@ -485,7 +512,8 @@
             "path": "packs/emnlp/2023.jsonl.zst",
             "sha256": "71817aa040ff14ce1cce6ea61b5934f0f63857754476e0565d340df87e76fd77",
             "compressed_bytes": 895290,
-            "record_count": 2241
+            "record_count": 2241,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -517,7 +545,8 @@
             "path": "packs/iccv/2025.jsonl.zst",
             "sha256": "bbe144fb5f88f113689ff9b9b27ec67e5512b806cc125af78ce6cd2e9d5193ec",
             "compressed_bytes": 462826,
-            "record_count": 949
+            "record_count": 949,
+            "pack_version": "0.13"
           }
         },
         {
@@ -529,7 +558,8 @@
             "path": "packs/iccv/2023.jsonl.zst",
             "sha256": "5842cce5917490ba10abb4b8198d999be33eba98da64d3d0922f94d380a1d13a",
             "compressed_bytes": 992331,
-            "record_count": 2156
+            "record_count": 2156,
+            "pack_version": "0.13"
           }
         }
       ]
@@ -556,7 +586,8 @@
             "path": "packs/eccv/2024.jsonl.zst",
             "sha256": "7b699f4c1bcda7581abe8a949cf6e0758a70faea260deeff796ad7e753307336",
             "compressed_bytes": 1048734,
-            "record_count": 2387
+            "record_count": 2387,
+            "pack_version": "0.13"
           }
         },
         {
@@ -568,7 +599,8 @@
             "path": "packs/eccv/2022.jsonl.zst",
             "sha256": "72cf674657c717c529f6f7725d6fe746ae1f567167d8fa9bf6326d2b906263c6",
             "compressed_bytes": 698364,
-            "record_count": 1645
+            "record_count": 1645,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -596,7 +628,8 @@
             "path": "packs/aistats/2025.jsonl.zst",
             "sha256": "20d53867bf25f020b14a3e1bd17d626b9cc540fd3c1c674295bc7196225bd0b3",
             "compressed_bytes": 234853,
-            "record_count": 583
+            "record_count": 583,
+            "pack_version": "0.13"
           }
         },
         {
@@ -608,7 +641,8 @@
             "path": "packs/aistats/2026.jsonl.zst",
             "sha256": "227a521c7d39aae44f10b30daea9e534118f3eea4a5fa7175daa8912804c609e",
             "compressed_bytes": 248050,
-            "record_count": 588
+            "record_count": 588,
+            "pack_version": "0.13"
           }
         },
         {
@@ -620,7 +654,8 @@
             "path": "packs/aistats/2024.jsonl.zst",
             "sha256": "1962fa65dbe2c3c99ea597c45a6685468a30c09e659c1457b5f18cd3b049a4bb",
             "compressed_bytes": 220524,
-            "record_count": 547
+            "record_count": 547,
+            "pack_version": "0.13"
           }
         }
       ]
@@ -644,7 +679,8 @@
             "path": "packs/colt/2026.jsonl.zst",
             "sha256": "518feb1db9d02d1aaef7205460a02b25cae1db105ec1e475c6e5df5758c639b5",
             "compressed_bytes": 97689,
-            "record_count": 196
+            "record_count": 196,
+            "pack_version": "0.13"
           }
         },
         {
@@ -656,7 +692,8 @@
             "path": "packs/colt/2025.jsonl.zst",
             "sha256": "a297b70c917f96899d53428ed9a2b32bf0543db7672afb75483b69bc7fdbc650",
             "compressed_bytes": 90372,
-            "record_count": 181
+            "record_count": 181,
+            "pack_version": "0.13"
           }
         }
       ]
@@ -680,7 +717,8 @@
             "path": "packs/aamas/2026.jsonl.zst",
             "sha256": "e21b24871490ff5992558bad0931844028023568261e35f7f97b948a48f77a4c",
             "compressed_bytes": 296817,
-            "record_count": 639
+            "record_count": 639,
+            "pack_version": "0.13"
           }
         },
         {
@@ -692,7 +730,8 @@
             "path": "packs/aamas/2025.jsonl.zst",
             "sha256": "5c101f037bfe219e3b2244c4b5afcf01f3663a5c553e8c91dba551899368dbbf",
             "compressed_bytes": 198139,
-            "record_count": 479
+            "record_count": 479,
+            "pack_version": "0.13"
           }
         }
       ]
@@ -716,7 +755,8 @@
             "path": "packs/corl/2025.jsonl.zst",
             "sha256": "2e35a3ec06dfb93af89fe04cf6e25e2698be67a3844156ca3ff0e8f1b3e7e69b",
             "compressed_bytes": 128070,
-            "record_count": 263
+            "record_count": 263,
+            "pack_version": "0.13"
           }
         },
         {
@@ -728,7 +768,8 @@
             "path": "packs/corl/2024.jsonl.zst",
             "sha256": "8d065ae36d8983fae02ffed1859bad63b3ccc3e72f568b1c051e02d1da617758",
             "compressed_bytes": 119068,
-            "record_count": 264
+            "record_count": 264,
+            "pack_version": "0.13"
           }
         }
       ]
@@ -752,7 +793,8 @@
             "path": "packs/rss/2025.jsonl.zst",
             "sha256": "af6185969cba641b56bf65d6c4f3dfdd4a819c576e9757f585b1a2e2182eeac8",
             "compressed_bytes": 88449,
-            "record_count": 163
+            "record_count": 163,
+            "pack_version": "0.13"
           }
         },
         {
@@ -764,7 +806,8 @@
             "path": "packs/rss/2026.jsonl.zst",
             "sha256": "d555ca19f2304fcc162babbac8ec86dda37f3781cdb09155865e9c23c1b4cb37",
             "compressed_bytes": 112888,
-            "record_count": 210
+            "record_count": 210,
+            "pack_version": "0.13"
           }
         },
         {
@@ -776,7 +819,8 @@
             "path": "packs/rss/2024.jsonl.zst",
             "sha256": "af1abc0afb3c583e8bc2b5755e6c331a210ab3a0e24ee77aec10cffe2f299cc0",
             "compressed_bytes": 72600,
-            "record_count": 134
+            "record_count": 134,
+            "pack_version": "0.13"
           }
         }
       ]
@@ -796,7 +840,8 @@
             "path": "packs/osdi/2026.jsonl.zst",
             "sha256": "69e4bccd541186d8472eb27c93bc4ad74fabdc3fc5e4a48a3125888747f82a9d",
             "compressed_bytes": 81291,
-            "record_count": 136
+            "record_count": 136,
+            "pack_version": "0.13"
           }
         },
         {
@@ -808,7 +853,8 @@
             "path": "packs/osdi/2025.jsonl.zst",
             "sha256": "2f1ff0fe0065d544eede42555e4c6a68142ef0855153f007509c2256439f676b",
             "compressed_bytes": 30944,
-            "record_count": 53
+            "record_count": 53,
+            "pack_version": "0.13"
           }
         },
         {
@@ -820,7 +866,8 @@
             "path": "packs/osdi/2024.jsonl.zst",
             "sha256": "97add5ce437db442bb2cf1126a3c72b933672c769ddfdc508b5373dd0507ee8f",
             "compressed_bytes": 33487,
-            "record_count": 53
+            "record_count": 53,
+            "pack_version": "0.13"
           }
         },
         {
@@ -832,7 +879,8 @@
             "path": "packs/osdi/2023.jsonl.zst",
             "sha256": "69a218433a5631402125215ce5368f0c41fa17138a8302cfd19d930efa812f86",
             "compressed_bytes": 33394,
-            "record_count": 55
+            "record_count": 55,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -856,7 +904,8 @@
             "path": "packs/sosp/2025.jsonl.zst",
             "sha256": "c533ae77983e0c937c31ff15305ec159b32827e4b657c1a4052cdfab338e2f88",
             "compressed_bytes": 37009,
-            "record_count": 65
+            "record_count": 65,
+            "pack_version": "0.13"
           }
         },
         {
@@ -868,7 +917,8 @@
             "path": "packs/sosp/2024.jsonl.zst",
             "sha256": "e20fba81b28734872e6c607f739d160a4172c27bbc0b0618749167f009559332",
             "compressed_bytes": 26604,
-            "record_count": 43
+            "record_count": 43,
+            "pack_version": "0.13"
           }
         },
         {
@@ -880,7 +930,8 @@
             "path": "packs/sosp/2023.jsonl.zst",
             "sha256": "840004a134efa7a1869b5edb9bee8473501ddfa7a4867077282733279345d461",
             "compressed_bytes": 6380,
-            "record_count": 9
+            "record_count": 9,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -911,7 +962,8 @@
             "path": "packs/ieee_sp/2025.jsonl.zst",
             "sha256": "6f804569d2ed7d03d7bf22772faff3d149174c24765898a8fdde05516f1a0862",
             "compressed_bytes": 41626,
-            "record_count": 65
+            "record_count": 65,
+            "pack_version": "0.13"
           }
         },
         {
@@ -923,7 +975,8 @@
             "path": "packs/ieee_sp/2024.jsonl.zst",
             "sha256": "2f537e3f53eb72b2bd439079f7d3e4221a1cfc0a553d1685c5ce65d2b55dcb19",
             "compressed_bytes": 159406,
-            "record_count": 261
+            "record_count": 261,
+            "pack_version": "0.13"
           }
         },
         {
@@ -954,7 +1007,8 @@
             "path": "packs/ndss/2026.jsonl.zst",
             "sha256": "cd486f371fc7c6ee26f1423391344d759822707bbb7cac6e897b79d8ed75664f",
             "compressed_bytes": 165834,
-            "record_count": 265
+            "record_count": 265,
+            "pack_version": "0.13"
           }
         },
         {
@@ -966,7 +1020,8 @@
             "path": "packs/ndss/2025.jsonl.zst",
             "sha256": "2995cce09aa33a678e4ba33303642b998fdaafa9b4a4ec7edfdd72aff003c8c1",
             "compressed_bytes": 134344,
-            "record_count": 211
+            "record_count": 211,
+            "pack_version": "0.13"
           }
         },
         {
@@ -978,7 +1033,8 @@
             "path": "packs/ndss/2024.jsonl.zst",
             "sha256": "a67c3fa7e28a7c89103831b5c5e6699ed1848d15c6f623f7eff4110558a3a190",
             "compressed_bytes": 88459,
-            "record_count": 140
+            "record_count": 140,
+            "pack_version": "0.13"
           }
         },
         {
@@ -990,7 +1046,8 @@
             "path": "packs/ndss/2023.jsonl.zst",
             "sha256": "a45730f2e032056734f8629b97da4cf91e47eb446da1849a9d229d0e878fbc4b",
             "compressed_bytes": 63301,
-            "record_count": 94
+            "record_count": 94,
+            "pack_version": "0.13"
           }
         }
       ],
@@ -1018,7 +1075,8 @@
             "path": "packs/accv/2024.jsonl.zst",
             "sha256": "758ce06d4ff962627c20e5ae63a64194e442b3d2630b14ace7bc709eaabb7274",
             "compressed_bytes": 131429,
-            "record_count": 269
+            "record_count": 269,
+            "pack_version": "0.13"
           }
         },
         {
@@ -1030,7 +1088,8 @@
             "path": "packs/accv/2022.jsonl.zst",
             "sha256": "bafb72e3ac70dad8f84e73475ed0ed43e30bdb2cd9e010a0c6f2aeb0407af560",
             "compressed_bytes": 130843,
-            "record_count": 277
+            "record_count": 277,
+            "pack_version": "0.13"
           }
         }
       ]

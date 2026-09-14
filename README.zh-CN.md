@@ -12,8 +12,8 @@
 因此 App 只会下载用户所选会议年份对应的数据包。
 
 - 正式地址：`https://cloud.apaper.ai`
-- 会议产品目录 Manifest：`v0.13`
-- 会议产品目录更新时间：`2026-09-14 10:00:17 UTC`
+- 会议产品目录 Manifest：`v0.14`
+- 会议产品目录更新时间：`2026-09-14 12:00:00 UTC`
 - Translation Engine 翻译器版本：`v0.3`
 - Translation Engine 环境版本：`v0.1`
 - Translation Engine 翻译器更新时间：`2026-08-08 00:48:48 UTC`
@@ -25,10 +25,10 @@
 
 ## App 运行边界
 
-已安装的 aPaper App 在运行时不会使用本仓库、`cloud.apaper.ai`、GitHub 或其他网络源维护
-Translation Engine。App 会在签名包内携带匹配的翻译器与环境包，启动时执行轻量检查，并且
-只从包内资源完成部署。本仓库仍是公开、版本化的手动下载与发布渠道，供维护者或确实需要
-手动获取对应架构资源的用户使用；它不是 App 的自动运行时依赖。
+aPaper App 运行时以 `https://cloud.apaper.ai` 作为会议目录权威来源。App 启动时先请求轻量
+版本入口，仅在 Manifest 版本变化时下载 Manifest，并只下载缺失或过期的所选会议/年份包。
+因此会议名称、标签、年份、可用状态和包版本可以在不更新 App 的情况下自适应变化。Translation
+Engine 资源仍随 App 分发，与会议目录同步链路相互独立。
 
 翻译器源码继续维护在 aPaper 主源码仓库中；Cloud 发布的是分发元数据与环境资产，不再维护
 第二份运行时源码树。macOS `arm64` 与 `x86_64` 资源路径保持分离，`windows/` 路径为未来
