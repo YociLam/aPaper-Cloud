@@ -14,14 +14,13 @@
 - 正式地址：`https://cloud.apaper.ai`
 - 会议产品目录 Manifest：`v0.14`
 - 会议产品目录更新时间：`2026-09-14 12:00:00 UTC`
-- Translation Engine 翻译器版本：`v0.3`
-- Translation Engine 环境版本：`v0.1`
-- Translation Engine 翻译器更新时间：`2026-08-08 00:48:48 UTC`
-- Translation Engine 环境更新时间：`2026-08-05 20:59:43 UTC`
 
 会议产品目录、Translation Engine 翻译器和 Translation Engine 环境是三条独立版本线。
 仅更新翻译器不会触发环境包更新，只有所需环境版本也发生变化时才会更新环境；任何一条
 发布线的更新都不会改变会议目录的路径、版本或更新时间。
+
+
+Translation Engine JSON 与 Release 包作为历史兼容与构建输入保留，不代表当前 App 的翻译器版本。安装、修复及更新使用已签名 App 内的资源，详见[分发说明](translation-engine/README.md)。
 
 ## App 运行边界
 
