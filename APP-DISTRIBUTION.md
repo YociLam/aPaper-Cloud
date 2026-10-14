@@ -70,3 +70,8 @@ not the checked-in seed descriptor. For the inspected source snapshot the signed
 is 26815 bytes / `13882f9040cb02d6890b122a725b71b81addb19950e4b61495f1d857854f7394`;
 the seed's 26312-byte / `0606c6ba...` record is not the compiled artifact. The translator time tracks
 the latest packaged worker/source change (2026-09-26), while the environment archive remains r1.
+
+Every App release must update both language READMEs and the website in the same publication
+change: product version/build, resource versions, actual update times and download links. The
+user-facing environment package label is exactly `v0.1-r1`; keep the underlying environment v0.1
+and archive revision fields separate for compatibility.

@@ -5,48 +5,57 @@
 
 # aPaper Cloud
 
-`aPaper Cloud` is a static, versioned distribution repository for public aPaper metadata. It does
-not store user profiles, reading history, recommendations, account credentials, PDF files, or any
-other private workspace data.
+aPaper Cloud distributes aPaper application releases, academic literature metadata, and versioned
+runtime resources. It provides the public files and integrity metadata used for software updates
+and conference catalog synchronization. Application source code and private research workspaces
+are maintained separately.
 
-The first published dataset is a catalog of academic conference proceedings. Conference metadata
-is partitioned by venue and edition year, allowing the App to download only the exact editions it
-needs.
+[Website](https://cloud.apaper.ai) · [Releases](https://github.com/YociLam/aPaper-Cloud/releases) · [Contact](mailto:contact@apaper.ai)
 
-- Production origin: `https://cloud.apaper.ai`
-- Conference catalog manifest: `v0.14`
-- Conference catalog updated: `2026-09-14 12:00:00 UTC`
-- App-bundled translator resource: `v0.4`
-- App-bundled environment resource: `v0.1` (archive `v0.1-r1`, arm64)
-- Translator resource updated: `2026-09-26 13:17:43 UTC`
-- Environment resource updated: `2026-08-27 12:30:26 UTC`
+## Contents
 
-The conference catalog, Translation Engine translator, and Translation Engine environment are
-independent version streams. A translator update does not require an environment package update
-unless the required environment version also changes. Updating any stream leaves the conference paths,
-version, and timestamp untouched.
+1. [Application downloads and updates](#application-downloads-and-updates)
+2. [Academic literature metadata](#academic-literature-metadata)
+3. [Translation Engine](#translation-engine)
+4. [Repository layout](#repository-layout)
+5. [Integrity and publication](#integrity-and-publication)
 
-Translation Engine JSON records and Release packages are historical compatibility/build inputs, not the current App version. Engine installation, repair and updates use resources in the signed App bundle. See [distribution policy](translation-engine/README.md).
+## Application downloads and updates
 
-## App runtime boundary
+Application archives are distributed through GitHub Releases. A release can provide a full ZIP
+archive for automatic updates and an optional DMG for first-time installation; both contain the
+same application version. The website's download links point to these release assets.
 
-The installed aPaper App uses `https://cloud.apaper.ai` as the conference catalog authority at
-runtime. It requests the lightweight manifest version at startup, downloads a changed manifest
-only when needed, and downloads only the selected venue/year packs whose per-pack version is
-missing or outdated.
-Conference names, labels, years, availability, and pack versions therefore adapt without an App
-release. Translation Engine resources remain bundled and are unrelated to this catalog channel.
-Each pack carries its own two-segment `pack_version` and SHA-256 in the Manifest.
+Stable, beta, and qualification channels remain separate. The native macOS updater reads a
+channel-specific Sparkle appcast with a pinned archive URL, build number, minimum system version,
+exact size, and EdDSA signature. It does not infer the App version from this repository's global
+“latest release”, which may belong to another product.
 
-Translation source remains maintained in the aPaper source repository; Cloud publishes distribution
-metadata and environment assets, not a second runtime source tree. The macOS `arm64` and `x86_64`
-package paths remain separate, and `windows/` namespaces stay reserved for a future release.
+**Availability:** App distribution is currently being qualified. No stable App release is published
+through this repository. Qualification prereleases are isolated test builds and are not the normal
+installation channel.
 
-## Catalog overview
+Current qualification: [0.1.1 (build 9022)](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9022), published **2026-10-14 03:34:31 UTC**.
 
-The table below is generated from `public/v1/conferences/manifest.json`. A number without a status
-suffix means that the edition pack has been fully published, has passed release validation, and is
-available for App synchronization.
+See [App distribution contract](APP-DISTRIBUTION.md) for channel paths, publication order, and
+verification requirements. Full application archives belong in Releases, not Git history or Pages.
+
+## Academic literature metadata
+
+Conference data is organized by venue and year. Packs contain bibliographic metadata and links to
+original sources, including official landing pages, available PDFs, and DOIs. They do not contain
+paper PDFs, account credentials, reading history, or private library content.
+
+| Catalog | Version | Updated (UTC) |
+| --- | --- | --- |
+| Conference manifest | `v0.14` | 2026-09-14 12:00:00 |
+
+The App checks the lightweight [version record](https://cloud.apaper.ai/v1/conferences/version.json),
+retrieves a changed [manifest](https://cloud.apaper.ai/v1/conferences/manifest.json), and verifies its
+SHA-256 before using it. Edition packs have independent versions, byte counts, and checksums;
+missing or outdated packs can be synchronized without reinstalling the App.
+
+### Coverage
 
 | Venue | 2022 | 2023 | 2024 | 2025 | 2026 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -71,164 +80,79 @@ available for App synchronization.
 | NDSS | — | 94 | 140 | 211 | 265 |
 | ACCV | 277 | — | 269 | — | — |
 
-Status definitions:
+Unqualified counts indicate published packs. **Partial** means searchable metadata is available
+with incomplete coverage; **cataloged** means an edition is recorded but its pack is not yet
+published; **announced** means final proceedings are pending. The live manifest is authoritative.
+The table uses the catalog publication time; per-edition update times are not currently tracked.
 
-- **Published**: the pack has passed record-count, compressed-size, and SHA-256 validation and is
-  available for App synchronization.
-- **Partial**: a searchable pack exists, but metadata completeness or public PDF coverage remains
-  incomplete.
-- **Cataloged**: the edition or paper count has been confirmed, but no downloadable pack has been
-  published.
-- **Announced**: the edition is listed in the catalog, but the final proceedings are not yet ready
-  for publication.
+Records preserve source provenance. Categories and source groups are retained only when supplied
+by the publisher; missing classifications are not inferred. Some ICLR and SOSP records retain the
+build-time provenance marker `temporary_reference_supabase_v1`; this does not introduce an App
+runtime connection to Supabase.
 
-The catalog table uses the release-wide manifest timestamp. Per-edition update timestamps are not
-currently maintained.
+## Translation Engine
+
+The current App installs and repairs its translation runtime from resources inside its signed
+bundle. Translator updates arrive with App releases; the App does not poll historical Cloud
+translation manifests or download an environment package from them at runtime.
+
+| App-bundled resource (macOS arm64) | Version | Updated (UTC) |
+| --- | --- | --- |
+| Translator | `v0.4` | 2026-09-26 13:17:43 |
+| Environment package | `v0.1-r1` | 2026-08-27 12:30:26 |
+
+These values describe the verified bundled resource snapshot shown on the website, not a separate
+Cloud v0.4 download or a stable App release announcement. Translator and environment versions are
+independent; `v0.1-r1` is a revised archive of environment v0.1. The
+[resource status record](https://cloud.apaper.ai/v1/app/macos/arm64/components/translation.json)
+records their exact package hashes.
+
+The historical `translation-engine-v0.1` Release and `/v1/translation/` endpoints remain available
+for compatibility, explicit maintainer downloads, and reproducible build inputs. In particular,
+the original arm64 archive remains the pinned base for the r1 recipe. Historical assets are not
+overwritten or relabeled as newer engine packages. See [Translation Engine distribution](translation-engine/README.md).
 
 ## Repository layout
 
 ```text
 public/
-  v1/
-    translation/
-      version.json
-      <environment-version>/manifest.json
-      schemas/environment-manifest-v1.json
-    conferences/
-      version.json
-      manifest.json
-      packs/<venue>/<year>.jsonl.zst
+  index.html                           Public resource status page
+  v1/app/macos/arm64/
+    components/translation.json         App-bundled resource status
+    <channel>/appcast.xml               App update feed, when published
+  v1/conferences/
+    version.json                       Catalog version and manifest checksum
+    manifest.json                      Venues, editions, and pack integrity metadata
+    packs/<venue>/<year>.jsonl.zst      Compressed bibliographic records
+  v1/translation/                      Historical compatibility metadata
+translation-engine/                    Environment provenance, recipes, and legacy asset route
+src/                                  Catalog packaging and validation tools
+APP-DISTRIBUTION.md                     App release and channel contract
 ```
 
-The Translation Engine control plane is also versioned under `public/v1/translation`. Large,
-architecture-specific environment archives are immutable GitHub Release assets; the public
-manifest exposes stable `cloud.apaper.ai` primary URLs and direct Release fallbacks without
-coupling the App to this repository's internal layout.
+App ZIP/DMG files and historical environment archives are GitHub Release assets. The static public
+origin is `https://cloud.apaper.ai`; conference manifest paths remain relative to that origin.
 
-- `version.json` is the lightweight endpoint checked first when the App starts.
-- `manifest.json` records the complete venue catalog in App display order, localized venue names,
-  optional localized venue tags, editions, publication states, paper counts, pack sizes, and
-  SHA-256 checksums.
-- `packs/<venue>/<year>.jsonl.zst` contains read-only metadata for one exact conference edition.
-- Packs contain metadata and validated source links only. They do not contain PDF files.
+## Integrity and publication
 
-The canonical production origin is always `https://cloud.apaper.ai`. Pack paths in the manifest are
-relative. Adding a venue, changing its localized name, or publishing a new edition therefore does
-not require rebuilding the App.
+Published metadata is validated against its schema, record count, size, and SHA-256. App update
+archives additionally require native code-signature checks and a Sparkle EdDSA signature. Stable
+App distribution has its own Developer ID and notarization gate; a qualification result does not
+approve a stable release.
 
-For Translation Engine assets, the origin is a manual distribution endpoint only. Conference
-catalog synchronization and Translation Engine package publication are separate concerns.
+Every App or bundled-resource publication must synchronize the relevant version, build, update
+time, and download links in **both READMEs and the website**. Use the actual signed artifacts and
+resource-change records; do not use a website deployment time as an engine update time. Upload and
+verify immutable Release assets before publishing an appcast that references them. Preserve
+unrelated conference packs and historical compatibility endpoints.
 
-## Conference catalog synchronization contract
+Run catalog validation from this repository root:
 
-The following synchronization contract applies only to the conference metadata catalog. It does
-not apply to the Translation Engine: the installed App does not query this repository or any
-Translation Engine URL to install, repair, or update its translator or environment.
-
-1. On startup, the App requests `version.json` and compares the remote two-segment
-   `manifest_version` with its locally persisted version.
-2. If the versions match, synchronization stops without downloading the manifest or conference
-   packs again.
-3. If the versions differ, the App downloads `manifest.json` and verifies it using the SHA-256 in
-   `version.json`.
-4. The source selector is rebuilt from the verified Manifest, including its localized venue names.
-   A first launch with no successful Manifest synchronization shows no conference sources; arXiv
-   and bioRxiv remain available independently.
-5. After validation, a bounded background queue synchronizes edition packs one at a time to avoid
-   concentrated server requests.
-6. If a user selects an edition whose local pack is missing or corrupt, the App performs an
-   on-demand recovery download.
-
-## Data boundaries
-
-- Rust validates the schema, record count, compressed size, and SHA-256 checksum.
-- Swift does not download, parse, or index conference metadata.
-- App-owned local caches live under `~/Documents/aPaper`; they are never written into the source
-  repository.
-- PDFs remain on publisher or conference websites and are accessed only when the user opens or
-  imports a paper.
-- `source_group` may contain only a publisher-provided track, session, subject, or collection. It
-  must not be inferred from a title, abstract, venue name, or language model.
-- When no reliable per-paper classification exists, `categories` and `source_group` remain empty.
-
-## Data sources
-
-Published or cataloged venues currently include NeurIPS, ICML, ICLR, CVPR, ACL, AAAI, IJCAI,
-EMNLP, ICCV, ECCV, AISTATS, COLT, AAMAS, CoRL, RSS, OSDI, SOSP, IEEE S&P, NDSS, and ACCV. Each
-record preserves its official landing URL, PDF URL, DOI when available, and provenance URL.
-
-ICLR 2024–2026 and SOSP 2024–2025 currently include metadata imported through the reference
-project's temporary Supabase build-time channel. These records carry
-`metadata_channel=temporary_reference_supabase_v1`; the App never connects to Supabase at runtime.
-The migration boundary and removal checklist are documented in
-`skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`.
-
-## Maintenance workflow
-
-Each conference has a dedicated extraction Skill under `skills/`. Packaging, release versioning,
-validation, and publication are governed by
-`skills/manage-apaper-cloud-metadata/SKILL.md`.
-
-A standard update consists of:
-
-1. Read `skills/extract-<venue>-metadata/SKILL.md` and extract records from the verified official
-   source.
-2. Normalize records to the aPaper conference schema and verify counts, required fields, duplicate
-   IDs, and source-native groups.
-3. Build the corresponding `.jsonl.zst` edition pack.
-4. Update the manifest and advance the two-segment release version once, for example `0.9` →
-   `0.10`.
-5. Regenerate `version.json`, then run local validation and Rust tests.
-6. Publish to GitHub and Cloudflare, and verify the byte size and SHA-256 of every changed pack.
-
-## General-purpose tools
-
-Normalize a publisher-exported JSON array with the shared importer:
-
-```bash
-cargo run --manifest-path apaper-cloud/Cargo.toml -- import-json \
-  --input /tmp/<venue>-<year>.json \
-  --venue <venue> \
-  --edition <venue>:<year> \
-  --year <year> \
-  --output /tmp/<venue>-<year>.jsonl
+```sh
+cargo run --locked -- validate-site public
+cargo test --locked
 ```
 
-Package normalized JSONL for publication:
-
-```bash
-cargo run --manifest-path apaper-cloud/Cargo.toml -- pack \
-  --input /tmp/<venue>-<year>.jsonl \
-  --output apaper-cloud/public/v1/conferences/packs/<venue>/<year>.jsonl.zst
-```
-
-Regenerate the lightweight version endpoint after the final manifest edit:
-
-```bash
-python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/update_version.py \
-  apaper-cloud/public
-```
-
-Run the complete local release validation:
-
-```bash
-cargo run --quiet --manifest-path apaper-cloud/Cargo.toml -- \
-  validate-site apaper-cloud/public
-cargo test --manifest-path apaper-cloud/Cargo.toml
-cargo test --manifest-path rust/Cargo.toml -p apaper_discovery --lib
-```
-
-Verify the release control plane and every changed edition after deployment:
-
-```bash
-python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/verify_published_release.py \
-  --public apaper-cloud/public \
-  --origin https://cloud.apaper.ai \
-  --pack <venue>:<year> \
-  --pack <venue>:<year>
-```
-
-Sources such as ACL Anthology XML, AAAI OAI-PMH, and CVF Open Access use venue-specific extractors.
-They are acquisition adapters within each conference Skill, not the project's only import path.
-
-Questions: `contact@apaper.ai`
+GitHub Actions validates the catalog and Translation Engine distribution before publication.
+The legacy asset route has separate tests and a Worker packaging dry-run; updating its development
+tooling does not deploy or remove the production Worker.

@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:apaper="urn:apaper:update:1" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>aPaper Update Qualification</title>
+        <item>
+            <title>0.1.1</title>
+            <pubDate>Wed, 14 Oct 2026 03:34:31 GMT</pubDate>
+            <sparkle:version>9022</sparkle:version>
+            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/YociLam/aPaper-Cloud/releases/download/apaper-update-qualification-20261014-9022/aPaper-Update-Qualification-0.1.1-9022.zip" length="443397164" type="application/octet-stream" sparkle:edSignature="oy0mw+Z4yqfV52vrqzElNw8H4uyxNpDHcFRHkZvlVruU5j8z6T3Wn6l1QNlpZ5bWjnNtYM+05kCbJ9BzKPysCg=="/>
+            <apaper:updateSignificance>standard</apaper:updateSignificance>
+            <apaper:releaseNotes><![CDATA[{"en": "This prerelease verifies automatic updates in an isolated qualification app.", "ja": "このプレリリースは、独立した検証用アプリで自動更新を確認します。", "ko": "이 사전 릴리스는 독립된 검증용 앱에서 자동 업데이트를 확인합니다.", "zh-Hans": "此预发布版本用于在独立的资格应用中验证自动更新。", "zh-Hant": "此預發佈版本用於在獨立的資格應用中驗證自動更新。"}]]></apaper:releaseNotes>
+        </item>
+    </channel>
+</rss>
