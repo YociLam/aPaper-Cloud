@@ -108,7 +108,7 @@
           <dt>Updated</dt>
           <dd><time id="app-updated">Checking…</time></dd>
           <dt>Channel</dt>
-          <dd><a href="https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9022">Qualification prerelease</a></dd>
+          <dd><a id="app-release-link" href="https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9062">Qualification prerelease</a></dd>
         </dl>
       </section>
       <section aria-labelledby="conference-heading">
@@ -168,6 +168,9 @@
           const build = item.getElementsByTagNameNS(ns, "version")[0]?.textContent;
           if (!version || !build) throw new Error("Missing App identity");
           appVersion.textContent = `${version} (${build})`;
+          const archiveURL = new URL(item.querySelector("enclosure")?.getAttribute("url"));
+          if (archiveURL.origin !== "https://github.com" || !archiveURL.pathname.startsWith("/YociLam/aPaper-Cloud/releases/download/apaper-update-qualification-")) throw new Error("Invalid App channel");
+          document.querySelector("#app-release-link").href = archiveURL.origin + archiveURL.pathname.split("/").slice(0, 6).join("/").replace("/download/", "/tag/");
           displayTime(appUpdated, item.querySelector("pubDate")?.textContent);
         })
         .catch(() => {
