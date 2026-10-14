@@ -1,0 +1,48 @@
+apaper-cloud/tests/fixtures/ijcai-detail.html:117: space before tab in indent.
++    	<div class="row">
+apaper-cloud/tests/fixtures/ijcai-detail.html:119: space before tab in indent.
++		    	<h1>
+apaper-cloud/tests/fixtures/ijcai-detail.html:120: space before tab in indent.
++		    		Semantically Labelled Automata for Multi-Task Reinforcement Learning with LTL Instructions
+apaper-cloud/tests/fixtures/ijcai-detail.html:121: space before tab in indent.
++		    	</h1>
+apaper-cloud/tests/fixtures/ijcai-detail.html:122: space before tab in indent.
++		    	<h2>Alessandro Abate, Giuseppe De Giacomo, Mathias Jackermeier, Jan Křetínský, Maximilian Prokop, Christoph Weinhuber</h2>
+apaper-cloud/tests/fixtures/ijcai-detail.html:132: space before tab in indent.
++	    	<div class="col-md-8 col-xs-12 col-sm-12">
+apaper-cloud/tests/fixtures/ijcai-detail.html:133: space before tab in indent.
++	    		<div>Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence</div>
+apaper-cloud/tests/fixtures/ijcai-detail.html:134: space before tab in indent.
++	    		<div>Main Track. Pages 3-11.
+apaper-cloud/tests/fixtures/ijcai-detail.html:135: space before tab in indent.
++	    		<a href="https://doi.org/10.24963/ijcai.2026/1"  class="doi" >https://doi.org/10.24963/ijcai.2026/1 </a></div>
+apaper-cloud/tests/fixtures/ijcai-detail.html:136: space before tab in indent.
++	    	</div>
+apaper-cloud/tests/fixtures/ijcai-detail.html:137: space before tab in indent.
++	    	<div class="col-md-4 col-xs-12 col-sm-12">
+apaper-cloud/tests/fixtures/ijcai-detail.html:138: space before tab in indent.
++		    	<div >
+apaper-cloud/tests/fixtures/ijcai-detail.html:139: space before tab in indent.
++			    	<div class="btn-container">
+apaper-cloud/tests/fixtures/ijcai-detail.html:140: space before tab in indent.
++				    	 <a class="button btn-lg btn-download" href="https://www.ijcai.org/proceedings/2026/0001.pdf"><i class="fa fa-file-pdf-o"></i> PDF </a>
+apaper-cloud/tests/fixtures/ijcai-detail.html:141: space before tab in indent.
++				    	 <a class="button btn-lg btn-download" href="/proceedings/2026/bibtex/1"> <i class="fa fa-download" php></i> BibTeX</a>
+apaper-cloud/tests/fixtures/ijcai-detail.html:143: space before tab in indent.
++		    	</div>
+apaper-cloud/tests/fixtures/ijcai-detail.html:144: space before tab in indent.
++	    	</div>
+apaper-cloud/tests/fixtures/ijcai-detail.html:150: space before tab in indent.
++		    	We study multi-task reinforcement learning (RL), a setting in which an agent learns a single, universal policy capable of generalising to arbitrary, possibly unseen tasks. We consider tasks specified as linear temporal logic (LTL) formulae, which are commonly used in formal methods to specify properties of systems, and have recently been successfully adopted in RL. In this setting, we present a novel task embedding technique leveraging a new generation of semantic LTL-to-automata translations, originally developed for temporal synthesis. The resulting semantically labelled automata contain rich, structured information in each state that allow us to (i) compute the automaton efficiently on-the-fly, (ii) extract expressive task embeddings used to condition the policy, and (iii) naturally support full LTL. Experimental results in a variety of domains demonstrate that our approach achieves state-of-the-art performance and is able to scale to complex specifications where existing methods fail.
+apaper-cloud/tests/fixtures/ijcai-detail.html:153: space before tab in indent.
++		    	<div class="keywords"><div class="title">Keywords:</div><div class="topic">Agent-based and Multi-agent Systems: Formal verification, validation and synthesis </div><div class="topic"> Knowledge Representation and Reasoning: Learning and reasoning </div><div class="topic"> Knowledge Representation and Reasoning: Reasoning about actions </div><div class="topic"> Machine Learning: Multi-task and transfer learning </div><div class="topic"> Machine Learning: Reinforcement learning</div></div>
+docs/architecture/dp-new/evidence/dp-new-candidate-targeted.log:31: new blank line at EOF.
+docs/architecture/dp-new/evidence/dp-new-final-cloud-tests.log:19: new blank line at EOF.
+docs/architecture/dp-new/evidence/dp-new-old-rust-decoder.log:9: new blank line at EOF.
+docs/architecture/dp-new/evidence/r1/dp-new-r1-app-cloud-tests.log:21: new blank line at EOF.
+docs/architecture/dp-new/evidence/r1/dp-new-r1-cloud-final-tests.log:21: new blank line at EOF.
+docs/architecture/dp-new/evidence/r1/dp-new-r1-cloud-tests.log:19: new blank line at EOF.
+docs/architecture/dp-new/evidence/r1/dp-new-r1-conference-final.log:35: new blank line at EOF.
+docs/architecture/dp-new/evidence/r1/dp-new-r1-conference-tests.log:33: new blank line at EOF.
+docs/architecture/dp-new/evidence/r1/dp-new-r1-production-https.log:10: new blank line at EOF.
+docs/architecture/dp-new/evidence/r1/dp-new-r1-transport.log:134: new blank line at EOF.

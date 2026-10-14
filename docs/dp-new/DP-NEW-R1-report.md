@@ -18,7 +18,7 @@ CVPR、ACL 原审计输入都恰好为 8 MiB 且在正文中截断，原差异�
 
 应用仓库：`/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper`，`codex/dp-new-candidate`。原 base e0e329455aab5056f9dd2817de33ac9fbf6ed8f7；产品局部检查点 ef787282a（明确 partial，不能代表验收）。
 
-Cloud：`/Users/junesum/Documents/AtomPaper-worktrees/dp-new-cloud-candidate`，同名分支。原 base 2292fa911b22cda7cf9ecd3cb6608784b1a3717e；元数据局部检查点 3858a47。后续 Skills、测试、证据随本轮 handoff 检查点保存，完整 commit ID 以最终交接消息和 Git 为准。没有改用 remote main。
+Cloud：`/Users/junesum/Documents/AtomPaper-worktrees/dp-new-cloud-candidate`，同名分支。原 base 2292fa911b22cda7cf9ecd3cb6608784b1a3717e；元数据局部检查点 3858a47。应用 handoff 检查点 4e1820aa541e566e6ee1af8eb5e640d5992ffe51 保存后续测试、开发副本和证据。Cloud 的 Skills/测试/证据补充检查点及报告更正 commit ID 见最终交接消息/Git。没有改用 remote main。
 
 R1 Modified：discovery `sources/conference.rs` 包替换逻辑；CoreKit 实际测试；Cloud 与 App 开发副本 `src/main.rs`、AAMAS Skill/脚本、manifest/version、双语 README、AAMAS 2026 包；audit.json 只追加 r1 字段，保留历史 finding。Cloud 自有新增 discipline 文件及修改区格式整理，两副本一致。
 
@@ -88,7 +88,7 @@ AC-01/02：继承 PASS，definitions/mapping/DTO 字节不变。AC-03：实现�
 | App candidate | `APAPER_SKIP_XCODE_SIGNING=1 bash scripts/build-macos-apps.sh Debug arm64 dp-new-native-qualification` | 0；本轮仅一次；资源及代码签名校验；独立输出复制后再 verify |
 | App candidate | `codesign --verify --deep --strict .qualification/dp-new-r1/aPaper-arm64.app` | 0 |
 | Cloud candidate | `cargo fmt -- --check`（自身新增/修改区整理后） | 0；初次格式差异不算 PASS |
-| 两仓库 | `git diff --check`；App build scripts `bash -n`；改动 Python `py_compile` | 0 |
+| 两仓库 | 产品源码范围 `git diff --check`；App build scripts `bash -n`；改动 Python `py_compile` | 0；全任务差异 check 为 2，原始 HTML／原始命令 receipts 的混合缩排及尾部空白保留 |
 | App candidate | AAMAS Skill `quick_validate.py` | 0；1 Skill，其他 9 unchanged 验证继承 |
 
 CoreKit 实际命令：
@@ -148,6 +148,8 @@ xcodebuild test -project apps/macos/APaperApp/APaperApp.xcodeproj \
 本地未完成：CVPR 26 条最终状态；IEEE S&P 论文级正式元数据与 PDF 验证；ACL 七项 PDF 摘要恢复没有执行。外部限制：ICLR accepted/final notes browser verification/API403；SOSP2026 ACM403；EMNLP2026最终collection未确认；AAMAS一条确实没有可接纳的标记摘要。上述类别不相互替代。
 
 Native/tooling：间歇 CUA timeout 与其会话重置出现过，最终 AX/截图可用。N1–N5 及 N6 UI 显示仍未测。原生工作区可用性没有建立，不能称 usable acceptance PASS。候选公网 HTTPS origin 尚无获准可用实例，且没有做 candidate→FFI→native在线测试。
+
+验证范围更正：早先 unstaged diff 检查没有覆盖未跟踪的原始 IJCAI HTML fixture。完整暂存/任务差异检查发现 raw HTML 混合缩排，Cloud 另有原始日志的尾部空白/EOF空行。保留原始输入与 raw receipts 并明确例外。排除 raw evidence 和该单个 fixture 后产品源码差异 check 为0，不声称完整 whitespace 检查PASS。
 
 历史无关失败：12 个 discovery assertion 身份/模式一致；App test compilation及Release/Agent cfg保持原状。没有广泛模型调用、伪造发现结果或修改模型就绪规则。
 
