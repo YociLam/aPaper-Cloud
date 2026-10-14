@@ -18,7 +18,7 @@ needs.
 - Conference catalog updated: `2026-09-14 12:00:00 UTC`
 - App-bundled translator resource: `v0.4`
 - App-bundled environment resource: `v0.1` (archive `v0.1-r1`, arm64)
-- Translator resource updated: `2026-08-27 12:30:26 UTC`
+- Translator resource updated: `2026-09-26 13:17:43 UTC`
 - Environment resource updated: `2026-08-27 12:30:26 UTC`
 
 The conference catalog, Translation Engine translator, and Translation Engine environment are
