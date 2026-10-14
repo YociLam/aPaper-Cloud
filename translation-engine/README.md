@@ -46,7 +46,8 @@ byte count plus SHA-256 before staged atomic activation.
 
 ## Retention policy (Update-01-Q2)
 
-The landing page no longer polls historical translator metadata. Existing JSON schemas, values,
+The landing page shows App-bundled resource versions/times from the separate status-only
+`/v1/app/macos/arm64/components/translation.json`; it no longer polls historical translator metadata. Existing JSON schemas, values,
 URLs, Worker configuration and release assets remain unchanged: historical client usage has not
 been ruled out. This is presentation deprecation, not endpoint retirement or Worker undeployment.
 

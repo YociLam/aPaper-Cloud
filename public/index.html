@@ -110,10 +110,17 @@
         </dl>
       </section>
       <section aria-labelledby="translation-heading">
-        <h2 id="translation-heading">Translation Engine</h2>
-        <p>Translation Engine updates are delivered with signed aPaper App releases.
-          Installation and repair use resources inside the App bundle.</p>
-        <p><a href="https://github.com/YociLam/aPaper-Cloud/tree/main/translation-engine">Historical distribution and build inputs</a></p>
+        <h2 id="translation-heading">Translation Engine · App bundle</h2>
+        <dl aria-label="App bundled Translation Engine resource status">
+          <dt>Translator</dt>
+          <dd id="translator-version">Checking…</dd>
+          <dt>Environment</dt>
+          <dd id="environment-version">Checking…</dd>
+          <dt>Translator updated</dt>
+          <dd><time id="translator-updated">Checking…</time></dd>
+          <dt>Environment updated</dt>
+          <dd><time id="environment-updated">Checking…</time></dd>
+        </dl>
       </section>
       <footer>
         <span>Contact</span>
@@ -151,6 +158,29 @@
           conferenceUpdated.textContent = "Unavailable";
         });
 
+
+      const translatorVersion = document.querySelector("#translator-version");
+      const environmentVersion = document.querySelector("#environment-version");
+      const translatorUpdated = document.querySelector("#translator-updated");
+      const environmentUpdated = document.querySelector("#environment-updated");
+
+      fetch(`/v1/app/macos/arm64/components/translation.json?check=${Date.now()}`, { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json();
+        })
+        .then((resource) => {
+          translatorVersion.textContent = resource.translator_version;
+          environmentVersion.textContent = `${resource.environment_version} (${resource.environment_archive_revision})`;
+          displayTime(translatorUpdated, resource.translator_updated_at);
+          displayTime(environmentUpdated, resource.environment_updated_at);
+        })
+        .catch(() => {
+          translatorVersion.textContent = "Unavailable";
+          environmentVersion.textContent = "Unavailable";
+          translatorUpdated.textContent = "Unavailable";
+          environmentUpdated.textContent = "Unavailable";
+        });
     </script>
   </body>
 </html>

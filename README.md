@@ -16,6 +16,10 @@ needs.
 - Production origin: `https://cloud.apaper.ai`
 - Conference catalog manifest: `v0.14`
 - Conference catalog updated: `2026-09-14 12:00:00 UTC`
+- App-bundled translator resource: `v0.4`
+- App-bundled environment resource: `v0.1` (archive `v0.1-r1`, arm64)
+- Translator resource updated: `2026-08-27 12:30:26 UTC`
+- Environment resource updated: `2026-08-27 12:30:26 UTC`
 
 The conference catalog, Translation Engine translator, and Translation Engine environment are
 independent version streams. A translator update does not require an environment package update

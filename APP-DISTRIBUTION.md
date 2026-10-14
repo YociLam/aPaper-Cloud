@@ -53,3 +53,13 @@ this namespace; this contract does not implement Tauri, Windows or a dynamic upd
 
 Historical `translation-engine-v0.1` assets and `public/v1/translation/**` remain intact. See
 [Translation Engine retention](translation-engine/README.md#retention-policy-update-01-q2).
+
+## Website and README resource status
+
+`public/v1/app/macos/arm64/components/translation.json` is a status-only snapshot of verified
+App-bundled resources, not a Cloud engine download manifest or a stable App release announcement.
+It records translator/environment versions independently, archive revision, exact package/resource
+hashes and the UTC commit times when those resource manifests last changed. It has no asset URL.
+The homepage's four status fields and both README summaries must match this record. When resources
+change, update all three surfaces together from the actual signed bundle; do not replace resource
+change times with the website deployment time. Historical `/v1/translation/**` remains unchanged.
