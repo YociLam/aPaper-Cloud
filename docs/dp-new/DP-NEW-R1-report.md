@@ -149,7 +149,7 @@ xcodebuild test -project apps/macos/APaperApp/APaperApp.xcodeproj \
 
 Native/tooling：间歇 CUA timeout 与其会话重置出现过，最终 AX/截图可用。N1–N5 及 N6 UI 显示仍未测。原生工作区可用性没有建立，不能称 usable acceptance PASS。候选公网 HTTPS origin 尚无获准可用实例，且没有做 candidate→FFI→native在线测试。
 
-验证范围更正：早先 unstaged diff 检查没有覆盖未跟踪的原始 IJCAI HTML fixture。完整暂存/任务差异检查发现 raw HTML 混合缩排，Cloud 另有原始日志的尾部空白/EOF空行。保留原始输入与 raw receipts 并明确例外。排除 raw evidence 和该单个 fixture 后产品源码差异 check 为0，不声称完整 whitespace 检查PASS。
+验证范围更正：早先 unstaged diff 检查没有覆盖未跟踪的原始 IJCAI HTML fixture。完整暂存/任务差异检查发现 raw HTML 混合缩排，Cloud 另有原始日志的尾部空白/EOF空行。保留原始输入与 raw receipts 并明确例外。排除 raw evidence 和两个发布者 HTML fixtures（IJCAI 混合缩排、ICCV CRLF/尾部空白）后产品源码差异 check 为0，不声称完整 whitespace 检查PASS。
 
 历史无关失败：12 个 discovery assertion 身份/模式一致；App test compilation及Release/Agent cfg保持原状。没有广泛模型调用、伪造发现结果或修改模型就绪规则。
 
