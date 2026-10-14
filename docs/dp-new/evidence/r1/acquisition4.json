@@ -1,0 +1,18 @@
+[
+  {
+    "key": "iclr_virtual",
+    "url": "https://iclr.cc/virtual/2026/papers.html",
+    "status": 200,
+    "bytes": 757834,
+    "content_length": "757834",
+    "sha256": "41eb3f1b15f9c63eff4c7845a0c3fbe018bf097508b3345d0c670c8589ca1e65"
+  },
+  {
+    "key": "sosp_schedule",
+    "url": "https://sigops.org/s/conferences/sosp/2026/schedule.html",
+    "status": 200,
+    "bytes": 49078,
+    "content_length": "49078",
+    "sha256": "f553498ec6c6e601a396df3d0d98859c2a38b0d090617748f9ec23d5226c774b"
+  }
+]

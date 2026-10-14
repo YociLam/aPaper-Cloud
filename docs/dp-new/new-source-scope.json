@@ -1,0 +1,42 @@
+[
+  {
+    "venue": "midl",
+    "volume": "v315",
+    "index_entries": 221,
+    "normalized_records": 221,
+    "index_only_ids": [],
+    "pack_only_ids": []
+  },
+  {
+    "venue": "mlhc",
+    "volume": "v340",
+    "index_entries": 74,
+    "normalized_records": 74,
+    "index_only_ids": [],
+    "pack_only_ids": []
+  },
+  {
+    "venue": "chil",
+    "volume": "v333",
+    "index_entries": 40,
+    "normalized_records": 40,
+    "index_only_ids": [],
+    "pack_only_ids": []
+  },
+  {
+    "venue": "mlcb",
+    "volume": "v311",
+    "index_entries": 23,
+    "normalized_records": 23,
+    "index_only_ids": [],
+    "pack_only_ids": []
+  },
+  {
+    "venue": "l4dc",
+    "volume": "v331",
+    "index_entries": 106,
+    "normalized_records": 106,
+    "index_only_ids": [],
+    "pack_only_ids": []
+  }
+]

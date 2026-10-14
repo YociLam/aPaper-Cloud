@@ -1,0 +1,50 @@
+[
+  {
+    "key": "iclr_accepted",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2026-orals-posters.json",
+    "status": 200,
+    "bytes": 15031089,
+    "content_length": "15031089",
+    "sha256": "064c43404a720a56ae51831dd6db48bfb58ec79f300f29b8d7cc8f889fcf1aca"
+  },
+  {
+    "key": "iclr_abstracts",
+    "url": "https://iclr.cc/static/virtual/data/iclr-2026-abstracts.json",
+    "status": 200,
+    "bytes": 8118594,
+    "content_length": "8118594",
+    "sha256": "2272dfefab54bb8de3736d43dcab3925be4db2c35fe2b75b59fbf90563844c41"
+  },
+  {
+    "key": "CSLO7280",
+    "url": "https://ifaamas.org/Proceedings/aamas2026/pdfs/CSLO7280.pdf",
+    "status": 200,
+    "bytes": 15069541,
+    "content_length": "15069541",
+    "sha256": "9810abf8936aafc9c8572e2d597620120a06fed17ac4345acb89fd4b14921d90"
+  },
+  {
+    "key": "XWPK8237",
+    "url": "https://ifaamas.org/Proceedings/aamas2026/pdfs/XWPK8237.pdf",
+    "status": 200,
+    "bytes": 884700,
+    "content_length": "884700",
+    "sha256": "30b759ce533f08a3a9c86378b2db088b6ebd105913082c8da6538655c7ee1d54"
+  },
+  {
+    "key": "CSLO7280_crossref",
+    "url": "https://api.crossref.org/works/10.65109/CSLO7280",
+    "status": 200,
+    "bytes": 1847,
+    "content_length": null,
+    "sha256": "0b0bf170dabdfc04e918978b7256d6c2c509057e9f35f0314857657e173e081d"
+  },
+  {
+    "key": "XWPK8237_crossref",
+    "url": "https://api.crossref.org/works/10.65109/XWPK8237",
+    "status": 200,
+    "bytes": 1973,
+    "content_length": null,
+    "sha256": "a602f05679ccd12d11915a2344a8be10a7ae046e86c2ba6c987e288ee0468462"
+  }
+]

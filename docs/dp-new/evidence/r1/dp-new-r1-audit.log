@@ -1,0 +1,87 @@
+[
+  {
+    "key": "cvpr",
+    "url": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "status": 200,
+    "bytes": 12117927,
+    "content_length": null,
+    "sha256": "31f63227934062163d5bc57838d339c3c7a7e1e6e51f71a238022bff73f1b792"
+  },
+  {
+    "key": "acl",
+    "url": "https://aclanthology.org/events/acl-2026/",
+    "status": 200,
+    "bytes": 18949012,
+    "content_length": "18949012",
+    "sha256": "301d164dfab06b58d230085ec937aa6991b496d0d12b98742ff9a5721c7b5fb0"
+  },
+  {
+    "key": "findings",
+    "url": "https://aclanthology.org/volumes/2026.findings-acl/",
+    "status": 200,
+    "bytes": 6670784,
+    "content_length": "6670784",
+    "sha256": "4506c84b8e534f82ea3a2e3d75190649a3d92649a7fbb16d3af9317b307ca923"
+  },
+  {
+    "key": "aaai2",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/archive/2",
+    "status": 200,
+    "bytes": 131849,
+    "content_length": null,
+    "sha256": "04d181c1014013325bf3ebbab39f769ce82803297feb87d1dccf520ad5d0bc28"
+  },
+  {
+    "key": "emnlp",
+    "url": "https://aclanthology.org/venues/emnlp/",
+    "status": 200,
+    "bytes": 25956,
+    "content_length": "25956",
+    "sha256": "3e579aa7eef49d086a6ecdc5ddc010d675ea67ec8ef33e124906c8c833150e31"
+  },
+  {
+    "key": "emnlp_program",
+    "url": "https://2026.emnlp.org/program/",
+    "status": 200,
+    "bytes": 19006,
+    "content_length": "19006",
+    "sha256": "82b969a4e99808852af41801e3d05d08a3ca4b9013878983a53387dbac99d3e7"
+  },
+  {
+    "key": "sosp_sigops",
+    "url": "https://www.sigops.org/conferences/",
+    "status": 200,
+    "bytes": 56763,
+    "content_length": null,
+    "sha256": "ea2724a1a6be7e5fed803a552f8219ae09eb81b4fc5cbb512b774be8d449e04d"
+  },
+  {
+    "key": "sosp2026",
+    "url": "https://sigops.org/s/conferences/sosp/2026/",
+    "status": 200,
+    "bytes": 29872,
+    "content_length": "29872",
+    "sha256": "8cc05b9383954990b5c170c1a8f8fedb01cfdd75aa36e1aca66b7934a8636b59"
+  },
+  {
+    "key": "iclr_group",
+    "url": "https://api2.openreview.net/groups?id=ICLR.cc/2026/Conference",
+    "status": 200,
+    "bytes": 10625,
+    "content_length": "10625",
+    "sha256": "22a696c88b5ae3613e0d63ce12b400a66a963c5145bc8f1a129e0d05984d57f8"
+  },
+  {
+    "key": "iclr_notes",
+    "url": "https://api2.openreview.net/notes?content.venueid=ICLR.cc%2F2026%2FConference&limit=1000&offset=0",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "sp_publications",
+    "url": "https://www.ieee-security.org/TC/SP2026/accepted-papers.html",
+    "status": 200,
+    "bytes": 178208,
+    "content_length": "178208",
+    "sha256": "ee58a5d42c2309a5ab38d0d1009f12e14758b1f062f1e3d456894b9ba10227ed"
+  }
+]

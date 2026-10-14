@@ -1,0 +1,216 @@
+Research Paper Track
+Beyond Vibe Decision Theo
+Vulnerabilities in LLM /
+Sukanya Krishna
+Harvard University
+Cambridge, MA, USA
+sukanyakrishna@g.harvard.edu
+ABSTRACT
+Language models are increasingly deployed in multi-agent envi-
+ronments where coordination emerges solely through natural lan-
+guage interaction. We investigate how contextual framing and ex-
+plicit strategic advice interact across three canonical game-theoretic
+paradigms: Prisoner's Dilemma, Public Goods, and Battle of the
+Sexes. While prior work shows that large language models (LLMs)
+are sensitive to contextual framing, the magnitude, directional-
+ity, and architectural consistency of these effects under conflict-
+ing instructions remain unclear. Through systematic experiments
+across eight models and multiple scenarios, we observe asymmetric
+manipulation patterns that are most pronounced in Public Goods
+settings. In these resource allocation games, competitive contexts
+shift toward cooperation by up to 52 percentage points when given
+cooperative advice, whereas cooperative contexts decline by as
+much as 96 percentage points under competitive advice. In Pris-
+oner's Dilemma, competitive malleability reaches 93 percentage
+points in some models, while others exhibit near-symmetric effects
+as small as 4 percentage points. Coordination games show com-
+paratively smaller and more uniform changes, typically below 45
+percentage points. Vulnerability varies substantially across model
+families, with no architecture demonstrating consistent robustness
+across paradigms. These findings suggest that instruction-following
+stability depends critically on the interaction between game struc-
+ture, contextual framing, and model architecture, raising important
+questions about alignment robustness in multi-agent deployments.
+KEYWORDS
+Multi-Agent Systems; Prompt Manipulation; AI Alignment; Game
+Theory
+АСМ Reference Format:
+Sukanya Krishna and Tobin South. 2026. Beyond Vibe Decision Theory:
+Asymmetric Manipulation Vulnerabilities in LLM Multi-Agent Coordina-
+tion. In Proc. of the 25th International Conference on Autonomous Agents
+and Multiagent Systems (AAMAS 2026), Paphos, Cyprus, May 25 - 29, 2026,
+IFAAMAS, 9 pages. https://doi.org/10.65109/CSLO7280
+1 INTRODUCTION
+A fundamental challenge in Al alignment is managing the tension
+between a Large Language Model's (LLM) instruction-following
+capabilities and its interpretation of situational context [21]. This
+This work is licensed under a Creative Commons Attribution Inter-
+national 4.0 License.
+Proc. of the 25th International Conference on Autonomous Agents and Multiagent Systems
+(AAMAS 2026), C. Amato, L. Dennis, V. Mascardi, J. Thangarajah (eds.), May 25 - 29,
+2026, Paphos, Cyprus. © 2026 International Foundation for Autonomous Agents and
+Multiagent Systems (www.ifaamas.org). https://doi.org/10.65109/CSLO7280
+AAMAS 2026, May 25-29, 2026, Paphos, Cyprus
+/: Asymmetric Manipulation
+ulti-Agent Coordination
+Tobin South
+Stanford University
+Stanford, CA, USA
+tsouth@stanford.edu
+tension becomes particularly acute in multi-agent systems where
+coordination is paramount and agents must reconcile potentially
+conflicting signals from narrative framing versus explicit strate-
+gic advice. Understanding how models navigate these conflicts
+is critical as LLMs are increasingly deployed in scenarios requir-
+ing strategic coordination, from autonomous trading systems to
+resource allocation networks.
+Behavioral economics has long demonstrated that contextual
+framing systematically alters human decision-making, often over-
+riding explicit incentives. In seminal work, labeling an identical
+Prisoner's Dilemma as the "Community Game" versus the "Wall
+Street Game" doubled cooperation rates [14], proving that implicit
+cues can overwhelm strategic considerations. This phenomenon
+extends beyond simple labeling: framing effects operate through
+belief channels about others' likely behavior, creating self-fulfilling
+coordination patterns [3, 5]. In public goods contexts, coopera-
+tive framings enhance contribution rates by establishing prosocial
+norms [10], while competitive framings trigger individual optimiza-
+tion at the expense of collective welfare.
+Recent work confirms LLMs exhibit similar sensitivities to con-
+textual framing [7, 15], yet a critical question remains: What hap-
+pens when rich narrative frames directly conflict with explicit strate-
+gic advice? Can models maintain stable preferences, or do contex-
+tual cues systematically override instruction-following? This ques-
+tion has profound implications for multi-agent deployment, where
+adversaries could exploit framing vulnerabilities to manipulate
+coordination outcomes, or where, conversely, beneficial framings
+might enhance cooperation.
+We address this through comprehensive controlled experiments
+testing eight model families (GPT-4, GPT-40, GPT-5, Llama-3.3-70B,
+Llama-3.1-70B, Gemma-27B, Gemini Flash, Gemini Pro) across three
+strategic domains drawn from established benchmarks [18]: Pris-
+oner's Dilemma (PD), Battle of the Sexes (BoS), and Public Goods
+(PG). We embed each game in either cooperative (e.g., environ-
+mental coalition, research partnership) or competitive (e.g., market
+rivalry, tournament ranking) narratives, then introduce contradic-
+tory strategic instructions. All experiments use N=30 trials per
+condition to ensure statistical robustness.
+Our findings suggest that manipulation vulnerability varies sys-
+tematically across game structures and model architectures. Public
+Goods games show the most consistent and striking asymmetric
+patterns: competitive contexts demonstrate 33-52% malleability
+toward cooperation across models, while cooperative contexts suf-
+fer catastrophic 61-96% collapse under competitive manipulation.
+This asymmetry appears strongest in contribution dilemmas involv-
+ing temporal dynamics and collective welfare trade-offs. Prisoner's
+Research Paper Track
+Dilemma and Battle of the Sexes exhibit more heterogeneous pat-
+terns, with vulnerability depending critically on model family: GPT
+models show clear generational progression in cooperative sta-
+bility, Llama variants display architecture-specific susceptibilities,
+and coordination games generally prove more robust than social
+dilemmas.
+Our approach differs fundamentally from prior game-theoretic
+analyses that seek to verify whether LLMs discover Nash equilibria
+or exhibit bounded rationality [1]. Classical analytical methods
+already provide complete solutions for canonical games; the con-
+tribution here is understanding how LLMs internalize social-norm
+reasoning from language training and how this reasoning responds
+to contextual manipulation in structured coordination settings. We
+do not aim to rediscover that cooperation is Pareto-superior in Pris-
+oner's Dilemma or that Battle of the Sexes has multiple equilibria
+Rather, we probe whether models can maintain stable strategic
+preferences when contextual cues and explicit instructions conflict
+(a test of alignment robustness that analytical game theory can-
+not address). This focus on preference stability under adversarial
+manipulation represents a distinct contribution from mechanistic
+coordination efficiency studies.
+Our contributions are: (1) comprehensive empirical evidence
+of game-structure-dependent manipulation patterns across model
+architectures with robust sample sizes (N=30); (2) identification
+that Public Goods games reveal the most consistent asymmetric
+vulnerabilities, while social dilemmas and coordination games show
+family-specific patterns; (3) demonstration that no model exhibits
+uniform robustness (vulnerability depends critically on the inter-
+action between architecture, game structure, and manipulation
+direction); and (4) implications for AI alignment regarding the sta-
+bility of instruction-following under contextual manipulation in
+multi-agent coordination scenarios.
+2 RELATED WORK
+Framing Effects in Human Decision-Making. Contextual fram-
+ing profoundly shapes human strategic behavior, often overriding
+explicit incentives. Labeling identical Prisoner's Dilemmas as the
+"Community Game" versus the "Wall Street Game" doubled coop
+eration rates, showing that linguistic cues can systematically shift
+choices even when payoffs remain constant [14]. Such effects arise
+through "belief channels," where frames shape expectations about
+others' behavior that become self-fulfilling equilibria [5]. When ac-
+tions become observable, these effects vanish [3], suggesting frames
+influence coordination beliefs rather than underlying preferences.
+In public goods settings, cooperative framings enhance contribu-
+tions by activating prosocial norms and shared expectations [10],
+with effects amplified under continuous rather than binary deci-
+sions. These mechanisms (i.e. belief formation, norm activation,
+and decision granularity) provide a foundation for understanding
+how LLMs may exhibit similar context-dependent reasoning.
+LLM Strategic Behavior and Contextual Sensitivity. LLMs show
+analogous framing sensitivities in strategic tasks. GPT-4 integrates
+contextual information into game-theoretic reasoning, producing
+systematically different strategies across narrative framings [15].
+Other studies find that LLMs play iterated Prisoner's Dilemmas
+more prosocially than humans [9], reflecting corpus-learned norms
+AAMAS 2026, May 25-29, 2026, Paphos, Cyprus
+rather than equilibrium optimization. While persona prompting
+can elicit specific behaviors [17], prior work aligns roles and strate-
+gies. In contrast, our study introduces conflicts between contextual
+frames and strategic instructions to test whether models can main-
+tain stable preferences when these signals diverge, a key measure
+of alignment stability in strategic reasoning.
+Multi-Agent LLM Coordination. As LLMs are deployed in multi-
+agent systems, coordination challenges arise that exceed single-
+agent reasoning. Benchmarks show models coordinate effectively
+when outcomes depend on observable state variables but struggle
+with theory-of-mind reasoning about others' intentions [1]. Frame-
+works like MLGym 18 standardize evaluation across canonical
+games, while mechanism design studies demonstrate that coordina-
+tion can be shaped through institutional structures [13]. However,
+most prior work examines coordination efficiency rather than ma-
+nipulation vulnerability. Our work directly tests how conflicting
+contextual and instructional cues exploit coordination mechanisms,
+revealing asymmetric manipulation effects across game structures.
+Prompt Manipulation and Security Vulnerabilities. LLM secu-
+rity research highlights extreme sensitivity to input manipulation
+Multi-agent "prompt infection" attacks show how adversarial con-
+tent can propagate across agents, compromising distributed sys-
+tems [12]. OWASP identifies prompt injection as a leading LLM
+threat [20], with success rates exceeding 90% for advanced at-
+tacks [8]. Unlike explicit injections, our study focuses on benign-
+appearing manipulations: competitive framings and strategic advice
+that each appear legitimate in isolation but jointly induce harmful
+coordination failures. Such frame-based manipulations can evade
+traditional adversarial detection, exposing subtler alignment vul-
+nerabilities.
+Alignment and Conditional Instruction-Following. Instruction-
+following and situational judgment remain in tension at the core
+of Al alignment. Models must obey user directives while rejecting
+harmful ones, creating exploitable ambiguity [21]. Safety alignment
+can be weakened through fine-tuning [4], which highlights how
+fragile these systems can be. Our experiments test whether mod-
+els preserve contextual integrity when explicit advice contradicts
+cooperative norms, probing inner alignment [11]. The observed
+"cooperative collapse" under conflicting cues suggests that current
+alignment training insufficiently addresses these subtle instruction-
+context conflicts, with implications for multi-agent robustness.
+Constitutional AI and Alignment Approaches. Recent advances
+in alignment training employ diverse approaches with potentially
+different robustness characteristics. Constitutional AI [2] embeds
+explicit principles during training, while RLHF with human feed-
+back [19] optimizes for demonstrated preferences. These method-
+ological differences may explain the architectural variation we ob-
+serve in manipulation vulnerability. Anthropic's work on honest AI
+systems [6] emphasizes calibrated uncertainty communication, sug-
+gesting alignment methods targeting epistemic integrity might offer
+distinct robustness profiles in multi-agent contexts. Understanding
+how different alignment philosophies shape strategic behavior un-
+der contlicting signals remains an open question with significant
+deployment implications.

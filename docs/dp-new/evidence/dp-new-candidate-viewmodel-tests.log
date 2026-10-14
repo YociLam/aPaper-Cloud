@@ -1,0 +1,3 @@
+/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/apps/macos/APaperApp/Tests/APaperAppTests/PaperMentorPresentationTests.swift:300:30: error: value of type 'ResearchWorkbenchModel' has no member 'projectSearch'
+/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/apps/macos/APaperApp/Tests/APaperAppTests/PaperMentorPresentationTests.swift:309:30: error: value of type 'ResearchWorkbenchModel' has no member 'projectSearch'
+** TEST FAILED **

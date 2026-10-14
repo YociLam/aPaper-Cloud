@@ -1,0 +1,13 @@
+{
+  "edition": "aamas:2026",
+  "before_records": 639,
+  "after_records": 640,
+  "added_ids": [
+    "CSLO7280"
+  ],
+  "removed_ids": [],
+  "retained_changed_ids": [],
+  "before_sha256": "e21b24871490ff5992558bad0931844028023568261e35f7f97b948a48f77a4c",
+  "after_sha256": "0c3b0368246d76105a9b31d749b4df7d3e19f2d0adf168a8ffa9730ba6df2823",
+  "acl_catalog_state_change": "published -> partial; existing pack SHA unchanged"
+}

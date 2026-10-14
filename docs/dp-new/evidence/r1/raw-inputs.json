@@ -1,0 +1,18 @@
+{
+  "cvpr.data": {
+    "bytes": 12117927,
+    "sha256": "31f63227934062163d5bc57838d339c3c7a7e1e6e51f71a238022bff73f1b792"
+  },
+  "acl_xml.data": {
+    "bytes": 7315152,
+    "sha256": "f2f798cc4fe127e8c0b6c5384ee8d20a7433ef05b0a949f69e749ed8c96bd941"
+  },
+  "findings_xml.data": {
+    "bytes": 6865641,
+    "sha256": "511c2317ca9af69910d17578489576a6dbc0cf62cf598a9dbf9f652bc599924d"
+  },
+  "iclr_accepted.data": {
+    "bytes": 15031089,
+    "sha256": "064c43404a720a56ae51831dd6db48bfb58ec79f300f29b8d7cc8f889fcf1aca"
+  }
+}

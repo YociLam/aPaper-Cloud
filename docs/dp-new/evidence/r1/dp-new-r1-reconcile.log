@@ -1,0 +1,283 @@
+{
+  "cvpr": {
+    "official_count": 4042,
+    "pack_count": 4068,
+    "index_only": [],
+    "pack_only": [
+      "Ahmed_Boundary-Responsive_Differentiable_Gating_for_Superpixel-Based_Segmentation_CVPR_2026_paper",
+      "Bae_Align_While_Search_Belief-Guided_Exploratory_Inference_for_World-Grounded_Embodied_Agents_CVPR_2026_paper",
+      "Berman_Scene-VLM_Multimodal_Video_Scene_Segmentation_via_Vision-Language_Models_CVPR_2026_paper",
+      "Cai_AutoDebias_An_Automated_Framework_for_Detecting_and_Mitigating_Backdoor_Biases_CVPR_2026_paper",
+      "Chai_RECS4R_Bridging_Semantics_and_Geometry_for_Referring_Remote_Sensing_Interpretation_CVPR_2026_paper",
+      "Chen_UniT_Unified_Multimodal_Chain-of-Thought_Test-time_Scaling_CVPR_2026_paper",
+      "Chowdhury_AMusE_Audio-Visual_Benchmark_and_Alignment_Framework_for_Agentic_Multi-Speaker_Understanding_CVPR_2026_paper",
+      "Fan_ExMesh_EXplicit_Mesh_Reconstruction_with_Topology_Adaptation_CVPR_2026_paper",
+      "Guan_Beyond_Endpoints_Path-Centric_Reasoning_for_Vectorized_Off-Road_Network_Extraction_CVPR_2026_paper",
+      "Gudavalli_WRIVINDER_Towards_Spatial_Intelligence_for_Geo-locating_Ground_Images_onto_Satellite_CVPR_2026_paper",
+      "Jeong_Draft_and_Refine_with_Visual_Experts_CVPR_2026_paper",
+      "Jia_Evaluating_Generative_Models_via_One-Dimensional_Code_Distributions_CVPR_2026_paper",
+      "Lassoued_ORCA_Orchestrated_Reasoning_with_Collaborative_Agents_for_Document_Visual_Question_CVPR_2026_paper",
+      "Li_Exploring_the_Underwater_World_Segmentation_without_Extra_Training_CVPR_2026_paper",
+      "Omama_AsymLoc_Towards_Asymmetric_Feature_Matching_for_Efficient_Visual_Localization_CVPR_2026_paper",
+      "Papais_SToRe3D_Sparse_Token_Relevance_in_ViTs_for_Efficient_Multi-View_3D_CVPR_2026_paper",
+      "Patwari_Composite-Attribute_Person_Re-Identification_via_Pose-Guided_Disentanglement_CVPR_2026_paper",
+      "Paul_Point_Cloud_as_a_Foreign_Language_for_Multi-modal_Large_Language_CVPR_2026_paper",
+      "Truong_SIGMA_A_Physics-Based_Benchmark_for_Gas_Chimney_Understanding_in_Seismic_CVPR_2026_paper",
+      "Wang_FVBench_Benchmarking_Deepfake_Video_Detection_Capability_of_Large_Multimodal_Models_CVPR_2026_paper",
+      "Xie_Similarity-as-Evidence_Calibrating_Overconfident_VLMs_for_Interpretable_and_Label-Efficient_Medical_Active_CVPR_2026_paper",
+      "Yang_Factorize_Reconstruct_Enhance_A_Unified_Framework_for_Multimodal_Sentiment_Analysis_CVPR_2026_paper",
+      "Zhang_SAM2Text_Towards_Prompt-Free_and_Multi-Resolution_Video_Scene_Text_Segmentation_CVPR_2026_paper",
+      "Zhao_FLOW_Optimal_Transport-Driven_Feature_Warping_for_Generalized_Remote_Physiological_Measurement_CVPR_2026_paper",
+      "Zheng_TrajTok_Learning_Trajectory_Tokens_Enhances_Video_Understanding_CVPR_2026_paper",
+      "Zhu_Personalized_Longitudinal_Medical_Report_Generation_via_Temporally-Aware_Federated_Adaptation_CVPR_2026_paper"
+    ]
+  },
+  "acl": {
+    "official_count": 4820,
+    "pack_count": 4806,
+    "index_only": [
+      "2026.acl-demo.0",
+      "2026.acl-industry.0",
+      "2026.acl-industry.1",
+      "2026.acl-long.0",
+      "2026.acl-long.1232",
+      "2026.acl-short.0",
+      "2026.acl-srw.0",
+      "2026.acl-tutorials.0",
+      "2026.findings-acl.0",
+      "2026.findings-acl.128",
+      "2026.findings-acl.138",
+      "2026.findings-acl.1664",
+      "2026.findings-acl.2161",
+      "2026.findings-acl.532"
+    ],
+    "pack_only": [],
+    "findings_count": 2164,
+    "group_counts": {
+      "2026.acl-long": 2221,
+      "2026.acl-short": 74,
+      "2026.acl-demo": 85,
+      "2026.acl-srw": 109,
+      "2026.acl-tutorials": 6,
+      "2026.acl-industry": 153,
+      "2026.findings-acl": 2158
+    }
+  }
+}
+ICLR group {
+  "submission_id": {
+    "value": "ICLR.cc/2026/Conference/-/Submission"
+  },
+  "pc_submission_revision_id": {
+    "value": "ICLR.cc/2026/Conference/-/PC_Revision"
+  },
+  "meta_invitation_id": {
+    "value": "ICLR.cc/2026/Conference/-/Edit"
+  },
+  "submission_name": {
+    "value": "Submission"
+  },
+  "submission_venue_id": {
+    "value": "ICLR.cc/2026/Conference/Submission"
+  },
+  "withdrawn_venue_id": {
+    "value": "ICLR.cc/2026/Conference/Withdrawn_Submission"
+  },
+  "desk_rejected_venue_id": {
+    "value": "ICLR.cc/2026/Conference/Desk_Rejected_Submission"
+  },
+  "rejected_venue_id": {
+    "value": "ICLR.cc/2026/Conference/Rejected_Submission"
+  },
+  "public_submissions": {
+    "value": true
+  },
+  "commitments_venue": {
+    "value": false
+  },
+  "public_withdrawn_submissions": {
+    "value": true
+  },
+  "public_desk_rejected_submissions": {
+    "value": true
+  },
+  "submission_email_template": {
+    "value": "Your submission to {{Abbreviated_Venue_Name}} has been {{action}}.\n\nSubmission Number: {{note_number}} \n\nTitle: {{note_title}} {{note_abstract}} \n\nTo view your submission, click here: https://openreview.net/forum?id={{note_forum}}"
+  },
+  "submission_email_pcs": {
+    "value": false
+  },
+  "title": {
+    "value": "The Fourteenth International Conference on Learning Representations"
+  },
+  "subtitle": {
+    "value": "ICLR 2026"
+  },
+  "website": {
+    "value": "https://iclr.cc/Conferences/2026"
+  },
+  "contact": {
+    "value": "program-chairs@iclr.cc"
+  },
+  "message_sender": {
+    "value": {
+      "fromName": "ICLR 2026",
+      "fromEmail": "iclr2026-notifications@openreview.net"
+    }
+  },
+  "location": {
+    "value": "Rio de Janeiro, Brazil"
+  },
+  "instructions": {
+    "value": ""
+  },
+  "start_date": {
+    "value": "Apr 23 2026"
+  },
+  "date": {
+    "value": "Submission Start: Sep 01 2025 11:59AM UTC-0, Abstract Registration: Sep 20 2025 11:59AM UTC-0, Submission Deadline: Sep 25 2025 11:59AM UTC-0"
+  },
+  "program_chairs_id": {
+    "value": "ICLR.cc/2026/Conference/Program_Chairs"
+  },
+  "reviewers_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers"
+  },
+  "reviewers_name": {
+    "value": "Reviewers"
+  },
+  "reviewer_roles": {
+    "value": [
+      "Reviewers"
+    ]
+  },
+  "reviewers_anon_name": {
+    "value": "Reviewer_"
+  },
+  "reviewers_submitted_name": {
+    "value": "Submitted"
+  },
+  "reviewers_custom_max_papers_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Custom_Max_Papers"
+  },
+  "reviewers_affinity_score_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Affinity_Score"
+  },
+  "reviewers_conflict_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Conflict"
+  },
+  "reviewers_assignment_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Assignment"
+  },
+  "reviewers_invite_assignment_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Invite_Assignment"
+  },
+  "reviewers_proposed_assignment_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Proposed_Assignment"
+  },
+  "reviewers_recruitment_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Recruitment"
+  },
+  "authors_id": {
+    "value": "ICLR.cc/2026/Conference/Authors"
+  },
+  "authors_accepted_id": {
+    "value": "ICLR.cc/2026/Conference/Authors/Accepted"
+  },
+  "authors_name": {
+    "value": "Authors"
+  },
+  "withdrawn_submission_id": {
+    "value": "ICLR.cc/2026/Conference/-/Withdrawn_Submission"
+  },
+  "withdraw_expiration_id": {
+    "value": "ICLR.cc/2026/Conference/-/Withdraw_Expiration"
+  },
+  "withdraw_reversion_id": {
+    "value": "ICLR.cc/2026/Conference/-/Withdrawal_Reversion"
+  },
+  "withdraw_committee": {
+    "value": [
+      "ICLR.cc/2026/Conference/Program_Chairs",
+      "ICLR.cc/2026/Conference/Submission{number}/Senior_Area_Chairs",
+      "ICLR.cc/2026/Conference/Submission{number}/Area_Chairs",
+      "ICLR.cc/2026/Conference/Submission{number}/Reviewers",
+      "ICLR.cc/2026/Conference/Submission{number}/Authors"
+    ]
+  },
+  "withdrawal_name": {
+    "value": "Withdrawal"
+  },
+  "withdrawal_email_pcs": {
+    "value": false
+  },
+  "withdrawn_submission_reveal_authors": {
+    "value": true
+  },
+  "desk_rejected_submission_id": {
+    "value": "ICLR.cc/2026/Conference/-/Desk_Rejected_Submission"
+  },
+  "desk_reject_expiration_id": {
+    "value": "ICLR.cc/2026/Conference/-/Desk_Reject_Expiration"
+  },
+  "desk_rejection_reversion_id": {
+    "value": "ICLR.cc/2026/Conference/-/Desk_Rejection_Reversion"
+  },
+  "desk_reject_committee": {
+    "value": [
+      "ICLR.cc/2026/Conference/Program_Chairs",
+      "ICLR.cc/2026/Conference/Submission{number}/Senior_Area_Chairs",
+      "ICLR.cc/2026/Conference/Submission{number}/Area_Chairs",
+      "ICLR.cc/2026/Conference/Submission{number}/Reviewers",
+      "ICLR.cc/2026/Conference/Submission{number}/Authors"
+    ]
+  },
+  "desk_rejection_name": {
+    "value": "Desk_Rejection"
+  },
+  "desk_rejection_email_pcs": {
+    "value": false
+  },
+  "desk_rejected_submission_reveal_authors": {
+    "value": true
+  },
+  "deletion_expiration_id": {
+    "value": "ICLR.cc/2026/Conference/-/Deletion_Expiration"
+  },
+  "automatic_reviewer_assignment": {
+    "value": true
+  },
+  "reviewers_message_submission_id": {
+    "value": "ICLR.cc/2026/Conference/Submission{number}/-/Message"
+  },
+  "reviewers_message_id": {
+    "value": "ICLR.cc/2026/Conference/Reviewers/-/Message"
+  },
+  "article_endorsement_id": {
+    "value": "ICLR.cc/2026/Conference/-/Article_Endorsement"
+  },
+  "area_chair_roles": {
+    "value": [
+      "Area_Chairs"
+    ]
+  },
+  "area_chairs_id": {
+    "value": "ICLR.cc/2026/Conference/Area_Chairs"
+  },
+  "area_chairs_name": {
+    "value": "Area_Chairs"
+  },
+  "area_chairs_anon_name": {
+    "value": "Area_Chair_"
+  },
+  "area_chairs_custom_max_papers_id": {
+    "value": "ICLR.cc/2026/Conference/Area_Chairs/-/Custom_Max_Papers"
+  },
+  "area_chairs_affinity_score_id": {
+    "value": "ICLR.cc/2026/Conference/Area_Chairs/-/Affinity_Score"
+  },
+  "area_chairs_conflict_id": {
+    "value": "ICLR.cc/2026/Conference/Area_C
+sosp2026 ['https://sysartifacts.github.io/sosp2026/']
+sp_publications ['program.html', 'accepted-papers.html', 'cfpapers.html', 'https://na.eventscloud.com/ieeesp2026', 'awards_papers.html']
+emnlp ['/events/emnlp-2025/', '/volumes/2025.emnlp-main/', '/volumes/2025.emnlp-demos/', '/volumes/2025.emnlp-industry/', '/volumes/2025.emnlp-tutorials/']

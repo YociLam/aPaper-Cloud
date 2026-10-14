@@ -10,6 +10,7 @@ import html
 import json
 from pathlib import Path
 import re
+import subprocess
 import time
 from urllib.parse import quote, urljoin
 from urllib.request import Request, urlopen
@@ -203,6 +204,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--timeout", type=int, default=90)
     parser.add_argument("--retries", type=int, default=3)
+    parser.add_argument("--ocr", action="store_true", help="macOS Vision fallback for explicitly labeled PDF abstracts; review every OCR admission")
     return parser.parse_args()
 
 
@@ -258,9 +260,14 @@ def dehyphenate(text: str) -> str:
     return " ".join(text.split())
 
 
-def extract_pdf_metadata(path: Path, paper_id: str) -> tuple[str, str]:
+def extract_pdf_metadata(path: Path, paper_id: str, *, ocr: bool = False) -> tuple[str, str]:
     document = fitz.open(path)
     text = "\n".join(document[index].get_text() for index in range(min(2, document.page_count)))
+    if ocr and not re.search(r"\bABSTRACT\b", text, re.I):
+        text = subprocess.check_output(
+            ["swift", str(Path(__file__).with_name("extract_pdf_columns.swift")), str(path)],
+            text=True, timeout=180,
+        )
     abstract_match = re.search(
         r"\bABSTRACT\b\s*(.+?)(?=\n\s*(?:CCS CONCEPTS|KEYWORDS|ACM Reference Format|1\s+INTRODUCTION)\b)",
         text,
@@ -280,6 +287,7 @@ def enrich_record(
     cache_dir: Path,
     timeout: int,
     retries: int,
+    ocr: bool = False,
 ) -> dict[str, object]:
     matched = crossref.get(normalized_title(str(record["title"])))
     if matched:
@@ -291,7 +299,7 @@ def enrich_record(
             cache_path.write_bytes(
                 fetch(str(record["pdf_url"]), timeout=timeout, retries=retries, accept="application/pdf")
             )
-        abstract, doi = extract_pdf_metadata(cache_path, str(record["id"]))
+        abstract, doi = extract_pdf_metadata(cache_path, str(record["id"]), ocr=ocr)
     if not abstract:
         raise ValueError(f"could not extract abstract for {record['id']} {record['title']}")
     if not record["authors"]:
@@ -346,6 +354,7 @@ def main() -> None:
                 cache_dir=args.cache_dir,
                 timeout=args.timeout,
                 retries=args.retries,
+                ocr=args.ocr,
             ): record
             for record in official_records
         }

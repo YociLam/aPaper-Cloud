@@ -1,0 +1,25 @@
+[0/1] Planning build
+Building for debugging...
+[0/5] Write sources
+[1/5] Write swift-version--58304C5D6DBC2206.txt
+[3/5] Emitting module APaperCoreKitTests
+[4/5] Compiling APaperCoreKitTests DailyPaperDiscoveryTests.swift
+[4/6] Write Objects.LinkFileList
+ld: warning: __eh_frame section too large (max 16MB) to encode dwarf unwind offsets in compact unwind table, performance of exception handling might be affected
+[5/6] Linking APaperCoreKitPackageTests
+Build complete! (98.37s)
+Test Suite 'Selected tests' started at 2026-10-14 20:43:31.194.
+Test Suite 'APaperCoreKitPackageTests.xctest' started at 2026-10-14 20:43:31.195.
+Test Suite 'APaperCoreKitPackageTests.xctest' passed at 2026-10-14 20:43:31.195.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-10-14 20:43:31.195.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1902
+􀄵  Target Platform: arm64e-apple-macos14.0
+􀟈  Test downloadedCatalogProjectsIntoSwiftDisciplineRows() started.
+􀟈  Test releaseCandidateVerifiedCacheCrossesProductionCatalogBridge() started.
+􁁛  Test downloadedCatalogProjectsIntoSwiftDisciplineRows() passed after 0.002 seconds.
+event=search_index_consistency db_key=24918e6a81aa9609 call_count=1 outcome=success page_count=0 indexed_count=0 rebuilt=false duration_us=345
+􁁛  Test releaseCandidateVerifiedCacheCrossesProductionCatalogBridge() passed after 5.638 seconds.
+􁁛  Test run with 2 tests in 0 suites passed after 5.639 seconds.

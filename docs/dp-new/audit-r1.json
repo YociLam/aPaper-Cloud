@@ -1,0 +1,65 @@
+{
+  "cvpr": {
+    "disposition": "Still locally incomplete",
+    "finding": "Original 8MiB acquisition truncated HTML: 2808 IDs. Complete 12117927-byte all-days main index has 4042 IDs, all in existing 4068 pack; remaining 26 pack-only detail URLs return 404. No pagination link or extra taxonomy scope used. These errors do not prove withdrawal; need publisher final identity/withdrawal reconciliation before removing any record.",
+    "evidence": "evidence/r1/reconciliation.json"
+  },
+  "acl": {
+    "disposition": "Reconciled; validated pack/catalog correction completed",
+    "finding": "Complete Main+Findings event contains 4820 IDs: seven front matter plus 4813 paper/overview IDs. Official 2026.acl.xml + 2026.findings.xml (only acl volume) supply 4806 admissible records, seven missing abstracts. Actual importer originally skipped all 4813 because current XML has no url child; fixed source-native collection/volume/paper identity. Replayed importer IDs exactly equal existing pack. ACL pack bytes preserved; state corrected to partial.",
+    "missing_abstract_ids": [
+      "2026.acl-industry.1",
+      "2026.acl-long.1232",
+      "2026.findings-acl.128",
+      "2026.findings-acl.138",
+      "2026.findings-acl.1664",
+      "2026.findings-acl.2161",
+      "2026.findings-acl.532"
+    ],
+    "evidence": "evidence/r1/dp-new-r1-acl-ingest-final.log"
+  },
+  "aaai": {
+    "disposition": "Reconciled; no change required",
+    "finding": "Archive pages 1 and 2 identify 48 Vol40 issues. All 43 Technical Track issue paper IDs union exactly equals 4149 retained IDs. Five other special/associated-track issues contain 771 IDs outside the declared technical-track pack scope. Preserve bytes.",
+    "evidence": "evidence/r1/aaai-reconciliation.json"
+  },
+  "iclr": {
+    "disposition": "Precisely blocked by an external prerequisite",
+    "finding": "Official virtual dataset includes BlogPosts, journal-to-conference entries and 223 synthetic negative-sourceid oral entries. Filtering to exact Conference source URL, positive sourceid and accepted decision leaves 5353 unique IDs, all in retained 5359 pack. Six remaining final acceptance/withdrawal states require publisher OpenReview notes; API notes queries return403 and all six forums redirect to browser verification. No challenge bypass; no deletions; temporary provenance preserved. Virtual attendance list alone is not final proceedings identity.",
+    "remaining_ids": [
+      "GqulkP3c1W",
+      "H8tismBT3Q",
+      "YYUNm7IibC",
+      "ZLJsJ8IWUz",
+      "aSKrSpVrCu",
+      "w2tnhhMbXv"
+    ],
+    "evidence": "evidence/r1/iclr-final-scope.json"
+  },
+  "ieee_sp": {
+    "disposition": "Still locally incomplete",
+    "finding": "Official accepted list supplies254 titles/author groups but zero abstracts or public PDF links. IEEE proceedings publication is confirmed (Xplore11573581, DOI10.1109/SP63933.2026.00244), not upstream unavailable. Complete per-paper publisher identities/abstracts/public PDFs and validation have not been obtained; retain partial254 pack:null. Bounded final collection request https://ieeexplore.ieee.org/xpl/conhome/11573355/proceeding returned418 while individual Proceedings document11573581 returned200. These acquisition outcomes do not establish the final paper set or verified PDF mapping.",
+    "evidence": "evidence/r1/acquisition.json"
+  },
+  "aamas": {
+    "disposition": "Reconciled; validated pack/catalog correction completed",
+    "finding": "CSLO7280 has a visibly labeled first-page ABSTRACT but an incomplete text layer. Opt-in PDFKit/Vision column OCR, manually compared to rendered publisher page, recovers it; official TOC authors/title/track/ID + Crossref DOI match. Added one record; all639 retained records equal. XWPK8237 first two pages have KEYWORDS then INTRODUCTION and no ABSTRACT; Crossref has no abstract. Keep partial640, one explicit exclusion. No admission rule weakened.",
+    "admitted": "CSLO7280",
+    "excluded": "XWPK8237",
+    "pdf_sha256": {
+      "CSLO7280": "9810abf8936aafc9c8572e2d597620120a06fed17ac4345acb89fd4b14921d90",
+      "XWPK8237": "30b759ce533f08a3a9c86378b2db088b6ebd105913082c8da6538655c7ee1d54"
+    },
+    "evidence": "evidence/r1/dp-new-r1-aamas.log"
+  },
+  "sosp": {
+    "disposition": "Precisely blocked by an external prerequisite",
+    "finding": "Previous2025 ACM check did not discover latest edition. Official SIGOPS2026 home/accepted/schedule now confirm newer2026 and schedule links final DOI set10.1145/3830418.*. Proceedings10.1145/3830418 and sampled paper3843867 return403; schedule lacks abstracts/public PDF bytes. Preserve existing temporary2025 pack;2026 publisher ingestion remains unfinished, not no newer edition.",
+    "evidence": "evidence/r1/acquisition6.json"
+  },
+  "emnlp": {
+    "disposition": "Precisely blocked by an external prerequisite",
+    "finding": "Official venue archive currently lists proceedings through2025. Official2026 program confirms upcoming Oct24–29 conference. Bounded main proceedings discovery did not confirm a published2026 collection; prior event404 alone was insufficient. Do not call the whole venue unavailable or replace2025; announced2026 pack:null retained. Additional official Main volume and collection XML requests both return404; current2026 Findings XML has only EACL/ACL, no EMNLP volume. This bounds checked inputs without proving universal absence.",
+    "evidence": "evidence/r1/acquisition7.json"
+  }
+}

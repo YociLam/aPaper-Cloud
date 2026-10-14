@@ -1,0 +1,35 @@
+   Compiling apaper_discovery v0.1.0 (/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.17s
+     Running unittests src/lib.rs (rust/target/debug/deps/apaper_discovery-da59ad47cb1cb5e3)
+
+running 26 tests
+test sources::conference::refresh_tests::production_https_catalog_acquisition_without_seeded_cache ... ignored, read-only real HTTPS acquisition from the published production origin
+test sources::conference::tests::online_conference_live_distinguishes_matches_from_successful_empty ... ignored, downloads one CVPR metadata pack from the configured cloud origin
+test sources::conference::tests::remote_manifest_upgrades_a_stale_local_catalog ... ignored, requires live pinned conference metadata
+test sources::conference::tests::remote_metadata_loads_multiple_conference_packs ... ignored, requires live GitHub conference metadata
+test sources::conference::tests::metadata_urls_resolve_multiple_conference_pack_paths ... ok
+test sources::conference::tests::manifest_versions_refresh_when_the_release_changes ... ok
+test sources::conference::tests::retrieval_requires_a_supported_source_pdf_url ... ok
+test sources::conference::tests::conference_level_domain_does_not_count_as_a_paper_keyword_hit ... ok
+test sources::conference::tests::cloud_manifest_fixture_uses_exact_venue_year_ids ... ok
+test sources::conference::tests::downloaded_manifest_must_match_the_announced_version ... ok
+test sources::conference::tests::matching_requires_a_real_keyword_hit ... ok
+test sources::conference::tests::source_group_becomes_the_primary_card_category ... ok
+test sources::conference::tests::disciplines_survive_catalog_serialization_and_future_ids_are_valid ... ok
+test sources::conference::tests::malformed_discipline_updates_are_rejected_before_cache_replacement ... ok
+test sources::conference::tests::venue_name_is_not_synthesized_as_a_paper_category ... ok
+test sources::conference::tests::valid_empty_catalog_and_partial_pack_availability_are_preserved ... ok
+test sources::conference::tests::atomic_manifest_write_replaces_the_cache_without_leaving_a_partial ... ok
+test sources::conference::tests::retrieval_reuses_the_verified_in_memory_manifest_after_startup ... ok
+test sources::conference::tests::retrieval_uses_valid_cached_catalog_without_waiting_for_remote_sync ... ok
+test sources::conference::tests::verified_cached_manifest_remains_available_when_remote_sync_fails ... ok
+test sources::conference::tests::cached_edition_is_loaded_without_startup_sync ... ok
+test sources::conference::tests::large_catalog_is_bounded_by_bytes_not_a_compiled_source_count ... ok
+test sources::conference::tests::pack_downloads_share_ownership_only_for_the_same_cache_path ... ok
+test sources::conference::tests::first_launch_without_remote_manifest_has_no_conference_catalog ... ok
+test sources::conference::tests::legacy_manifest_uses_one_hundred_thousand_record_scan_budget ... ok
+T1-T6: TLS FileDownloader + synchronization + public projection; ICCV 949 retained/1752 added; invalid replacement preserves verified cache; recovery uses next startup/current reference.
+test sources::conference::refresh_tests::downloader_tls_catalog_refresh_rejection_recovery_and_iccv_precision ... ok
+
+test result: ok. 22 passed; 0 failed; 4 ignored; 0 measured; 173 filtered out; finished in 15.45s
+

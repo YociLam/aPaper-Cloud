@@ -1,0 +1,10 @@
+   Compiling apaper_discovery v0.1.0 (/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.43s
+     Running unittests src/lib.rs (rust/target/debug/deps/apaper_discovery-da59ad47cb1cb5e3)
+
+running 1 test
+REAL PUBLIC HTTPS: version=0.14 sha=a92d71605ab41fa9900c4f81f0c6b5dec38b3ec0ad419c70368ce4a125f624be sources=20; published catalog only, no candidate deployment, no seeded cache or custom CA
+test sources::conference::refresh_tests::production_https_catalog_acquisition_without_seeded_cache ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 198 filtered out; finished in 2.08s
+

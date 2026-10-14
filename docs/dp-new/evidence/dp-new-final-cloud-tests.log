@@ -1,0 +1,19 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running unittests src/main.rs (target/debug/deps/apaper_cloud-fe98b9ed422bf3bc)
+
+running 12 tests
+test tests::acl_tracks_are_source_native_groups ... ok
+test tests::manifest_version_requires_two_numeric_segments ... ok
+test tests::publisher_not_equal_title_markup_is_readable ... ok
+test tests::imported_abstracts_collapse_exact_upstream_duplication ... ok
+test tests::conference_titles_preserve_semantic_superscripts_and_literal_currency ... ok
+test tests::acl_records_without_abstracts_are_skipped_without_aborting_the_edition ... ok
+test tests::acl_markup_text_preserves_inline_content_once ... ok
+test tests::conference_titles_render_math_and_escaped_characters_as_plain_unicode ... ok
+test tests::conference_titles_reject_unknown_source_markup ... ok
+test tests::conference_titles_render_bibtex_accents ... ok
+test tests::conference_titles_remove_latex_formatting_without_losing_text ... ok
+test tests::imported_records_keep_only_complete_searchable_metadata ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

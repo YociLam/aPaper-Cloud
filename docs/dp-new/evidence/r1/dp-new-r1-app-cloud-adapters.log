@@ -1,0 +1,13 @@
+test_cvf_retains_year_precision_without_inventing_a_day (test_publisher_adapters.PublisherAdapterTests) ... ok
+test_frontmatter_author_order_and_preface_exclusion (test_publisher_adapters.PublisherAdapterTests) ... ok
+test_ijcai_index_duplicate_identity_is_rejected (test_publisher_adapters.PublisherAdapterTests) ... ok
+test_ijcai_index_preserves_track_when_subject_heading_is_absent (test_publisher_adapters.PublisherAdapterTests) ... ok
+test_ijcai_keeps_publisher_subjects_and_stable_identity (test_publisher_adapters.PublisherAdapterTests) ... ok
+test_required_venues_preserve_ordered_metadata_from_official_posts (test_publisher_adapters.PublisherAdapterTests) ... ok
+test_wrong_collection_and_missing_date_fail_instead_of_guessing (test_publisher_adapters.PublisherAdapterTests) ... ok
+test_real_validator_rejects_invalid_checksummed_release_metadata (test_release_contract.ReleaseContractTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.073s
+
+OK

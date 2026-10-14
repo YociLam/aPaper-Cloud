@@ -1,0 +1,12 @@
+{
+  "note": "Receipt files captured after acquisition; source byte SHA/URLs in each batch, not publisher publication dates",
+  "snapshots": {
+    "acquisition2.json": "2026-10-14T13:05:35.065776+00:00",
+    "acquisition3.json": "2026-10-14T13:05:35.066031+00:00",
+    "acquisition.json": "2026-10-14T13:05:35.065496+00:00",
+    "acquisition4.json": "2026-10-14T13:05:35.066469+00:00",
+    "acquisition5.json": "2026-10-14T13:05:35.066741+00:00",
+    "acquisition6.json": "2026-10-14T13:05:35.066986+00:00",
+    "acquisition7.json": "2026-10-14T13:19:39.725773+00:00"
+  }
+}

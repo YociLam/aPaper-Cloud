@@ -1,25 +1,29 @@
 ---
 name: extract-ijcai-metadata
-description: Extract, normalize, verify, and publish one IJCAI proceedings year to aPaper Cloud. Use when IJCAI releases a new proceedings index or subject-area mappings need repair.
+description: Extract final IJCAI proceedings metadata and publisher subjects for aPaper, preserving indexed collection scope.
 ---
 
-# Extract IJCAI Metadata
+# Extract IJCAI metadata
 
-## Source contract
+Read ../manage-apaper-cloud-metadata/SKILL.md. The annual publisher proceedings are
+https://www.ijcai.org/proceedings/<year>/; 2026 is verified final. Index sections/subsections
+contain paper_wrapper IDs and Details links. Include every indexed contribution (main,
+special tracks, sister-conference summaries and demonstrations) consistent with the existing
+proceedings collection; exclude front matter without a paper ID. Describe this scope explicitly.
 
-- Use the official `ijcai.org/proceedings/<year>` index and paper pages.
-- Preserve the official paper page and PDF URL.
-- Map the official subject-area hierarchy to `source_group` and `categories`; keep the broad official category before more specific descendants.
-- When multiple labels share a common parent such as Computer Vision, retain the hierarchy instead of translating every descendant into the same broad label.
-- Use ISSN `1045-0823` for the IJCAI proceedings series where applicable.
+Run `../manage-apaper-cloud-metadata/scripts/fetch_ijcai_proceedings.py --year <year>
+--cache-dir <outside-repo> --output <json>`. It uses four workers and one complete index;
+no separate pagination. Review unique ID and official link counts before import.
+Use `ijcai-<year>-<numeric publisher ID>` identities. Detail citation metadata supplies
+ordered authors, title, date, DOI, PDF URL. The plain abstract and per-paper topic labels
+come from the detail page; source_group retains the indexed official subject heading, or the enclosing official track
+when no subject heading is supplied. Keep subject_area and track kinds distinct.
+Do not invent abstracts/dates or infer categories. A failed detail aborts extraction rather
+than silently reducing the collection. Keep HTML caches outside the repository.
 
-## Workflow
-
-1. Read `../manage-apaper-cloud-metadata/SKILL.md`.
-2. Enumerate the complete official index and capture its subject-area grouping without relying on display order alone.
-3. Parse title, authors, abstract, official page/PDF, DOI when present, dates, and subject hierarchy.
-4. Normalize to `venue_id=ijcai` and `edition_id=ijcai:<year>` with stable official IDs.
-5. Audit category hierarchy, duplicate translations, counts, and a deterministic PDF sample.
-6. Pack, update exact manifest metadata, update `version.json`, and run all validations from the management skill.
-
-Do not flatten distinct official child topics into repeated copies of one translated parent label.
+Normalize using `import-json --venue ijcai --edition ijcai:<year> --year <year>`, inspect
+skipped counts, verify a deterministic PDF sample including each included track, then pack
+under `public/v1/conferences/packs/ijcai/<year>.jsonl.zst`. Record sample coverage honestly;
+PDF bodies never enter the repository. Update counts, availability, bytes, checksum and
+pack_version only from actual output. Regenerate version.json and run management validators
+and adapter fixtures after final candidate edits. Publication requires separate authorization.

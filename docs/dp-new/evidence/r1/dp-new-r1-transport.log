@@ -1,0 +1,134 @@
+   Compiling apaper_discovery v0.1.0 (/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.59s
+     Running unittests src/lib.rs (rust/target/debug/deps/apaper_discovery-da59ad47cb1cb5e3)
+
+running 1 test
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53139)
+Traceback (most recent call last):
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 14, in do_GET
+    def do_GET(self): self.reply(True)
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 32, in reply
+    self.wfile.write(data[:7] if mode.get('interrupted') and '/packs/' in relative else data)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1204, in sendall
+    v = self.send(byte_view[count:])
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1173, in send
+    return self._sslobj.write(data)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53142)
+Traceback (most recent call last):
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 14, in do_GET
+    def do_GET(self): self.reply(True)
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 32, in reply
+    self.wfile.write(data[:7] if mode.get('interrupted') and '/packs/' in relative else data)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1204, in sendall
+    v = self.send(byte_view[count:])
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1173, in send
+    return self._sslobj.write(data)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53145)
+Traceback (most recent call last):
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 14, in do_GET
+    def do_GET(self): self.reply(True)
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 32, in reply
+    self.wfile.write(data[:7] if mode.get('interrupted') and '/packs/' in relative else data)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1204, in sendall
+    v = self.send(byte_view[count:])
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1173, in send
+    return self._sslobj.write(data)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53148)
+Traceback (most recent call last):
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 14, in do_GET
+    def do_GET(self): self.reply(True)
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 32, in reply
+    self.wfile.write(data[:7] if mode.get('interrupted') and '/packs/' in relative else data)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1204, in sendall
+    v = self.send(byte_view[count:])
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1173, in send
+    return self._sslobj.write(data)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 53177)
+Traceback (most recent call last):
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 14, in do_GET
+    def do_GET(self): self.reply(True)
+  File "/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery/tests/fixtures/catalog_https.py", line 32, in reply
+    self.wfile.write(data[:7] if mode.get('interrupted') and '/packs/' in relative else data)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1204, in sendall
+    v = self.send(byte_view[count:])
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ssl.py", line 1173, in send
+    return self._sslobj.write(data)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+test sources::conference::refresh_tests::downloader_tls_catalog_refresh_rejection_recovery_and_iccv_precision ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 197 filtered out; finished in 13.20s
+

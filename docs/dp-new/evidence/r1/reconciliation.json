@@ -1,0 +1,66 @@
+{
+  "cvpr": {
+    "official_count": 4042,
+    "pack_count": 4068,
+    "index_only": [],
+    "pack_only": [
+      "Ahmed_Boundary-Responsive_Differentiable_Gating_for_Superpixel-Based_Segmentation_CVPR_2026_paper",
+      "Bae_Align_While_Search_Belief-Guided_Exploratory_Inference_for_World-Grounded_Embodied_Agents_CVPR_2026_paper",
+      "Berman_Scene-VLM_Multimodal_Video_Scene_Segmentation_via_Vision-Language_Models_CVPR_2026_paper",
+      "Cai_AutoDebias_An_Automated_Framework_for_Detecting_and_Mitigating_Backdoor_Biases_CVPR_2026_paper",
+      "Chai_RECS4R_Bridging_Semantics_and_Geometry_for_Referring_Remote_Sensing_Interpretation_CVPR_2026_paper",
+      "Chen_UniT_Unified_Multimodal_Chain-of-Thought_Test-time_Scaling_CVPR_2026_paper",
+      "Chowdhury_AMusE_Audio-Visual_Benchmark_and_Alignment_Framework_for_Agentic_Multi-Speaker_Understanding_CVPR_2026_paper",
+      "Fan_ExMesh_EXplicit_Mesh_Reconstruction_with_Topology_Adaptation_CVPR_2026_paper",
+      "Guan_Beyond_Endpoints_Path-Centric_Reasoning_for_Vectorized_Off-Road_Network_Extraction_CVPR_2026_paper",
+      "Gudavalli_WRIVINDER_Towards_Spatial_Intelligence_for_Geo-locating_Ground_Images_onto_Satellite_CVPR_2026_paper",
+      "Jeong_Draft_and_Refine_with_Visual_Experts_CVPR_2026_paper",
+      "Jia_Evaluating_Generative_Models_via_One-Dimensional_Code_Distributions_CVPR_2026_paper",
+      "Lassoued_ORCA_Orchestrated_Reasoning_with_Collaborative_Agents_for_Document_Visual_Question_CVPR_2026_paper",
+      "Li_Exploring_the_Underwater_World_Segmentation_without_Extra_Training_CVPR_2026_paper",
+      "Omama_AsymLoc_Towards_Asymmetric_Feature_Matching_for_Efficient_Visual_Localization_CVPR_2026_paper",
+      "Papais_SToRe3D_Sparse_Token_Relevance_in_ViTs_for_Efficient_Multi-View_3D_CVPR_2026_paper",
+      "Patwari_Composite-Attribute_Person_Re-Identification_via_Pose-Guided_Disentanglement_CVPR_2026_paper",
+      "Paul_Point_Cloud_as_a_Foreign_Language_for_Multi-modal_Large_Language_CVPR_2026_paper",
+      "Truong_SIGMA_A_Physics-Based_Benchmark_for_Gas_Chimney_Understanding_in_Seismic_CVPR_2026_paper",
+      "Wang_FVBench_Benchmarking_Deepfake_Video_Detection_Capability_of_Large_Multimodal_Models_CVPR_2026_paper",
+      "Xie_Similarity-as-Evidence_Calibrating_Overconfident_VLMs_for_Interpretable_and_Label-Efficient_Medical_Active_CVPR_2026_paper",
+      "Yang_Factorize_Reconstruct_Enhance_A_Unified_Framework_for_Multimodal_Sentiment_Analysis_CVPR_2026_paper",
+      "Zhang_SAM2Text_Towards_Prompt-Free_and_Multi-Resolution_Video_Scene_Text_Segmentation_CVPR_2026_paper",
+      "Zhao_FLOW_Optimal_Transport-Driven_Feature_Warping_for_Generalized_Remote_Physiological_Measurement_CVPR_2026_paper",
+      "Zheng_TrajTok_Learning_Trajectory_Tokens_Enhances_Video_Understanding_CVPR_2026_paper",
+      "Zhu_Personalized_Longitudinal_Medical_Report_Generation_via_Temporally-Aware_Federated_Adaptation_CVPR_2026_paper"
+    ]
+  },
+  "acl": {
+    "official_count": 4820,
+    "pack_count": 4806,
+    "index_only": [
+      "2026.acl-demo.0",
+      "2026.acl-industry.0",
+      "2026.acl-industry.1",
+      "2026.acl-long.0",
+      "2026.acl-long.1232",
+      "2026.acl-short.0",
+      "2026.acl-srw.0",
+      "2026.acl-tutorials.0",
+      "2026.findings-acl.0",
+      "2026.findings-acl.128",
+      "2026.findings-acl.138",
+      "2026.findings-acl.1664",
+      "2026.findings-acl.2161",
+      "2026.findings-acl.532"
+    ],
+    "pack_only": [],
+    "findings_count": 2164,
+    "group_counts": {
+      "2026.acl-long": 2221,
+      "2026.acl-short": 74,
+      "2026.acl-demo": 85,
+      "2026.acl-srw": 109,
+      "2026.acl-tutorials": 6,
+      "2026.acl-industry": 153,
+      "2026.findings-acl": 2158
+    }
+  }
+}

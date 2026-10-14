@@ -28,12 +28,12 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
    - never copy inferred category rules from another venue.
 2. Acquire metadata only from the conference or proceedings publisher. Keep the source URL and source-native track/category in every JSONL record.
 3. Add or update the compressed pack under `public/v1/conferences/packs/<venue>/<year>.jsonl.zst`. This path convention applies to existing and newly added venues without changing the publishing scripts.
-   - Before releasing refreshed packs, run `python3 skills/manage-apaper-cloud-metadata/scripts/normalize_conference_titles.py public`. The packer converts source LaTeX/BibTeX title markup to readable plain Unicode, and validation rejects any title that has not passed the same normalization contract.
+   - Normalize each changed input through the repository `import-json` and `pack` commands. The packer converts source LaTeX/BibTeX title markup to readable plain Unicode, and validation rejects unsupported markup. Do not repackage unchanged historical records for a taxonomy-only release; there is no standalone normalize_conference_titles.py in this checkout.
 4. Update `manifest.json`:
    - advance the two-segment `manifest_version` once for every catalog or pack release;
    - set `paper_count` and pack `record_count` to the exact same value;
    - use `published` only when metadata and public PDF links have been verified;
-   - keep unavailable or unverified editions `cataloged`, `partial`, or `announced` with `pack: null`.
+   - keep unavailable or unverified editions `cataloged`, `partial`, or `announced`; valid partial packs remain selectable, while editions without a verified pack use `pack: null`.
 5. Run `python3 skills/manage-apaper-cloud-metadata/scripts/update_version.py public` to rewrite `version.json` with the manifest SHA-256.
 6. Update the catalog summaries near the top of both `README.md` (default English) and `README.zh-CN.md` from the final manifest: current version, UTC update time, every listed venue/year count, and non-published state labels must match exactly. Keep the language switch and shared `assets/aPaper.png` header intact. Do not present `cataloged`, `partial`, or `announced` editions as downloadable packs.
 7. Validate before publishing:
@@ -62,7 +62,7 @@ Use this skill for changes under `apaper-cloud/public/v1/conferences/`. Locate t
 - Edition IDs are `<venue_id>:<year>` and years are integers.
 - `version.json` must match `manifest.json` in schema, dataset, `manifest_version`, and SHA-256.
 - `canonical_origin` must remain `https://cloud.apaper.ai`; do not restore a GitHub Pages or raw-repository runtime fallback.
-- The app has a bounded selection cap of 20,000 records; do not remove that guard.
+- The app has a bounded selection cap of 100,000 records; do not remove that guard.
 - Conference editions are selected by exact venue/year, not by a rolling date window.
 - Conference venue availability, ordering, names, translations, cadence, and editions come from the remote Manifest rather than a hard-coded App list.
 - Source groups describe the publisher's own track or collection. They are not inferred research topics.

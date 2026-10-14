@@ -1,0 +1,9 @@
+   Compiling apaper_discovery v0.1.0 (/private/tmp/apaper-dp-new-baseline/rust/crates/discovery)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.45s
+     Running unittests src/lib.rs (rust/target/baseline/debug/deps/apaper_discovery-da59ad47cb1cb5e3)
+
+running 1 test
+test sources::conference::dp_new_compatibility::dp_new_old_decoder_accepts_additive_candidate ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 193 filtered out; finished in 0.01s
+
