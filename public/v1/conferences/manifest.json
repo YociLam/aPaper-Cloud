@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "manifest_version": "0.14",
+  "manifest_version": "0.15",
   "dataset": "apaper.conferences",
-  "generated_at": "2026-09-14T12:00:00Z",
+  "generated_at": "2026-10-14T12:51:30Z",
   "canonical_origin": "https://cloud.apaper.ai",
   "maximum_selected_records": 100000,
   "venues": [
@@ -66,7 +66,10 @@
       "localized_tag": {
         "en": "Top AI/ML Conference",
         "zh-Hans": "AI/ML 综合顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "icml",
@@ -77,9 +80,15 @@
         {
           "id": "icml:2026",
           "year": 2026,
-          "paper_count": 6341,
-          "state": "cataloged",
-          "pack": null
+          "paper_count": 6552,
+          "state": "published",
+          "pack": {
+            "path": "packs/icml/2026.jsonl.zst",
+            "record_count": 6552,
+            "compressed_bytes": 2910598,
+            "sha256": "8a12d71721aa5b8255a8a93d6d24dbb17f48fb92a5d6cc563f80101c3f44dad3",
+            "pack_version": "0.15"
+          }
         },
         {
           "id": "icml:2025",
@@ -128,7 +137,10 @@
       "localized_tag": {
         "en": "Top Machine Learning Conference",
         "zh-Hans": "机器学习顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "iclr",
@@ -196,7 +208,10 @@
       "localized_tag": {
         "en": "Top Deep Learning / Representation Learning Conference",
         "zh-Hans": "深度学习/表示学习顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "cvpr",
@@ -264,7 +279,10 @@
       "localized_tag": {
         "en": "Top Computer Vision Conference",
         "zh-Hans": "计算机视觉顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "acl",
@@ -276,7 +294,7 @@
           "id": "acl:2026",
           "year": 2026,
           "paper_count": 4806,
-          "state": "published",
+          "state": "partial",
           "pack": {
             "path": "packs/acl/2026.jsonl.zst",
             "sha256": "3363592a4db4fa6379a81b419f49b4af1711097e6e8780eee8d4e22eb1755710",
@@ -332,7 +350,10 @@
       "localized_tag": {
         "en": "Top NLP Conference",
         "zh-Hans": "NLP 顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "aaai",
@@ -400,7 +421,10 @@
       "localized_tag": {
         "en": "Top General AI Conference",
         "zh-Hans": "AI 综合顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "ijcai",
@@ -411,9 +435,15 @@
         {
           "id": "ijcai:2026",
           "year": 2026,
-          "paper_count": 0,
-          "state": "announced",
-          "pack": null
+          "paper_count": 972,
+          "state": "published",
+          "pack": {
+            "path": "packs/ijcai/2026.jsonl.zst",
+            "record_count": 972,
+            "compressed_bytes": 451087,
+            "sha256": "562518753fbd50e573380b118fc5e4a2f6be14e25d6c3c730a7423a06976670d",
+            "pack_version": "0.15"
+          }
         },
         {
           "id": "ijcai:2025",
@@ -462,7 +492,10 @@
       "localized_tag": {
         "en": "Top General AI Conference",
         "zh-Hans": "AI 综合顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "emnlp",
@@ -524,7 +557,10 @@
       "localized_tag": {
         "en": "Top NLP Conference",
         "zh-Hans": "NLP 顶会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "iccv",
@@ -539,14 +575,14 @@
         {
           "id": "iccv:2025",
           "year": 2025,
-          "paper_count": 949,
+          "paper_count": 2701,
           "state": "published",
           "pack": {
             "path": "packs/iccv/2025.jsonl.zst",
-            "sha256": "bbe144fb5f88f113689ff9b9b27ec67e5512b806cc125af78ce6cd2e9d5193ec",
-            "compressed_bytes": 462826,
-            "record_count": 949,
-            "pack_version": "0.13"
+            "record_count": 2701,
+            "compressed_bytes": 1271630,
+            "sha256": "3d1d9b988d2dd66721dd893713477f98fe96c6853cb5f1536efb2dc4cc005f01",
+            "pack_version": "0.15"
           }
         },
         {
@@ -562,6 +598,9 @@
             "pack_version": "0.13"
           }
         }
+      ],
+      "discipline_ids": [
+        "oecd:ford:1.2"
       ]
     },
     {
@@ -607,7 +646,10 @@
       "localized_names": {
         "en": "European Conference on Computer Vision",
         "zh-Hans": "欧洲计算机视觉会议"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "aistats",
@@ -658,6 +700,10 @@
             "pack_version": "0.13"
           }
         }
+      ],
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:1.1"
       ]
     },
     {
@@ -696,6 +742,10 @@
             "pack_version": "0.13"
           }
         }
+      ],
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:1.1"
       ]
     },
     {
@@ -711,14 +761,14 @@
         {
           "id": "aamas:2026",
           "year": 2026,
-          "paper_count": 639,
+          "paper_count": 640,
           "state": "partial",
           "pack": {
             "path": "packs/aamas/2026.jsonl.zst",
-            "sha256": "e21b24871490ff5992558bad0931844028023568261e35f7f97b948a48f77a4c",
-            "compressed_bytes": 296817,
-            "record_count": 639,
-            "pack_version": "0.13"
+            "sha256": "0c3b0368246d76105a9b31d749b4df7d3e19f2d0adf168a8ffa9730ba6df2823",
+            "compressed_bytes": 297321,
+            "record_count": 640,
+            "pack_version": "0.15"
           }
         },
         {
@@ -734,6 +784,9 @@
             "pack_version": "0.13"
           }
         }
+      ],
+      "discipline_ids": [
+        "oecd:ford:1.2"
       ]
     },
     {
@@ -772,6 +825,10 @@
             "pack_version": "0.13"
           }
         }
+      ],
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:2.2"
       ]
     },
     {
@@ -823,6 +880,10 @@
             "pack_version": "0.13"
           }
         }
+      ],
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:2.2"
       ]
     },
     {
@@ -887,7 +948,10 @@
       "localized_names": {
         "en": "USENIX Symposium on Operating Systems Design and Implementation",
         "zh-Hans": "USENIX 操作系统设计与实现研讨会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "sosp",
@@ -938,7 +1002,10 @@
       "localized_names": {
         "en": "ACM Symposium on Operating Systems Principles",
         "zh-Hans": "ACM 操作系统原理研讨会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "ieee_sp",
@@ -990,7 +1057,10 @@
       "localized_names": {
         "en": "IEEE Symposium on Security and Privacy",
         "zh-Hans": "IEEE 安全与隐私研讨会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "ndss",
@@ -1054,7 +1124,10 @@
       "localized_names": {
         "en": "Network and Distributed System Security Symposium",
         "zh-Hans": "网络与分布式系统安全研讨会"
-      }
+      },
+      "discipline_ids": [
+        "oecd:ford:1.2"
+      ]
     },
     {
       "id": "accv",
@@ -1092,7 +1165,223 @@
             "pack_version": "0.13"
           }
         }
+      ],
+      "discipline_ids": [
+        "oecd:ford:1.2"
       ]
+    },
+    {
+      "id": "midl",
+      "short_name": "MIDL",
+      "name": "Medical Imaging with Deep Learning",
+      "localized_names": {
+        "en": "Medical Imaging with Deep Learning",
+        "zh-Hans": "医学影像深度学习大会"
+      },
+      "cadence": "annual",
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:2.6"
+      ],
+      "editions": [
+        {
+          "id": "midl:2026",
+          "year": 2026,
+          "paper_count": 221,
+          "state": "published",
+          "pack": {
+            "path": "packs/midl/2026.jsonl.zst",
+            "record_count": 221,
+            "compressed_bytes": 122624,
+            "sha256": "6525d847e455bc44514cba982940842c2ae6f3528c70106780761affb1b1e987",
+            "pack_version": "0.15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mlhc",
+      "short_name": "MLHC",
+      "name": "Machine Learning for Healthcare Conference",
+      "localized_names": {
+        "en": "Machine Learning for Healthcare Conference",
+        "zh-Hans": "医疗机器学习大会"
+      },
+      "cadence": "annual",
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:3.3"
+      ],
+      "editions": [
+        {
+          "id": "mlhc:2026",
+          "year": 2026,
+          "paper_count": 74,
+          "state": "published",
+          "pack": {
+            "path": "packs/mlhc/2026.jsonl.zst",
+            "record_count": 74,
+            "compressed_bytes": 48918,
+            "sha256": "e006e27b6dcc76548edbec88ec02a108e31eddbc922eb3615c1adc389c07796a",
+            "pack_version": "0.15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chil",
+      "short_name": "CHIL",
+      "name": "Conference on Health, Inference, and Learning",
+      "localized_names": {
+        "en": "Conference on Health, Inference, and Learning",
+        "zh-Hans": "健康、推断与学习大会"
+      },
+      "cadence": "annual",
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:3.3"
+      ],
+      "editions": [
+        {
+          "id": "chil:2026",
+          "year": 2026,
+          "paper_count": 40,
+          "state": "published",
+          "pack": {
+            "path": "packs/chil/2026.jsonl.zst",
+            "record_count": 40,
+            "compressed_bytes": 23373,
+            "sha256": "0fd9bbc6719bf9bfc37b2dcfafad854ce61f0ebc6de9e63d8fa625ce55260e09",
+            "pack_version": "0.15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mlcb",
+      "short_name": "MLCB",
+      "name": "Machine Learning in Computational Biology meeting",
+      "localized_names": {
+        "en": "Machine Learning in Computational Biology meeting",
+        "zh-Hans": "计算生物学机器学习会议"
+      },
+      "cadence": "annual",
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:1.6"
+      ],
+      "editions": [
+        {
+          "id": "mlcb:2025",
+          "year": 2025,
+          "paper_count": 23,
+          "state": "published",
+          "pack": {
+            "path": "packs/mlcb/2025.jsonl.zst",
+            "record_count": 23,
+            "compressed_bytes": 13931,
+            "sha256": "ca2c06862238be665848f1bacfa77812484bb6cf460629c32dfc19cbf9debd8c",
+            "pack_version": "0.15"
+          }
+        }
+      ]
+    },
+    {
+      "id": "l4dc",
+      "short_name": "L4DC",
+      "name": "Learning for Dynamics and Control Conference",
+      "localized_names": {
+        "en": "Learning for Dynamics and Control Conference",
+        "zh-Hans": "动力学与控制学习大会"
+      },
+      "cadence": "annual",
+      "discipline_ids": [
+        "oecd:ford:1.2",
+        "oecd:ford:2.2"
+      ],
+      "editions": [
+        {
+          "id": "l4dc:2026",
+          "year": 2026,
+          "paper_count": 106,
+          "state": "published",
+          "pack": {
+            "path": "packs/l4dc/2026.jsonl.zst",
+            "record_count": 106,
+            "compressed_bytes": 50403,
+            "sha256": "def4a53717b877a655b9895e89cbf4775ab6c35a9270c439a36e40f08e659998",
+            "pack_version": "0.15"
+          }
+        }
+      ]
+    }
+  ],
+  "discipline_taxonomy": {
+    "id": "oecd:ford",
+    "name": "OECD Fields of Research and Development",
+    "version": "Frascati Manual 2015, Table 2.2",
+    "reference_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/10/frascati-manual-2015_g1g57dcb/9789264239012-en.pdf"
+  },
+  "disciplines": [
+    {
+      "id": "oecd:ford:1.2",
+      "code": "1.2",
+      "name": "Computer and information sciences",
+      "localized_names": {
+        "en": "Computer and information sciences",
+        "zh-Hans": "计算机与信息科学"
+      },
+      "display_order": 0
+    },
+    {
+      "id": "oecd:ford:1.1",
+      "code": "1.1",
+      "name": "Mathematics",
+      "localized_names": {
+        "en": "Mathematics",
+        "zh-Hans": "数学"
+      },
+      "display_order": 1
+    },
+    {
+      "id": "oecd:ford:1.6",
+      "code": "1.6",
+      "name": "Biological sciences",
+      "localized_names": {
+        "en": "Biological sciences",
+        "zh-Hans": "生物科学"
+      },
+      "display_order": 2
+    },
+    {
+      "id": "oecd:ford:2.2",
+      "code": "2.2",
+      "name": "Electrical engineering, electronic engineering, information engineering",
+      "localized_names": {
+        "en": "Electrical engineering, electronic engineering, information engineering",
+        "zh-Hans": "电气工程、电子工程与信息工程"
+      },
+      "display_order": 3
+    },
+    {
+      "id": "oecd:ford:2.6",
+      "code": "2.6",
+      "name": "Medical engineering",
+      "localized_names": {
+        "en": "Medical engineering",
+        "zh-Hans": "医学工程"
+      },
+      "display_order": 4
+    },
+    {
+      "id": "oecd:ford:3.3",
+      "code": "3.3",
+      "name": "Health sciences",
+      "localized_names": {
+        "en": "Health sciences",
+        "zh-Hans": "健康科学"
+      },
+      "display_order": 5
     }
   ]
 }

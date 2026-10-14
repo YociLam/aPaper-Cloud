@@ -7,6 +7,9 @@ use std::fs::{self, File};
 use std::io::{BufRead, BufReader, BufWriter, Write};
 use std::path::{Path, PathBuf};
 
+mod discipline;
+use discipline::{validate_disciplines, Discipline, DisciplineTaxonomy};
+
 const MANIFEST_PATH: &str = "v1/conferences/manifest.json";
 const VERSION_PATH: &str = "v1/conferences/version.json";
 const MAX_PACK_RECORDS: usize = 30_000;
@@ -18,6 +21,12 @@ struct Manifest {
     manifest_version: String,
     dataset: String,
     generated_at: String,
+    canonical_origin: String,
+    maximum_selected_records: usize,
+    #[serde(default)]
+    discipline_taxonomy: Option<DisciplineTaxonomy>,
+    #[serde(default)]
+    disciplines: Vec<Discipline>,
     venues: Vec<Venue>,
 }
 
@@ -38,6 +47,9 @@ struct Venue {
     localized_names: BTreeMap<String, String>,
     #[serde(default)]
     localized_tag: BTreeMap<String, String>,
+    #[serde(default)]
+    discipline_ids: Vec<String>,
+    cadence: String,
     editions: Vec<Edition>,
 }
 
@@ -46,6 +58,7 @@ struct Edition {
     id: String,
     year: u16,
     paper_count: usize,
+    state: String,
     pack: Option<PackReference>,
 }
 
@@ -440,7 +453,25 @@ fn acl_paper_record(
 ) -> Result<Option<ConferencePaperRecord>, String> {
     let title = normalize_title_markup(&child_markup_text(paper, "title"));
     let abstract_text = child_markup_text(paper, "abstract");
-    let anthology_id = child_markup_text(paper, "url");
+    let mut anthology_id = child_markup_text(paper, "url");
+    if anthology_id.is_empty() {
+        // Current publisher XML encodes identity in collection/volume/paper IDs.
+        if let (Some(id), Some(volume), Some(collection)) = (
+            paper.attribute("id"),
+            paper.parent().filter(|node| node.has_tag_name("volume")),
+            paper
+                .ancestors()
+                .find(|node| node.has_tag_name("collection")),
+        ) {
+            if !id.is_empty() && id.bytes().all(|byte| byte.is_ascii_digit()) {
+                if let (Some(collection_id), Some(volume_id)) =
+                    (collection.attribute("id"), volume.attribute("id"))
+                {
+                    anthology_id = format!("{collection_id}-{volume_id}.{id}");
+                }
+            }
+        }
+    }
     if title.is_empty() || abstract_text.is_empty() || anthology_id.is_empty() {
         return Ok(None);
     }
@@ -712,6 +743,18 @@ fn normalize_title_command(characters: &[char], index: &mut usize, output: &mut 
         let argument = title_command_argument(characters, index);
         output.push_str(&normalize_title_fragment(&argument));
         return;
+    }
+
+    if command == "not" {
+        let mut next = *index;
+        while next < characters.len() && characters[next].is_whitespace() {
+            next += 1;
+        }
+        if characters.get(next) == Some(&'=') {
+            output.push('≠');
+            *index = next + 1;
+            return;
+        }
     }
 
     let symbols = [
@@ -989,6 +1032,10 @@ fn parse_pack_arguments(args: Vec<String>) -> Result<PackArguments, String> {
     })
 }
 
+fn default_pack_version() -> String {
+    "0.0".into()
+}
+
 fn validate_site(root: &Path) -> Result<(), String> {
     let manifest_path = root.join(MANIFEST_PATH);
     let manifest_bytes = fs::read(&manifest_path)
@@ -998,6 +1045,10 @@ fn validate_site(root: &Path) -> Result<(), String> {
     if manifest.schema_version != 1
         || !valid_manifest_version(&manifest.manifest_version)
         || manifest.dataset != "apaper.conferences"
+        || manifest.generated_at.trim().is_empty()
+        || manifest.canonical_origin != "https://cloud.apaper.ai"
+        || manifest.maximum_selected_records == 0
+        || manifest.maximum_selected_records > 100_000
     {
         return Err("conference manifest uses an unsupported contract".to_string());
     }
@@ -1020,10 +1071,25 @@ fn validate_site(root: &Path) -> Result<(), String> {
         return Err("conference manifest contains no venues".to_string());
     }
 
+    // Release tooling requires classification; runtime still accepts verified legacy catalogs.
+    if manifest.discipline_taxonomy.is_none() {
+        return Err("release requires discipline taxonomy".into());
+    }
+    validate_disciplines(
+        manifest.discipline_taxonomy.as_ref(),
+        &manifest.disciplines,
+        manifest
+            .venues
+            .iter()
+            .map(|venue| venue.discipline_ids.as_slice()),
+    )?;
+    let mut venue_ids = BTreeSet::new();
     let mut edition_ids = std::collections::BTreeSet::new();
     for venue in &manifest.venues {
         if venue.id.trim().is_empty()
             || venue.short_name.trim().is_empty()
+            || venue.cadence.trim().is_empty()
+            || !venue_ids.insert(&venue.id)
             || venue.name.trim().is_empty()
             || venue.localized_names.len() < 2
             || venue.localized_names.get("en").map(String::as_str) != Some(venue.name.as_str())
@@ -1050,6 +1116,13 @@ fn validate_site(root: &Path) -> Result<(), String> {
             return Err("conference venue identifiers and names are required".to_string());
         }
         for edition in &venue.editions {
+            if !["published", "partial", "cataloged", "announced"].contains(&edition.state.as_str())
+                || (edition.state == "published" && edition.pack.is_none())
+                || (edition.pack.is_some()
+                    && !["published", "partial"].contains(&edition.state.as_str()))
+            {
+                return Err(format!("{} has invalid availability", edition.id));
+            }
             if edition.id != format!("{}:{}", venue.id, edition.year) {
                 return Err(format!(
                     "edition {} does not match its venue and year",
@@ -1085,24 +1158,23 @@ fn valid_manifest_version(version: &str) -> bool {
         && (minor == "0" || !minor.starts_with('0'))
 }
 
-fn default_pack_version() -> String {
-    "0.0".to_string()
-}
-
 fn validate_pack_reference(
     root: &Path,
     venue: &Venue,
     edition: &Edition,
     pack: &PackReference,
 ) -> Result<(), String> {
-    if pack.record_count != edition.paper_count
+    if !valid_manifest_version(&pack.pack_version)
+        || pack.record_count != edition.paper_count
         || pack.record_count > MAX_PACK_RECORDS
-        || !valid_manifest_version(&pack.pack_version)
     {
         return Err(format!("{} has an invalid record count", edition.id));
     }
     if pack.compressed_bytes > MAX_PACK_COMPRESSED_BYTES {
         return Err(format!("{} exceeds the compressed size policy", edition.id));
+    }
+    if pack.path != format!("packs/{}/{}.jsonl.zst", venue.id, edition.year) {
+        return Err("invalid pack path".into());
     }
     let path = root.join("v1/conferences").join(&pack.path);
     let metadata =
@@ -1124,11 +1196,15 @@ fn validate_pack_reference(
     let decoder = zstd::stream::read::Decoder::new(bytes.as_slice())
         .map_err(|error| format!("could not decode {}: {error}", edition.id))?;
     let mut record_count = 0;
+    let mut paper_ids = BTreeSet::new();
     for line in BufReader::new(decoder).lines() {
         let line = line.map_err(|error| format!("could not read {}: {error}", edition.id))?;
         let paper: ConferencePaperRecord = serde_json::from_str(&line)
             .map_err(|error| format!("invalid record in {}: {error}", edition.id))?;
         validate_record(&paper, &venue.id, &edition.id, edition.year)?;
+        if !paper_ids.insert(paper.id.clone()) {
+            return Err(format!("duplicate record {}", paper.id));
+        }
         record_count += 1;
     }
     if record_count != pack.record_count {
@@ -1236,6 +1312,17 @@ mod tests {
     use super::*;
 
     #[test]
+    fn publisher_not_equal_title_markup_is_readable() {
+        assert_eq!(
+            normalize_title_markup(r"Coverage $\not =$ Exposure"),
+            "Coverage ≠ Exposure"
+        );
+        assert!(title_has_unsupported_markup(&normalize_title_markup(
+            r"\not\in"
+        )));
+    }
+
+    #[test]
     fn manifest_version_requires_two_numeric_segments() {
         assert!(valid_manifest_version("0.9"));
         assert!(valid_manifest_version("0.10"));
@@ -1256,6 +1343,37 @@ mod tests {
             child_markup_text(document.root_element(), "title"),
             "Learning LLM Systems"
         );
+    }
+
+    #[test]
+    fn acl_current_xml_identity_uses_primary_and_findings_collection_ids() {
+        let arguments = IngestAclArguments {
+            inputs: Vec::new(),
+            venue_id: "acl".into(),
+            edition_id: "acl:2026".into(),
+            year: 2026,
+            output: PathBuf::new(),
+        };
+        for (collection, volume, expected) in [
+            ("2026.acl", "long", "2026.acl-long.1"),
+            ("2026.findings", "acl", "2026.findings-acl.1"),
+        ] {
+            let xml = format!("<collection id='{collection}'><volume id='{volume}'><paper id='1'><title>Publisher paper</title><abstract>Publisher abstract.</abstract><author><first>Ada</first><last>Researcher</last></author></paper></volume></collection>");
+            let document = Document::parse(&xml).unwrap();
+            let paper = document
+                .descendants()
+                .find(|node| node.has_tag_name("paper"))
+                .unwrap();
+            let group = acl_source_group("acl", volume, collection.ends_with("findings"));
+            let record = acl_paper_record(&arguments, paper, &group, "2026", "2026")
+                .unwrap()
+                .unwrap();
+            assert_eq!(record.id, expected);
+            assert_eq!(
+                record.pdf_url.unwrap(),
+                format!("https://aclanthology.org/{expected}.pdf")
+            );
+        }
     }
 
     #[test]

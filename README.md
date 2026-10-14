@@ -48,7 +48,7 @@ paper PDFs, account credentials, reading history, or private library content.
 
 | Catalog | Version | Updated (UTC) |
 | --- | --- | --- |
-| Conference manifest | `v0.14` | 2026-09-14 12:00:00 |
+| Conference manifest | `v0.15` (unreleased candidate) | 2026-10-14 12:51:30 |
 
 The App checks the lightweight [version record](https://cloud.apaper.ai/v1/conferences/version.json),
 retrieves a changed [manifest](https://cloud.apaper.ai/v1/conferences/manifest.json), and verifies its
@@ -60,28 +60,33 @@ missing or outdated packs can be synchronized without reinstalling the App.
 | Venue | 2022 | 2023 | 2024 | 2025 | 2026 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | NeurIPS | — | 3,540 | 4,493 | 5,823 | announced |
-| ICML | — | 1,828 | 2,610 | 3,330 | 6,341 (cataloged) |
+| ICML | — | 1,828 | 2,610 | 3,330 | 6,552 |
 | ICLR | — | 435 (partial) | 2,261 (partial) | 3,708 (partial) | 5,359 (partial) |
 | CVPR | — | 2,352 | 2,710 | 2,871 | 4,068 |
-| ACL | — | 2,150 | 1,982 | 3,353 | 4,806 |
+| ACL | — | 2,150 | 1,982 | 3,353 | 4,806 (partial) |
 | AAAI | — | 1,578 | 2,331 | 3,028 | 4,149 |
-| IJCAI | — | 850 | 1,047 | 1,279 | announced |
+| IJCAI | — | 850 | 1,047 | 1,279 | 972 |
 | EMNLP | — | 2,241 | 2,388 | 3,488 | announced |
-| ICCV | — | 2,156 | — | 949 | — |
+| ICCV | — | 2,156 | — | 2,701 | — |
 | ECCV | 1,645 | — | 2,387 | — | announced |
 | AISTATS | — | — | 547 | 583 | 588 |
 | COLT | — | — | — | 181 | 196 |
-| AAMAS | — | — | — | 479 | 639 (partial) |
+| AAMAS | — | — | — | 479 | 640 (partial) |
 | CoRL | — | — | 264 (partial) | 263 | — |
 | RSS | — | — | 134 | 163 | 210 |
 | OSDI | — | 55 | 53 | 53 | 136 |
 | SOSP | — | 9 (partial) | 43 (partial) | 65 (partial) | — |
-| IEEE S&P | — | cataloged | 261 | 65 | 254 (partial) |
+| IEEE S&P | — | cataloged | 261 | 65 | 254 (partial / no pack) |
 | NDSS | — | 94 | 140 | 211 | 265 |
 | ACCV | 277 | — | 269 | — | — |
+| MIDL | — | — | — | — | 221 |
+| MLHC | — | — | — | — | 74 |
+| CHIL | — | — | — | — | 40 |
+| MLCB | — | — | — | 23 | — |
+| L4DC | — | — | — | — | 106 |
 
-Unqualified counts indicate published packs. **Partial** means searchable metadata is available
-with incomplete coverage; **cataloged** means an edition is recorded but its pack is not yet
+Unqualified counts indicate validated candidate packs, pending deployment. **Partial** means coverage
+is incomplete; only editions with a valid pack are selectable; **cataloged** means an edition is recorded but its pack is not yet
 published; **announced** means final proceedings are pending. The live manifest is authoritative.
 The table uses the catalog publication time; per-edition update times are not currently tracked.
 
@@ -89,6 +94,8 @@ Records preserve source provenance. Categories and source groups are retained on
 by the publisher; missing classifications are not inferred. Some ICLR and SOSP records retain the
 build-time provenance marker `temporary_reference_supabase_v1`; this does not introduce an App
 runtime connection to Supabase.
+
+DP-NEW is an unreleased local candidate: 25 sources, 71 editions, 66 packs. Partial editions are selectable only when they have a valid pack; rows marked no pack are unavailable. Discipline definitions and references share the manifest hash. Venue mappings are reviewed by aPaper, not official OECD venue assignments. See the [execution report](docs/dp-new/DP-NEW-report.md) and [mapping](docs/dp-new/discipline-mapping.md).
 
 ## Translation Engine
 
