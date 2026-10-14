@@ -48,7 +48,7 @@ paper PDFs, account credentials, reading history, or private library content.
 
 | Catalog | Version | Updated (UTC) |
 | --- | --- | --- |
-| Conference manifest | `v0.15` (unreleased candidate) | 2026-10-14 12:51:30 |
+| Conference manifest | `v0.16` (unreleased candidate) | 2026-10-14 16:12:47 |
 
 The App checks the lightweight [version record](https://cloud.apaper.ai/v1/conferences/version.json),
 retrieves a changed [manifest](https://cloud.apaper.ai/v1/conferences/manifest.json), and verifies its
@@ -95,7 +95,7 @@ by the publisher; missing classifications are not inferred. Some ICLR and SOSP r
 build-time provenance marker `temporary_reference_supabase_v1`; this does not introduce an App
 runtime connection to Supabase.
 
-DP-NEW is an unreleased local candidate: 25 sources, 71 editions, 66 packs. Partial editions are selectable only when they have a valid pack; rows marked no pack are unavailable. Discipline definitions and references share the manifest hash. Venue mappings are reviewed by aPaper, not official OECD venue assignments. See the [execution report](docs/dp-new/DP-NEW-report.md) and [mapping](docs/dp-new/discipline-mapping.md).
+DP-NEW is an unreleased local candidate: 31 sources (25 conferences and six journals), 77 annual selections, 72 packs. Partial editions are selectable only when they have a valid pack; rows marked no pack are unavailable. Discipline definitions and references share the manifest hash. Venue mappings are reviewed by aPaper, not official OECD venue assignments. See the [execution report](docs/dp-new/DP-NEW-report.md) and [mapping](docs/dp-new/discipline-mapping.md).
 
 ## Translation Engine
 
@@ -163,3 +163,7 @@ cargo test --locked
 GitHub Actions validates the catalog and Translation Engine distribution before publication.
 The legacy asset route has separate tests and a Worker packaging dry-run; updating its development
 tooling does not deploy or remove the production Worker.
+
+## E1 journal candidate
+
+Schema 1 keeps conferences in `venues` and adds a separate `journals` extension. Older clients do not enumerate journals; supported clients retain explicit journal kind, ISSNs, native article type, actual volume/issue/article number and original date precision. Annual packs are distribution partitions. The six licensed 2026 snapshots contain 1,552 records through 2026-10-14T15:44:19Z. JLB is usable partial/10 with 14 NC/ND-license exclusions and two unresolved license/abstract records; the other five are complete for their declared input/scope/cutoff, not the future full year. All preceding 66 packs are byte-preserved. This candidate is unreleased; no public 0.16 refresh is claimed. See [contract](docs/dp-new/E1-journal-contract.md) and source reconciliation receipts in docs/dp-new/evidence/e1/.

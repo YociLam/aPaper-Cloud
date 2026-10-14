@@ -1,0 +1,3934 @@
+{
+  "source": "plos_medicine",
+  "identity": {
+    "title": "PLOS Medicine",
+    "short": "PLOS Med",
+    "zh": "PLOS 医学",
+    "issn": "1549-1676",
+    "publisher": "Public Library of Science",
+    "disciplines": [
+      "oecd:ford:3.2",
+      "oecd:ford:3.3"
+    ],
+    "scope": "https://journals.plos.org/plosmedicine/s/journal-information",
+    "types": [
+      "Research Article",
+      "Review",
+      "Systematic Review",
+      "Policy Forum",
+      "Essay",
+      "Clinical Trial"
+    ],
+    "plos": "PLoSMedicine",
+    "slug": "plosmedicine"
+  },
+  "coverage": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-10-14",
+    "cutoff": "2026-10-14T15:44:19Z",
+    "included_article_types": [
+      "Research Article",
+      "Review",
+      "Systematic Review",
+      "Policy Forum",
+      "Essay",
+      "Clinical Trial"
+    ],
+    "discovered": 248,
+    "admitted": 175,
+    "excluded": 73,
+    "unresolved": 0,
+    "duplicates": 238,
+    "completeness": "snapshot_complete",
+    "identity_basis": "PLOS publisher Solr index"
+  },
+  "identity_basis": "PLOS publisher index",
+  "crossref_only_ids": [],
+  "pages": [
+    {
+      "url": "https://api.crossref.org/journals/1549-1676/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 200,
+      "total": 238,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/1549-1676/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=MTc4ODI4MzM2MTAwMCwxMC4xMzcxJTJGam91cm5hbC5wbWVkLjEwMDUyMjI%3D",
+      "count": 38,
+      "total": 238,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/1549-1676/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=MTc5MTkxMzQyOTAwMCwxMC4xMzcxJTJGam91cm5hbC5wbWVkLjEwMDUyODA%3D",
+      "count": 0,
+      "total": 238,
+      "terminal": true
+    },
+    {
+      "url": "https://api.crossref.org/journals/1549-1676/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 200,
+      "total": 238,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/1549-1676/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=MTc4ODI4MzM2MTAwMCwxMC4xMzcxJTJGam91cm5hbC5wbWVkLjEwMDUyMjI%3D",
+      "count": 38,
+      "total": 238,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/1549-1676/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=MTc5MTkxMzQyOTAwMCwxMC4xMzcxJTJGam91cm5hbC5wbWVkLjEwMDUyODA%3D",
+      "count": 0,
+      "total": 238,
+      "terminal": true
+    },
+    {
+      "url": "https://api.plos.org/search?q=eissn%3A1549-1676+AND+doc_type%3Afull+AND+publication_date%3A%5B2026-01-01T00%3A00%3A00Z+TO+2026-10-14T15%3A44%3A19Z%5D&wt=json&rows=200&start=0&sort=id+asc",
+      "count": 200,
+      "total": 248,
+      "terminal": false
+    },
+    {
+      "url": "https://api.plos.org/search?q=eissn%3A1549-1676+AND+doc_type%3Afull+AND+publication_date%3A%5B2026-01-01T00%3A00%3A00Z+TO+2026-10-14T15%3A44%3A19Z%5D&wt=json&rows=200&start=200&sort=id+asc",
+      "count": 48,
+      "total": 248,
+      "terminal": false
+    },
+    {
+      "url": "https://api.plos.org/search?q=eissn%3A1549-1676+AND+doc_type%3Afull+AND+publication_date%3A%5B2026-01-01T00%3A00%3A00Z+TO+2026-10-14T15%3A44%3A19Z%5D&wt=json&rows=200&start=400&sort=id+asc",
+      "count": 0,
+      "total": 248,
+      "terminal": true
+    }
+  ],
+  "identities": [
+    {
+      "doi": "10.1371/image.pmed.v22.i12",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i01",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i02",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i03",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i04",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i05",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i06",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i07",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i08",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/image.pmed.v23.i09",
+      "status": "excluded",
+      "reason": "publisher_article_type: Issue Image",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004513",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004513",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                4
+              ]
+            ],
+            "date-time": "2026-02-04T00:00:00Z",
+            "timestamp": 1770163200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004572",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004575",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004595",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004595",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                23
+              ]
+            ],
+            "date-time": "2026-02-23T00:00:00Z",
+            "timestamp": 1771804800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004604",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004609",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004614",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004625",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004635",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004642",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004652",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004652",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                5
+              ]
+            ],
+            "date-time": "2026-02-05T00:00:00Z",
+            "timestamp": 1770249600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004653",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004658",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004659",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004672",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004672",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                1
+              ]
+            ],
+            "date-time": "2026-04-01T00:00:00Z",
+            "timestamp": 1775001600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004673",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004674",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004674",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                23
+              ]
+            ],
+            "date-time": "2026-02-23T00:00:00Z",
+            "timestamp": 1771804800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004676",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004681",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004688",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004692",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004703",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004712",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004712",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                27
+              ]
+            ],
+            "date-time": "2026-04-27T00:00:00Z",
+            "timestamp": 1777248000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004716",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004725",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004733",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004739",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004739",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                11
+              ]
+            ],
+            "date-time": "2026-06-11T00:00:00Z",
+            "timestamp": 1781136000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004745",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004747",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004747",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                27
+              ]
+            ],
+            "date-time": "2026-05-27T00:00:00Z",
+            "timestamp": 1779840000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004748",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004749",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004749",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                13
+              ]
+            ],
+            "date-time": "2026-02-13T00:00:00Z",
+            "timestamp": 1770940800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004750",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004752",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004758",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004767",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004770",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004771",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004775",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004779",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004779",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2026-04-10T00:00:00Z",
+            "timestamp": 1775779200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004785",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004785",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                14
+              ]
+            ],
+            "date-time": "2026-07-14T00:00:00Z",
+            "timestamp": 1783987200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004791",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004792",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004798",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004802",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004809",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004809",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                27
+              ]
+            ],
+            "date-time": "2026-05-27T00:00:00Z",
+            "timestamp": 1779840000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004814",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004817",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004819",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004821",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004825",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004825",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                23
+              ]
+            ],
+            "date-time": "2026-07-23T00:00:00Z",
+            "timestamp": 1784764800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004829",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004832",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004832",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                12
+              ]
+            ],
+            "date-time": "2026-05-12T00:00:00Z",
+            "timestamp": 1778544000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004833",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004842",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004844",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004846",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004847",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004855",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004860",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004861",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004861",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                16
+              ]
+            ],
+            "date-time": "2026-07-16T00:00:00Z",
+            "timestamp": 1784160000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004862",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004864",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004867",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004868",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004870",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004871",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004873",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004874",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004876",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004877",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004877",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                19
+              ]
+            ],
+            "date-time": "2026-05-19T00:00:00Z",
+            "timestamp": 1779148800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004879",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004879",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                16
+              ]
+            ],
+            "date-time": "2026-01-16T00:00:00Z",
+            "timestamp": 1768521600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004880",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004882",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004882",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                29
+              ]
+            ],
+            "date-time": "2026-07-29T00:00:00Z",
+            "timestamp": 1785283200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004884",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004885",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004223",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                5
+              ]
+            ],
+            "date-time": "2026-01-05T00:00:00Z",
+            "timestamp": 1767571200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004887",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004889",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004889",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                29
+              ]
+            ],
+            "date-time": "2026-07-29T00:00:00Z",
+            "timestamp": 1785283200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004890",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004893",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004900",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004901",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1003636",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                1,
+                23
+              ]
+            ],
+            "date-time": "2026-01-23T00:00:00Z",
+            "timestamp": 1769126400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004906",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004906",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                19
+              ]
+            ],
+            "date-time": "2026-02-19T00:00:00Z",
+            "timestamp": 1771459200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004909",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004909",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                14
+              ]
+            ],
+            "date-time": "2026-07-14T00:00:00Z",
+            "timestamp": 1783987200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004910",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004912",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004914",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004914",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                26
+              ]
+            ],
+            "date-time": "2026-06-26T00:00:00Z",
+            "timestamp": 1782432000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004916",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004916",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                11
+              ]
+            ],
+            "date-time": "2026-09-11T00:00:00Z",
+            "timestamp": 1789084800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004917",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004918",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004920",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004920",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                11
+              ]
+            ],
+            "date-time": "2026-02-11T00:00:00Z",
+            "timestamp": 1770768000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004922",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004922",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                12
+              ]
+            ],
+            "date-time": "2026-02-12T00:00:00Z",
+            "timestamp": 1770854400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004923",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004924",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004925",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004925",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                10
+              ]
+            ],
+            "date-time": "2026-02-10T00:00:00Z",
+            "timestamp": 1770681600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004929",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004930",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004930",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                4
+              ]
+            ],
+            "date-time": "2026-02-04T00:00:00Z",
+            "timestamp": 1770163200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004931",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004932",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004932",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                6
+              ]
+            ],
+            "date-time": "2026-10-06T00:00:00Z",
+            "timestamp": 1791244800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004934",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004935",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004936",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004937",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004941",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004946",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004946",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                2,
+                27
+              ]
+            ],
+            "date-time": "2026-02-27T00:00:00Z",
+            "timestamp": 1772150400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004947",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004947",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                6
+              ]
+            ],
+            "date-time": "2026-10-06T00:00:00Z",
+            "timestamp": 1791244800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004950",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004952",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004956",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004957",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004961",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004962",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004962",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                19
+              ]
+            ],
+            "date-time": "2026-03-19T00:00:00Z",
+            "timestamp": 1773878400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004963",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004963",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                9
+              ]
+            ],
+            "date-time": "2026-03-09T00:00:00Z",
+            "timestamp": 1773014400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004965",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004965",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                18
+              ]
+            ],
+            "date-time": "2026-09-18T00:00:00Z",
+            "timestamp": 1789689600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004966",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004968",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004968",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                13
+              ]
+            ],
+            "date-time": "2026-03-13T00:00:00Z",
+            "timestamp": 1773360000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004970",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004970",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                15
+              ]
+            ],
+            "date-time": "2026-04-15T00:00:00Z",
+            "timestamp": 1776211200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004976",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004979",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004981",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004982",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004982",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                9
+              ]
+            ],
+            "date-time": "2026-04-09T00:00:00Z",
+            "timestamp": 1775692800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004987",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004993",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004993",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                1
+              ]
+            ],
+            "date-time": "2026-04-01T00:00:00Z",
+            "timestamp": 1775001600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004994",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004995",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1004999",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004999",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                18
+              ]
+            ],
+            "date-time": "2026-08-18T00:00:00Z",
+            "timestamp": 1787011200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005003",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005004",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005004",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                15
+              ]
+            ],
+            "date-time": "2026-09-15T00:00:00Z",
+            "timestamp": 1789430400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005013",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005018",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004794",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                23
+              ]
+            ],
+            "date-time": "2026-03-23T00:00:00Z",
+            "timestamp": 1774224000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005022",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005023",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005023",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2026-04-02T00:00:00Z",
+            "timestamp": 1775088000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005024",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005024",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                2
+              ]
+            ],
+            "date-time": "2026-04-02T00:00:00Z",
+            "timestamp": 1775088000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005025",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005029",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005030",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005030",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                22
+              ]
+            ],
+            "date-time": "2026-04-22T00:00:00Z",
+            "timestamp": 1776816000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005032",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005033",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005034",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005035",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005036",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005037",
+      "status": "excluded",
+      "reason": "publisher_article_type: Formal Comment",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005038",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005039",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005040",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005040",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2026-04-10T00:00:00Z",
+            "timestamp": 1775779200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005042",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005042",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                31
+              ]
+            ],
+            "date-time": "2026-03-31T00:00:00Z",
+            "timestamp": 1774915200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005043",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005043",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                30
+              ]
+            ],
+            "date-time": "2026-09-30T00:00:00Z",
+            "timestamp": 1790726400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005045",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005045",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                9
+              ]
+            ],
+            "date-time": "2026-04-09T00:00:00Z",
+            "timestamp": 1775692800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005047",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005047",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                27
+              ]
+            ],
+            "date-time": "2026-04-27T00:00:00Z",
+            "timestamp": 1777248000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005048",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004798",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                10
+              ]
+            ],
+            "date-time": "2026-04-10T00:00:00Z",
+            "timestamp": 1775779200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005049",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005052",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005055",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005056",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005059",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005063",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005064",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005064",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                29
+              ]
+            ],
+            "date-time": "2026-05-29T00:00:00Z",
+            "timestamp": 1780012800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005068",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005069",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005069",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                12
+              ]
+            ],
+            "date-time": "2026-05-12T00:00:00Z",
+            "timestamp": 1778544000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005074",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005075",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005076",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005003",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2026-04-29T00:00:00Z",
+            "timestamp": 1777420800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005077",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005077",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                19
+              ]
+            ],
+            "date-time": "2026-05-19T00:00:00Z",
+            "timestamp": 1779148800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005078",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005081",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005081",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                29
+              ]
+            ],
+            "date-time": "2026-04-29T00:00:00Z",
+            "timestamp": 1777420800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005082",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005083",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005083",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                6
+              ]
+            ],
+            "date-time": "2026-08-06T00:00:00Z",
+            "timestamp": 1785974400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005086",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005086",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                29
+              ]
+            ],
+            "date-time": "2026-05-29T00:00:00Z",
+            "timestamp": 1780012800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005087",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005087",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                11
+              ]
+            ],
+            "date-time": "2026-05-11T00:00:00Z",
+            "timestamp": 1778457600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005088",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005090",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005094",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005099",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005100",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005107",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005111",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005114",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005114",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                1
+              ]
+            ],
+            "date-time": "2026-06-01T00:00:00Z",
+            "timestamp": 1780272000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005120",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005120",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                20
+              ]
+            ],
+            "date-time": "2026-08-20T00:00:00Z",
+            "timestamp": 1787184000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005122",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005122",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                16
+              ]
+            ],
+            "date-time": "2026-06-16T00:00:00Z",
+            "timestamp": 1781568000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005123",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005123",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                29
+              ]
+            ],
+            "date-time": "2026-05-29T00:00:00Z",
+            "timestamp": 1780012800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005124",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005125",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005125",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                17
+              ]
+            ],
+            "date-time": "2026-06-17T00:00:00Z",
+            "timestamp": 1781654400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005126",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005129",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005132",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005133",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005134",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005136",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005142",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005144",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005145",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005151",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005153",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005154",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005156",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005162",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005165",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005167",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005169",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005169",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                2
+              ]
+            ],
+            "date-time": "2026-07-02T00:00:00Z",
+            "timestamp": 1782950400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005170",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005172",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005174",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005174",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                3
+              ]
+            ],
+            "date-time": "2026-08-03T00:00:00Z",
+            "timestamp": 1785715200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005175",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005179",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005180",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1004868",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                16
+              ]
+            ],
+            "date-time": "2026-07-16T00:00:00Z",
+            "timestamp": 1784160000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005182",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005184",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005188",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005189",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005189",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                11
+              ]
+            ],
+            "date-time": "2026-08-11T00:00:00Z",
+            "timestamp": 1786406400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005190",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005191",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005196",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005197",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005198",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005199",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005199",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                14
+              ]
+            ],
+            "date-time": "2026-08-14T00:00:00Z",
+            "timestamp": 1786665600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005201",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005205",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005207",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005208",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005213",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005217",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005218",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005220",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005222",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005223",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005223",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                11
+              ]
+            ],
+            "date-time": "2026-09-11T00:00:00Z",
+            "timestamp": 1789084800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005230",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005232",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005232",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                31
+              ]
+            ],
+            "date-time": "2026-08-31T00:00:00Z",
+            "timestamp": 1788134400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005237",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005241",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005250",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005253",
+      "status": "excluded",
+      "reason": "publisher_article_type: Perspective",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005254",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1003632",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                22
+              ]
+            ],
+            "date-time": "2026-09-22T00:00:00Z",
+            "timestamp": 1790035200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005255",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005260",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005262",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005262",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2026-10-07T00:00:00Z",
+            "timestamp": 1791331200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005272",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005272",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                12
+              ]
+            ],
+            "date-time": "2026-10-12T00:00:00Z",
+            "timestamp": 1791763200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005274",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pmed.1005274",
+          "type": "new_version",
+          "label": "New version",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                10,
+                13
+              ]
+            ],
+            "date-time": "2026-10-13T00:00:00Z",
+            "timestamp": 1791849600000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005277",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pmed.1005280",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    }
+  ],
+  "raw_input_hashes": {
+    "810a586a79f64f0dcdef4d35e174c1252fb73bd6d9b223e66c65e475ef41cbfd.input": "0074b86a50276db787748f1f17c898975e4ba2a7ea1b23f1e7f960792f44c7ae",
+    "15b61a73723fd6ad546dd0a917d6e8a0331b8bcee8fa72ea18f9c3a76f159868.input": "601c7b2341b8edc9f9ab579ddb405116e2309eff06177ff1a243bd0b681b1781",
+    "f219656750c0ade4a4a877b824ebdf2fdab4ce67f17e76315a8b57e897e80956.input": "1805546666f48f61efcadae46d09fa45a9416528bbbf7dc3b0e328135fad01c5",
+    "2cc6bf31b1b9a52876cc0bc705433262131bb09b66e090620831d5fbea96d710.input": "a41178b0d53a3b6eea8430e9c04f88e48376d126510438755cfc2c223e86e335",
+    "2c5ecaac85f3e555162a06106da5fcb0b4409eb3fe265827fbe1c6b830e64a79.input": "5db949ad6881c8a819f71315cb84e8dc5e2cc71330b4c8a4108476db3e21be63",
+    "01bc360b53dad12f672787be755fc4d4fb8378efa61f6ddd484c8f4e3b64fd76.input": "14d1059eeffdc038c64805aadcf58810a2eaa6ef69d3b877ad5e5bb86f5501e9",
+    "1b4499a9b6f5203fbbad63987f9e1f3f23f9fe907383286711e0e1af36e4810c.input": "ff34ea437918f1378e61732526cd33b2a5463891be3754438a796513d68996e7",
+    "3b5d6d754a05635bb2d9e8c42ccea85717172df92be41af5d6952178dc231385.input": "0074b86a50276db787748f1f17c898975e4ba2a7ea1b23f1e7f960792f44c7ae",
+    "91e713bd2a2078f71cbb362d1d5cde56faa9df72a96270dcbbe9dbc2b2f2a84f.input": "bfcb901fe4432d69683841fcfeb9ba7cc035d37fcc5c40ea76d9d787a7f1d98e",
+    "a2f0cc776125ffa290141f6821f41d457a99ea5c22c64f774748b05f93456b8d.input": "ef9cc334959011b6181c70c5723da8317f3f5b11c266ef7dbc41197da7c7016a",
+    "4bf17fd8fcc35aaa15426a44e49d7fde217909e6ca318200da405b86a5e26a39.input": "601c7b2341b8edc9f9ab579ddb405116e2309eff06177ff1a243bd0b681b1781",
+    "d09eb6a20d3c71f860235d90d282e79fe8a4abef722dd6bc63235066cc4c514b.input": "e2fc5d2e91816d2a2274e7c1503932ab4d7beabbb10ceb956776b705d1179e0e",
+    "dc35ebfeafde17ffec735fa0dc78bfb616f9059106bbdfa8b987099781d09d13.input": "bfcb901fe4432d69683841fcfeb9ba7cc035d37fcc5c40ea76d9d787a7f1d98e",
+    "8417f18f51f5e5b5af36911a0882d60834d998db3c259dc578aca682fff5704a.input": "3d7d32b2ecdbda958092e9fd7e06653d1e43c389fe9a2fd8e312a762fe3b7b17",
+    "ffed5d2edc2b3f713a766efb01a9c13fe35d689144f797b5179784a44ef72c0b.input": "5db949ad6881c8a819f71315cb84e8dc5e2cc71330b4c8a4108476db3e21be63",
+    "a953b90202a4a4afed5a339638b3ec322f805b4e50bfbc4f94c8f61adc53e149.input": "14d1059eeffdc038c64805aadcf58810a2eaa6ef69d3b877ad5e5bb86f5501e9"
+  },
+  "duplicate_basis": "Overlap between the two Crossref date-filter enumerations; actual pack DOI records are unique."
+}

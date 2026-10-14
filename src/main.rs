@@ -8,6 +8,7 @@ use std::io::{BufRead, BufReader, BufWriter, Write};
 use std::path::{Path, PathBuf};
 
 mod discipline;
+mod journal;
 use discipline::{validate_disciplines, Discipline, DisciplineTaxonomy};
 
 const MANIFEST_PATH: &str = "v1/conferences/manifest.json";
@@ -28,6 +29,8 @@ struct Manifest {
     #[serde(default)]
     disciplines: Vec<Discipline>,
     venues: Vec<Venue>,
+    #[serde(default)]
+    journals: Vec<Venue>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -41,6 +44,10 @@ struct ManifestVersion {
 
 #[derive(Debug, Deserialize)]
 struct Venue {
+    #[serde(default = "default_source_kind")]
+    source_kind: String,
+    #[serde(default)]
+    journal: Option<journal::JournalIdentity>,
     id: String,
     short_name: String,
     name: String,
@@ -55,6 +62,8 @@ struct Venue {
 
 #[derive(Debug, Deserialize)]
 struct Edition {
+    #[serde(default)]
+    coverage: Option<journal::CollectionCoverage>,
     id: String,
     year: u16,
     paper_count: usize,
@@ -74,6 +83,10 @@ struct PackReference {
 
 #[derive(Debug, Deserialize, Serialize)]
 struct ConferencePaperRecord {
+    #[serde(default = "default_source_kind", skip_serializing_if = "is_conference")]
+    source_kind: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    journal: Option<journal::JournalArticleMetadata>,
     schema_version: u32,
     id: String,
     venue_id: String,
@@ -102,6 +115,13 @@ struct ConferenceSourceGroup {
     id: String,
     name: String,
     kind: String,
+}
+
+fn default_source_kind() -> String {
+    "conference".into()
+}
+fn is_conference(kind: &String) -> bool {
+    kind == "conference"
 }
 
 fn main() {
@@ -256,6 +276,8 @@ fn import_json(arguments: ImportJsonArguments) -> Result<(), String> {
             .filter(|value| !value.trim().is_empty())
             .unwrap_or_else(|| format!("{:04}-01-01T00:00:00Z", arguments.year));
         let record = ConferencePaperRecord {
+            journal: None,
+            source_kind: default_source_kind(),
             schema_version: 1,
             id,
             venue_id: arguments.venue_id.clone(),
@@ -495,6 +517,8 @@ fn acl_paper_record(
     }
     let landing_url = format!("https://aclanthology.org/{anthology_id}/");
     Ok(Some(ConferencePaperRecord {
+        journal: None,
+        source_kind: default_source_kind(),
         schema_version: 1,
         id: anthology_id.clone(),
         venue_id: arguments.venue_id.clone(),
@@ -1040,7 +1064,7 @@ fn validate_site(root: &Path) -> Result<(), String> {
     let manifest_path = root.join(MANIFEST_PATH);
     let manifest_bytes = fs::read(&manifest_path)
         .map_err(|error| format!("could not open {}: {error}", manifest_path.display()))?;
-    let manifest: Manifest = serde_json::from_reader(manifest_bytes.as_slice())
+    let mut manifest: Manifest = serde_json::from_reader(manifest_bytes.as_slice())
         .map_err(|error| format!("invalid {}: {error}", manifest_path.display()))?;
     if manifest.schema_version != 1
         || !valid_manifest_version(&manifest.manifest_version)
@@ -1071,6 +1095,28 @@ fn validate_site(root: &Path) -> Result<(), String> {
         return Err("conference manifest contains no venues".to_string());
     }
 
+    if manifest
+        .venues
+        .iter()
+        .any(|v| v.source_kind != "conference" || v.journal.is_some())
+        || manifest
+            .journals
+            .iter()
+            .any(|v| v.source_kind != "journal" || v.journal.is_none())
+    {
+        return Err("source kind does not match catalog section".into());
+    }
+    for source in &manifest.journals {
+        source.journal.as_ref().unwrap().validate()?;
+        for collection in &source.editions {
+            collection
+                .coverage
+                .as_ref()
+                .ok_or("journal coverage required")?
+                .validate(collection.year, collection.paper_count, &collection.state)?;
+        }
+    }
+    manifest.venues.append(&mut manifest.journals);
     // Release tooling requires classification; runtime still accepts verified legacy catalogs.
     if manifest.discipline_taxonomy.is_none() {
         return Err("release requires discipline taxonomy".into());
@@ -1138,7 +1184,7 @@ fn validate_site(root: &Path) -> Result<(), String> {
         }
     }
     println!(
-        "validated {} venues and {} exact editions",
+        "validated {} sources and {} exact annual collections",
         manifest.venues.len(),
         edition_ids.len()
     );
@@ -1202,6 +1248,11 @@ fn validate_pack_reference(
         let paper: ConferencePaperRecord = serde_json::from_str(&line)
             .map_err(|error| format!("invalid record in {}: {error}", edition.id))?;
         validate_record(&paper, &venue.id, &edition.id, edition.year)?;
+        if paper.source_kind != venue.source_kind
+            || paper.journal.as_ref().map(|j| &j.identity) != venue.journal.as_ref()
+        {
+            return Err("pack source identity mismatch".into());
+        }
         if !paper_ids.insert(paper.id.clone()) {
             return Err(format!("duplicate record {}", paper.id));
         }
@@ -1275,6 +1326,21 @@ fn validate_record(
     edition_id: &str,
     year: u16,
 ) -> Result<(), String> {
+    if paper.source_kind == "journal" {
+        paper
+            .journal
+            .as_ref()
+            .ok_or("journal metadata required")?
+            .validate()?;
+        if paper.abstract_text.trim().is_empty()
+            || paper.doi.as_ref().is_none_or(|s| s.trim().is_empty())
+            || paper.acceptance_status != "published"
+        {
+            return Err("journal article admission failed".into());
+        }
+    } else if paper.source_kind != "conference" || paper.journal.is_some() {
+        return Err("unsupported pack kind".into());
+    }
     if paper.schema_version != 1
         || paper.id.trim().is_empty()
         || paper.title.trim().is_empty()

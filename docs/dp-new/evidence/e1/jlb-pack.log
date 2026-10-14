@@ -1,0 +1,7 @@
+   Compiling apaper-cloud v0.1.0 (/Users/junesum/Documents/AtomPaper-worktrees/dp-new-cloud-candidate)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.68s
+     Running `target/debug/apaper-cloud pack --input /tmp/apaper-e1-jlb/jlb.jsonl --output public/v1/conferences/packs/jlb/2026.jsonl.zst`
+record_count=10
+normalized_title_count=0
+compressed_bytes=7794
+sha256=ffa80d2e69173b9068b074098cbd1d7cf8373623528106f146a5e9cfe3afef95

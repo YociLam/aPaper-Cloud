@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "manifest_version": "0.15",
+  "manifest_version": "0.16",
   "dataset": "apaper.conferences",
-  "generated_at": "2026-10-14T12:51:30Z",
+  "generated_at": "2026-10-14T16:12:47Z",
   "canonical_origin": "https://cloud.apaper.ai",
   "maximum_selected_records": 100000,
   "venues": [
@@ -1382,6 +1382,366 @@
         "zh-Hans": "健康科学"
       },
       "display_order": 5
+    },
+    {
+      "id": "oecd:ford:1.5",
+      "code": "1.5",
+      "name": "Earth and related environmental sciences",
+      "localized_names": {
+        "en": "Earth and related environmental sciences",
+        "zh-Hans": "地球与相关环境科学"
+      },
+      "display_order": 6
+    },
+    {
+      "id": "oecd:ford:3.2",
+      "code": "3.2",
+      "name": "Clinical medicine",
+      "localized_names": {
+        "en": "Clinical medicine",
+        "zh-Hans": "临床医学"
+      },
+      "display_order": 7
+    },
+    {
+      "id": "oecd:ford:5.5",
+      "code": "5.5",
+      "name": "Law",
+      "localized_names": {
+        "en": "Law",
+        "zh-Hans": "法学"
+      },
+      "display_order": 8
+    }
+  ],
+  "journals": [
+    {
+      "id": "glj",
+      "source_kind": "journal",
+      "journal": {
+        "title": "German Law Journal",
+        "publisher": "Cambridge University Press",
+        "issns": [
+          "2071-8322"
+        ]
+      },
+      "short_name": "GLJ",
+      "name": "German Law Journal",
+      "localized_names": {
+        "en": "German Law Journal",
+        "zh-Hans": "德国法律期刊"
+      },
+      "localized_tag": {},
+      "discipline_ids": [
+        "oecd:ford:5.5"
+      ],
+      "cadence": "annual_snapshot",
+      "editions": [
+        {
+          "id": "glj:2026",
+          "year": 2026,
+          "paper_count": 57,
+          "state": "published",
+          "coverage": {
+            "period_start": "2026-01-01",
+            "period_end": "2026-10-14",
+            "cutoff": "2026-10-14T15:44:19Z",
+            "included_article_types": [
+              "Article"
+            ],
+            "discovered": 66,
+            "admitted": 57,
+            "excluded": 9,
+            "unresolved": 0,
+            "duplicates": 37,
+            "completeness": "snapshot_complete",
+            "identity_basis": "publisher-deposited Crossref online/issued works"
+          },
+          "pack": {
+            "path": "packs/glj/2026.jsonl.zst",
+            "pack_version": "0.16",
+            "sha256": "89df58b760d6d085c57d1d9dbd12839da8ebe458e7c58cd8427463ed617511ca",
+            "compressed_bytes": 37412,
+            "record_count": 57
+          }
+        }
+      ]
+    },
+    {
+      "id": "plos_medicine",
+      "source_kind": "journal",
+      "journal": {
+        "title": "PLOS Medicine",
+        "publisher": "Public Library of Science",
+        "issns": [
+          "1549-1676"
+        ]
+      },
+      "short_name": "PLOS Med",
+      "name": "PLOS Medicine",
+      "localized_names": {
+        "en": "PLOS Medicine",
+        "zh-Hans": "PLOS 医学"
+      },
+      "localized_tag": {},
+      "discipline_ids": [
+        "oecd:ford:3.2",
+        "oecd:ford:3.3"
+      ],
+      "cadence": "annual_snapshot",
+      "editions": [
+        {
+          "id": "plos_medicine:2026",
+          "year": 2026,
+          "paper_count": 175,
+          "state": "published",
+          "coverage": {
+            "period_start": "2026-01-01",
+            "period_end": "2026-10-14",
+            "cutoff": "2026-10-14T15:44:19Z",
+            "included_article_types": [
+              "Research Article",
+              "Review",
+              "Systematic Review",
+              "Policy Forum",
+              "Essay",
+              "Clinical Trial"
+            ],
+            "discovered": 248,
+            "admitted": 175,
+            "excluded": 73,
+            "unresolved": 0,
+            "duplicates": 238,
+            "completeness": "snapshot_complete",
+            "identity_basis": "PLOS publisher Solr index"
+          },
+          "pack": {
+            "path": "packs/plos_medicine/2026.jsonl.zst",
+            "pack_version": "0.16",
+            "sha256": "a3592c940f14cad27c88e9926ae41b600026cde0f03de1a93c9a3a5061612333",
+            "compressed_bytes": 168735,
+            "record_count": 175
+          }
+        }
+      ]
+    },
+    {
+      "id": "jlb",
+      "source_kind": "journal",
+      "journal": {
+        "title": "Journal of Law and the Biosciences",
+        "publisher": "Oxford University Press",
+        "issns": [
+          "2053-9711"
+        ]
+      },
+      "short_name": "JLB",
+      "name": "Journal of Law and the Biosciences",
+      "localized_names": {
+        "en": "Journal of Law and the Biosciences",
+        "zh-Hans": "法律与生物科学期刊"
+      },
+      "localized_tag": {},
+      "discipline_ids": [
+        "oecd:ford:5.5"
+      ],
+      "cadence": "annual_snapshot",
+      "editions": [
+        {
+          "id": "jlb:2026",
+          "year": 2026,
+          "paper_count": 10,
+          "state": "partial",
+          "coverage": {
+            "period_start": "2026-01-01",
+            "period_end": "2026-10-14",
+            "cutoff": "2026-10-14T15:44:19Z",
+            "included_article_types": [
+              "journal-article"
+            ],
+            "discovered": 26,
+            "admitted": 10,
+            "excluded": 14,
+            "unresolved": 2,
+            "duplicates": 26,
+            "completeness": "snapshot_partial",
+            "identity_basis": "publisher-deposited Crossref online/issued works"
+          },
+          "pack": {
+            "path": "packs/jlb/2026.jsonl.zst",
+            "pack_version": "0.16",
+            "sha256": "ffa80d2e69173b9068b074098cbd1d7cf8373623528106f146a5e9cfe3afef95",
+            "compressed_bytes": 7794,
+            "record_count": 10
+          }
+        }
+      ]
+    },
+    {
+      "id": "plos_global_public_health",
+      "source_kind": "journal",
+      "journal": {
+        "title": "PLOS Global Public Health",
+        "publisher": "Public Library of Science",
+        "issns": [
+          "2767-3375"
+        ]
+      },
+      "short_name": "PLOS GPH",
+      "name": "PLOS Global Public Health",
+      "localized_names": {
+        "en": "PLOS Global Public Health",
+        "zh-Hans": "PLOS 全球公共卫生"
+      },
+      "localized_tag": {},
+      "discipline_ids": [
+        "oecd:ford:3.3"
+      ],
+      "cadence": "annual_snapshot",
+      "editions": [
+        {
+          "id": "plos_global_public_health:2026",
+          "year": 2026,
+          "paper_count": 817,
+          "state": "published",
+          "coverage": {
+            "period_start": "2026-01-01",
+            "period_end": "2026-10-14",
+            "cutoff": "2026-10-14T15:44:19Z",
+            "included_article_types": [
+              "Research Article",
+              "Review",
+              "Systematic Review"
+            ],
+            "discovered": 911,
+            "admitted": 817,
+            "excluded": 94,
+            "unresolved": 0,
+            "duplicates": 911,
+            "completeness": "snapshot_complete",
+            "identity_basis": "PLOS publisher Solr index"
+          },
+          "pack": {
+            "path": "packs/plos_global_public_health/2026.jsonl.zst",
+            "pack_version": "0.16",
+            "sha256": "1f09cd8acf38d6a6e49ac8f5340fd1ec2f76b70985f1ee32fe28254e18dcda73",
+            "compressed_bytes": 612023,
+            "record_count": 817
+          }
+        }
+      ]
+    },
+    {
+      "id": "plos_biology",
+      "source_kind": "journal",
+      "journal": {
+        "title": "PLOS Biology",
+        "publisher": "Public Library of Science",
+        "issns": [
+          "1545-7885"
+        ]
+      },
+      "short_name": "PLOS Biol",
+      "name": "PLOS Biology",
+      "localized_names": {
+        "en": "PLOS Biology",
+        "zh-Hans": "PLOS 生物学"
+      },
+      "localized_tag": {},
+      "discipline_ids": [
+        "oecd:ford:1.6"
+      ],
+      "cadence": "annual_snapshot",
+      "editions": [
+        {
+          "id": "plos_biology:2026",
+          "year": 2026,
+          "paper_count": 365,
+          "state": "published",
+          "coverage": {
+            "period_start": "2026-01-01",
+            "period_end": "2026-10-14",
+            "cutoff": "2026-10-14T15:44:19Z",
+            "included_article_types": [
+              "Research Article",
+              "Methods and Resources",
+              "Short Reports",
+              "Review",
+              "Essay",
+              "Perspective",
+              "Community Page"
+            ],
+            "discovered": 455,
+            "admitted": 365,
+            "excluded": 90,
+            "unresolved": 0,
+            "duplicates": 446,
+            "completeness": "snapshot_complete",
+            "identity_basis": "PLOS publisher Solr index"
+          },
+          "pack": {
+            "path": "packs/plos_biology/2026.jsonl.zst",
+            "pack_version": "0.16",
+            "sha256": "99393a6ac83a47c294fec8c6eb780f3c1b577aa1f7ec6f94540ba62ed6734742",
+            "compressed_bytes": 241356,
+            "record_count": 365
+          }
+        }
+      ]
+    },
+    {
+      "id": "plos_climate",
+      "source_kind": "journal",
+      "journal": {
+        "title": "PLOS Climate",
+        "publisher": "Public Library of Science",
+        "issns": [
+          "2767-3200"
+        ]
+      },
+      "short_name": "PLOS Clim",
+      "name": "PLOS Climate",
+      "localized_names": {
+        "en": "PLOS Climate",
+        "zh-Hans": "PLOS 气候"
+      },
+      "localized_tag": {},
+      "discipline_ids": [
+        "oecd:ford:1.5"
+      ],
+      "cadence": "annual_snapshot",
+      "editions": [
+        {
+          "id": "plos_climate:2026",
+          "year": 2026,
+          "paper_count": 128,
+          "state": "published",
+          "coverage": {
+            "period_start": "2026-01-01",
+            "period_end": "2026-10-14",
+            "cutoff": "2026-10-14T15:44:19Z",
+            "included_article_types": [
+              "Research Article",
+              "Review",
+              "Systematic Review"
+            ],
+            "discovered": 192,
+            "admitted": 128,
+            "excluded": 64,
+            "unresolved": 0,
+            "duplicates": 192,
+            "completeness": "snapshot_complete",
+            "identity_basis": "PLOS publisher Solr index"
+          },
+          "pack": {
+            "path": "packs/plos_climate/2026.jsonl.zst",
+            "pack_version": "0.16",
+            "sha256": "cac91cc4f42384404635923a3407bc27a141cae6db3bc4d401e35cf1b53639e6",
+            "compressed_bytes": 92032,
+            "record_count": 128
+          }
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,795 @@
+{
+  "source": "glj",
+  "identity": {
+    "title": "German Law Journal",
+    "short": "GLJ",
+    "zh": "德国法律期刊",
+    "issn": "2071-8322",
+    "publisher": "Cambridge University Press",
+    "disciplines": [
+      "oecd:ford:5.5"
+    ],
+    "scope": "https://www.cambridge.org/core/journals/german-law-journal/information/about-this-journal",
+    "types": [
+      "Article"
+    ]
+  },
+  "coverage": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-10-14",
+    "cutoff": "2026-10-14T15:44:19Z",
+    "included_article_types": [
+      "Article"
+    ],
+    "discovered": 66,
+    "admitted": 57,
+    "excluded": 9,
+    "unresolved": 0,
+    "duplicates": 37,
+    "completeness": "snapshot_complete",
+    "identity_basis": "publisher-deposited Crossref online/issued works"
+  },
+  "identity_basis": "publisher-deposited Crossref works (not independently complete publisher archive)",
+  "crossref_only_ids": [],
+  "pages": [
+    {
+      "url": "https://api.crossref.org/journals/2071-8322/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 66,
+      "total": 66,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/2071-8322/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=MTc5MTE5NjIwMjAwMCwxMC4xMDE3JTJGZ2xqLjIwMjYuMTAyMzc%3D",
+      "count": 0,
+      "total": 66,
+      "terminal": true
+    },
+    {
+      "url": "https://api.crossref.org/journals/2071-8322/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 37,
+      "total": 37,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/2071-8322/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=MTc5MTE5NjIwMjAwMCwxMC4xMDE3JTJGZ2xqLjIwMjYuMTAyMzc%3D",
+      "count": 0,
+      "total": 37,
+      "terminal": true
+    }
+  ],
+  "identities": [
+    {
+      "doi": "10.1017/glj.2025.10150",
+      "status": "excluded",
+      "reason": "publisher_article_type: Front Cover (OFC, IFC) and matter",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2025.10151",
+      "status": "excluded",
+      "reason": "publisher_article_type: Front Cover (OFC, IFC) and matter",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2025.10152",
+      "status": "excluded",
+      "reason": "publisher_article_type: Front Cover (OFC, IFC) and matter",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2025.10153",
+      "status": "excluded",
+      "reason": "publisher_article_type: Front Cover (OFC, IFC) and matter",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10175",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10176",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10177",
+      "status": "excluded",
+      "reason": "publisher_article_type: Erratum",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10178",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10179",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10180",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10181",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10182",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10183",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10184",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10185",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10186",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10187",
+      "status": "excluded",
+      "reason": "publisher_article_type: Introduction",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10188",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10189",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10190",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10191",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10192",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10193",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10194",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10195",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10196",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10197",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10198",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10199",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10200",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10201",
+      "status": "excluded",
+      "reason": "publisher_article_type: Front Cover (OFC, IFC) and matter",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10202",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10203",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10204",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10205",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10206",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10207",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10208",
+      "status": "excluded",
+      "reason": "publisher_article_type: Front Cover (OFC, IFC) and matter",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10209",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10210",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10211",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10212",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10213",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10214",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10215",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10216",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10217",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10218",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10219",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10220",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10221",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10222",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10223",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10224",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10225",
+      "status": "excluded",
+      "reason": "publisher_article_type: Front Cover (OFC, IFC) and matter",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10226",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10227",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10228",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10229",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10230",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10231",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10232",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10233",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10236",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10237",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1017/glj.2026.10239",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    }
+  ],
+  "raw_input_hashes": {
+    "da01e95f470c618d161a283507de7728c1ea5439b27df136c7866103f1d55eac.input": "15774fbc983d0f639236c3352b8d0284c24887a3810ab56cf52c1571ada27663",
+    "bfd3223f36003a52566ec2229229bd028d0a11b7772745eb2f8d89f7b7883161.input": "c400202b96052c8318213c41a4487d6af576dade98268cad3df8dcc4d34f4f59",
+    "986b2da548245b9a2fd5abf576b82e8dfbc8c451abff6b4d0e3e3a3079a3b754.input": "76ffcb2111f5e2b5db6b56d0df402edf40fab9719bc7cd63186cc098e24884d0",
+    "b9d34e81e219c1c2267181ec119bf81d682526c16550a557e762c73a2473b945.input": "9b5f82c5fda6a9ca7a36e8648847cee6c5beb657042343e7efb094fcb100d518",
+    "1d9e892d3b885fc3c68ad073bd76659ffae7194e0c686536d7e59b59eb2b753f.input": "504b03c510768fafe0b4d5242836cbd61a2da1b12669cd1b78ea50ffb8c07c58",
+    "f4ec394ab72b31081d6e327baad9fa7cbdbb470392eac6f7550ccc39f8ad5a20.input": "a2ae3ae5a23975f6a230fd04da4fa99e79fabcdd411776d4cfd1460481a41eb1",
+    "b08e3fe60fa6ed1307e1d71e5cb034bc22d297ce555f1c5e9cb04459308ce50d.input": "41d54e33949cad1aee7d598c2ced15ec1a074a177b5b8a2ee1948b34a7694d60",
+    "53f1781fb2357e9e6257b29ecd3083638cd6015e9cabfd7941893a2cf9b82417.input": "27d385134fad9e034aada61736d19a23901279c340b52a7c9c1c567ee53f5562",
+    "af622ea88be54be1cf1fd3cf5d79ef0855a838e5d5ef946d1847464c6aa85b45.input": "2a531969690842eb067971d506e99799f2ac34ace10e761cda166861ee5344a9",
+    "1bc5802688979a07e3fbd77c07c60c473b7f104a7ba34ab864a3c1322d5c71bf.input": "27824af5fe1d8c26619ab85e7c58f870e274d796055e2f80896599344f5fb3c7",
+    "532f0620f55ba7aaaa6d15a75965fb9441f0052b80bed074998e9c3c2b8a8d20.input": "1b55bc45f98d039b0e889c01dbca66ddf0129078d97b90a3c6a5a9c4f0b410db",
+    "c39a37012d1724792d27ef77abaf27ffd1bb7b3ce49f4724b359fba82692b155.input": "e7b674cb91c2cfa4e18a92ad678067a119617d46e8a6f959d4a09a0fd165c885",
+    "521bbd8243eab0a55bf5ad5b828434cc4deac176757493486428fa9e9f1eeacf.input": "42e0eb5b04929494d9f5e8394ff5045ec86f265ed6b9bb3b673e5b64c60db571",
+    "820f1998b1afbdbd5095d159d87c992701ac83014bd874111372890a71190524.input": "6ce035df5fff3ee29fb137b30e2971b7fcf7247625ac8eb1d754289a57e965ca",
+    "abdb5414cc13869780a909c50419820b21c1ccaf87ec040a16049c78a6abddca.input": "060cd28474a2dd05c18b893273285a5984d766caa0985259abd3ee1255bc237f",
+    "11d9053ed3b1bb9bd25f74f019c5711f7d2d09da331a3ef671f815a78973747c.input": "fcdab0dac71a52530635bccc7798120f75682f0d69b10994994d9c0e2d4c7cf1",
+    "79c6f6d802a7717e8b0caaee2401f2a6cd64c929213e5c01fc4367ba3c267632.input": "ed7d115c54e94e7eeeeebf4b819ac921282ff23ddf4c1b73b77d3c5d0fa0935f",
+    "fe76c6640355e467bd3b2b1f112854eba349648d3e9b8d3f47083b98d93bd28b.input": "5b53634ff04b992c82775063bef18664af7d57cc5bb57201e596033794f5c279",
+    "e529720ee5a2bdeaa267ca21795d13e75a3c9bcec2a7928ee076b79bb7895824.input": "4d5c07c9d30d1727e154724281c87b657f4d7ff3afff46ec5c21bc5e3e5f8b7e",
+    "03b26c9cb5856d9f8008f40f45cd5c2f2c3cb36c0ef082165c1ab96dfbc633d2.input": "68faafe1cdec2b56d21cb706ab1542cb1a6ea20eb7ec6aa995abd3f583e347f2",
+    "c32766a6ee15193d8c4315a30d456c024133f2d8d9685936f981f9c8c3768ad5.input": "3852b0168041a8cc5e6d82c83b75ca63583c92eda626a7d04a3319360a9ae070",
+    "b722848db23ffffca547e9061daef2df37115b07ba28df971f289b3844cd42d0.input": "c77a565d6c5a719c9354892340d881c2111c1f56e3fff5df600fa01e240fd10c",
+    "f160278c334d2a110dd9c0a35b56d487cc891682dbb82c950e748e6cd3a17c3c.input": "108590e4e3c8ac9d19976972224eed5c67b9923b7462153d453ec439fd5d2b05",
+    "6a07ad3a7dda3eda18f778376746d89b59df8cb469f5d9d9c6309f1690dfdf75.input": "25546c01d6f8f7ccfbe692caef6650282a8ea2d0f2cf28cf5dc5d403309cc6c3",
+    "3109acd50d9965ec8d38ddc50e996a0057eb27bd2eb29985468dc46fd046022a.input": "8a9dd4949b00a48dfaf6a279aacb61b80342734774433d7f10244761d6a16812",
+    "7934acc6065fd7270a1d53ace9e4d29003d4a25fb046d6f0d461018eca143382.input": "a88d66689c68fbfaf96f4523e83b740039f093a8e2325fd53d37c0b8e4bd7106",
+    "86be32985804730c18acae46bf594c67ad9ba1b0f69a5a7602c26da0bcf46bde.input": "d8e6cd22ed759cba9af9fe5872179daad6c50e2359f123fa49e2b4acfd5d6a2b",
+    "d950079bcf4aa968cc7faefd0ff6a2b8a0d3d49ebf6729ea165ec5f226945a9a.input": "8b7f1d5d18c7c543ce898211b27b6d4ffa5db79af2f5bceff60295a9b9e2d9d9",
+    "9d223a33f3a39d0e4585536b3fb20126c4278601580e51d69eb0321e9b178ea3.input": "daa4a10e2d285a839c533339da041dbbd985b2a36174b4e6a2d6f70f2a4c2555",
+    "c14382ed46c19871fb7ad86ddfec99395eaaf83c3fcbc3acbb564a5cc9edc98b.input": "3f8aab10a0a303c7a88237eb918c25b121f5be33571b6b295554e232ca61d5a5",
+    "fb70f7229d1ad18b1f0d685d866058defba62e7f7ecd480765cdcd5c0822f988.input": "fe768b628647cbd47e3161cf62db7d339a18a78caf851f854a904d9c21b23ab0",
+    "776a056558eff0d71426f2e073f02c865cc2c28c14b3da3d627bec301fbf3a32.input": "e1222ae5afd3e29faa1f1623a95f1c05c9fae831223bd2b5fc2143c2b13d9547",
+    "7d5b04d6f178debbb55b49a26c441bb9cd961a3546af4bd0a79615a83372cbfa.input": "3e9a85d18e2df81f6c461965e8f16bd9b308595a0d71e1e8fd8d7c4e88e2e35b",
+    "a917f5227b04acede3c603e84ded965fe20305b4a18c17d29bcea46983f38cab.input": "cae331e2b65f21001461a8af74ead398ebc0ae70e8e65f26212275d600b6a916",
+    "12901f6860e5b9f32e0bf8b60d2a8ab302e7d591ac63926b3e84fde6571d142b.input": "33abfc16be9b6de8f8cb5906a0d0e50a2ad78edb54528866230a29ea14423f37",
+    "89f0d5058c5700b04927d5955dd9b875d11d86424f035b09ff493adc115edec5.input": "49415752ef1f2e9fbb3f24396337d1edfe6781b6bd2254a4dff7e7d2cf3a3f53",
+    "9fea72b14d2614f233ba718b0c0dc82a0f1430da69c5d3b76df8ad42b9968eb0.input": "b94baa89a2c84bedb220ae656c771636a7fa55c438b5f506d208729948839150",
+    "bee3f9019099b2bdf281ae6cbf79944ddbeb902256cef70ec78b6a033b5f1b9d.input": "6fd0ef7162ca2aace68c9af3abf71005bb7b00c71c3f9f95bdbb33f3041995e7",
+    "d2f0f931e413ef1b0fbfa7306728776c526468e361174b01a43604e1a7d55e70.input": "5cf7eb21c327bef247c7b77ac6cac00c1c58cfdee279249cfd79c3837f6b45d6",
+    "3264fb5d2f4baede909b5a87b6a365c089b31c726f9b8415bcb98a305510f050.input": "84f387f7e402a51ece4e6b8f94df2da4b0068112529c840ec117e1797bd96270",
+    "055c8f8872f781a0c4e9e899a82bc3d35e4e05fdbf329b410ca64117d4b33e24.input": "955137b3f90552774aa0606e616e7009695448c24f58a6c7a42a946c03ed3a12",
+    "e1e22c85bb093a6b3077072ae8a39f43fddbc47b627ff944ecab3a9419164b28.input": "54d01fae9d4e92585f4f7d2d6a18b70a35a9f4e4129db3f25e52796a2a007454",
+    "2e73bab04d393ba93830c29a1e64198f0adff00e787f5ed0e6ea187071a9fa51.input": "7f2fc431d21b5333845d420321f7a2879bf7789312fc16d0722c07e39fd7774a",
+    "fda0cdea5d55c2e905d0abbe10692691e7c481c701b6f11a1f69a59576092a08.input": "5d48579c54180185ce30d993be37a27e91022c489b4615614bf16c48dabf5e62",
+    "c5f20f7f6ecfff98e4b72da209f188790285724b0eef4414cbc5f7f751c3d275.input": "34a2707484aaf230e48deba328a6d3852c4a9ae6fff8da46a844f21985bec250",
+    "24dac3c50acfc66c33d3e28c37950977c6b55deef4ae5af14655640c6e961b42.input": "9a5fc1c5b5a0253c67c0c0d744009bbe7c4ad7e18fe28a30e2202db4ebb0710f",
+    "c55d5b833b0b0a701cd6ed7829d2e3b00f0716086c9c45f001f99aa96f762ef6.input": "479d7707f499d9f5fbb7d021c9dd08a5870e2bc11cd809029a621f47730467d3",
+    "7f8190b2b4375b920ad933ba0ecc2690a63f79f603eb2aa7c4eb33007b86389c.input": "c7f7449de13911cb6bc35b106f4851037aa038799a7ede46f614a95f8a3c67cf",
+    "2892bb0eb1d90f88d5f3c8c87547ee417a9ea6bacd3adca0b9203e66bd7236d1.input": "3ecdd839c38ea2dc94e77489c837da8711d31983c5b28702a71b3189373c8590",
+    "e779399fbdd012feadb46265118fef7682c32cf6f915594d8399742e47123c84.input": "e559213c07f6f26a54430cbd646b50aa5c31cba1d1b58f2dfc7f58e6fadc06ed",
+    "a99cd5a3fd7c8a0f7438b953e24f7ddba3a5481e0f933f5e4cab3074fd117c52.input": "b875bc37b55d74d8d36b2b28194334532d8ef5b1580ec0eb01f7fbe92b5b246a",
+    "4f1df808f6bec20394aa487da154e6ef2734d615c7be2fa2dc180c2eff56d718.input": "ccc188f6ae1bf798d6757b3d75eb350633f04da3dee157edd791ff75bf32ecdc",
+    "52ed47aa17cf284626cb1f8de0088f2a2667ed681891348ebf8c7a246f27652d.input": "d4e45062ac84ba2fccfeb035dbfe68a700aa17afb6f9be82ac79ceb830da677d",
+    "b147739964d52b4fab89897d23a990bb07e5fdfbb73c4a7bdfb5b2f06838ad5d.input": "94928f8380de495944c8f29aa5d375f3706d94919e1a1a7cf89906c300481d74",
+    "e275d63be82d203c3dc7e1384ce4de766d8191076c126ee4e8cde380cdc510e2.input": "40785eaa471fad7dc0897c03374bc6d0673a46d4138ef2a0933658aa71a13794",
+    "7cdc5370a93f5cfcfaf9196cfde8c424f5bd6e85426c8c3e8417fb967932f027.input": "8749a8998bbca680b4134edcfbddfd40c2a34c5f3860c04338f16913eff00781",
+    "5611c88a0e57c39c365c942a8eb198a280aa72d1bed52967575cd79fb04c3f3a.input": "de9f5fe1f39816a44874c8247c936d009a8c08f95f23261c277b26b437fd88a9",
+    "9e9a63c940ef1d61b930cf8c04a2b17ca7dd9e442c610977285ae557b25c0327.input": "50de6cbcdbe9b1b22aac95e28c2a9f30808b34d592aede1d5266e5ba73c10e2e",
+    "e4b6694b35609b8cf525eb98b8e803b954979e2de3878993a6b6e3a2da9223a2.input": "acf8872e3b08841720fe3d4aaa047f4cd3d24646b4698271d67dfadf5b6d9685",
+    "ecd52ce66e2133d5103fa723ccc9445a04713f88827c46d7de943cfa1aaa5c6f.input": "96b25f7b5369d1a91c8a4255ff86485c507f2870cd1046b435ea09c146f97ece",
+    "d00c779a07b67d2c2c7438c4ba926dc728bca051b013bf0596486b64fb395049.input": "fadfe410d8e6a3172373de5f51d70f47639111ffdc5922bbbc4e640402640ffa",
+    "6e4f57c6141977865d17cc969a31191a705727a5a2d4b17b4a2e2b663936f9da.input": "77c7ea23f8c2df1e5a4bfd2032987db227f8ed66fa46d3943b9a64d186eaa211",
+    "20d4c4970dfd7bce03fef70f81824791df0cb7ba0da521ddc34a58038f87369f.input": "4f2f63d3816fea685940d8e514580c6a6a8e40e34ec2eb6139555bf6d3ebcdae",
+    "3567c965afb7a58c0fe14d82e1bd96e5b2c5836521ca7e8d76dfa6430510449c.input": "3bbd824e90c1220624b805e2ff49b06cb5c3f94910221ec78357dc19f7c7ff4b",
+    "ee7a4129b23168f05c7e6a2ef878a568e24d93ea4b0aaf06d7ac93c4431e525e.input": "d710bc5b7ea2d43ffb16d5a35e023e7fbc04757f8babc6ce0cc74da02574d6e1",
+    "ba2f27a047926f307f23209d9d8ef1d5d3b9bb732b5ef921fe2b2724d3194557.input": "d8847508cda39d1a2c3bf47869f944a4b39822575fbbc5e0a944f0e1795b30f4",
+    "388788278f5b8f6c3d8050b124d8fcfa4bb65ba2f4a0dccdeb7ef26d7462fdbd.input": "e9d87266e35009d56c72d49e2ec83840b85f73e707b9d315943246b54b064a22",
+    "c3fa7dda23bb81d58f5bafe0c69f9a6f19feacf2a9e2a1214d5df4b64892cad0.input": "7d22ea659cec62449ee427e3038a7b41e97685080a37c1af66d8299e7ee28864",
+    "d430172c3753c9d4c22614d489996992a115376257eee63ac30a0d10914fbeb2.input": "e1efa4cdb34d935e1a359e1a6e105af717f4af838900092be27f9a94a13611cf",
+    "908135a129060e3ca721bad9f0b5fead9a8b71ebe890eaa2be6662a606fb2e35.input": "2e49bf6ddfe55ada83875175c4d4a8639e89b4707ac860a35781c0e673b8f9c4"
+  },
+  "duplicate_basis": "Overlap between the two Crossref date-filter enumerations; actual pack DOI records are unique."
+}

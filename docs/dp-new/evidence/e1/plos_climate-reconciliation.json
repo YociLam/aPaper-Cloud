@@ -1,0 +1,2211 @@
+{
+  "source": "plos_climate",
+  "identity": {
+    "title": "PLOS Climate",
+    "short": "PLOS Clim",
+    "zh": "PLOS 气候",
+    "issn": "2767-3200",
+    "publisher": "Public Library of Science",
+    "disciplines": [
+      "oecd:ford:1.5"
+    ],
+    "scope": "https://journals.plos.org/climate/s/journal-information",
+    "types": [
+      "Research Article",
+      "Review",
+      "Systematic Review"
+    ],
+    "plos": "PLoSClimate",
+    "slug": "climate"
+  },
+  "coverage": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-10-14",
+    "cutoff": "2026-10-14T15:44:19Z",
+    "included_article_types": [
+      "Research Article",
+      "Review",
+      "Systematic Review"
+    ],
+    "discovered": 192,
+    "admitted": 128,
+    "excluded": 64,
+    "unresolved": 0,
+    "duplicates": 192,
+    "completeness": "snapshot_complete",
+    "identity_basis": "PLOS publisher Solr index"
+  },
+  "identity_basis": "PLOS publisher index",
+  "crossref_only_ids": [],
+  "pages": [
+    {
+      "url": "https://api.crossref.org/journals/2767-3200/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 192,
+      "total": 192,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/2767-3200/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=MTc5MTgyNjk4NjAwMCwxMC4xMzcxJTJGam91cm5hbC5wY2xtLjAwMDEwNDQ%3D",
+      "count": 0,
+      "total": 192,
+      "terminal": true
+    },
+    {
+      "url": "https://api.crossref.org/journals/2767-3200/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 192,
+      "total": 192,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/2767-3200/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=MTc5MTgyNjk4NjAwMCwxMC4xMzcxJTJGam91cm5hbC5wY2xtLjAwMDEwNDQ%3D",
+      "count": 0,
+      "total": 192,
+      "terminal": true
+    },
+    {
+      "url": "https://api.plos.org/search?q=eissn%3A2767-3200+AND+doc_type%3Afull+AND+publication_date%3A%5B2026-01-01T00%3A00%3A00Z+TO+2026-10-14T15%3A44%3A19Z%5D&wt=json&rows=200&start=0&sort=id+asc",
+      "count": 192,
+      "total": 192,
+      "terminal": false
+    },
+    {
+      "url": "https://api.plos.org/search?q=eissn%3A2767-3200+AND+doc_type%3Afull+AND+publication_date%3A%5B2026-01-01T00%3A00%3A00Z+TO+2026-10-14T15%3A44%3A19Z%5D&wt=json&rows=200&start=200&sort=id+asc",
+      "count": 0,
+      "total": 192,
+      "terminal": true
+    }
+  ],
+  "identities": [
+    {
+      "doi": "10.1371/journal.pclm.0000563",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000586",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000594",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000608",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000638",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000645",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000647",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000652",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000662",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000683",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000696",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000707",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000712",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000713",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000716",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000717",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000720",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000723",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000735",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000746",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000749",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000751",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000754",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000761",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000762",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000763",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000764",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000765",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000773",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000774",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000779",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000780",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000781",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000782",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000784",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000791",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000795",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000796",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000797",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000799",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000800",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000801",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000802",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000804",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000806",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000808",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000809",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000812",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {
+        "has-preprint": [
+          {
+            "id-type": "doi",
+            "id": "10.51224/SRXIV.616",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000813",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000816",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000820",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000821",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000822",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000823",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000824",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000825",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000828",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {
+        "has-preprint": [
+          {
+            "id-type": "doi",
+            "id": "10.31234/osf.io/uxdmb_v4",
+            "asserted-by": "object"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.31234/osf.io/uxdmb_v5",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000829",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000832",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000833",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000835",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000836",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000837",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000838",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000839",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000840",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000841",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000842",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000843",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000847",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000848",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000849",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000850",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000851",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000853",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000859",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000860",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000862",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000440",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                3,
+                3
+              ]
+            ],
+            "date-time": "2026-03-03T00:00:00Z",
+            "timestamp": 1772496000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000865",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000866",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000867",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000869",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000872",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000873",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000874",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000876",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000877",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000878",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000879",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000880",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000881",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000882",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000884",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000885",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000886",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000887",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000888",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000890",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000891",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000894",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000895",
+      "status": "excluded",
+      "reason": "publisher_article_type: Editorial",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000896",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000897",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000901",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000902",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000851",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                4,
+                14
+              ]
+            ],
+            "date-time": "2026-04-14T00:00:00Z",
+            "timestamp": 1776124800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000905",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000906",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000907",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000908",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000910",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000915",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000916",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000918",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000921",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000922",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000923",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000926",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000929",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000930",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000931",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000932",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000933",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000838",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                5,
+                20
+              ]
+            ],
+            "date-time": "2026-05-20T00:00:00Z",
+            "timestamp": 1779235200000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000935",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000941",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000942",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000943",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000944",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000946",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000947",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000949",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000951",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000952",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000953",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000955",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000958",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000962",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000965",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000967",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000968",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000969",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000970",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000971",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000973",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000974",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000976",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000388",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                18
+              ]
+            ],
+            "date-time": "2026-06-18T00:00:00Z",
+            "timestamp": 1781740800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000977",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000835",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                6,
+                23
+              ]
+            ],
+            "date-time": "2026-06-23T00:00:00Z",
+            "timestamp": 1782172800000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000979",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000980",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000982",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000984",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000985",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000986",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000988",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000993",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000952",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                7
+              ]
+            ],
+            "date-time": "2026-07-07T00:00:00Z",
+            "timestamp": 1783382400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000995",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0000998",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001000",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001001",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001005",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001006",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001010",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001014",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000652",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                27
+              ]
+            ],
+            "date-time": "2026-07-27T00:00:00Z",
+            "timestamp": 1785110400000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001015",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001016",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001021",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001022",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000953",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                7,
+                31
+              ]
+            ],
+            "date-time": "2026-07-31T00:00:00Z",
+            "timestamp": 1785456000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001025",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001029",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001032",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001036",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001038",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001039",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001040",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001044",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001046",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000453",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                8,
+                20
+              ]
+            ],
+            "date-time": "2026-08-20T00:00:00Z",
+            "timestamp": 1787184000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001048",
+      "status": "excluded",
+      "reason": "publisher_article_type: Opinion",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001050",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001052",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001054",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001056",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001057",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001058",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001061",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001062",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001066",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001068",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001070",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001079",
+      "status": "excluded",
+      "reason": "publisher_article_type: Correction",
+      "publisher_updates": [
+        {
+          "DOI": "10.1371/journal.pclm.0000763",
+          "type": "correction",
+          "label": "Correction",
+          "source": "publisher",
+          "updated": {
+            "date-parts": [
+              [
+                2026,
+                9,
+                29
+              ]
+            ],
+            "date-time": "2026-09-29T00:00:00Z",
+            "timestamp": 1790640000000
+          }
+        }
+      ],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001082",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001083",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001088",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1371/journal.pclm.0001090",
+      "status": "excluded",
+      "reason": "publisher_article_type: Essay",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "http://creativecommons.org/licenses/by/4.0/"
+      ]
+    }
+  ],
+  "raw_input_hashes": {
+    "e0dc3b52a7a0ead4778fd7efbca18ce2d8f5e909650f490dbadb04c0d317f330.input": "ffb7d66701b1b2eb92adbb3eb638143a1d3c11ff121e1db7d908e49df56e0821",
+    "881b1d5feeb84c4d3a99497f75a1dd737c8c589242cf9cab12c4555ccf305c8f.input": "1f4500b57e200d78503cbb520f6de974d18b47a896b1133a198e10dc19795f8c",
+    "c5353b2181801052c7670e59e91c1c4e32cac37f680b52b3fdee4c5e7f20be87.input": "f9f7b760e8b989badb69bb9afd2e6ce0e03a31851805ef2d78785015c90c0388",
+    "e1cd46c353a195ecd26cfa69a4ea0f78ced5e5a3be51152dc3f9825f5fc9685a.input": "1f4500b57e200d78503cbb520f6de974d18b47a896b1133a198e10dc19795f8c",
+    "00f469cbfd07781d4fbe75fef719171b7cb7df2111210ee2890f088a238feac0.input": "ddeb87ec656acb0ad9e683105dc685acf4540486c68792d894f6153ba090720a",
+    "706cafa608bb3c2e1305b7aea610f2e87e9b2eb5a638e21548a463acd6ee4f70.input": "dfb2d5ab69b1ff67c01669d421a229b91edf8f323bcbceb76ef6251922b03918",
+    "9749384b095aaaf8f406210ade504b10f2768e693ed7c355ec48766293bc9d8b.input": "f9f7b760e8b989badb69bb9afd2e6ce0e03a31851805ef2d78785015c90c0388"
+  },
+  "duplicate_basis": "Overlap between the two Crossref date-filter enumerations; actual pack DOI records are unique."
+}

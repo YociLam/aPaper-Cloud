@@ -1,0 +1,6 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running `target/debug/apaper-cloud pack --input /tmp/apaper-e1-plos-climate/plos_climate.jsonl --output public/v1/conferences/packs/plos_climate/2026.jsonl.zst`
+record_count=128
+normalized_title_count=0
+compressed_bytes=92032
+sha256=cac91cc4f42384404635923a3407bc27a141cae6db3bc4d401e35cf1b53639e6

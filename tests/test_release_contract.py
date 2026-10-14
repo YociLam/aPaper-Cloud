@@ -19,6 +19,12 @@ class ReleaseContractTests(unittest.TestCase):
             lambda m:m.pop('discipline_taxonomy'),
             lambda m:m.pop('generated_at'),
             lambda m:m['venues'][0].update(discipline_ids=[]),
+            lambda m:m['venues'][0].update(source_kind='journal'),
+            lambda m:m['journals'][0].update(source_kind='conference'),
+            lambda m:m['journals'][0].update(source_kind='unknown'),
+            lambda m:m['journals'][0].pop('journal'),
+            lambda m:m['journals'][0]['editions'][0].pop('coverage'),
+            lambda m:m['journals'][0]['editions'][0]['coverage'].update(admitted=0),
         ]
         for mutation in mutations:
             with self.subTest(mutation=mutations.index(mutation)),tempfile.TemporaryDirectory() as directory:

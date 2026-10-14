@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "dataset": "apaper.conferences",
-  "manifest_version": "0.15",
-  "updated_at": "2026-10-14T12:51:30Z",
-  "manifest_sha256": "137165cc72dadc950f882b5bbefe32d1017a3d6f2ce5e6418d3c59b54d2d0b9a"
+  "manifest_version": "0.16",
+  "updated_at": "2026-10-14T16:12:47Z",
+  "manifest_sha256": "7d5a82fdddcaaa1597475d7dfcdb9971762973aaf8c8f764a42e764b470e2c74"
 }

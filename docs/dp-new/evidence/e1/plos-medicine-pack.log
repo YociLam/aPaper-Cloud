@@ -1,0 +1,6 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running `target/debug/apaper-cloud pack --input /tmp/apaper-e1-plos-medicine/plos_medicine.jsonl --output public/v1/conferences/packs/plos_medicine/2026.jsonl.zst`
+record_count=175
+normalized_title_count=0
+compressed_bytes=168735
+sha256=a3592c940f14cad27c88e9926ae41b600026cde0f03de1a93c9a3a5061612333
