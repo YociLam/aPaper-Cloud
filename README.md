@@ -35,7 +35,7 @@ exact size, and EdDSA signature. It does not infer the App version from this rep
 through this repository. Qualification prereleases are isolated test builds and are not the normal
 installation channel.
 
-Current qualification: [0.1.2 (build 9062)](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9062), published **2026-10-14 15:16:20 UTC**.
+Current qualification: [0.1.3 (build 9083)](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261015-9083), published **2026-10-15 10:38:05 UTC**.
 
 See [App distribution contract](APP-DISTRIBUTION.md) for channel paths, publication order, and
 verification requirements. Full application archives belong in Releases, not Git history or Pages.

@@ -31,7 +31,7 @@ aPaper Cloud 是 aPaper 的公共分发仓库，统一提供应用安装与更�
 **当前状态：** App 分发正在进行资格验证，本仓库尚未发布正式稳定版 App。资格预发布包是
 独立的测试构建，不是普通用户的安装渠道。
 
-当前资格预发布：[0.1.2（构建 9062）](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9062)，发布时间为 **2026-10-14 15:16:20 UTC**。
+当前资格预发布：[0.1.3（构建 9083）](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261015-9083)，发布时间为 **2026-10-15 10:38:05 UTC**。
 
 渠道路径、发布顺序和校验要求见[应用分发合同](APP-DISTRIBUTION.md)。完整应用归档保存在
 Releases，不进入 Git 历史或 Pages 静态站点。
