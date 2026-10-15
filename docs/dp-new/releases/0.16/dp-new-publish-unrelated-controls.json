@@ -1,0 +1,16 @@
+[
+  {
+    "path": "v1/app/macos/arm64/qualification/appcast.xml",
+    "bytes": 1886,
+    "sha256": "96a94e11cb5f6aa09eb1751d229fd6526ec99ca019cdb53c476fe3b5516149ce",
+    "verified_by": "curl anonymous ordinary HTTPS URL",
+    "preserved": true
+  },
+  {
+    "path": "v1/translation/version.json",
+    "bytes": 276,
+    "sha256": "bcbcba8fb9d08d7de436028a9583e6020e05cc326bc2e14b400837875be0d10b",
+    "verified_by": "curl anonymous ordinary HTTPS URL",
+    "preserved": true
+  }
+]

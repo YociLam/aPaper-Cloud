@@ -1,0 +1,141 @@
+{
+  "boundary": "Real public HTTPS, ordinary pack URLs without cache-busting query; not native UI",
+  "verified_at_utc": "2026-10-15T04:58:52.621798+00:00",
+  "packs": [
+    {
+      "edition": "icml:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/icml/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 2910598,
+      "sha256": "8a12d71721aa5b8255a8a93d6d24dbb17f48fb92a5d6cc563f80101c3f44dad3",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "ijcai:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/ijcai/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 451087,
+      "sha256": "562518753fbd50e573380b118fc5e4a2f6be14e25d6c3c730a7423a06976670d",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "iccv:2025",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/iccv/2025.jsonl.zst",
+      "http_status": 200,
+      "bytes": 1271630,
+      "sha256": "3d1d9b988d2dd66721dd893713477f98fe96c6853cb5f1536efb2dc4cc005f01",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "aamas:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/aamas/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 297321,
+      "sha256": "0c3b0368246d76105a9b31d749b4df7d3e19f2d0adf168a8ffa9730ba6df2823",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "midl:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/midl/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 122624,
+      "sha256": "6525d847e455bc44514cba982940842c2ae6f3528c70106780761affb1b1e987",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "mlhc:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/mlhc/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 48918,
+      "sha256": "e006e27b6dcc76548edbec88ec02a108e31eddbc922eb3615c1adc389c07796a",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "chil:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/chil/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 23373,
+      "sha256": "0fd9bbc6719bf9bfc37b2dcfafad854ce61f0ebc6de9e63d8fa625ce55260e09",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "mlcb:2025",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/mlcb/2025.jsonl.zst",
+      "http_status": 200,
+      "bytes": 13931,
+      "sha256": "ca2c06862238be665848f1bacfa77812484bb6cf460629c32dfc19cbf9debd8c",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "l4dc:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/l4dc/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 50403,
+      "sha256": "def4a53717b877a655b9895e89cbf4775ab6c35a9270c439a36e40f08e659998",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "glj:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/glj/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 37412,
+      "sha256": "89df58b760d6d085c57d1d9dbd12839da8ebe458e7c58cd8427463ed617511ca",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "plos_medicine:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/plos_medicine/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 168735,
+      "sha256": "a3592c940f14cad27c88e9926ae41b600026cde0f03de1a93c9a3a5061612333",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "jlb:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/jlb/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 7794,
+      "sha256": "ffa80d2e69173b9068b074098cbd1d7cf8373623528106f146a5e9cfe3afef95",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "plos_global_public_health:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/plos_global_public_health/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 612023,
+      "sha256": "1f09cd8acf38d6a6e49ac8f5340fd1ec2f76b70985f1ee32fe28254e18dcda73",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "plos_biology:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/plos_biology/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 241356,
+      "sha256": "99393a6ac83a47c294fec8c6eb780f3c1b577aa1f7ec6f94540ba62ed6734742",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    },
+    {
+      "edition": "plos_climate:2026",
+      "url": "https://cloud.apaper.ai/v1/conferences/packs/plos_climate/2026.jsonl.zst",
+      "http_status": 200,
+      "bytes": 92032,
+      "sha256": "cac91cc4f42384404635923a3407bc27a141cae6db3bc4d401e35cf1b53639e6",
+      "matches_candidate": true,
+      "cache_busting_query": false
+    }
+  ]
+}

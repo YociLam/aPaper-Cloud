@@ -1,0 +1,48 @@
+{
+  "deployment_source_commit": "0b93377125e032ab606c38056451f3f55a48de40",
+  "workflow_id": 38684026216,
+  "workflow_url": "https://github.com/YociLam/aPaper-Cloud/actions/runs/38684026216",
+  "workflow_conclusion": "success",
+  "workflow_completed_at_utc": "2026-10-15T04:56:21Z",
+  "verified_at_taipei": "2026-10-15T13:00:56.370480+08:00",
+  "live_version": {
+    "schema_version": 1,
+    "dataset": "apaper.conferences",
+    "manifest_version": "0.16",
+    "updated_at": "2026-10-14T16:12:47Z",
+    "manifest_sha256": "7d5a82fdddcaaa1597475d7dfcdb9971762973aaf8c8f764a42e764b470e2c74"
+  },
+  "all_pack_verification": {
+    "executed": 72,
+    "passed": 72,
+    "failed": 0,
+    "boundary": "Official release verifier, real public HTTPS, checksummed payloads"
+  },
+  "changed_plain_url_verification": {
+    "executed": 15,
+    "passed": 15,
+    "failed": 0,
+    "cache_busting_query": false
+  },
+  "app_and_translation_controls_preserved": [
+    {
+      "path": "v1/app/macos/arm64/qualification/appcast.xml",
+      "bytes": 1886,
+      "sha256": "96a94e11cb5f6aa09eb1751d229fd6526ec99ca019cdb53c476fe3b5516149ce",
+      "verified_by": "curl anonymous ordinary HTTPS URL",
+      "preserved": true
+    },
+    {
+      "path": "v1/translation/version.json",
+      "bytes": 276,
+      "sha256": "bcbcba8fb9d08d7de436028a9583e6020e05cc326bc2e14b400837875be0d10b",
+      "verified_by": "curl anonymous ordinary HTTPS URL",
+      "preserved": true
+    }
+  ],
+  "native_app_public_refresh_observed_this_run": false,
+  "formal_app_replaced": false,
+  "production_user_data_migrated": false,
+  "rollback_executed": false,
+  "ordinary_manifest_sha256_matches": true
+}
