@@ -1,0 +1,33 @@
+{
+  "scope": "production metadata publication only; no App release or production user data operation",
+  "previous_public_git_commit": "81b224a10b374c33fda3b54f8af37f8db73b1d0a",
+  "previous_version": {
+    "schema_version": 1,
+    "dataset": "apaper.conferences",
+    "manifest_version": "0.14",
+    "updated_at": "2026-09-14T12:00:00Z",
+    "manifest_sha256": "a92d71605ab41fa9900c4f81f0c6b5dec38b3ec0ad419c70368ce4a125f624be"
+  },
+  "release_version": "0.16",
+  "release_manifest_sha256": "7d5a82fdddcaaa1597475d7dfcdb9971762973aaf8c8f764a42e764b470e2c74",
+  "changed_editions": [
+    "icml:2026",
+    "ijcai:2026",
+    "iccv:2025",
+    "aamas:2026",
+    "midl:2026",
+    "mlhc:2026",
+    "chil:2026",
+    "mlcb:2025",
+    "l4dc:2026",
+    "glj:2026",
+    "plos_medicine:2026",
+    "jlb:2026",
+    "plos_global_public_health:2026",
+    "plos_biology:2026",
+    "plos_climate:2026"
+  ],
+  "pack_bytes_changed_by_release_preparation": 0,
+  "previous_qualification_appcast_and_translation_assets_preserved": true,
+  "rollback_plan": "If required, restore only v1/conferences release files from preceding verified release and publish through existing Pages workflow; preserve current App/Translation assets. Not executed."
+}
