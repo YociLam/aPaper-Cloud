@@ -47,7 +47,7 @@ def main() -> None:
 
     with tempfile.TemporaryDirectory(prefix="apaper-title-normalization-") as directory:
         temporary_root = Path(directory)
-        for venue in manifest["venues"]:
+        for venue in manifest.get("venues", []) + manifest.get("journals", []):
             for edition in venue["editions"]:
                 pack = edition.get("pack")
                 if pack is None:

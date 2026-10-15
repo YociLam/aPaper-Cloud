@@ -43,7 +43,7 @@ Releases，不进入 Git 历史或 Pages 静态站点。
 
 | 目录 | 版本 | 更新时间（UTC） |
 | --- | --- | --- |
-| 会议 Manifest | `v0.16`（未发布候选） | 2026-10-14 16:12:47 |
+| 会议 Manifest | `v0.16` | 2026-10-14 16:12:47 |
 
 App 先检查轻量[版本记录](https://cloud.apaper.ai/v1/conferences/version.json)，仅在版本变化时
 获取 [Manifest](https://cloud.apaper.ai/v1/conferences/manifest.json)，并验证其 SHA-256。
@@ -87,7 +87,7 @@ Manifest 为准。表格使用会议目录的发布时间，目前不单独记�
 部分 ICLR 与 SOSP 记录仍保留构建期来源标记 `temporary_reference_supabase_v1`，这不表示
 App 在运行时连接 Supabase。
 
-DP-NEW 本地候选包含 31 个来源（25 个会议、6 个期刊）、77 个年度选择、72 个数据包，尚未部署。带有效数据包的部分届次仍可选；“无数据包”不可选。分类定义与来源引用共享 Manifest 哈希；映射由 aPaper 审核，不是 OECD 对会议的官方分类。详见[执行报告](docs/dp-new/DP-NEW-report.md)和[分类映射](docs/dp-new/discipline-mapping.md)。
+DP-NEW 目录包含 31 个来源（25 个会议、6 个期刊）、77 个年度选择、72 个数据包。带有效数据包的部分届次仍可选；“无数据包”不可选。分类定义与来源引用共享 Manifest 哈希；映射由 aPaper 审核，不是 OECD 对会议的官方分类。详见[执行报告](docs/dp-new/DP-NEW-report.md)和[分类映射](docs/dp-new/discipline-mapping.md)。
 
 ## 翻译引擎
 
@@ -149,6 +149,6 @@ cargo test --locked
 GitHub Actions 负责会议目录和翻译引擎分发校验。历史资产路由另有测试与 Worker 打包 dry-run；
 更新其开发工具依赖不会部署或删除线上 Worker。
 
-## E1 期刊候选
+## E1 期刊元数据
 
-Schema 1 保持 `venues` 仅为会议，使用独立 `journals` 扩展；旧客户端不枚举期刊，新客户端明确保留 journal 类型、ISSN、出版方文章类型、实际卷期/文章号与日期精度。年度包是分发分区，不是出版方卷号。六个 2026 许可快照截至 2026-10-14T15:44:19Z，共 1,552 条；JLB 为可用 partial/10，14 条 NC/ND 许可明确排除，另两条许可/摘要缺口仍开放。其余五源仅对声明输入、范围和截止点完整，不代表未来全年。前 66 包字节不变。候选尚未发布，不宣称公网 0.16 刷新；见[契约](docs/dp-new/E1-journal-contract.md)与 docs/dp-new/evidence/e1/ 逐源核对收据。
+Schema 1 保持 `venues` 仅为会议，使用独立 `journals` 扩展；旧客户端不枚举期刊，新客户端明确保留 journal 类型、ISSN、出版方文章类型、实际卷期/文章号与日期精度。年度包是分发分区，不是出版方卷号。六个 2026 许可快照截至 2026-10-14T15:44:19Z，共 1,552 条；JLB 为可用 partial/10，14 条 NC/ND 许可明确排除，另两条许可/摘要缺口仍开放。其余五源仅对声明输入、范围和截止点完整，不代表未来全年。前 66 包字节不变。0.16 发布使用上述已验证快照字节；见[契约](docs/dp-new/E1-journal-contract.md)与 docs/dp-new/evidence/e1/ 逐源核对收据。

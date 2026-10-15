@@ -62,7 +62,7 @@ def load_json(data: bytes, label: str) -> dict:
 
 
 def edition_pack(manifest: dict, edition_id: str) -> dict:
-    for venue in manifest.get("venues", []):
+    for venue in manifest.get("venues", []) + manifest.get("journals", []):
         for edition in venue.get("editions", []):
             if edition.get("id") == edition_id:
                 pack = edition.get("pack")
