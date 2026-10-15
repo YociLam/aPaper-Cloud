@@ -1,0 +1,28 @@
+[
+  {
+    "source": "glj",
+    "doi": "10.1017/glj.2026.10175",
+    "title": "The Housing Challenge to Neoliberal Homeownership: Profitability Relativism and Governance Asymmetry as Post-Neoliberalization",
+    "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/BCDD06B9841381A8EFCE8FE78F61F643/S2071832226101758a.pdf/div-class-title-the-housing-challenge-to-neoliberal-homeownership-profitability-relativism-and-governance-asymmetry-as-post-neoliberalization-div.pdf",
+    "bytes": 359501,
+    "sha256": "8bc4d28172b4964b0758b6aaa8a34f9678efc253e6860705abffd43e90ad1e69",
+    "pages": 26,
+    "first_page_text_characters": 3408,
+    "title_tokens_matched": 10,
+    "title_tokens": 10,
+    "boundary": "real HTTPS PDF bytes and readable content; NOT native Reader"
+  },
+  {
+    "source": "plos-medicine",
+    "doi": "10.1371/journal.pmed.1004513",
+    "title": "Pregnancy outcomes in women at high risk of preterm birth receiving a vaginal cervical cerclage with, or without, progesterone: A retrospective, secondary analysis of the C-STICH randomised controlled trial data",
+    "url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1004513&type=printable",
+    "bytes": 545123,
+    "sha256": "3474b74266b601797fdf3617928c93a59d7e72824e937895deb877b3e30cbca8",
+    "pages": 15,
+    "first_page_text_characters": 3536,
+    "title_tokens_matched": 22,
+    "title_tokens": 22,
+    "boundary": "real HTTPS PDF bytes and readable content; NOT native Reader"
+  }
+]

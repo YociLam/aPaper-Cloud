@@ -1,5 +1,5 @@
 schema_version: 1
-translator_version: "v0.1"
+translator_version: "v0.3"
 required_environment_version: "v0.1"
 backend_id: "python_pdfmathtranslate"
 worker_protocol_version: 1

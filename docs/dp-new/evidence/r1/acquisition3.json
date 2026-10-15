@@ -1,0 +1,394 @@
+[
+  {
+    "key": "aaai-issue-683",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/683",
+    "status": 200,
+    "bytes": 100545,
+    "content_length": null,
+    "sha256": "9bcfbf61528ecdcea864f6f44cc2ac5378d64eee937755a95badfd32b64314d4"
+  },
+  {
+    "key": "aaai-issue-684",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/684",
+    "status": 200,
+    "bytes": 102048,
+    "content_length": null,
+    "sha256": "d3b7912a361f6b4e20f150bddc8f171f782ca913306ac1cfc0527a7cd833b5d6"
+  },
+  {
+    "key": "aaai-issue-685",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/685",
+    "status": 200,
+    "bytes": 76638,
+    "content_length": null,
+    "sha256": "ec6153294ad543476aeda4ce1701bd40a24c5bc448cc9c2dee972eecedfee028"
+  },
+  {
+    "key": "aaai-issue-686",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/686",
+    "status": 200,
+    "bytes": 106169,
+    "content_length": null,
+    "sha256": "0b23b10de3734f672bc3c41ee08c17a6e742a53c74d09f8323ba536774907515"
+  },
+  {
+    "key": "aaai-issue-687",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/687",
+    "status": 200,
+    "bytes": 106208,
+    "content_length": null,
+    "sha256": "4cf05cdbac7dd744d591aa15d8ee1c4d70748fb75854f24afb44cc2677bbd167"
+  },
+  {
+    "key": "aaai-issue-733",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/733",
+    "status": 200,
+    "bytes": 106318,
+    "content_length": null,
+    "sha256": "d56840ff076052c3f7bc425fee7b58c98ebce2f7e889a2465098a2c7986f7a6b"
+  },
+  {
+    "key": "aaai-issue-688",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/688",
+    "status": 200,
+    "bytes": 106495,
+    "content_length": null,
+    "sha256": "63f9451a61f43e0c5e9e666802304ab04521cbccc6305d2f8dbcd42bb414a28b"
+  },
+  {
+    "key": "aaai-issue-689",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/689",
+    "status": 200,
+    "bytes": 106735,
+    "content_length": null,
+    "sha256": "c6a390ee59801f852e48ebba284c5531c6331bd869ae1677734af37cf2f281c1"
+  },
+  {
+    "key": "aaai-issue-690",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/690",
+    "status": 200,
+    "bytes": 107712,
+    "content_length": null,
+    "sha256": "3fa2d83a4829dffe996391e0fec346022adc4ab5c2bf145c55189f6a8129a5ab"
+  },
+  {
+    "key": "aaai-issue-691",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/691",
+    "status": 200,
+    "bytes": 105696,
+    "content_length": null,
+    "sha256": "1719e93eeb054e96c85d1aa238895a9d2c996b4fd1f823a3fb52662af5b437cc"
+  },
+  {
+    "key": "aaai-issue-692",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/692",
+    "status": 200,
+    "bytes": 105796,
+    "content_length": null,
+    "sha256": "913c2b0819a2fbda9377015870780519d71fbc7a429aa4a2583872dc4252de92"
+  },
+  {
+    "key": "aaai-issue-693",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/693",
+    "status": 200,
+    "bytes": 106964,
+    "content_length": null,
+    "sha256": "95861f18448e51d91c4967fb754f0e6d0d692b36ef0173c548fc24bb205eca33"
+  },
+  {
+    "key": "aaai-issue-694",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/694",
+    "status": 200,
+    "bytes": 107685,
+    "content_length": null,
+    "sha256": "58fb363074311917558dd8a23ab7fc5049de6fcb15546ff1c29226adf6b80500"
+  },
+  {
+    "key": "aaai-issue-695",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/695",
+    "status": 200,
+    "bytes": 106508,
+    "content_length": null,
+    "sha256": "6292bbbcabe2cff75ad1235f1568ac170e65e2df55fc91780fb9d1d6622b0238"
+  },
+  {
+    "key": "aaai-issue-696",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/696",
+    "status": 200,
+    "bytes": 106466,
+    "content_length": null,
+    "sha256": "3ff62587179b51097ac4720d9f4c3ba0e3482b6d79aa7f51d52ae888afffaac9"
+  },
+  {
+    "key": "aaai-issue-697",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/697",
+    "status": 200,
+    "bytes": 114852,
+    "content_length": null,
+    "sha256": "a28a684c4551e51619ec532d241b7fa973145a3f247e3578ac41c4521b8d6aae"
+  },
+  {
+    "key": "aaai-issue-698",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/698",
+    "status": 200,
+    "bytes": 106746,
+    "content_length": null,
+    "sha256": "9cc1a7254e26e08f2a67a10d557a8dacd3322b051d07ed6365e17be17b359a29"
+  },
+  {
+    "key": "aaai-issue-699",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/699",
+    "status": 200,
+    "bytes": 96460,
+    "content_length": null,
+    "sha256": "bdddaa688516f3db1d99f114d91f921cd550ac20ea7da22f86a9b74570f7e662"
+  },
+  {
+    "key": "aaai-issue-700",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/700",
+    "status": 200,
+    "bytes": 93533,
+    "content_length": null,
+    "sha256": "8e4bdf0fbe5e73b8f287239b5f50a164de56be605a5ab4299edf76d125d08637"
+  },
+  {
+    "key": "aaai-issue-701",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/701",
+    "status": 200,
+    "bytes": 87425,
+    "content_length": null,
+    "sha256": "f89bf74584966125348cd8aa7398040ec9b9cc4287adc66922361970ad34d58c"
+  },
+  {
+    "key": "aaai-issue-702",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/702",
+    "status": 200,
+    "bytes": 95632,
+    "content_length": null,
+    "sha256": "50011df84c9efd53c50994c4d79f97619f340330f0b42df0ff9559e7c7abafb3"
+  },
+  {
+    "key": "aaai-issue-703",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/703",
+    "status": 200,
+    "bytes": 94723,
+    "content_length": null,
+    "sha256": "079b1540b653314046c4bf7ab2a49a7d5793ebd29e5ff59d930786d6c94de9fb"
+  },
+  {
+    "key": "aaai-issue-704",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/704",
+    "status": 200,
+    "bytes": 76059,
+    "content_length": null,
+    "sha256": "f2424df8bb3b322adaba2b526b88aae993866ae7f5f4029bee2d9b626c0ea3be"
+  },
+  {
+    "key": "aaai-issue-705",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/705",
+    "status": 200,
+    "bytes": 107947,
+    "content_length": null,
+    "sha256": "a1cc086454a7c8555b9acbac1319902506f12207bb880a2ddda6cf0ad221ac9a"
+  },
+  {
+    "key": "aaai-issue-707",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/707",
+    "status": 200,
+    "bytes": 108176,
+    "content_length": null,
+    "sha256": "28d5cfe3cbe7dcb244b91aada6fb6359d8d1dfeefe4ef37721c5f0a404217823"
+  },
+  {
+    "key": "aaai-issue-708",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/708",
+    "status": 200,
+    "bytes": 109742,
+    "content_length": null,
+    "sha256": "2f7bd67bd944d4c55db9f171198e80d452510e11a1f443a5a404310ed9bd7b5d"
+  },
+  {
+    "key": "aaai-issue-709",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/709",
+    "status": 200,
+    "bytes": 107733,
+    "content_length": null,
+    "sha256": "8ddd1a16565af67a0d87260b230c9d01b661ea2da93d7c57af8a5f174e490b80"
+  },
+  {
+    "key": "aaai-issue-710",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/710",
+    "status": 200,
+    "bytes": 107005,
+    "content_length": null,
+    "sha256": "2ed96b399857b27969512a489c18ba5c8eb7a0a765ed1063db06060739a75821"
+  },
+  {
+    "key": "aaai-issue-711",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/711",
+    "status": 200,
+    "bytes": 106997,
+    "content_length": null,
+    "sha256": "ef9655aa07ff3b35810c5f1282e25b24b43105e665dd8b70675e45fe2f1c5b86"
+  },
+  {
+    "key": "aaai-issue-712",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/712",
+    "status": 200,
+    "bytes": 109431,
+    "content_length": null,
+    "sha256": "2c3fff04ab5381ea1d84b630857312d4541ec452402094c25bf29898a91f9616"
+  },
+  {
+    "key": "aaai-issue-713",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/713",
+    "status": 200,
+    "bytes": 108124,
+    "content_length": null,
+    "sha256": "32eebeb464312710d5b88482570e05bb311584bb03c487d673c55a619fd0b08e"
+  },
+  {
+    "key": "aaai-issue-714",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/714",
+    "status": 200,
+    "bytes": 95659,
+    "content_length": null,
+    "sha256": "60744fa9307cdde4e37a1d8cab559f5c692608df2413788cd5148b6fe67855e6"
+  },
+  {
+    "key": "aaai-issue-715",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/715",
+    "status": 200,
+    "bytes": 101739,
+    "content_length": null,
+    "sha256": "fbe05e58872ef000412ae0aee4a72da2df6d46d225e8b6ffbe27b91e7aa789ab"
+  },
+  {
+    "key": "aaai-issue-716",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/716",
+    "status": 200,
+    "bytes": 99705,
+    "content_length": null,
+    "sha256": "f9a0223099aa21faf843d478e021b2ee56805f4d115e3fb7cf52320e50db7176"
+  },
+  {
+    "key": "aaai-issue-717",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/717",
+    "status": 200,
+    "bytes": 81559,
+    "content_length": null,
+    "sha256": "f3f7e9b3e23e25304501ff0a7c86bb01472cac211ad4f024ab2b2c32b18efa48"
+  },
+  {
+    "key": "aaai-issue-718",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/718",
+    "status": 200,
+    "bytes": 107558,
+    "content_length": null,
+    "sha256": "7003853322b598525cbdf3ddde9fd8e3be55b4ea37826e9f344a90e80d11280b"
+  },
+  {
+    "key": "aaai-issue-719",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/719",
+    "status": 200,
+    "bytes": 109136,
+    "content_length": null,
+    "sha256": "92398cde972365b3522c6cdbed87aa7051d4087f2fe0de524a3173ba082e5431"
+  },
+  {
+    "key": "aaai-issue-720",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/720",
+    "status": 200,
+    "bytes": 107167,
+    "content_length": null,
+    "sha256": "53ee596195fa86e67064a47cb3b08212080f5ec00a99bce9bba278bd92d1ddcd"
+  },
+  {
+    "key": "aaai-issue-721",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/721",
+    "status": 200,
+    "bytes": 116451,
+    "content_length": null,
+    "sha256": "c1ab94c519b7ed17b3312a82983da76e9e6a4bfe4c9545e4974ce0b63ef74cdf"
+  },
+  {
+    "key": "aaai-issue-722",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/722",
+    "status": 200,
+    "bytes": 101032,
+    "content_length": null,
+    "sha256": "f271d4af4205694ebd321e3dd6ff7f100f95fa21a5f7f561b044d3a6a80568c9"
+  },
+  {
+    "key": "aaai-issue-723",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/723",
+    "status": 200,
+    "bytes": 98616,
+    "content_length": null,
+    "sha256": "e649a1ac13bd88001a6178de848b1a937a5eebe4d2fa27d7be6f94e574ec1366"
+  },
+  {
+    "key": "aaai-issue-724",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/724",
+    "status": 200,
+    "bytes": 96349,
+    "content_length": null,
+    "sha256": "b4302fb9ccf82355573d4e2da0d70f3a3345c3d6d7a9f9784b56ed706de88ebc"
+  },
+  {
+    "key": "aaai-issue-725",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/725",
+    "status": 200,
+    "bytes": 123992,
+    "content_length": null,
+    "sha256": "449bece7889cf2477c8530e34a97de4c5ca68641a8a2cf874d7632dab092d29a"
+  },
+  {
+    "key": "aaai-issue-726",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/726",
+    "status": 200,
+    "bytes": 113598,
+    "content_length": null,
+    "sha256": "60c4c20abbcb0a9e870a2ab86d8a969db3768b4f3242e7dad8fc62c2de4d80d3"
+  },
+  {
+    "key": "aaai-issue-727",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/727",
+    "status": 200,
+    "bytes": 95397,
+    "content_length": null,
+    "sha256": "2916ea3d25a68d620bab4c3967b5937d8adade95807079499899f01f31ce3581"
+  },
+  {
+    "key": "aaai-issue-728",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/728",
+    "status": 200,
+    "bytes": 100758,
+    "content_length": null,
+    "sha256": "8565c40d3b17d4f68c058ad9ce5d93e3868c7d6a9bfad8f5af8cdd2da003d22e"
+  },
+  {
+    "key": "aaai-issue-729",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/729",
+    "status": 200,
+    "bytes": 198523,
+    "content_length": null,
+    "sha256": "af4665d16a27dd45d8f824b132f3688a56a807d4ac1b899a274456b650ebd22e"
+  },
+  {
+    "key": "aaai-issue-732",
+    "url": "https://ojs.aaai.org/index.php/AAAI/issue/view/732",
+    "status": 200,
+    "bytes": 275109,
+    "content_length": null,
+    "sha256": "83e248dccf5025315f29f7692ab9907cdc24857450377b3acae23d8dda9efff8"
+  },
+  {
+    "key": "findings_xml",
+    "url": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2026.findings.xml",
+    "status": 200,
+    "bytes": 6865641,
+    "content_length": "6865641",
+    "sha256": "511c2317ca9af69910d17578489576a6dbc0cf62cf598a9dbf9f652bc599924d"
+  }
+]

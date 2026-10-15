@@ -5,179 +5,150 @@
 
 # aPaper Cloud
 
-`aPaper Cloud` 是一个静态、版本化的 aPaper 公共元数据分发项目。它不存储用户资料、
-阅读历史、推荐内容、账户凭据、PDF 文件或其他私有工作区数据。
+aPaper Cloud 是 aPaper 的公共分发仓库，统一提供应用安装与更新包、学术文献元数据及版本化
+运行资源，为软件更新和会议目录同步提供可校验的文件与版本信息。应用源码与用户的私有
+研究资料在本仓库之外维护。
 
-首个发布的数据集为各类学术会议论文集目录。会议元数据按具体会议及举办年份独立划分，
-因此 App 只会下载用户所选会议年份对应的数据包。
+[网站](https://cloud.apaper.ai) · [发布版本](https://github.com/YociLam/aPaper-Cloud/releases) · [联系支持](mailto:contact@apaper.ai)
 
-- 正式地址：`https://cloud.apaper.ai`
-- 会议产品目录 Manifest：`v0.12`
-- 会议产品目录更新时间：`2026-07-22 20:11:41 UTC`
-- Translation Engine 翻译器版本：`v0.1`
-- Translation Engine 环境版本：`v0.1`
-- Translation Engine 更新时间：`2026-08-05 20:59:43 UTC`
+## 目录
 
-会议产品目录、Translation Engine 翻译器和 Translation Engine 环境是三条独立版本线。
-仅更新翻译器不会触发环境下载，只有所需环境版本也发生变化时才会更新环境；任何一条
-发布线的更新都不会改变会议目录的路径、版本或更新时间。
+1. [应用下载与更新](#应用下载与更新)
+2. [学术文献元数据](#学术文献元数据)
+3. [翻译引擎](#翻译引擎)
+4. [仓库结构](#仓库结构)
+5. [完整性与发布规范](#完整性与发布规范)
 
-## 收录概览
+## 应用下载与更新
 
-下表来自 `public/v1/conferences/manifest.json`。数字表示该会议年份当前收录的论文数；
-未附状态说明的数字表示该年份的数据包已完整发布并通过发布校验，可供 App 同步。
+应用文件通过 GitHub Releases 分发。同一版本可以同时提供用于自动更新的完整 ZIP 包，以及
+供首次安装使用的 DMG；两种包装包含相同版本的应用，网站下载入口链接到对应的 Release 资产。
+
+正式版、测试版与资格验证版使用独立渠道。原生 macOS 更新器读取对应渠道的 Sparkle appcast，
+其中明确指定归档地址、构建号、最低系统版本、准确大小及 EdDSA 签名。仓库包含多个产品，
+因此不会将全局“最新 Release”作为 App 的版本来源。
+
+**当前状态：** App 分发正在进行资格验证，本仓库尚未发布正式稳定版 App。资格预发布包是
+独立的测试构建，不是普通用户的安装渠道。
+
+当前资格预发布：[0.1.1（构建 9022）](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9022)，发布时间为 **2026-10-14 03:34:31 UTC**。
+
+渠道路径、发布顺序和校验要求见[应用分发合同](APP-DISTRIBUTION.md)。完整应用归档保存在
+Releases，不进入 Git 历史或 Pages 静态站点。
+
+## 学术文献元数据
+
+会议数据按会议与年份组织，包含文献题录、官方页面、可用的 PDF 来源及 DOI 等信息。
+数据包不包含论文 PDF、账户凭据、阅读历史或用户私有文献库内容。
+
+| 目录 | 版本 | 更新时间（UTC） |
+| --- | --- | --- |
+| 会议 Manifest | `v0.16`（未发布候选） | 2026-10-14 16:12:47 |
+
+App 先检查轻量[版本记录](https://cloud.apaper.ai/v1/conferences/version.json)，仅在版本变化时
+获取 [Manifest](https://cloud.apaper.ai/v1/conferences/manifest.json)，并验证其 SHA-256。
+各会议年份包具有独立版本、字节数和校验值；缺失或过期的数据可以独立同步，无需重新安装 App。
+
+### 收录范围
 
 | 会议 | 2022 | 2023 | 2024 | 2025 | 2026 |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | NeurIPS | — | 3,540 | 4,493 | 5,823 | 已公布 |
-| ICML | — | 1,828 | 2,610 | 3,330 | 6,341（已编目） |
-| ICLR | — | 435（部分） | 2,261（部分） | 3,708（部分） | 5,359（部分） |
+| ICML | — | 1,828 | 2,610 | 3,330 | 6,552 |
+| ICLR | — | 435 (部分) | 2,261 (部分) | 3,708 (部分) | 5,359 (部分) |
 | CVPR | — | 2,352 | 2,710 | 2,871 | 4,068 |
-| ACL | — | 2,150 | 1,982 | 3,353 | 4,806 |
+| ACL | — | 2,150 | 1,982 | 3,353 | 4,806 (部分) |
 | AAAI | — | 1,578 | 2,331 | 3,028 | 4,149 |
-| IJCAI | — | 850 | 1,047 | 1,279 | 已公布 |
+| IJCAI | — | 850 | 1,047 | 1,279 | 972 |
 | EMNLP | — | 2,241 | 2,388 | 3,488 | 已公布 |
-| ICCV | — | 2,156 | — | 949 | — |
+| ICCV | — | 2,156 | — | 2,701 | — |
 | ECCV | 1,645 | — | 2,387 | — | 已公布 |
-| AISTATS | — | — | 547 | 583 | — |
+| AISTATS | — | — | 547 | 583 | 588 |
 | COLT | — | — | — | 181 | 196 |
-| AAMAS | — | — | — | 479 | 639（部分） |
-| CoRL | — | — | 264（部分） | 263 | — |
-| RSS | — | — | 134 | 163 | — |
+| AAMAS | — | — | — | 479 | 640 (部分) |
+| CoRL | — | — | 264 (部分) | 263 | — |
+| RSS | — | — | 134 | 163 | 210 |
 | OSDI | — | 55 | 53 | 53 | 136 |
-| SOSP | — | 9（部分） | 43（部分） | 65（部分） | — |
-| IEEE S&P | — | 已编目 | 261 | 65 | 254（部分） |
+| SOSP | — | 9 (部分) | 43 (部分) | 65 (部分) | — |
+| IEEE S&P | — | 已编目 | 261 | 65 | 254 (部分 / 无数据包) |
 | NDSS | — | 94 | 140 | 211 | 265 |
 | ACCV | 277 | — | 269 | — | — |
+| MIDL | — | — | — | — | 221 |
+| MLHC | — | — | — | — | 74 |
+| CHIL | — | — | — | — | 40 |
+| MLCB | — | — | — | 23 | — |
+| L4DC | — | — | — | — | 106 |
 
-状态说明：
+未附状态的数字表示已发布的数据包。**部分**表示已有可检索数据但覆盖尚不完整；**已编目**表示
+会议年份已登记、尚无已发布的数据包；**已公布**表示正式论文集尚待确认。实际可用状态以线上
+Manifest 为准。表格使用会议目录的发布时间，目前不单独记录每个会议年份的更新时间。
 
-- **已发布**：元数据包已生成并通过记录数、体积和 SHA-256 校验，可供 App 同步。
-- **部分**：已有可检索数据包，但元数据或公开 PDF 覆盖仍不完整。
-- **已编目**：已确认会议年份或论文数量，但尚未发布可下载的数据包。
-- **已公布**：会议年份已进入目录，正式论文集尚未达到发布条件。
+每条记录保留来源信息。分类和来源分组只采用出版方明确提供的内容，不推断缺失分类。
+部分 ICLR 与 SOSP 记录仍保留构建期来源标记 `temporary_reference_supabase_v1`，这不表示
+App 在运行时连接 Supabase。
 
-目录表按每次 Manifest 发布统一更新时间；项目目前不为单个会议年份维护独立更新时间。
+DP-NEW 本地候选包含 31 个来源（25 个会议、6 个期刊）、77 个年度选择、72 个数据包，尚未部署。带有效数据包的部分届次仍可选；“无数据包”不可选。分类定义与来源引用共享 Manifest 哈希；映射由 aPaper 审核，不是 OECD 对会议的官方分类。详见[执行报告](docs/dp-new/DP-NEW-report.md)和[分类映射](docs/dp-new/discipline-mapping.md)。
 
-## 数据结构
+## 翻译引擎
+
+当前 App 从已签名应用包内部署和修复专用翻译环境。翻译器更新随 App 版本一同交付，运行时
+不轮询历史 Cloud 翻译版本接口，也不通过这些接口下载环境包。
+
+| App 内置资源（macOS arm64） | 版本 | 更新时间（UTC） |
+| --- | --- | --- |
+| 翻译器 | `v0.4` | 2026-09-26 13:17:43 |
+| 环境包 | `v0.1-r1` | 2026-08-27 12:30:26 |
+
+上述信息对应网站展示的已验证内置资源快照，不代表另行提供了 Cloud v0.4 下载包，也不构成
+正式 App 发布声明。翻译器与环境分别管理版本；`v0.1-r1` 表示 v0.1 环境归档的修订版。
+[资源状态记录](https://cloud.apaper.ai/v1/app/macos/arm64/components/translation.json)保存准确的包校验值。
+
+历史 `translation-engine-v0.1` Release 与 `/v1/translation/` 接口继续保留，用于兼容已有使用者、
+维护者手动下载及可复现构建。其中，原 arm64 归档仍是 r1 构建配方固定引用的基础输入。
+历史资产不覆盖、不重新标注为新版本环境包。详见[翻译引擎分发说明](translation-engine/README.md)。
+
+## 仓库结构
 
 ```text
 public/
-  v1/
-    translation/
-      version.json
-      <environment-version>/manifest.json
-      schemas/environment-manifest-v1.json
-    conferences/
-      version.json
-      manifest.json
-      packs/<venue>/<year>.jsonl.zst
+  index.html                           公共资源状态页
+  v1/app/macos/arm64/
+    components/translation.json         App 内置资源状态
+    <channel>/appcast.xml               对应渠道的应用更新源（发布后生效）
+  v1/conferences/
+    version.json                       目录版本与 Manifest 校验值
+    manifest.json                      会议、年份及数据包完整性信息
+    packs/<venue>/<year>.jsonl.zst      压缩文献元数据
+  v1/translation/                      历史兼容元数据
+translation-engine/                    环境来源、构建配方及历史资产路由
+src/                                  目录打包与校验工具
+APP-DISTRIBUTION.md                     应用发布与渠道合同
 ```
 
-Translation Engine 的控制面独立位于 `public/v1/translation`。双架构完整环境包作为不可变
-GitHub Release 资产发布；公开 Manifest 只提供稳定的 `cloud.apaper.ai` 主地址与 GitHub
-Release 回退地址，不改变既有会议目录路径。
+App ZIP／DMG 与历史环境归档通过 GitHub Release 资产分发。静态服务的规范地址是
+`https://cloud.apaper.ai`，会议 Manifest 中的包路径相对于该地址解析。
 
-- `version.json` 是 App 启动时首先访问的轻量版本入口。
-- `manifest.json` 按 App 展示顺序记录完整会议目录、会议多语言名称、可选的多语言会议标签、
-  年份、状态、论文数量、数据包大小和 SHA-256。
-- `packs/<venue>/<year>.jsonl.zst` 是按会议年份拆分的只读元数据包。
-- 数据包只保存元数据和经过验证的来源链接，不保存 PDF 文件。
+## 完整性与发布规范
 
-生产环境的规范来源始终是 `https://cloud.apaper.ai`。Manifest 中的数据包路径均为相对路径。
-新增会议、修改会议多语言名称或发布新年份时，都不需要重新构建 App。
+元数据发布前校验 Schema、记录数、大小和 SHA-256。应用更新归档还需要原生代码签名检查与
+Sparkle EdDSA 签名。正式 App 分发另有 Developer ID 与公证门槛，资格验证通过不等于
+正式稳定版已获准发布。
 
-## App 同步约定
+每次发布 App 或内置资源时，必须同步更新**中英文 README 与网站**中对应的版本、构建号、
+更新时间和下载地址。信息以实际签名产物及资源变更记录为准，不用网站部署时间代替引擎
+更新时间。先上传并验证不可变 Release 资产，再发布引用它的 appcast；保留无关会议包及
+历史兼容接口。
 
-1. App 启动时请求 `version.json`，只比较远端与本地的两段式 `manifest_version`。
-2. 版本相同则停止，不重复下载 Manifest 或会议数据包。
-3. 版本不同才下载 `manifest.json`，并使用 `version.json` 中的 SHA-256 校验内容。
-4. App 根据已校验的 Manifest 动态生成会议来源列表及其本地化名称。首次启动若尚未成功同步
-   Manifest，则会议列表为空，只保留独立的 arXiv 与 bioRxiv 来源。
-5. Manifest 校验通过后，App 通过有界后台队列逐个同步会议年份包，避免集中请求服务器。
-6. 用户勾选会议年份时，如果本地数据包缺失或损坏，仍会触发一次按需恢复下载。
+在本仓库根目录执行目录校验：
 
-## 数据边界
-
-- Rust 会校验 Schema、记录数、压缩体积和 SHA-256。
-- Swift 不负责下载、解析或索引会议元数据。
-- App 的本地缓存位于 `~/Documents/aPaper`，不写入源码仓库。
-- PDF 保留在论文来源网站，仅在用户打开或导入论文时访问。
-- `source_group` 只能保存出版方提供的 track、session、subject 或 collection，不能根据标题、
-  摘要、会议名称或模型推断。
-- 没有可靠逐论文分类时，`categories` 和 `source_group` 保持为空。
-
-## 数据来源
-
-已发布或已编目的会议包括 NeurIPS、ICML、ICLR、CVPR、ACL、AAAI、IJCAI、EMNLP、
-ICCV、ECCV、AISTATS、COLT、AAMAS、CoRL、RSS、OSDI、SOSP、IEEE S&P、NDSS 和
-ACCV。每条记录保留其官方 landing URL、PDF URL、DOI（如有）和 provenance URL。
-
-ICLR 2024–2026 与 SOSP 2024–2025 目前仍包含通过参考项目 Supabase 导入的临时构建期数据。
-这些记录带有 `metadata_channel=temporary_reference_supabase_v1`，App 不会在运行时访问
-Supabase。迁移边界和拆除清单见
-`skills/manage-apaper-cloud-metadata/TEMPORARY_REFERENCE_SUPABASE_CHANNEL.md`。
-
-## 维护流程
-
-`skills/` 中为每个会议提供独立提取 Skill，并由
-`skills/manage-apaper-cloud-metadata/SKILL.md` 统一约束打包、版本升级、校验和发布流程。
-
-一次标准更新包含：
-
-1. 读取对应的 `skills/extract-<venue>-metadata/SKILL.md`，从官方来源提取数据。
-2. 规范化为 aPaper 会议记录格式，并核对数量、必填字段、重复 ID 和来源分组。
-3. 生成对应会议年份的 `.jsonl.zst` 数据包。
-4. 更新 Manifest；一次发布只推进一次两段式版本号，例如 `0.9` → `0.10`。
-5. 重新生成 `version.json`，执行本地校验和 Rust 测试。
-6. 发布到 GitHub 与 Cloudflare，并逐个核对线上数据包的大小和 SHA-256。
-
-## 通用工具
-
-从出版方提取出的 JSON 数组可以先通过通用导入器规范化：
-
-```bash
-cargo run --manifest-path apaper-cloud/Cargo.toml -- import-json \
-  --input /tmp/<venue>-<year>.json \
-  --venue <venue> \
-  --edition <venue>:<year> \
-  --year <year> \
-  --output /tmp/<venue>-<year>.jsonl
+```sh
+cargo run --locked -- validate-site public
+cargo test --locked
 ```
 
-将规范化 JSONL 打包为发布文件：
+GitHub Actions 负责会议目录和翻译引擎分发校验。历史资产路由另有测试与 Worker 打包 dry-run；
+更新其开发工具依赖不会部署或删除线上 Worker。
 
-```bash
-cargo run --manifest-path apaper-cloud/Cargo.toml -- pack \
-  --input /tmp/<venue>-<year>.jsonl \
-  --output apaper-cloud/public/v1/conferences/packs/<venue>/<year>.jsonl.zst
-```
+## E1 期刊候选
 
-在最终修改 Manifest 后更新轻量版本入口：
-
-```bash
-python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/update_version.py \
-  apaper-cloud/public
-```
-
-发布前执行完整本地校验：
-
-```bash
-cargo run --quiet --manifest-path apaper-cloud/Cargo.toml -- \
-  validate-site apaper-cloud/public
-cargo test --manifest-path apaper-cloud/Cargo.toml
-cargo test --manifest-path rust/Cargo.toml -p apaper_discovery --lib
-```
-
-部署后核对版本、Manifest 和本次变化的每个会议年份包：
-
-```bash
-python3 apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/verify_published_release.py \
-  --public apaper-cloud/public \
-  --origin https://cloud.apaper.ai \
-  --pack <venue>:<year> \
-  --pack <venue>:<year>
-```
-
-ACL Anthology XML、AAAI OAI-PMH、CVF Open Access 等来源具有各自的专用提取器；它们属于
-会议 Skill 的采集适配层，不是整个项目唯一的导入方式。
+Schema 1 保持 `venues` 仅为会议，使用独立 `journals` 扩展；旧客户端不枚举期刊，新客户端明确保留 journal 类型、ISSN、出版方文章类型、实际卷期/文章号与日期精度。年度包是分发分区，不是出版方卷号。六个 2026 许可快照截至 2026-10-14T15:44:19Z，共 1,552 条；JLB 为可用 partial/10，14 条 NC/ND 许可明确排除，另两条许可/摘要缺口仍开放。其余五源仅对声明输入、范围和截止点完整，不代表未来全年。前 66 包字节不变。候选尚未发布，不宣称公网 0.16 刷新；见[契约](docs/dp-new/E1-journal-contract.md)与 docs/dp-new/evidence/e1/ 逐源核对收据。

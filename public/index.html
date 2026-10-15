@@ -99,9 +99,21 @@
         <img src="/assets/apaper-mark.png" width="126" height="126" alt="aPaper logo">
         <h1>aPaper Cloud</h1>
       </div>
-      <p>Versioned public metadata for aPaper.</p>
+      <p>Application updates and research resources for aPaper.</p>
+      <section aria-labelledby="app-heading">
+        <h2 id="app-heading">App updates · qualification</h2>
+        <dl aria-label="Qualification App update status">
+          <dt>Version</dt>
+          <dd id="app-version">Checking…</dd>
+          <dt>Updated</dt>
+          <dd><time id="app-updated">Checking…</time></dd>
+          <dt>Channel</dt>
+          <dd><a href="https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9022">Qualification prerelease</a></dd>
+        </dl>
+      </section>
       <section aria-labelledby="conference-heading">
         <h2 id="conference-heading">Conference catalog</h2>
+        <p>Unreleased DP-NEW candidate v0.15: 25 sources, 71 editions, 66 packs. Discipline definitions and source memberships share the verified manifest.</p>
         <dl aria-label="Conference catalog status">
           <dt>Manifest</dt>
           <dd id="conference-version">Checking…</dd>
@@ -110,14 +122,16 @@
         </dl>
       </section>
       <section aria-labelledby="translation-heading">
-        <h2 id="translation-heading">Translation Engine</h2>
-        <dl aria-label="Translation Engine status">
+        <h2 id="translation-heading">Translation Engine · App bundle</h2>
+        <dl aria-label="App bundled Translation Engine resource status">
           <dt>Translator</dt>
           <dd id="translator-version">Checking…</dd>
           <dt>Environment</dt>
           <dd id="environment-version">Checking…</dd>
-          <dt>Updated</dt>
-          <dd><time id="translation-updated">Checking…</time></dd>
+          <dt>Translator updated</dt>
+          <dd><time id="translator-updated">Checking…</time></dd>
+          <dt>Environment updated</dt>
+          <dd><time id="environment-updated">Checking…</time></dd>
         </dl>
       </section>
       <footer>
@@ -139,6 +153,29 @@
         }).format(updatedAt);
       }
 
+      const appVersion = document.querySelector("#app-version");
+      const appUpdated = document.querySelector("#app-updated");
+      fetch(`/v1/app/macos/arm64/qualification/appcast.xml?check=${Date.now()}`, { cache: "no-store" })
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.text();
+        })
+        .then((text) => {
+          const xml = new DOMParser().parseFromString(text, "application/xml");
+          const item = xml.querySelector("rss > channel > item");
+          if (!item || xml.querySelector("parsererror")) throw new Error("Invalid appcast");
+          const ns = "http://www.andymatuschak.org/xml-namespaces/sparkle";
+          const version = item.getElementsByTagNameNS(ns, "shortVersionString")[0]?.textContent;
+          const build = item.getElementsByTagNameNS(ns, "version")[0]?.textContent;
+          if (!version || !build) throw new Error("Missing App identity");
+          appVersion.textContent = `${version} (${build})`;
+          displayTime(appUpdated, item.querySelector("pubDate")?.textContent);
+        })
+        .catch(() => {
+          appVersion.textContent = "Not published";
+          appUpdated.textContent = "—";
+        });
+
       const conferenceVersion = document.querySelector("#conference-version");
       const conferenceUpdated = document.querySelector("#conference-updated");
 
@@ -156,24 +193,28 @@
           conferenceUpdated.textContent = "Unavailable";
         });
 
+
       const translatorVersion = document.querySelector("#translator-version");
       const environmentVersion = document.querySelector("#environment-version");
-      const translationUpdated = document.querySelector("#translation-updated");
+      const translatorUpdated = document.querySelector("#translator-updated");
+      const environmentUpdated = document.querySelector("#environment-updated");
 
-      fetch(`/v1/translation/version.json?check=${Date.now()}`, { cache: "no-store" })
+      fetch(`/v1/app/macos/arm64/components/translation.json?check=${Date.now()}`, { cache: "no-store" })
         .then((response) => {
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           return response.json();
         })
-        .then((release) => {
-          translatorVersion.textContent = release.translator_version;
-          environmentVersion.textContent = release.environment_version;
-          displayTime(translationUpdated, release.updated_at);
+        .then((resource) => {
+          translatorVersion.textContent = resource.translator_version;
+          environmentVersion.textContent = resource.environment_archive_revision;
+          displayTime(translatorUpdated, resource.translator_updated_at);
+          displayTime(environmentUpdated, resource.environment_updated_at);
         })
         .catch(() => {
           translatorVersion.textContent = "Unavailable";
           environmentVersion.textContent = "Unavailable";
-          translationUpdated.textContent = "Unavailable";
+          translatorUpdated.textContent = "Unavailable";
+          environmentUpdated.textContent = "Unavailable";
         });
     </script>
   </body>

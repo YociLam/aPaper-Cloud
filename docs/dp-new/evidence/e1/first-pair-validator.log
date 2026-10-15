@@ -1,0 +1,3 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running `target/debug/apaper-cloud validate-site public`
+validated 27 venues and 73 exact editions

@@ -1,0 +1,74 @@
+[
+  {
+    "test": "engine::tests::broader_fallback_recovers_from_an_empty_focused_query",
+    "baseline": "assertion `left == right` failed\n  left: 0\n right: 1",
+    "candidate": "assertion `left == right` failed\n  left: 0\n right: 1",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::daily_archive_keeps_only_the_latest_feed_pointer_for_each_local_day",
+    "baseline": "assertion `left == right` failed\n  left: 0\n right: 20",
+    "candidate": "assertion `left == right` failed\n  left: 0\n right: 20",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::daily_research_search_uses_local_home_and_twelve_item_pages",
+    "baseline": "assertion `left == right` failed\n  left: 0\n right: 12",
+    "candidate": "assertion `left == right` failed\n  left: 0\n right: 12",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::newer_version_is_not_blocked_by_seen_manifestation_key",
+    "baseline": "",
+    "candidate": "",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::opened_paper_is_excluded_before_the_next_ranking_pass",
+    "baseline": "",
+    "candidate": "",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::previewed_paper_can_be_recommended_again",
+    "baseline": "",
+    "candidate": "",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::read_later_paper_is_excluded_before_the_next_ranking_pass",
+    "baseline": "",
+    "candidate": "",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::refresh_publishes_atomic_disjoint_feed_and_hides_scores",
+    "baseline": "assertion `left == right` failed\n  left: 0\n right: 1",
+    "candidate": "assertion `left == right` failed\n  left: 0\n right: 1",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::refresh_publishes_available_candidates_when_relevance_is_underfilled",
+    "baseline": "assertion `left == right` failed\n  left: 0\n right: 1",
+    "candidate": "assertion `left == right` failed\n  left: 0\n right: 1",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::repeated_refresh_keeps_soft_lifecycle_states_eligible_and_excludes_dismissed",
+    "baseline": "",
+    "candidate": "",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::selection_keeps_each_active_query_group_represented",
+    "baseline": "",
+    "candidate": "",
+    "matching_failure": true
+  },
+  {
+    "test": "engine::tests::successful_refresh_records_stage_counts_and_timings",
+    "baseline": "assertion `left == right` failed\n  left: 0\n right: 20",
+    "candidate": "assertion `left == right` failed\n  left: 0\n right: 20",
+    "matching_failure": true
+  }
+]

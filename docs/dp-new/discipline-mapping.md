@@ -1,0 +1,46 @@
+# DP-NEW discipline mapping
+
+Classification codes and canonical English names were checked against [OECD Frascati Manual 2015, Table 2.2, printed p.59](https://www.oecd.org/content/dam/oecd/en/publications/reports/2015/10/frascati-manual-2015_g1g57dcb/9789264239012-en.pdf).
+
+The taxonomy is authoritative; the venue assignments below are aPaper engineering review, not an OECD venue classification. Chinese names are aPaper display translations. Stable IDs do not depend on labels. Reference hierarchy is intentionally not a UI hierarchy. Paper categories and publisher tracks remain independent.
+
+| Code | Canonical English | aPaper zh-Hans | Order |
+| --- | --- | --- | ---: |
+| 1.2 | Computer and information sciences | 计算机与信息科学 | 0 |
+| 1.1 | Mathematics | 数学 | 1 |
+| 1.6 | Biological sciences | 生物科学 | 2 |
+| 2.2 | Electrical engineering, electronic engineering, information engineering | 电气工程、电子工程与信息工程 | 3 |
+| 2.6 | Medical engineering | 医学工程 | 4 |
+| 3.3 | Health sciences | 健康科学 | 5 |
+
+| Venue | Codes | Official scope evidence | Reviewed rationale |
+| --- | --- | --- | --- |
+| NeurIPS | 1.2 | [Conference on Neural Information Processing Systems](https://proceedings.neurips.cc/paper_files/paper/2025) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| ICML | 1.2 | [International Conference on Machine Learning](https://proceedings.mlr.press/v306/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| ICLR | 1.2 | [International Conference on Learning Representations](https://openreview.net/group?id=ICLR.cc/2026/Conference) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| CVPR | 1.2 | [Conference on Computer Vision and Pattern Recognition](https://openaccess.thecvf.com/CVPR2026?day=all) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| ACL | 1.2 | [Annual Meeting of the Association for Computational Linguistics](https://aclanthology.org/events/acl-2026/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| AAAI | 1.2 | [AAAI Conference on Artificial Intelligence](https://ojs.aaai.org/index.php/AAAI/issue/archive) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| IJCAI | 1.2 | [International Joint Conference on Artificial Intelligence](https://www.ijcai.org/proceedings/2026/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| EMNLP | 1.2 | [Conference on Empirical Methods in Natural Language Processing](https://aclanthology.org/events/emnlp-2026/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| ICCV | 1.2 | [International Conference on Computer Vision](https://openaccess.thecvf.com/ICCV2025?day=all) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| ECCV | 1.2 | [European Conference on Computer Vision](https://www.ecva.net/papers.php) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| AISTATS | 1.2, 1.1 | [International Conference on Artificial Intelligence and Statistics](https://proceedings.mlr.press/v300/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. Statistics/learning theory is central to the named mathematical proceedings scope, so also 1.1. |
+| COLT | 1.2, 1.1 | [Conference on Learning Theory](https://proceedings.mlr.press/v336/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. Statistics/learning theory is central to the named mathematical proceedings scope, so also 1.1. |
+| AAMAS | 1.2 | [International Conference on Autonomous Agents and Multiagent Systems](https://ifaamas.org/Proceedings/aamas2026/forms/contents.htm) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| CoRL | 1.2, 2.2 | [Conference on Robot Learning](https://proceedings.mlr.press/v305/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. Robotics/control methods and engineered information/control systems are central to its scope, so also 2.2. |
+| RSS | 1.2, 2.2 | [Robotics: Science and Systems](https://roboticsproceedings.org/rss22/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. Robotics/control methods and engineered information/control systems are central to its scope, so also 2.2. |
+| OSDI | 1.2 | [USENIX Symposium on Operating Systems Design and Implementation](https://www.usenix.org/conference/osdi26/technical-sessions) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| SOSP | 1.2 | [ACM Symposium on Operating Systems Principles](https://dl.acm.org/doi/proceedings/10.1145/3731569) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| IEEE S&P | 1.2 | [IEEE Symposium on Security and Privacy](https://www.ieee-security.org/TC/SP2026/program.html) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| NDSS | 1.2 | [Network and Distributed System Security Symposium](https://www.ndss-symposium.org/ndss2026/accepted-papers/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| ACCV | 1.2 | [Asian Conference on Computer Vision](https://openaccess.thecvf.com/ACCV2024?day=all) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. |
+| MIDL | 1.2, 2.6 | [Medical Imaging with Deep Learning](https://proceedings.mlr.press/v315/) | Deep learning and medical imaging methods are the named scope: computing 1.2 and medical engineering 2.6; no blanket clinical-medicine classification. |
+| MLHC | 1.2, 3.3 | [Machine Learning for Healthcare Conference](https://proceedings.mlr.press/v340/) | Machine learning/inference plus healthcare/health systems are the named scope: computing 1.2 and health sciences 3.3. |
+| CHIL | 1.2, 3.3 | [Conference on Health, Inference, and Learning](https://proceedings.mlr.press/v333/) | Machine learning/inference plus healthcare/health systems are the named scope: computing 1.2 and health sciences 3.3. |
+| MLCB | 1.2, 1.6 | [Machine Learning in Computational Biology meeting](https://proceedings.mlr.press/v311/) | Machine learning in computational biology is the named scope: computing 1.2 and biological sciences 1.6. |
+| L4DC | 1.2, 2.2 | [Learning for Dynamics and Control Conference](https://proceedings.mlr.press/v331/) | The official conference/proceedings scope is computing, AI, ML, computational language, vision, or computer systems/security; 1.2 is the source discipline, not a paper relevance signal. Robotics/control methods and engineered information/control systems are central to its scope, so also 2.2. |
+
+No tags are inferred from individual paper applications. Unused definitions do not render. The same manifest SHA covers definitions and references; no independently synchronized taxonomy file exists.
+
+Future source kinds may reuse this manifest-level classification. This release only exposes supported conference adapters, with no journal runtime claim.

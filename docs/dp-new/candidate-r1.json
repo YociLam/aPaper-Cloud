@@ -1,0 +1,82 @@
+{
+  "manifest_version": "0.15",
+  "manifest_sha256": "137165cc72dadc950f882b5bbefe32d1017a3d6f2ce5e6418d3c59b54d2d0b9a",
+  "sources": 25,
+  "editions": 71,
+  "packs": 66,
+  "changed_packs": [
+    {
+      "edition": "icml:2026",
+      "path": "packs/icml/2026.jsonl.zst",
+      "record_count": 6552,
+      "compressed_bytes": 2910598,
+      "sha256": "8a12d71721aa5b8255a8a93d6d24dbb17f48fb92a5d6cc563f80101c3f44dad3",
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "ijcai:2026",
+      "path": "packs/ijcai/2026.jsonl.zst",
+      "record_count": 972,
+      "compressed_bytes": 451087,
+      "sha256": "562518753fbd50e573380b118fc5e4a2f6be14e25d6c3c730a7423a06976670d",
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "iccv:2025",
+      "path": "packs/iccv/2025.jsonl.zst",
+      "record_count": 2701,
+      "compressed_bytes": 1271630,
+      "sha256": "3d1d9b988d2dd66721dd893713477f98fe96c6853cb5f1536efb2dc4cc005f01",
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "aamas:2026",
+      "path": "packs/aamas/2026.jsonl.zst",
+      "sha256": "0c3b0368246d76105a9b31d749b4df7d3e19f2d0adf168a8ffa9730ba6df2823",
+      "compressed_bytes": 297321,
+      "record_count": 640,
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "midl:2026",
+      "path": "packs/midl/2026.jsonl.zst",
+      "record_count": 221,
+      "compressed_bytes": 122624,
+      "sha256": "6525d847e455bc44514cba982940842c2ae6f3528c70106780761affb1b1e987",
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "mlhc:2026",
+      "path": "packs/mlhc/2026.jsonl.zst",
+      "record_count": 74,
+      "compressed_bytes": 48918,
+      "sha256": "e006e27b6dcc76548edbec88ec02a108e31eddbc922eb3615c1adc389c07796a",
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "chil:2026",
+      "path": "packs/chil/2026.jsonl.zst",
+      "record_count": 40,
+      "compressed_bytes": 23373,
+      "sha256": "0fd9bbc6719bf9bfc37b2dcfafad854ce61f0ebc6de9e63d8fa625ce55260e09",
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "mlcb:2025",
+      "path": "packs/mlcb/2025.jsonl.zst",
+      "record_count": 23,
+      "compressed_bytes": 13931,
+      "sha256": "ca2c06862238be665848f1bacfa77812484bb6cf460629c32dfc19cbf9debd8c",
+      "pack_version": "0.15"
+    },
+    {
+      "edition": "l4dc:2026",
+      "path": "packs/l4dc/2026.jsonl.zst",
+      "record_count": 106,
+      "compressed_bytes": 50403,
+      "sha256": "def4a53717b877a655b9895e89cbf4775ab6c35a9270c439a36e40f08e659998",
+      "pack_version": "0.15"
+    }
+  ],
+  "development_copy": "all66 hashes and bytes equal; manifest/version/tools/AAMAS Skill equal"
+}

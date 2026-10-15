@@ -1,0 +1,290 @@
+[
+  {
+    "venue": "midl",
+    "volume": "v315",
+    "year": 2026,
+    "skill": "skills/extract-midl-metadata/SKILL.md",
+    "skill_validated_before_replay": true,
+    "record_count": 221,
+    "replayed_pack_sha256": "6525d847e455bc44514cba982940842c2ae6f3528c70106780761affb1b1e987",
+    "candidate_bytes_identical": true,
+    "commands": [
+      [
+        "python3",
+        "apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/fetch_pmlr_volume.py",
+        "--volume",
+        "v315",
+        "--venue",
+        "midl",
+        "--year",
+        "2026",
+        "--expected-title-fragment",
+        "Medical Imaging with Deep Learning",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/midl/input.json"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "import-json",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/midl/input.json",
+        "--venue",
+        "midl",
+        "--edition",
+        "midl:2026",
+        "--year",
+        "2026",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/midl/records.jsonl"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "pack",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/midl/records.jsonl",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/midl/pack.jsonl.zst"
+      ]
+    ]
+  },
+  {
+    "venue": "mlhc",
+    "volume": "v340",
+    "year": 2026,
+    "skill": "skills/extract-mlhc-metadata/SKILL.md",
+    "skill_validated_before_replay": true,
+    "record_count": 74,
+    "replayed_pack_sha256": "e006e27b6dcc76548edbec88ec02a108e31eddbc922eb3615c1adc389c07796a",
+    "candidate_bytes_identical": true,
+    "commands": [
+      [
+        "python3",
+        "apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/fetch_pmlr_volume.py",
+        "--volume",
+        "v340",
+        "--venue",
+        "mlhc",
+        "--year",
+        "2026",
+        "--expected-title-fragment",
+        "Machine Learning for Healthcare",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/mlhc/input.json"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "import-json",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/mlhc/input.json",
+        "--venue",
+        "mlhc",
+        "--edition",
+        "mlhc:2026",
+        "--year",
+        "2026",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/mlhc/records.jsonl"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "pack",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/mlhc/records.jsonl",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/mlhc/pack.jsonl.zst"
+      ]
+    ]
+  },
+  {
+    "venue": "chil",
+    "volume": "v333",
+    "year": 2026,
+    "skill": "skills/extract-chil-metadata/SKILL.md",
+    "skill_validated_before_replay": true,
+    "record_count": 40,
+    "replayed_pack_sha256": "0fd9bbc6719bf9bfc37b2dcfafad854ce61f0ebc6de9e63d8fa625ce55260e09",
+    "candidate_bytes_identical": true,
+    "commands": [
+      [
+        "python3",
+        "apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/fetch_pmlr_volume.py",
+        "--volume",
+        "v333",
+        "--venue",
+        "chil",
+        "--year",
+        "2026",
+        "--expected-title-fragment",
+        "Health, Inference, and Learning",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/chil/input.json"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "import-json",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/chil/input.json",
+        "--venue",
+        "chil",
+        "--edition",
+        "chil:2026",
+        "--year",
+        "2026",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/chil/records.jsonl"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "pack",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/chil/records.jsonl",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/chil/pack.jsonl.zst"
+      ]
+    ]
+  },
+  {
+    "venue": "mlcb",
+    "volume": "v311",
+    "year": 2025,
+    "skill": "skills/extract-mlcb-metadata/SKILL.md",
+    "skill_validated_before_replay": true,
+    "record_count": 23,
+    "replayed_pack_sha256": "ca2c06862238be665848f1bacfa77812484bb6cf460629c32dfc19cbf9debd8c",
+    "candidate_bytes_identical": true,
+    "commands": [
+      [
+        "python3",
+        "apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/fetch_pmlr_volume.py",
+        "--volume",
+        "v311",
+        "--venue",
+        "mlcb",
+        "--year",
+        "2025",
+        "--expected-title-fragment",
+        "Machine Learning in Computational Biology",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/mlcb/input.json"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "import-json",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/mlcb/input.json",
+        "--venue",
+        "mlcb",
+        "--edition",
+        "mlcb:2025",
+        "--year",
+        "2025",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/mlcb/records.jsonl"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "pack",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/mlcb/records.jsonl",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/mlcb/pack.jsonl.zst"
+      ]
+    ]
+  },
+  {
+    "venue": "l4dc",
+    "volume": "v331",
+    "year": 2026,
+    "skill": "skills/extract-l4dc-metadata/SKILL.md",
+    "skill_validated_before_replay": true,
+    "record_count": 106,
+    "replayed_pack_sha256": "def4a53717b877a655b9895e89cbf4775ab6c35a9270c439a36e40f08e659998",
+    "candidate_bytes_identical": true,
+    "commands": [
+      [
+        "python3",
+        "apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/fetch_pmlr_volume.py",
+        "--volume",
+        "v331",
+        "--venue",
+        "l4dc",
+        "--year",
+        "2026",
+        "--expected-title-fragment",
+        "Learning for Dynamics and Control",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/l4dc/input.json"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "import-json",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/l4dc/input.json",
+        "--venue",
+        "l4dc",
+        "--edition",
+        "l4dc:2026",
+        "--year",
+        "2026",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/l4dc/records.jsonl"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "pack",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/l4dc/records.jsonl",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/l4dc/pack.jsonl.zst"
+      ]
+    ]
+  },
+  {
+    "venue": "icml",
+    "volume": "v306",
+    "year": 2026,
+    "skill": "skills/extract-icml-metadata/SKILL.md",
+    "skill_validated_before_replay": true,
+    "record_count": 6552,
+    "replayed_pack_sha256": "8a12d71721aa5b8255a8a93d6d24dbb17f48fb92a5d6cc563f80101c3f44dad3",
+    "candidate_bytes_identical": true,
+    "commands": [
+      [
+        "python3",
+        "apaper-cloud/skills/manage-apaper-cloud-metadata/scripts/fetch_pmlr_volume.py",
+        "--volume",
+        "v306",
+        "--venue",
+        "icml",
+        "--year",
+        "2026",
+        "--expected-title-fragment",
+        "International Conference on Machine Learning",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/icml/input.json"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "import-json",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/icml/input.json",
+        "--venue",
+        "icml",
+        "--edition",
+        "icml:2026",
+        "--year",
+        "2026",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/icml/records.jsonl"
+      ],
+      [
+        "apaper-cloud/target/debug/apaper-cloud",
+        "pack",
+        "--input",
+        "/tmp/dp-new-evidence/revalidated/icml/records.jsonl",
+        "--output",
+        "/tmp/dp-new-evidence/revalidated/icml/pack.jsonl.zst"
+      ]
+    ]
+  }
+]

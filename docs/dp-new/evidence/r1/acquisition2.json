@@ -1,0 +1,224 @@
+[
+  {
+    "key": "acl_xml",
+    "url": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2026.acl.xml",
+    "status": 200,
+    "bytes": 7315152,
+    "content_length": "7315152",
+    "sha256": "f2f798cc4fe127e8c0b6c5384ee8d20a7433ef05b0a949f69e749ed8c96bd941"
+  },
+  {
+    "key": "findings_xml",
+    "url": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2026.findings-acl.xml",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "sosp_accepted",
+    "url": "https://sigops.org/s/conferences/sosp/2026/accepted.html",
+    "status": 200,
+    "bytes": 46164,
+    "content_length": "46164",
+    "sha256": "aa9882bdf2df1d9cb3da3760d6f6b1ed24d2d50e4c2002b92175d593fcb509d5"
+  },
+  {
+    "key": "sosp_program",
+    "url": "https://sigops.org/s/conferences/sosp/2026/program.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "iclr_notes_alt",
+    "url": "https://api2.openreview.net/notes?content.venueid=ICLR.cc/2026/Conference&limit=100&offset=0",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "iclr_submissions",
+    "url": "https://api2.openreview.net/notes?invitation=ICLR.cc/2026/Conference/-/Submission&limit=1000&offset=0",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "2026.acl-industry.1",
+    "url": "https://aclanthology.org/2026.acl-industry.1/",
+    "status": 200,
+    "bytes": 34908,
+    "content_length": "34908",
+    "sha256": "24c015539be59ead955b28b19a04024897f08c15ec0e0f43aefe83534828088c"
+  },
+  {
+    "key": "2026.acl-long.1232",
+    "url": "https://aclanthology.org/2026.acl-long.1232/",
+    "status": 200,
+    "bytes": 40006,
+    "content_length": "40006",
+    "sha256": "949c917b484422672a8b2381e1b32b72c187b6b6ea300d87b8e6499da0920d4d"
+  },
+  {
+    "key": "2026.findings-acl.128",
+    "url": "https://aclanthology.org/2026.findings-acl.128/",
+    "status": 200,
+    "bytes": 40705,
+    "content_length": "40705",
+    "sha256": "e246f27cad017d5b3e9f6fe6292411a7f91f584fdd40e52aae46bbc2e9f93562"
+  },
+  {
+    "key": "2026.findings-acl.138",
+    "url": "https://aclanthology.org/2026.findings-acl.138/",
+    "status": 200,
+    "bytes": 40652,
+    "content_length": "40652",
+    "sha256": "6ee1b821b426db2dcceaa62e40fafe1bd0fd615627a3795d4b767f79eb1748fa"
+  },
+  {
+    "key": "2026.findings-acl.1664",
+    "url": "https://aclanthology.org/2026.findings-acl.1664/",
+    "status": 200,
+    "bytes": 38150,
+    "content_length": "38150",
+    "sha256": "505f6efe40b81dbecdd0301b6765e2d8c9898c50e281dfc99f465d09f751376a"
+  },
+  {
+    "key": "2026.findings-acl.2161",
+    "url": "https://aclanthology.org/2026.findings-acl.2161/",
+    "status": 200,
+    "bytes": 36642,
+    "content_length": "36642",
+    "sha256": "fa4c44761e272dd253217dfed89c101d86b6750efbf566f256b0ff7c6af2eced"
+  },
+  {
+    "key": "2026.findings-acl.532",
+    "url": "https://aclanthology.org/2026.findings-acl.532/",
+    "status": 200,
+    "bytes": 37402,
+    "content_length": "37402",
+    "sha256": "f108a7430440e4400a114ef8874c4cd532941e0f68fe9d7613bdbc424d0e52fe"
+  },
+  {
+    "key": "Ahmed_Boundary-Responsive_Differentiable_Gating_for_Superpixel-Based_Segmentation_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Ahmed_Boundary-Responsive_Differentiable_Gating_for_Superpixel-Based_Segmentation_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Bae_Align_While_Search_Belief-Guided_Exploratory_Inference_for_World-Grounded_Embodied_Agents_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Bae_Align_While_Search_Belief-Guided_Exploratory_Inference_for_World-Grounded_Embodied_Agents_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Berman_Scene-VLM_Multimodal_Video_Scene_Segmentation_via_Vision-Language_Models_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Berman_Scene-VLM_Multimodal_Video_Scene_Segmentation_via_Vision-Language_Models_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Cai_AutoDebias_An_Automated_Framework_for_Detecting_and_Mitigating_Backdoor_Biases_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Cai_AutoDebias_An_Automated_Framework_for_Detecting_and_Mitigating_Backdoor_Biases_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Chai_RECS4R_Bridging_Semantics_and_Geometry_for_Referring_Remote_Sensing_Interpretation_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chai_RECS4R_Bridging_Semantics_and_Geometry_for_Referring_Remote_Sensing_Interpretation_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Chen_UniT_Unified_Multimodal_Chain-of-Thought_Test-time_Scaling_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chen_UniT_Unified_Multimodal_Chain-of-Thought_Test-time_Scaling_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Chowdhury_AMusE_Audio-Visual_Benchmark_and_Alignment_Framework_for_Agentic_Multi-Speaker_Understanding_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Chowdhury_AMusE_Audio-Visual_Benchmark_and_Alignment_Framework_for_Agentic_Multi-Speaker_Understanding_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Fan_ExMesh_EXplicit_Mesh_Reconstruction_with_Topology_Adaptation_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Fan_ExMesh_EXplicit_Mesh_Reconstruction_with_Topology_Adaptation_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Guan_Beyond_Endpoints_Path-Centric_Reasoning_for_Vectorized_Off-Road_Network_Extraction_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Guan_Beyond_Endpoints_Path-Centric_Reasoning_for_Vectorized_Off-Road_Network_Extraction_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Gudavalli_WRIVINDER_Towards_Spatial_Intelligence_for_Geo-locating_Ground_Images_onto_Satellite_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Gudavalli_WRIVINDER_Towards_Spatial_Intelligence_for_Geo-locating_Ground_Images_onto_Satellite_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Jeong_Draft_and_Refine_with_Visual_Experts_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jeong_Draft_and_Refine_with_Visual_Experts_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Jia_Evaluating_Generative_Models_via_One-Dimensional_Code_Distributions_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jia_Evaluating_Generative_Models_via_One-Dimensional_Code_Distributions_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Lassoued_ORCA_Orchestrated_Reasoning_with_Collaborative_Agents_for_Document_Visual_Question_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lassoued_ORCA_Orchestrated_Reasoning_with_Collaborative_Agents_for_Document_Visual_Question_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Li_Exploring_the_Underwater_World_Segmentation_without_Extra_Training_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Exploring_the_Underwater_World_Segmentation_without_Extra_Training_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Omama_AsymLoc_Towards_Asymmetric_Feature_Matching_for_Efficient_Visual_Localization_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Omama_AsymLoc_Towards_Asymmetric_Feature_Matching_for_Efficient_Visual_Localization_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Papais_SToRe3D_Sparse_Token_Relevance_in_ViTs_for_Efficient_Multi-View_3D_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Papais_SToRe3D_Sparse_Token_Relevance_in_ViTs_for_Efficient_Multi-View_3D_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Patwari_Composite-Attribute_Person_Re-Identification_via_Pose-Guided_Disentanglement_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Patwari_Composite-Attribute_Person_Re-Identification_via_Pose-Guided_Disentanglement_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Paul_Point_Cloud_as_a_Foreign_Language_for_Multi-modal_Large_Language_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Paul_Point_Cloud_as_a_Foreign_Language_for_Multi-modal_Large_Language_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Truong_SIGMA_A_Physics-Based_Benchmark_for_Gas_Chimney_Understanding_in_Seismic_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Truong_SIGMA_A_Physics-Based_Benchmark_for_Gas_Chimney_Understanding_in_Seismic_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Wang_FVBench_Benchmarking_Deepfake_Video_Detection_Capability_of_Large_Multimodal_Models_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_FVBench_Benchmarking_Deepfake_Video_Detection_Capability_of_Large_Multimodal_Models_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Xie_Similarity-as-Evidence_Calibrating_Overconfident_VLMs_for_Interpretable_and_Label-Efficient_Medical_Active_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xie_Similarity-as-Evidence_Calibrating_Overconfident_VLMs_for_Interpretable_and_Label-Efficient_Medical_Active_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Yang_Factorize_Reconstruct_Enhance_A_Unified_Framework_for_Multimodal_Sentiment_Analysis_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Factorize_Reconstruct_Enhance_A_Unified_Framework_for_Multimodal_Sentiment_Analysis_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Zhang_SAM2Text_Towards_Prompt-Free_and_Multi-Resolution_Video_Scene_Text_Segmentation_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_SAM2Text_Towards_Prompt-Free_and_Multi-Resolution_Video_Scene_Text_Segmentation_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Zhao_FLOW_Optimal_Transport-Driven_Feature_Warping_for_Generalized_Remote_Physiological_Measurement_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_FLOW_Optimal_Transport-Driven_Feature_Warping_for_Generalized_Remote_Physiological_Measurement_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Zheng_TrajTok_Learning_Trajectory_Tokens_Enhances_Video_Understanding_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zheng_TrajTok_Learning_Trajectory_Tokens_Enhances_Video_Understanding_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "Zhu_Personalized_Longitudinal_Medical_Report_Generation_via_Temporally-Aware_Federated_Adaptation_CVPR_2026_paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_Personalized_Longitudinal_Medical_Report_Generation_via_Temporally-Aware_Federated_Adaptation_CVPR_2026_paper.html",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "bundle_path": "/Users/junesum/.codex/worktrees/dp-new/AtomPaper/.build/macos/Debug-dp-new-native-qualification/aPaper-arm64.app",
+  "bundle_id": "com.atompaper.APaperDPNewQualification",
+  "pid": 89210,
+  "executable": "/Users/junesum/.codex/worktrees/dp-new/AtomPaper/.build/macos/Debug-dp-new-native-qualification/aPaper-arm64.app/Contents/MacOS/aPaper",
+  "executable_sha256": "8b52df0d02811fcf1f0d5d3541db92379089648d9ec791d5c84b7af2ced3fa9b",
+  "source_head": "e0e329455aab5056f9dd2817de33ac9fbf6ed8f7",
+  "data_root": "/var/folders/wl/g0m40l115jg74r9qmy662zr80000gn/T/apaper-dp-new-7y4zcgr_/AppData",
+  "witness": "/var/folders/wl/g0m40l115jg74r9qmy662zr80000gn/T/apaper-dp-new-7y4zcgr_/qualification-startup.json",
+  "manifest_sha256": "dab9dbdb1e042e74879618aeb5a3208147b4d0da28f0612f24e8c1d984ab4974",
+  "qualification_origin_override": "https://127.0.0.1:9",
+  "catalog_installation": "previously checksummed candidate cache fixture; production checksum rules retained",
+  "startup_witness": {
+    "appDataRootPath": "/var/folders/wl/g0m40l115jg74r9qmy662zr80000gn/T/apaper-dp-new-7y4zcgr_/AppData",
+    "buildConfiguration": "Debug",
+    "bundleIdentifier": "com.atompaper.APaperDPNewQualification",
+    "coreRootPath": "/var/folders/wl/g0m40l115jg74r9qmy662zr80000gn/T/apaper-dp-new-7y4zcgr_/AppData",
+    "createdAt": "2026-10-14T11:51:32Z",
+    "executablePath": "/Users/junesum/.codex/worktrees/dp-new/AtomPaper/.build/macos/Debug-dp-new-native-qualification/aPaper-arm64.app/Contents/MacOS/aPaper",
+    "mode": "dp-new-native-qualification",
+    "processID": 89210,
+    "productionRootPath": "/Users/junesum/Documents/aPaper-K",
+    "sourceRevision": "e0e329455aab5056f9dd2817de33ac9fbf6ed8f7"
+  },
+  "initial_observed_executable_sha256": "f1f7a5cb0e4e84b5fd81f7fd7c10041291c5de01a14dc091b7b5875fa9cd8770",
+  "native_result": "BLOCKED: guest gate did not advance; final ScreenCaptureKit stream error -3811"
+}

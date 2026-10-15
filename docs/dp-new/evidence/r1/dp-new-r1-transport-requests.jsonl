@@ -1,0 +1,48 @@
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"old": true}}
+{"method": "GET", "path": "/v1/conferences/manifest.json", "mode": {"old": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"old": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"bad_manifest_hash": true}}
+{"method": "GET", "path": "/v1/conferences/manifest.json", "mode": {"bad_manifest_hash": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/manifest.json", "mode": {}}
+{"method": "HEAD", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "HEAD", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "HEAD", "path": "/v1/conferences/packs/aistats/2026.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/aistats/2026.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/aistats/2026.jsonl.zst", "mode": {}}
+{"method": "HEAD", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "HEAD", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"bad_pack": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"bad_pack": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"bad_pack": true}}
+{"method": "HEAD", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"interrupted": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"interrupted": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"interrupted": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"interrupted": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"interrupted": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"interrupted": true}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {"interrupted": true}}
+{"method": "HEAD", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/packs/iccv/2025.jsonl.zst", "mode": {}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/version.json", "mode": {"offline": true}}
+{"method": "HEAD", "path": "/v1/conferences/packs/midl/2026.jsonl.zst", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/packs/midl/2026.jsonl.zst", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/packs/midl/2026.jsonl.zst", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/packs/midl/2026.jsonl.zst", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/packs/midl/2026.jsonl.zst", "mode": {"offline": true}}
+{"method": "GET", "path": "/v1/conferences/packs/midl/2026.jsonl.zst", "mode": {"offline": true}}

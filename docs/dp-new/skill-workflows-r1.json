@@ -1,0 +1,12 @@
+{
+  "aamas": {
+    "command": "/tmp/dp-new-skill-runtime/bin/python /tmp/dp-new-r1-aamas.py",
+    "script_sha256": "bee388ce75853da5a4485f1c347430e9d2b6f67d36fb605cf234a45ca020ea7a",
+    "result": "PDF column OCR -> labeled abstract -> manual comparison -> official TOC metadata -> import-json -> pack;639 retained equal;1 admitted",
+    "reusable_skill": "apaper-cloud/skills/extract-aamas-metadata/SKILL.md"
+  },
+  "acl": {
+    "command": "cargo run --locked --quiet -- ingest-acl --input acl_xml.data --input findings_xml.data --venue acl --edition acl:2026 --year 2026 --output reconciled.jsonl",
+    "result": "4806 identical existing IDs,7 excluded incomplete; no ACL repack"
+  }
+}

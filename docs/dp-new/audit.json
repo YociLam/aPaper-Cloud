@@ -1,0 +1,808 @@
+[
+  {
+    "venue": "neurips",
+    "source": "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference",
+    "checked_at": "2026-10-14T10:38:30Z",
+    "http_status": 200,
+    "finding": "verified no change: exact latest proceedings index identities match the declared pack scope",
+    "previous_editions": [
+      {
+        "id": "neurips:2026",
+        "state": "announced",
+        "count": 0,
+        "pack_present": false
+      },
+      {
+        "id": "neurips:2025",
+        "state": "published",
+        "count": 5823,
+        "pack_present": true
+      },
+      {
+        "id": "neurips:2024",
+        "state": "published",
+        "count": 4493,
+        "pack_present": true
+      },
+      {
+        "id": "neurips:2023",
+        "state": "published",
+        "count": 3540,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 5823,
+    "pack_edition": "neurips:2025",
+    "missing_from_pack": 0,
+    "absent_from_index": 0,
+    "result": "unchanged"
+  },
+  {
+    "venue": "icml",
+    "source": "https://proceedings.mlr.press/v306/",
+    "checked_at": "2026-10-14T10:04:09Z",
+    "http_status": 200,
+    "finding": "new edition available: final PMLR v306; ingested 6,552 records; prior declared count 6,341 was not a pack",
+    "previous_editions": [
+      {
+        "id": "icml:2026",
+        "state": "cataloged",
+        "count": 6341,
+        "pack_present": false
+      },
+      {
+        "id": "icml:2025",
+        "state": "published",
+        "count": 3330,
+        "pack_present": true
+      },
+      {
+        "id": "icml:2024",
+        "state": "published",
+        "count": 2610,
+        "pack_present": true
+      },
+      {
+        "id": "icml:2023",
+        "state": "published",
+        "count": 1828,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 3330,
+    "pack_edition": "icml:2025",
+    "missing_from_pack": 0,
+    "absent_from_index": 0,
+    "result": "published / 6552",
+    "checked_sources": [
+      {
+        "url": "https://proceedings.mlr.press/v267/",
+        "checked_at": "2026-10-14T10:04:42Z"
+      },
+      {
+        "url": "https://proceedings.mlr.press/v306/",
+        "checked_at": "2026-10-14T10:04:09Z"
+      }
+    ]
+  },
+  {
+    "venue": "iclr",
+    "source": "https://openreview.net/group?id=ICLR.cc/2026/Conference",
+    "checked_at": "2026-10-14T10:04:09Z",
+    "http_status": 200,
+    "finding": "local ingestion incomplete: OpenReview group accessible, accepted final identity and PDF reconciliation not completed; retain temporary provenance and valid partial packs",
+    "previous_editions": [
+      {
+        "id": "iclr:2026",
+        "state": "partial",
+        "count": 5359,
+        "pack_present": true
+      },
+      {
+        "id": "iclr:2025",
+        "state": "partial",
+        "count": 3708,
+        "pack_present": true
+      },
+      {
+        "id": "iclr:2024",
+        "state": "partial",
+        "count": 2261,
+        "pack_present": true
+      },
+      {
+        "id": "iclr:2023",
+        "state": "partial",
+        "count": 435,
+        "pack_present": true
+      }
+    ],
+    "result": "partial / unchanged",
+    "r1": {
+      "disposition": "Precisely blocked by an external prerequisite",
+      "finding": "Official virtual dataset includes BlogPosts, journal-to-conference entries and 223 synthetic negative-sourceid oral entries. Filtering to exact Conference source URL, positive sourceid and accepted decision leaves 5353 unique IDs, all in retained 5359 pack. Six remaining final acceptance/withdrawal states require publisher OpenReview notes; API notes queries return403 and all six forums redirect to browser verification. No challenge bypass; no deletions; temporary provenance preserved. Virtual attendance list alone is not final proceedings identity.",
+      "remaining_ids": [
+        "GqulkP3c1W",
+        "H8tismBT3Q",
+        "YYUNm7IibC",
+        "ZLJsJ8IWUz",
+        "aSKrSpVrCu",
+        "w2tnhhMbXv"
+      ],
+      "evidence": "evidence/r1/iclr-final-scope.json"
+    }
+  },
+  {
+    "venue": "cvpr",
+    "source": "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "checked_at": "2026-10-14T10:04:09Z",
+    "http_status": 200,
+    "finding": "local ingestion incomplete: official index/pack identity discrepancy; no records removed without scope evidence",
+    "official_index_count": 2808,
+    "previous_editions": [
+      {
+        "id": "cvpr:2026",
+        "state": "published",
+        "count": 4068,
+        "pack_present": true
+      },
+      {
+        "id": "cvpr:2025",
+        "state": "published",
+        "count": 2871,
+        "pack_present": true
+      },
+      {
+        "id": "cvpr:2024",
+        "state": "published",
+        "count": 2710,
+        "pack_present": true
+      },
+      {
+        "id": "cvpr:2023",
+        "state": "published",
+        "count": 2352,
+        "pack_present": true
+      }
+    ],
+    "pack_edition": "cvpr:2026",
+    "missing_from_pack": 0,
+    "absent_from_index": 1260,
+    "r1": {
+      "disposition": "Still locally incomplete",
+      "finding": "Original 8MiB acquisition truncated HTML: 2808 IDs. Complete 12117927-byte all-days main index has 4042 IDs, all in existing 4068 pack; remaining 26 pack-only detail URLs return 404. No pagination link or extra taxonomy scope used. These errors do not prove withdrawal; need publisher final identity/withdrawal reconciliation before removing any record.",
+      "evidence": "evidence/r1/reconciliation.json"
+    }
+  },
+  {
+    "venue": "acl",
+    "source": "https://aclanthology.org/events/acl-2026/",
+    "checked_at": "2026-10-14T10:04:10Z",
+    "http_status": 200,
+    "finding": "access/verification blocked: event index covers Main volumes but not the declared Findings collection; seven front-matter IDs and two other IDs need scope reconciliation; official XML acquisition returned HTTP 404. No deletions or guessed records applied.",
+    "previous_editions": [
+      {
+        "id": "acl:2026",
+        "state": "published",
+        "count": 4806,
+        "pack_present": true
+      },
+      {
+        "id": "acl:2025",
+        "state": "published",
+        "count": 3353,
+        "pack_present": true
+      },
+      {
+        "id": "acl:2024",
+        "state": "published",
+        "count": 1982,
+        "pack_present": true
+      },
+      {
+        "id": "acl:2023",
+        "state": "published",
+        "count": 2150,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 2765,
+    "missing_from_pack": 9,
+    "absent_from_index": 2050,
+    "r1": {
+      "disposition": "Reconciled; validated pack/catalog correction completed",
+      "finding": "Complete Main+Findings event contains 4820 IDs: seven front matter plus 4813 paper/overview IDs. Official 2026.acl.xml + 2026.findings.xml (only acl volume) supply 4806 admissible records, seven missing abstracts. Actual importer originally skipped all 4813 because current XML has no url child; fixed source-native collection/volume/paper identity. Replayed importer IDs exactly equal existing pack. ACL pack bytes preserved; state corrected to partial.",
+      "missing_abstract_ids": [
+        "2026.acl-industry.1",
+        "2026.acl-long.1232",
+        "2026.findings-acl.128",
+        "2026.findings-acl.138",
+        "2026.findings-acl.1664",
+        "2026.findings-acl.2161",
+        "2026.findings-acl.532"
+      ],
+      "evidence": "evidence/r1/dp-new-r1-acl-ingest-final.log"
+    }
+  },
+  {
+    "venue": "aaai",
+    "source": "https://ojs.aaai.org/index.php/AAAI/issue/archive",
+    "checked_at": "2026-10-14T10:04:10Z",
+    "http_status": 200,
+    "finding": "local ingestion incomplete: retrieved page does not establish an exact final proceedings identity set",
+    "previous_editions": [
+      {
+        "id": "aaai:2026",
+        "state": "published",
+        "count": 4149,
+        "pack_present": true
+      },
+      {
+        "id": "aaai:2025",
+        "state": "published",
+        "count": 3028,
+        "pack_present": true
+      },
+      {
+        "id": "aaai:2024",
+        "state": "published",
+        "count": 2331,
+        "pack_present": true
+      },
+      {
+        "id": "aaai:2023",
+        "state": "published",
+        "count": 1578,
+        "pack_present": true
+      }
+    ],
+    "r1": {
+      "disposition": "Reconciled; no change required",
+      "finding": "Archive pages 1 and 2 identify 48 Vol40 issues. All 43 Technical Track issue paper IDs union exactly equals 4149 retained IDs. Five other special/associated-track issues contain 771 IDs outside the declared technical-track pack scope. Preserve bytes.",
+      "evidence": "evidence/r1/aaai-reconciliation.json"
+    }
+  },
+  {
+    "venue": "ijcai",
+    "source": "https://www.ijcai.org/proceedings/2026/",
+    "checked_at": "2026-10-14T10:04:11Z",
+    "http_status": 200,
+    "finding": "new edition available: final publisher proceedings; ingested all 972 indexed contributions",
+    "official_index_count": 972,
+    "previous_editions": [
+      {
+        "id": "ijcai:2026",
+        "state": "announced",
+        "count": 0,
+        "pack_present": false
+      },
+      {
+        "id": "ijcai:2025",
+        "state": "published",
+        "count": 1279,
+        "pack_present": true
+      },
+      {
+        "id": "ijcai:2024",
+        "state": "published",
+        "count": 1047,
+        "pack_present": true
+      },
+      {
+        "id": "ijcai:2023",
+        "state": "published",
+        "count": 850,
+        "pack_present": true
+      }
+    ],
+    "result": "published / 972",
+    "checked_sources": [
+      {
+        "url": "https://www.ijcai.org/proceedings/2026/",
+        "checked_at": "2026-10-14T10:04:11Z"
+      },
+      {
+        "url": "https://www.ijcai.org/proceedings/2026/",
+        "checked_at": "2026-10-14T10:04:11Z"
+      }
+    ]
+  },
+  {
+    "venue": "emnlp",
+    "source": "https://aclanthology.org/events/emnlp-2026/",
+    "checked_at": "2026-10-14T10:04:11Z",
+    "finding": "access/verification blocked",
+    "previous_editions": [
+      {
+        "id": "emnlp:2026",
+        "state": "announced",
+        "count": 0,
+        "pack_present": false
+      },
+      {
+        "id": "emnlp:2025",
+        "state": "published",
+        "count": 3488,
+        "pack_present": true
+      },
+      {
+        "id": "emnlp:2024",
+        "state": "published",
+        "count": 2388,
+        "pack_present": true
+      },
+      {
+        "id": "emnlp:2023",
+        "state": "published",
+        "count": 2241,
+        "pack_present": true
+      }
+    ],
+    "r1": {
+      "disposition": "Precisely blocked by an external prerequisite",
+      "finding": "Official venue archive currently lists proceedings through2025. Official2026 program confirms upcoming Oct24–29 conference. Bounded main proceedings discovery did not confirm a published2026 collection; prior event404 alone was insufficient. Do not call the whole venue unavailable or replace2025; announced2026 pack:null retained. Additional official Main volume and collection XML requests both return404; current2026 Findings XML has only EACL/ACL, no EMNLP volume. This bounds checked inputs without proving universal absence.",
+      "evidence": "evidence/r1/acquisition7.json"
+    }
+  },
+  {
+    "venue": "iccv",
+    "source": "https://openaccess.thecvf.com/ICCV2025?day=all",
+    "checked_at": "2026-10-14T10:04:12Z",
+    "http_status": 200,
+    "finding": "existing pack updated: all-days official index 2,701; 1,752 added, no removals; 949 date-precision corrections",
+    "official_index_count": 2701,
+    "previous_editions": [
+      {
+        "id": "iccv:2025",
+        "state": "published",
+        "count": 949,
+        "pack_present": true
+      },
+      {
+        "id": "iccv:2023",
+        "state": "published",
+        "count": 2156,
+        "pack_present": true
+      }
+    ],
+    "result": "published / 2701",
+    "checked_sources": [
+      {
+        "url": "https://openaccess.thecvf.com/ICCV2025?day=all",
+        "checked_at": "2026-10-14T10:04:12Z"
+      },
+      {
+        "url": "https://openaccess.thecvf.com/ICCV2025?day=all",
+        "checked_at": "2026-10-14T10:04:12Z"
+      }
+    ]
+  },
+  {
+    "venue": "eccv",
+    "source": "https://www.ecva.net/papers.php",
+    "checked_at": "2026-10-14T10:04:13Z",
+    "http_status": 200,
+    "finding": "verified no change: ECCV 2024 exact index identities match 2387 records; upstream 2026 not present in ECVA open-access edition index",
+    "previous_editions": [
+      {
+        "id": "eccv:2026",
+        "state": "announced",
+        "count": 0,
+        "pack_present": false
+      },
+      {
+        "id": "eccv:2024",
+        "state": "published",
+        "count": 2387,
+        "pack_present": true
+      },
+      {
+        "id": "eccv:2022",
+        "state": "published",
+        "count": 1645,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 2387,
+    "missing_from_pack": 0,
+    "absent_from_index": 0
+  },
+  {
+    "venue": "aistats",
+    "source": "https://proceedings.mlr.press/v300/",
+    "checked_at": "2026-10-14T10:04:13Z",
+    "http_status": 200,
+    "finding": "verified no change: latest published index record identities match the pack (bounded index check)",
+    "previous_editions": [
+      {
+        "id": "aistats:2025",
+        "state": "published",
+        "count": 583,
+        "pack_present": true
+      },
+      {
+        "id": "aistats:2026",
+        "state": "published",
+        "count": 588,
+        "pack_present": true
+      },
+      {
+        "id": "aistats:2024",
+        "state": "published",
+        "count": 547,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 588,
+    "pack_edition": "aistats:2026",
+    "missing_from_pack": 0,
+    "absent_from_index": 0
+  },
+  {
+    "venue": "colt",
+    "source": "https://proceedings.mlr.press/v336/",
+    "checked_at": "2026-10-14T10:04:46Z",
+    "http_status": 200,
+    "finding": "verified no change: 197 index entries minus publisher preface hanneke26a = 196 research papers; exact identities match",
+    "previous_editions": [
+      {
+        "id": "colt:2026",
+        "state": "published",
+        "count": 196,
+        "pack_present": true
+      },
+      {
+        "id": "colt:2025",
+        "state": "published",
+        "count": 181,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 196,
+    "pack_edition": "colt:2026",
+    "missing_from_pack": 0,
+    "absent_from_index": 0,
+    "result": "published / 196"
+  },
+  {
+    "venue": "aamas",
+    "source": "https://ifaamas.org/Proceedings/aamas2026/forms/contents.htm",
+    "checked_at": "2026-10-14T10:04:14Z",
+    "http_status": 200,
+    "finding": "verified no change in declared partial scope: 641 publisher PDF IDs; pack retains 639, excludes CSLO7280/XWPK8237 with unresolved abstracts",
+    "official_index_count": 641,
+    "previous_editions": [
+      {
+        "id": "aamas:2026",
+        "state": "partial",
+        "count": 639,
+        "pack_present": true
+      },
+      {
+        "id": "aamas:2025",
+        "state": "published",
+        "count": 479,
+        "pack_present": true
+      }
+    ],
+    "result": "partial / 639",
+    "missing_from_pack": 2,
+    "absent_from_index": 0,
+    "r1": {
+      "disposition": "Reconciled; validated pack/catalog correction completed",
+      "finding": "CSLO7280 has a visibly labeled first-page ABSTRACT but an incomplete text layer. Opt-in PDFKit/Vision column OCR, manually compared to rendered publisher page, recovers it; official TOC authors/title/track/ID + Crossref DOI match. Added one record; all639 retained records equal. XWPK8237 first two pages have KEYWORDS then INTRODUCTION and no ABSTRACT; Crossref has no abstract. Keep partial640, one explicit exclusion. No admission rule weakened.",
+      "admitted": "CSLO7280",
+      "excluded": "XWPK8237",
+      "pdf_sha256": {
+        "CSLO7280": "9810abf8936aafc9c8572e2d597620120a06fed17ac4345acb89fd4b14921d90",
+        "XWPK8237": "30b759ce533f08a3a9c86378b2db088b6ebd105913082c8da6538655c7ee1d54"
+      },
+      "evidence": "evidence/r1/dp-new-r1-aamas.log"
+    }
+  },
+  {
+    "venue": "corl",
+    "source": "https://proceedings.mlr.press/v305/",
+    "checked_at": "2026-10-14T10:04:15Z",
+    "http_status": 200,
+    "finding": "verified no change: latest published index record identities match the pack (bounded index check)",
+    "previous_editions": [
+      {
+        "id": "corl:2025",
+        "state": "published",
+        "count": 263,
+        "pack_present": true
+      },
+      {
+        "id": "corl:2024",
+        "state": "partial",
+        "count": 264,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 263,
+    "pack_edition": "corl:2025",
+    "missing_from_pack": 0,
+    "absent_from_index": 0
+  },
+  {
+    "venue": "rss",
+    "source": "https://roboticsproceedings.org/rss22/",
+    "checked_at": "2026-10-14T10:04:15Z",
+    "http_status": 200,
+    "finding": "verified no change: latest published index record identities match the pack (bounded index check)",
+    "previous_editions": [
+      {
+        "id": "rss:2025",
+        "state": "published",
+        "count": 163,
+        "pack_present": true
+      },
+      {
+        "id": "rss:2026",
+        "state": "published",
+        "count": 210,
+        "pack_present": true
+      },
+      {
+        "id": "rss:2024",
+        "state": "published",
+        "count": 134,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 210,
+    "pack_edition": "rss:2026",
+    "missing_from_pack": 0,
+    "absent_from_index": 0
+  },
+  {
+    "venue": "osdi",
+    "source": "https://www.usenix.org/conference/osdi26/technical-sessions",
+    "checked_at": "2026-10-14T10:04:16Z",
+    "http_status": 200,
+    "finding": "verified no change in collection identities: 137 presentation links minus keynote = 136 papers; errata links exist, PDF content not exhaustively rechecked",
+    "previous_editions": [
+      {
+        "id": "osdi:2026",
+        "state": "published",
+        "count": 136,
+        "pack_present": true
+      },
+      {
+        "id": "osdi:2025",
+        "state": "published",
+        "count": 53,
+        "pack_present": true
+      },
+      {
+        "id": "osdi:2024",
+        "state": "published",
+        "count": 53,
+        "pack_present": true
+      },
+      {
+        "id": "osdi:2023",
+        "state": "published",
+        "count": 55,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 136,
+    "pack_edition": "osdi:2026",
+    "missing_from_pack": 0,
+    "absent_from_index": 0,
+    "result": "published / 136"
+  },
+  {
+    "venue": "sosp",
+    "source": "https://dl.acm.org/doi/proceedings/10.1145/3731569",
+    "checked_at": "2026-10-14T10:04:16Z",
+    "finding": "access/verification blocked: ACM returned HTTP 403; no publisher replacement completed; preserve temporary provenance and partial packs",
+    "previous_editions": [
+      {
+        "id": "sosp:2025",
+        "state": "partial",
+        "count": 65,
+        "pack_present": true
+      },
+      {
+        "id": "sosp:2024",
+        "state": "partial",
+        "count": 43,
+        "pack_present": true
+      },
+      {
+        "id": "sosp:2023",
+        "state": "partial",
+        "count": 9,
+        "pack_present": true
+      }
+    ],
+    "result": "partial / unchanged",
+    "r1": {
+      "disposition": "Precisely blocked by an external prerequisite",
+      "finding": "Previous2025 ACM check did not discover latest edition. Official SIGOPS2026 home/accepted/schedule now confirm newer2026 and schedule links final DOI set10.1145/3830418.*. Proceedings10.1145/3830418 and sampled paper3843867 return403; schedule lacks abstracts/public PDF bytes. Preserve existing temporary2025 pack;2026 publisher ingestion remains unfinished, not no newer edition.",
+      "evidence": "evidence/r1/acquisition6.json"
+    }
+  },
+  {
+    "venue": "ieee_sp",
+    "source": "https://www.ieee-security.org/TC/SP2026/program.html",
+    "checked_at": "2026-10-14T10:04:16Z",
+    "http_status": 200,
+    "finding": "local ingestion incomplete: existing partial count 254 with pack:null remains unavailable; program alone does not establish a verified pack",
+    "previous_editions": [
+      {
+        "id": "ieee_sp:2026",
+        "state": "partial",
+        "count": 254,
+        "pack_present": false
+      },
+      {
+        "id": "ieee_sp:2025",
+        "state": "published",
+        "count": 65,
+        "pack_present": true
+      },
+      {
+        "id": "ieee_sp:2024",
+        "state": "published",
+        "count": 261,
+        "pack_present": true
+      },
+      {
+        "id": "ieee_sp:2023",
+        "state": "cataloged",
+        "count": 0,
+        "pack_present": false
+      }
+    ],
+    "result": "partial / 254 / unavailable",
+    "r1": {
+      "disposition": "Still locally incomplete",
+      "finding": "Official accepted list supplies254 titles/author groups but zero abstracts or public PDF links. IEEE proceedings publication is confirmed (Xplore11573581, DOI10.1109/SP63933.2026.00244), not upstream unavailable. Complete per-paper publisher identities/abstracts/public PDFs and validation have not been obtained; retain partial254 pack:null. Bounded final collection request https://ieeexplore.ieee.org/xpl/conhome/11573355/proceeding returned418 while individual Proceedings document11573581 returned200. These acquisition outcomes do not establish the final paper set or verified PDF mapping.",
+      "evidence": "evidence/r1/acquisition.json"
+    }
+  },
+  {
+    "venue": "ndss",
+    "source": "https://www.ndss-symposium.org/ndss2026/accepted-papers/",
+    "checked_at": "2026-10-14T10:04:17Z",
+    "http_status": 200,
+    "finding": "verified no change: latest published index record identities match the pack (bounded index check)",
+    "previous_editions": [
+      {
+        "id": "ndss:2026",
+        "state": "published",
+        "count": 265,
+        "pack_present": true
+      },
+      {
+        "id": "ndss:2025",
+        "state": "published",
+        "count": 211,
+        "pack_present": true
+      },
+      {
+        "id": "ndss:2024",
+        "state": "published",
+        "count": 140,
+        "pack_present": true
+      },
+      {
+        "id": "ndss:2023",
+        "state": "published",
+        "count": 94,
+        "pack_present": true
+      }
+    ],
+    "official_index_count": 265,
+    "pack_edition": "ndss:2026",
+    "missing_from_pack": 0,
+    "absent_from_index": 0
+  },
+  {
+    "venue": "accv",
+    "source": "https://openaccess.thecvf.com/ACCV2024?day=all",
+    "checked_at": "2026-10-14T10:04:17Z",
+    "http_status": 200,
+    "finding": "verified no change: latest published index record identities match the pack (bounded index check)",
+    "official_index_count": 269,
+    "previous_editions": [
+      {
+        "id": "accv:2024",
+        "state": "published",
+        "count": 269,
+        "pack_present": true
+      },
+      {
+        "id": "accv:2022",
+        "state": "published",
+        "count": 277,
+        "pack_present": true
+      }
+    ],
+    "pack_edition": "accv:2024",
+    "missing_from_pack": 0,
+    "absent_from_index": 0
+  },
+  {
+    "venue": "uai",
+    "source": "https://proceedings.mlr.press/",
+    "checked_at": "2026-10-14T10:04:18Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "alt",
+    "source": "https://proceedings.mlr.press/v313/",
+    "checked_at": "2026-10-14T10:04:19Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "clear",
+    "source": "https://proceedings.mlr.press/",
+    "checked_at": "2026-10-14T10:04:19Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "acml",
+    "source": "https://proceedings.mlr.press/v304/",
+    "checked_at": "2026-10-14T10:04:19Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "automl",
+    "source": "https://proceedings.mlr.press/",
+    "checked_at": "2026-10-14T10:04:20Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "naacl",
+    "source": "https://aclanthology.org/events/naacl-2025/",
+    "checked_at": "2026-10-14T10:04:20Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "eacl",
+    "source": "https://aclanthology.org/events/eacl-2026/",
+    "checked_at": "2026-10-14T10:04:21Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "usenix_security",
+    "source": "https://www.usenix.org/conference/usenixsecurity26/technical-sessions",
+    "checked_at": "2026-10-14T10:04:21Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "nsdi",
+    "source": "https://www.usenix.org/conference/nsdi26/technical-sessions",
+    "checked_at": "2026-10-14T10:04:23Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  },
+  {
+    "venue": "wacv",
+    "source": "https://openaccess.thecvf.com/WACV2026?day=all",
+    "checked_at": "2026-10-14T10:04:23Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required",
+    "official_index_count": 831
+  },
+  {
+    "venue": "miccai",
+    "source": "https://papers.miccai.org/miccai-2026/",
+    "checked_at": "2026-10-14T10:04:26Z",
+    "http_status": 200,
+    "finding": "official page accessible; bounded review recorded, completeness not established; not admitted: extraction/scope/PDF reconciliation still required"
+  }
+]

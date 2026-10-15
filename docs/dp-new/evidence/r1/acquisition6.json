@@ -1,0 +1,60 @@
+[
+  {
+    "key": "sosp2026_proceedings",
+    "url": "https://dl.acm.org/doi/proceedings/10.1145/3830418",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "sosp2026_sample",
+    "url": "https://dl.acm.org/doi/10.1145/3830418.3843867",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "iclr_GqulkP3c1W",
+    "url": "https://openreview.net/forum?id=GqulkP3c1W",
+    "status": 200,
+    "bytes": 4787,
+    "content_length": null,
+    "sha256": "1af3feab249f13c99021acd5d4f6e7bc5ca87f87c88a80f162f41060e796a9a2"
+  },
+  {
+    "key": "iclr_H8tismBT3Q",
+    "url": "https://openreview.net/forum?id=H8tismBT3Q",
+    "status": 200,
+    "bytes": 4787,
+    "content_length": null,
+    "sha256": "90e72052b605c7350f9ddff6bc706a8f56f05fbfe5de5699b281d3a9f9e0ce0f"
+  },
+  {
+    "key": "iclr_YYUNm7IibC",
+    "url": "https://openreview.net/forum?id=YYUNm7IibC",
+    "status": 200,
+    "bytes": 4787,
+    "content_length": null,
+    "sha256": "e2c174065abd9db8441ec4d4e5015b6898b6508eb00984e814feb7ef9139a1ac"
+  },
+  {
+    "key": "iclr_ZLJsJ8IWUz",
+    "url": "https://openreview.net/forum?id=ZLJsJ8IWUz",
+    "status": 200,
+    "bytes": 4787,
+    "content_length": null,
+    "sha256": "155e3521c404248ee72ebabdef38b2633e0c20c86a3d95efcb7be866a923df8e"
+  },
+  {
+    "key": "iclr_aSKrSpVrCu",
+    "url": "https://openreview.net/forum?id=aSKrSpVrCu",
+    "status": 200,
+    "bytes": 4787,
+    "content_length": null,
+    "sha256": "c4f87d5c25d7c2d1dabe89ffbf643eac3169c9fcb3e32fb5d04883dd11025872"
+  },
+  {
+    "key": "iclr_w2tnhhMbXv",
+    "url": "https://openreview.net/forum?id=w2tnhhMbXv",
+    "status": 200,
+    "bytes": 4787,
+    "content_length": null,
+    "sha256": "1e61f1b2ce364cbdd0655d9a6827805d99abdb133b14d4657d8c20b50d6c4863"
+  }
+]

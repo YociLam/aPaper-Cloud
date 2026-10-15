@@ -1,0 +1,110 @@
+{
+  "glj": {
+    "title": "German Law Journal",
+    "short": "GLJ",
+    "zh": "德国法律期刊",
+    "issn": "2071-8322",
+    "publisher": "Cambridge University Press",
+    "disciplines": [
+      "oecd:ford:5.5"
+    ],
+    "scope": "https://www.cambridge.org/core/journals/german-law-journal/information/about-this-journal",
+    "types": [
+      "Article"
+    ]
+  },
+  "jlb": {
+    "title": "Journal of Law and the Biosciences",
+    "short": "JLB",
+    "zh": "法律与生物科学期刊",
+    "issn": "2053-9711",
+    "publisher": "Oxford University Press",
+    "disciplines": [
+      "oecd:ford:5.5"
+    ],
+    "scope": "https://academic.oup.com/jlb/pages/About",
+    "types": [
+      "journal-article"
+    ]
+  },
+  "plos_medicine": {
+    "title": "PLOS Medicine",
+    "short": "PLOS Med",
+    "zh": "PLOS 医学",
+    "issn": "1549-1676",
+    "publisher": "Public Library of Science",
+    "disciplines": [
+      "oecd:ford:3.2",
+      "oecd:ford:3.3"
+    ],
+    "scope": "https://journals.plos.org/plosmedicine/s/journal-information",
+    "types": [
+      "Research Article",
+      "Review",
+      "Systematic Review",
+      "Policy Forum",
+      "Essay",
+      "Clinical Trial"
+    ],
+    "plos": "PLoSMedicine",
+    "slug": "plosmedicine"
+  },
+  "plos_global_public_health": {
+    "title": "PLOS Global Public Health",
+    "short": "PLOS GPH",
+    "zh": "PLOS 全球公共卫生",
+    "issn": "2767-3375",
+    "publisher": "Public Library of Science",
+    "disciplines": [
+      "oecd:ford:3.3"
+    ],
+    "scope": "https://journals.plos.org/globalpublichealth/s/journal-information",
+    "types": [
+      "Research Article",
+      "Review",
+      "Systematic Review"
+    ],
+    "plos": "PLoSGlobalPublicHealth",
+    "slug": "globalpublichealth"
+  },
+  "plos_biology": {
+    "title": "PLOS Biology",
+    "short": "PLOS Biol",
+    "zh": "PLOS 生物学",
+    "issn": "1545-7885",
+    "publisher": "Public Library of Science",
+    "disciplines": [
+      "oecd:ford:1.6"
+    ],
+    "scope": "https://journals.plos.org/plosbiology/s/journal-information",
+    "types": [
+      "Research Article",
+      "Methods and Resources",
+      "Short Reports",
+      "Review",
+      "Essay",
+      "Perspective",
+      "Community Page"
+    ],
+    "plos": "PLoSBiology",
+    "slug": "plosbiology"
+  },
+  "plos_climate": {
+    "title": "PLOS Climate",
+    "short": "PLOS Clim",
+    "zh": "PLOS 气候",
+    "issn": "2767-3200",
+    "publisher": "Public Library of Science",
+    "disciplines": [
+      "oecd:ford:1.5"
+    ],
+    "scope": "https://journals.plos.org/climate/s/journal-information",
+    "types": [
+      "Research Article",
+      "Review",
+      "Systematic Review"
+    ],
+    "plos": "PLoSClimate",
+    "slug": "climate"
+  }
+}

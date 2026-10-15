@@ -1,0 +1,327 @@
+{
+  "source": "jlb",
+  "identity": {
+    "title": "Journal of Law and the Biosciences",
+    "short": "JLB",
+    "zh": "法律与生物科学期刊",
+    "issn": "2053-9711",
+    "publisher": "Oxford University Press",
+    "disciplines": [
+      "oecd:ford:5.5"
+    ],
+    "scope": "https://academic.oup.com/jlb/pages/About",
+    "types": [
+      "journal-article"
+    ]
+  },
+  "coverage": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-10-14",
+    "cutoff": "2026-10-14T15:44:19Z",
+    "included_article_types": [
+      "journal-article"
+    ],
+    "discovered": 26,
+    "admitted": 10,
+    "excluded": 14,
+    "unresolved": 2,
+    "duplicates": 26,
+    "completeness": "snapshot_partial",
+    "identity_basis": "publisher-deposited Crossref online/issued works"
+  },
+  "identity_basis": "publisher-deposited Crossref works (not independently complete publisher archive)",
+  "crossref_only_ids": [],
+  "pages": [
+    {
+      "url": "https://api.crossref.org/journals/2053-9711/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 26,
+      "total": 26,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/2053-9711/works?filter=from-online-pub-date%3A2026-01-01%2Cuntil-online-pub-date%3A2026-10-14&rows=200&cursor=MTc4NTc1NjE2NDAwMCwxMC4xMDkzJTJGamxiJTJGbHNhZzAyNA%3D%3D",
+      "count": 0,
+      "total": 26,
+      "terminal": true
+    },
+    {
+      "url": "https://api.crossref.org/journals/2053-9711/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=%2A",
+      "count": 26,
+      "total": 26,
+      "terminal": false
+    },
+    {
+      "url": "https://api.crossref.org/journals/2053-9711/works?filter=from-pub-date%3A2026-01-01%2Cuntil-pub-date%3A2026-10-14&rows=200&cursor=MTc4NTc1NjE2NDAwMCwxMC4xMDkzJTJGamxiJTJGbHNhZzAyNA%3D%3D",
+      "count": 0,
+      "total": 26,
+      "terminal": true
+    }
+  ],
+  "identities": [
+    {
+      "doi": "10.1093/jlb/lsaf016",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsaf025",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag001",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag002",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag003",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag004",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag005",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag006",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag007",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag008",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag009",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag010",
+      "status": "unresolved",
+      "reason": "missing_abstract_title_or_ordered_authors",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag011",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag012",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag013",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag014",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag015",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag016",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag017",
+      "status": "unresolved",
+      "reason": "missing_effective_abstract_reuse_license",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": []
+    },
+    {
+      "doi": "10.1093/jlb/lsag018",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag019",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag020",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag021",
+      "status": "admitted",
+      "reason": "licensed_published_article",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag022",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag023",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    },
+    {
+      "doi": "10.1093/jlb/lsag024",
+      "status": "excluded",
+      "reason": "noncommercial_license_outside_redistribution_scope",
+      "publisher_updates": [],
+      "publisher_relations": {},
+      "publisher_license_urls": [
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      ]
+    }
+  ],
+  "raw_input_hashes": {
+    "11cd59ea12cad9cab2edcf07f940af743fa7ee014e9ace517e3c95c46080150d.input": "5c04e333559232366522b635a3de19370de0c430b62711350913fff6407894f7",
+    "d0bd1c3979fd814fa77ed95d84231cc2d7dbd1d093bde2ada5bb7cf888101c0b.input": "5c04e333559232366522b635a3de19370de0c430b62711350913fff6407894f7",
+    "43987478fc9136ae534e68fc9069d2ffa065223184e3457addf46374f9928ab9.input": "ab9c091e9e0bcc08d09444ab71bfea7c8042b7ad67d1938ae21605aac814a194",
+    "d281ca59091ddbfe61e669a4970005d785e35b67d8dacc8d60a325ad11e26073.input": "ab9c091e9e0bcc08d09444ab71bfea7c8042b7ad67d1938ae21605aac814a194"
+  },
+  "duplicate_basis": "Overlap between the two Crossref date-filter enumerations; actual pack DOI records are unique."
+}

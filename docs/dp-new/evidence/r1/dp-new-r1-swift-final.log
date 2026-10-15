@@ -1,0 +1,18 @@
+Building for debugging...
+[0/4] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (0.14s)
+Test Suite 'Selected tests' started at 2026-10-14 21:03:37.819.
+Test Suite 'APaperCoreKitPackageTests.xctest' started at 2026-10-14 21:03:37.820.
+Test Suite 'APaperCoreKitPackageTests.xctest' passed at 2026-10-14 21:03:37.820.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-10-14 21:03:37.820.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1902
+􀄵  Target Platform: arm64e-apple-macos14.0
+􀟈  Test downloadedCatalogProjectsIntoSwiftDisciplineRows() started.
+􀟈  Test releaseCandidateVerifiedCacheCrossesProductionCatalogBridge() started.
+􁁛  Test downloadedCatalogProjectsIntoSwiftDisciplineRows() passed after 0.001 seconds.
+event=search_index_consistency db_key=ee2b9c7a1d3809aa call_count=1 outcome=success page_count=0 indexed_count=0 rebuilt=false duration_us=284
+􁁛  Test releaseCandidateVerifiedCacheCrossesProductionCatalogBridge() passed after 11.945 seconds.
+􁁛  Test run with 2 tests in 0 suites passed after 11.946 seconds.

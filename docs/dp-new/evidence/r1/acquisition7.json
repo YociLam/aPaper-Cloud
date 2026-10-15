@@ -1,0 +1,20 @@
+[
+  {
+    "key": "emnlp_main",
+    "url": "https://aclanthology.org/volumes/2026.emnlp-main/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "emnlp_xml",
+    "url": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2026.emnlp.xml",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "sp_proceedings",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11573581",
+    "status": 200,
+    "bytes": 43599,
+    "content_length": null,
+    "sha256": "555997afb12ef3b1e0cb976394a77c7ae7b889a117931d44e5dd3c1c816081e4"
+  }
+]

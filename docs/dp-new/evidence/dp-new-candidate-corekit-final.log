@@ -1,0 +1,280 @@
+Fetching https://github.com/mgriebling/SwiftMath.git from cache
+Fetched https://github.com/mgriebling/SwiftMath.git from cache (1.24s)
+Computing version for https://github.com/mgriebling/SwiftMath.git
+Computed https://github.com/mgriebling/SwiftMath.git at 1.7.3 (1.94s)
+Creating working copy for https://github.com/mgriebling/SwiftMath.git
+Working copy of https://github.com/mgriebling/SwiftMath.git resolved at 1.7.3
+Building for debugging...
+[0/16] /Users/junesum/.codex/worktrees/dp-new/AtomPaper/.build/dp-new-candidate-corekit/arm64-apple-macosx/debug/APaperCoreKitPackageTests.derived/runner.swift
+[1/16] Write sources
+[4/16] Write APaperCoreKitSmoke-entitlement.plist
+[6/16] Write sources
+[7/16] Copying Info.plist
+[8/16] Copying ScigreatFieldCatalog.json
+[9/16] Copying mathFonts.bundle
+[10/16] Write swift-version--58304C5D6DBC2206.txt
+[12/38] Compiling SwiftMath MathFont.swift
+[13/38] Compiling SwiftMath MathImage.swift
+[14/38] Compiling SwiftMath MTUnicode.swift
+[15/38] Compiling SwiftMath MTMathUILabel.swift
+[16/38] Compiling SwiftMath MTTypesetter.swift
+[17/39] Compiling SwiftMath MTMathImage.swift
+[18/39] Compiling SwiftMath RWLock.swift
+[19/39] Compiling SwiftMath MTBezierPath.swift
+[20/39] Compiling SwiftMath MTColor.swift
+[21/39] Compiling SwiftMath MTFontManager.swift
+[22/39] Compiling SwiftMath MTFontMathTable.swift
+[23/39] Compiling SwiftMath MTLabel.swift
+[24/39] Compiling SwiftMath MTMathAtomFactory.swift
+[25/39] Compiling SwiftMath resource_bundle_accessor.swift
+[26/39] Compiling SwiftMath MTMathListIndex.swift
+[27/39] Compiling SwiftMath MTMathListBuilder.swift
+[28/39] Compiling SwiftMath MTConfig.swift
+[29/39] Compiling SwiftMath MTFont.swift
+[30/39] Compiling SwiftMath MTMathList.swift
+[31/39] Compiling SwiftMath MTFontMathTableV2.swift
+[32/39] Compiling SwiftMath MTFontV2.swift
+[33/39] Emitting module SwiftMath
+[34/39] Compiling SwiftMath MTMathListDisplay.swift
+[35/128] Compiling APaperCoreKit MockPaperCoreService.swift
+[36/128] Compiling APaperCoreKit PaperCoreService.swift
+[37/128] Compiling APaperCoreKit PaperMentorInvocationRuntimeClient.swift
+[38/128] Compiling APaperCoreKit ReaderCommandBridge.swift
+[39/128] Compiling APaperCoreKit ReaderCommandExecution.swift
+[40/128] Compiling APaperCoreKit ReaderActionModels.swift
+[41/133] Compiling APaperCoreKit APIConfigurationFileStore.swift
+[42/133] Compiling APaperCoreKit AgentRuntimeApplicationService.swift
+[43/133] Compiling APaperCoreKit PaperMentorRuntimeHostCoordinator.swift
+[44/133] Compiling APaperCoreKit BackgroundWorkBudget.swift
+[45/133] Compiling APaperCoreKit BridgeBackedDiscoveryService.swift
+[46/133] Compiling APaperCoreKit DiscoveryService.swift
+[47/133] Compiling APaperCoreKit LibraryMaintenance.swift
+[48/133] Compiling APaperCoreKit LibraryPaperRecord.swift
+[49/133] Compiling APaperCoreKit ManagedAttachment.swift
+[50/133] Compiling APaperCoreKit MetadataCandidate.swift
+[51/133] Compiling APaperCoreKit MetadataResolution.swift
+[52/133] Compiling APaperCoreKit PaperBatchDeletePlan.swift
+[53/133] Compiling APaperCoreKit PaperInsight.swift
+[54/133] Compiling APaperCoreKit PaperMentorBasicRuntime.swift
+[55/133] Compiling APaperCoreKit PaperMentorCitation.swift
+[56/133] Compiling APaperCoreKit PaperMentorGuestPaper.swift
+[57/133] Compiling APaperCoreKit PaperMentorInlineFollowUp.swift
+[58/133] Compiling APaperCoreKit PaperMentorInvocation.swift
+[59/133] Compiling APaperCoreKit BridgeBackedTranslationService.swift
+[60/133] Compiling APaperCoreKit TranslationModels.swift
+[61/133] Compiling APaperCoreKit TranslationRustBridge.swift
+[62/133] Compiling APaperCoreKit TranslationService.swift
+[63/133] Compiling APaperCoreKit resource_bundle_accessor.swift
+[64/133] Compiling APaperCoreKit RecallGraph.swift
+[65/133] Compiling APaperCoreKit RecallGraphLayoutCache.swift
+[66/133] Compiling APaperCoreKit RecallKnowledgeGraphRenderer.swift
+[67/133] Compiling APaperCoreKit ResearchEditorBuffer.swift
+[68/133] Compiling APaperCoreKit ScopedRetrieval.swift
+[69/133] Compiling APaperCoreKit SlideToConfirmState.swift
+[70/133] Compiling APaperCoreKit SourceBoundPDFDocument.swift
+[71/133] Compiling APaperCoreKit SourceOccurrenceContinuity.swift
+[72/133] Compiling APaperCoreKit ResearchMemoryBridge.swift
+[73/133] Compiling APaperCoreKit AgentRuntimeHostClient.swift
+[74/133] Compiling APaperCoreKit DiscoveryRustBridge.swift
+[75/133] Compiling APaperCoreKit ExactEvidenceOpenClient.swift
+[76/133] Compiling APaperCoreKit MockDiscoveryService.swift
+[77/133] Compiling APaperCoreKit AgentProductConfiguration.swift
+[78/133] Compiling APaperCoreKit AgentRuntimeHost.swift
+[79/133] Compiling APaperCoreKit AgentUpload.swift
+[80/133] Compiling APaperCoreKit Annotation.swift
+[81/133] Compiling APaperCoreKit AnnotationAndReaderKnowledgeCaptureLocatorBuilders.swift
+[82/133] Compiling APaperCoreKit QWeatherConfigurationStore.swift
+[83/133] Compiling APaperCoreKit ResearchWorkbenchBridge.swift
+[84/133] Compiling APaperCoreKit RustCoreBridge.swift
+[85/133] Compiling APaperCoreKit ScigreatFieldCatalog.swift
+[86/133] Compiling APaperCoreKit ScigreatPaperMetadataCoordinator.swift
+[87/133] Compiling APaperCoreKit BrainstormEvidencePreparation.swift
+[88/133] Compiling APaperCoreKit BrainstormResult.swift
+[89/133] Compiling APaperCoreKit CoreHealthStatus.swift
+[90/133] Compiling APaperCoreKit CurrentPaperQA.swift
+[91/133] Compiling APaperCoreKit DailyPaper.swift
+[92/133] Compiling APaperCoreKit DocumentIdentity.swift
+[93/133] Emitting module APaperCoreKit
+[94/133] Compiling APaperCoreKit StreamingMarkdown.swift
+[95/133] Compiling APaperCoreKit StreamingMermaid.swift
+[96/133] Compiling APaperCoreKit Tag.swift
+[97/133] Compiling APaperCoreKit ZoteroOneTimeMigration.swift
+[98/133] Compiling APaperCoreKit PaperPreparationGenerationGate.swift
+[99/133] Compiling APaperCoreKit BridgeBackedPaperCoreService.swift
+[100/133] Compiling APaperCoreKit ExactEvidenceOpen.swift
+[101/133] Compiling APaperCoreKit ExperimentalAgentRuntimeSmoke.swift
+[102/133] Compiling APaperCoreKit ExperimentalTeachingPlan.swift
+[103/133] Compiling APaperCoreKit ExtractedDocumentText.swift
+[104/133] Compiling APaperCoreKit JournalQuartileBadge.swift
+[105/133] Compiling APaperCoreKit KnowledgeEnvironment.swift
+[106/133] Compiling APaperCoreKit ReaderActionRuntime.swift
+[107/133] Compiling APaperCoreKit ReaderActionValidator.swift
+[108/133] Compiling APaperCoreKit LiveReaderNavigationCoordinator.swift
+[109/133] Compiling APaperCoreKit LiveReaderSessionTransport.swift
+[110/133] Compiling APaperCoreKit NativeReaderValidationTransport.swift
+[111/133] Compiling APaperCoreKit PDFKitNativeValidationService.swift
+[112/133] Compiling APaperCoreKit PaperMentorKnowledgeCaptureLocatorBuilder.swift
+[113/133] Compiling APaperCoreKit PaperMentorProductPerformance.swift
+[114/133] Compiling APaperCoreKit PaperMentorReaderContext.swift
+[115/133] Compiling APaperCoreKit PaperReadingState.swift
+[116/133] Compiling APaperCoreKit ProductWorkflow.swift
+[117/133] Compiling APaperCoreKit QuickCitation.swift
+[118/133] Compiling APaperCoreKit KfrKnowledgeReadClient.swift
+[119/133] Compiling APaperCoreKit KnowledgeEnvironmentClient.swift
+[120/133] Compiling APaperCoreKit KnowledgeManagerClient.swift
+[121/133] Compiling APaperCoreKit KnowledgeWorkspaceClient.swift
+[122/133] Compiling APaperCoreKit MockRustCoreBridge.swift
+[123/133] Compiling APaperCoreKit KnowledgeGraph.swift
+[124/133] Compiling APaperCoreKit KnowledgeManager.swift
+[125/133] Compiling APaperCoreKit KnowledgeManagerDialogue.swift
+[126/133] Compiling APaperCoreKit KnowledgeRelationshipCanonicalV2.swift
+[127/133] Compiling APaperCoreKit KnowledgeSedimentationAuthorization.swift
+[128/133] Compiling APaperCoreKit KnowledgeWorkspace.swift
+[129/211] Emitting module APaperCoreKitSmoke
+[130/211] Compiling APaperCoreKitSmoke main.swift
+[130/211] Write Objects.LinkFileList
+[132/211] Compiling APaperCoreKitTests Phase148R3PublicationFenceTests.swift
+[133/211] Compiling APaperCoreKitTests Phase148R41ActivationContractTests.swift
+[134/211] Compiling APaperCoreKitTests Phase148R41SelectionRecoveryTests.swift
+[135/211] Compiling APaperCoreKitTests Phase148R42ActivationClosureTests.swift
+[136/211] Compiling APaperCoreKitTests Phase148R43ActivationCandidateTests.swift
+[137/215] Compiling APaperCoreKitTests ExperimentalAgentRuntimeSmokeTests.swift
+[138/215] Compiling APaperCoreKitTests ExperimentalTeachingPlanTests.swift
+[139/215] Compiling APaperCoreKitTests KfrKnowledgeContentReadTests.swift
+[140/215] Compiling APaperCoreKitTests KnowledgeCaptureLocatorWitnessClientTests.swift
+[141/215] Compiling APaperCoreKitTests KnowledgeGraphTests.swift
+[142/215] Compiling APaperCoreKitTests AgentUploadTests.swift
+[143/215] Compiling APaperCoreKitTests AnnotationAndReaderKnowledgeCaptureLocatorBuilderTests.swift
+[144/215] Compiling APaperCoreKitTests AnnotationTests.swift
+[145/215] Compiling APaperCoreKitTests AppDataRootBoundaryTests.swift
+[146/215] Compiling APaperCoreKitTests BackgroundWorkBudgetTests.swift
+[147/215] Compiling APaperCoreKitTests KnowledgeManagerClientAsyncTests.swift
+[148/215] Compiling APaperCoreKitTests KnowledgeManagerTests.swift
+[149/215] Compiling APaperCoreKitTests KnowledgeWorkspaceTests.swift
+[150/215] Compiling APaperCoreKitTests LibrarySearchExecutionTests.swift
+[151/215] Compiling APaperCoreKitTests LiteParseOCRSmokeBridgeTests.swift
+[152/215] Compiling APaperCoreKitTests Phase148R43WKnowledgeManagerDialogueTests.swift
+[153/215] Compiling APaperCoreKitTests Phase148R4EvidencePresentationPublicationFenceTests.swift
+[154/215] Compiling APaperCoreKitTests Phase148R4OperationPublicationFenceTests.swift
+[155/215] Compiling APaperCoreKitTests Phase148R4ReviewedEvidenceAdmissionTests.swift
+[156/215] Compiling APaperCoreKitTests Phase148RKnowledgePrivacyTests.swift
+[157/215] Compiling APaperCoreKitTests BrainstormEvidencePreparationTests.swift
+[158/215] Compiling APaperCoreKitTests BrainstormResultTests.swift
+[159/215] Compiling APaperCoreKitTests DailyPaperDiscoveryTests.swift
+[160/215] Compiling APaperCoreKitTests DestructiveBulkExecutionGuardTests.swift
+[161/215] Compiling APaperCoreKitTests ExactEvidenceOpenClientTests.swift
+[162/215] Compiling APaperCoreKitTests AIProviderManagementTests.swift
+[163/215] Compiling APaperCoreKitTests APIConfigurationFileStoreTests.swift
+[164/215] Compiling APaperCoreKitTests APaperRuntimeDirectoryLayoutTests.swift
+[165/215] Compiling APaperCoreKitTests AgentProductConfigurationTests.swift
+[166/215] Compiling APaperCoreKitTests AgentRuntimeHostTests.swift
+[167/215] Compiling APaperCoreKitTests PaperIntelligenceReadinessTests.swift
+[168/215] Compiling APaperCoreKitTests PaperMentorCitationTests.swift
+[169/215] Compiling APaperCoreKitTests PaperMentorConversationSnapshotTests.swift
+[170/215] Compiling APaperCoreKitTests PaperMentorInvocationRuntimeClientTests.swift
+[171/215] Compiling APaperCoreKitTests PaperMentorInvocationTests.swift
+[172/215] Compiling APaperCoreKitTests LiveReaderNavigationCoordinatorTests.swift
+[173/215] Compiling APaperCoreKitTests LiveReaderSessionTransportTests.swift
+[174/215] Compiling APaperCoreKitTests MetadataResolutionTests.swift
+[175/215] Compiling APaperCoreKitTests PaperInsightProductBridgeTests.swift
+[176/215] Compiling APaperCoreKitTests PaperInsightTests.swift
+[177/215] Compiling APaperCoreKitTests RecallKnowledgeGraphRendererTests.swift
+[178/215] Compiling APaperCoreKitTests ResearchChatProductTests.swift
+[179/215] Compiling APaperCoreKitTests ResearchEditorBufferTests.swift
+[180/215] Compiling APaperCoreKitTests ResearchMemoryBridgeTests.swift
+[181/215] Compiling APaperCoreKitTests ScigreatCredentialStoreTests.swift
+[182/215] Compiling APaperCoreKitTests PaperMentorKnowledgeCaptureLocatorBuilderTests.swift
+[183/215] Compiling APaperCoreKitTests PaperMentorProductPerformanceTests.swift
+[184/215] Compiling APaperCoreKitTests PaperMentorReaderContextTests.swift
+[185/215] Compiling APaperCoreKitTests PaperMentorRuntimeHostCoordinatorTests.swift
+[186/215] Compiling APaperCoreKitTests PaperPreparationGenerationGateTests.swift
+[187/215] Compiling APaperCoreKitTests Phase149PaperKnowledgeSpaceTests.swift
+/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/swift-packages/APaperCoreKit/Tests/APaperCoreKitTests/Phase14KnowledgeEnvironmentTests.swift:1156:13: warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1154 |             "committedAtMs": 10 as Int64,
+1155 |         ]
+1156 |         var globalItem: [String: Any] = [
+     |             `- warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1157 |             "knowledgeUnitId": "unit-profile",
+1158 |             "knowledgeRevisionId": "revision-profile",
+[188/215] Compiling APaperCoreKitTests Phase14CanonicalContractWireTests.swift
+/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/swift-packages/APaperCoreKit/Tests/APaperCoreKitTests/Phase14KnowledgeEnvironmentTests.swift:1156:13: warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1154 |             "committedAtMs": 10 as Int64,
+1155 |         ]
+1156 |         var globalItem: [String: Any] = [
+     |             `- warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1157 |             "knowledgeUnitId": "unit-profile",
+1158 |             "knowledgeRevisionId": "revision-profile",
+[189/215] Compiling APaperCoreKitTests Phase14KnowledgeEnvironmentTests.swift
+/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/swift-packages/APaperCoreKit/Tests/APaperCoreKitTests/Phase14KnowledgeEnvironmentTests.swift:1156:13: warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1154 |             "committedAtMs": 10 as Int64,
+1155 |         ]
+1156 |         var globalItem: [String: Any] = [
+     |             `- warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1157 |             "knowledgeUnitId": "unit-profile",
+1158 |             "knowledgeRevisionId": "revision-profile",
+[190/215] Compiling APaperCoreKitTests PreP11XOperationModelsTests.swift
+/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/swift-packages/APaperCoreKit/Tests/APaperCoreKitTests/Phase14KnowledgeEnvironmentTests.swift:1156:13: warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1154 |             "committedAtMs": 10 as Int64,
+1155 |         ]
+1156 |         var globalItem: [String: Any] = [
+     |             `- warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1157 |             "knowledgeUnitId": "unit-profile",
+1158 |             "knowledgeRevisionId": "revision-profile",
+[191/215] Compiling APaperCoreKitTests QuickCitationTests.swift
+/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/swift-packages/APaperCoreKit/Tests/APaperCoreKitTests/Phase14KnowledgeEnvironmentTests.swift:1156:13: warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1154 |             "committedAtMs": 10 as Int64,
+1155 |         ]
+1156 |         var globalItem: [String: Any] = [
+     |             `- warning: variable 'globalItem' was never mutated; consider changing to 'let' constant
+1157 |             "knowledgeUnitId": "unit-profile",
+1158 |             "knowledgeRevisionId": "revision-profile",
+[192/215] Emitting module APaperCoreKitTests
+[193/215] Compiling APaperCoreKitTests PaperReadingStateTests.swift
+[194/215] Compiling APaperCoreKitTests Phase1410KnowledgeRetrievalTests.swift
+[195/215] Compiling APaperCoreKitTests Phase147KnowledgeCandidateReviewTests.swift
+[196/215] Compiling APaperCoreKitTests Phase148KnowledgeGovernanceTests.swift
+[197/215] Compiling APaperCoreKitTests Phase148R2ActivationContractTests.swift
+[198/215] Compiling APaperCoreKitTests ReaderCommandBridgeTests.swift
+[199/215] Compiling APaperCoreKitTests ReaderCommandExecutionTests.swift
+[200/215] Compiling APaperCoreKitTests ReaderLocalizationR2CorpusTests.swift
+[201/215] Compiling APaperCoreKitTests ReaderNativeValidationTests.swift
+[202/215] Compiling APaperCoreKitTests RecallGraphLayoutCacheTests.swift
+[203/215] Compiling APaperCoreKitTests ScigreatMappingTests.swift
+[204/215] Compiling APaperCoreKitTests ScopedRetrievalTests.swift
+[205/215] Compiling APaperCoreKitTests SlideToConfirmStateTests.swift
+[206/215] Compiling APaperCoreKitTests SmokeTests.swift
+[207/215] Compiling APaperCoreKitTests SourceBoundPDFDocumentTests.swift
+[208/215] Compiling APaperCoreKitTests StreamingMarkdownTests.swift
+[209/215] Compiling APaperCoreKitTests StreamingMermaidTests.swift
+[210/215] Compiling APaperCoreKitTests TranslationServiceTests.swift
+[211/215] Compiling APaperCoreKitTests ZRET1ABridgeModelsTests.swift
+[212/217] Compiling APaperCoreKitPackageTests runner.swift
+[213/217] Emitting module APaperCoreKitPackageTests
+[213/217] Write Objects.LinkFileList
+ld: warning: __eh_frame section too large (max 16MB) to encode dwarf unwind offsets in compact unwind table, performance of exception handling might be affected
+[214/217] Linking APaperCoreKitSmoke
+[215/217] Applying APaperCoreKitSmoke
+ld: warning: __eh_frame section too large (max 16MB) to encode dwarf unwind offsets in compact unwind table, performance of exception handling might be affected
+[216/217] Linking APaperCoreKitPackageTests
+Build complete! (113.48s)
+Test Suite 'Selected tests' started at 2026-10-14 20:00:19.594.
+Test Suite 'APaperCoreKitPackageTests.xctest' started at 2026-10-14 20:00:19.596.
+Test Suite 'APaperCoreKitPackageTests.xctest' passed at 2026-10-14 20:00:19.596.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'Selected tests' passed at 2026-10-14 20:00:19.596.
+	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+􀟈  Test run started.
+􀄵  Testing Library Version: 1902
+􀄵  Target Platform: arm64e-apple-macos14.0
+􀟈  Test disciplineDirectoryHandlesLargeCatalogWithoutCompiledCategoryList() started.
+􀟈  Test conferenceCatalogUsesManifestLocalizedVenueNames() started.
+􀟈  Test disciplineDirectoriesProjectSharedSourcesInCatalogOrder() started.
+􀟈  Test releaseCandidateVerifiedCacheCrossesProductionCatalogBridge() started.
+􀟈  Test conferenceCatalogPreservesManifestVenueOrderAndAllowsMissingTags() started.
+􁁛  Test conferenceCatalogUsesManifestLocalizedVenueNames() passed after 0.001 seconds.
+􁁛  Test conferenceCatalogPreservesManifestVenueOrderAndAllowsMissingTags() passed after 0.001 seconds.
+􁁛  Test disciplineDirectoriesProjectSharedSourcesInCatalogOrder() passed after 0.001 seconds.
+􁁛  Test disciplineDirectoryHandlesLargeCatalogWithoutCompiledCategoryList() passed after 0.053 seconds.
+event=search_index_consistency db_key=a574a8f35bfc95f9 call_count=1 outcome=success page_count=0 indexed_count=0 rebuilt=false duration_us=266
+􁁛  Test releaseCandidateVerifiedCacheCrossesProductionCatalogBridge() passed after 4.640 seconds.
+􁁛  Test run with 5 tests in 0 suites passed after 4.640 seconds.

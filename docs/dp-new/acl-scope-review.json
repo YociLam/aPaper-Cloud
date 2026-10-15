@@ -1,0 +1,17 @@
+[
+  {
+    "source": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2026.acl-long.xml",
+    "collection": "2026.acl-long",
+    "blocker": "HTTP Error 404: Not Found"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2026.acl-industry.xml",
+    "collection": "2026.acl-industry",
+    "blocker": "HTTP Error 404: Not Found"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/acl-org/acl-anthology/master/data/xml/2026.findings-acl.xml",
+    "collection": "2026.findings-acl",
+    "blocker": "HTTP Error 404: Not Found"
+  }
+]

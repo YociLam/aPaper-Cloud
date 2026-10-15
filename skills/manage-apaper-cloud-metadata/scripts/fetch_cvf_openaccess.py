@@ -140,9 +140,10 @@ def fetch_paper(
     title = (parser.meta.get("citation_title") or [""])[0].strip()
     authors = [value.strip() for value in parser.meta.get("citation_author", []) if value.strip()]
     pdf_url = (parser.meta.get("citation_pdf_url") or [""])[0].strip()
-    published = (parser.meta.get("citation_publication_date") or [str(year)])[0].strip()
-    if re.fullmatch(r"\d{4}", published):
-        published = f"{published}-06-01T00:00:00Z"
+    published = (parser.meta.get("citation_publication_date") or [""])[0].strip()
+    # Keep publisher year precision; do not manufacture a month/day.
+    if not published:
+        raise RuntimeError(f"missing CVF publication date at {url}")
     if not title or not authors or not parser.abstract or not pdf_url:
         raise RuntimeError(f"incomplete CVF metadata at {url}")
     return {

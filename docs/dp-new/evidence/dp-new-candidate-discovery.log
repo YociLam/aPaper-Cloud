@@ -1,0 +1,311 @@
+   Compiling apaper_discovery v0.1.0 (/Users/junesum/.codex/worktrees/dp-new-candidate/AtomPaper/rust/crates/discovery)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.73s
+     Running unittests src/lib.rs (rust/target/debug/deps/apaper_discovery-da59ad47cb1cb5e3)
+
+running 197 tests
+test arxiv_transport::tests::atom_envelope_accepts_valid_feeds_and_rejects_empty_html_malformed_and_api_error ... ok
+test arxiv_transport::tests::cancellation_after_a_late_rate_limit_does_not_retry_or_leak_the_permit ... ok
+test arxiv_transport::tests::actual_rate_limits_advance_the_fallback_streak_but_local_suppression_does_not ... ok
+test arxiv_transport::tests::rate_limit_is_classified_and_suppresses_a_second_send ... ok
+test arxiv_transport::tests::initial_rate_limit_is_one_send_and_cross_key_suppression_is_zero_sends ... ok
+test arxiv_transport::tests::permit_is_held_until_the_slow_body_callback_returns ... ok
+test arxiv_transport::tests::cancellation_in_one_window_does_not_cancel_a_second_background_client ... ok
+test arxiv_transport::tests::cooldown_and_cache_expiry_do_not_trigger_idle_sends ... ok
+test arxiv_transport::tests::cache_keys_do_not_collide_and_cached_success_does_not_clear_cooldown ... ok
+test arxiv_transport::tests::retry_after_huge_values_are_bounded_without_duration_overflow ... ok
+test arxiv_transport::tests::service_unavailable_with_retry_after_is_deferred_without_inline_retry ... ok
+test arxiv_transport::tests::transient_timeout_retries_once_then_returns_the_second_failure ... ok
+test arxiv_transport::tests::queued_a_b_c_requests_can_cancel_independently_without_extra_sends ... ok
+test download::tests::adaptive_range_thread_memory_has_bounded_up_and_down_tiers ... ok
+test download::tests::adaptive_range_threads_leave_fast_or_non_range_downloads_single ... ok
+test download::tests::adaptive_range_threads_scale_to_twelve_from_observed_eta ... ok
+test download::tests::forced_range_tag_overrides_the_small_file_threshold ... ok
+test arxiv_transport::tests::retry_after_accepts_delta_seconds_and_http_dates_at_the_boundaries ... ok
+test download::tests::incompatible_range_layout_is_removed_before_new_workers_start ... ok
+test download::tests::range_probe_detects_support_when_head_omits_accept_ranges ... ok
+test download::tests::retry_backoff_remains_immediately_cancellable ... ok
+test download::tests::retry_delay_uses_bounded_exponential_equal_jitter ... ok
+test arxiv_transport::tests::real_http_late_429_survives_cancelled_subscriber_and_is_shared ... ok
+test download::tests::slow_source_tag_only_marks_successful_range_capable_small_pdfs ... ok
+test arxiv_transport::tests::real_http_transient_failure_has_two_attempts_and_parser_errors_have_one ... ok
+test arxiv_transport::tests::real_http_oversize_and_invalid_utf8_are_not_retried_or_cached ... ok
+test arxiv_transport::tests::real_http_status_and_body_classification_precedes_paper_parsing ... ok
+test download::tests::range_worker_failure_still_joins_every_started_worker ... ok
+test download::tests::slow_single_download_requests_an_in_place_range_upgrade ... ok
+test arxiv_transport::tests::real_http_slow_body_keeps_single_transport_until_consumed ... ok
+test arxiv_transport::tests::concurrent_same_key_reuses_the_response_after_the_first_body_finishes ... ok
+test download::tests::range_download_reuses_a_single_download_prefix_after_upgrade ... ok
+test download::tests::ranged_download_splits_and_merges_a_supported_file ... ok
+test download::tests::download_to_path_reuses_an_abandoned_single_prefix_when_range_capable ... ok
+test engine::tests::daily_arxiv_acquisition_uses_the_network_batch_without_changing_other_source_budgets ... ok
+test engine::tests::detailed_analysis_cannot_mutate_fixed_ranking_evidence ... ok
+test arxiv_transport::tests::concurrent_different_keys_are_serialized_until_the_first_body_finishes ... ok
+test arxiv_transport::tests::real_http_body_timeout_stays_timeout_and_has_only_one_retry ... ok
+test arxiv_transport::tests::real_focus_and_daily_engine_instances_share_one_http_cooldown ... ok
+test engine::tests::a_valid_no_match_run_completes_without_a_workflow_error ... ok
+test engine::tests::featured_uses_the_recommended_boundary_without_an_extra_gate ... ok
+test engine::tests::automatic_refresh_does_not_replace_an_active_job ... ok
+test engine::tests::an_empty_source_publishes_diagnostics_instead_of_failing_silently ... ok
+test engine::tests::four_tier_policy_reserves_one_featured_and_up_to_thirty_regular ... ok
+test engine::tests::a_different_refresh_request_replaces_the_active_job_instead_of_adopting_it ... ok
+test engine::tests::live_online_sources_search_uses_the_native_engine_path ... ignored, requires live access to the public arXiv API
+test engine::tests::exhausted_focus_batch_does_not_repeat_rows_at_a_later_offset ... ok
+test engine::tests::broader_fallback_recovers_from_an_empty_focused_query ... FAILED
+test engine::tests::online_conference_search_accepts_more_than_sixteen_editions ... ok
+test engine::tests::online_search_enforces_one_source_and_ten_results_per_network_batch ... ok
+test engine::tests::active_refresh_can_be_canceled_without_retaining_its_job_id ... ok
+test engine::tests::online_source_policy_defaults_preprints_and_preserves_exact_conference_window ... ok
+test engine::tests::focus_deduplication_does_not_rewind_the_source_cursor ... ok
+test engine::tests::pdf_preload_queue_is_bounded_and_dispatches_by_source_lanes ... ok
+test engine::tests::pdf_preload_queue_preserves_all_selected_papers_and_deduplicates ... ok
+test engine::tests::pdf_preload_queue_prioritizes_featured_without_duplicates ... ok
+test engine::tests::failed_first_refresh_keeps_empty_home_available_and_marks_it_offline ... ok
+test engine::tests::daily_research_search_uses_local_home_and_twelve_item_pages ... FAILED
+test engine::tests::publication_classification_uses_base_boundary_and_six_calendar_months ... ok
+test engine::tests::publication_ties_prefer_verified_venue_value_without_overriding_score ... ok
+test engine::tests::failed_refresh_does_not_record_search_timing ... ok
+test engine::tests::cancellation_from_another_engine_cannot_publish ... ok
+test engine::tests::focus_reveals_cached_arxiv_rows_before_fetching_the_next_source_page ... ok
+test engine::tests::canceled_refresh_resumes_after_the_last_completed_source_bucket ... ok
+test engine::tests::polling_reconciles_a_nonterminal_job_without_a_worker ... ok
+test engine::tests::library_identity_is_excluded_before_ranking ... ok
+test engine::tests::detailed_analysis_is_reassembled_in_the_fixed_selection_order ... ok
+test engine::tests::newer_version_is_not_blocked_by_seen_manifestation_key ... FAILED
+test engine::tests::score_policy_uses_final_score_with_an_inclusive_one_point_floor ... ok
+test engine::tests::opened_paper_is_excluded_before_the_next_ranking_pass ... FAILED
+test engine::tests::source_selections_group_conference_editions_by_venue_without_a_source_limit ... ok
+test engine::tests::online_search_truncates_a_misbehaving_adapter_to_the_bounded_batch ... ok
+test engine::tests::unscored_candidates_are_not_published_as_low_scoring_candidates ... ok
+test identity::tests::arxiv_normalization_preserves_work_and_version ... ok
+test identity::tests::canonical_identity_priority_is_arxiv_then_doi_then_title ... ok
+test identity::tests::doi_only_library_projection_matches_an_arxiv_work ... ok
+test identity::tests::newer_manifestation_is_an_update ... ok
+test identity::tests::zotero_surname_first_authors_match_source_given_name_first_authors ... ok
+test intent::tests::agent_category_does_not_assume_language_or_retrieval ... ok
+test intent::tests::agent_scientific_discovery_only_expands_when_requested ... ok
+test intent::tests::computer_vision_terms_use_vision_categories_without_language_pollution ... ok
+test intent::tests::machine_learning_does_not_receive_agent_or_rag_terms ... ok
+test intent::tests::protein_intent_keeps_protein_concepts ... ok
+test model::tests::conference_edition_ids_have_user_facing_source_names ... ok
+test ranking::tests::conference_editions_are_not_filtered_by_the_rolling_source_window ... ok
+test ranking::tests::full_sentence_intent_influences_final_deterministic_relevance ... ok
+test ranking::tests::keyword_and_recency_bonuses_are_independently_bounded ... ok
+test ranking::tests::multi_word_keyword_requires_a_contiguous_phrase_match ... ok
+test ranking::tests::publication_time_adds_only_a_bounded_recency_bonus ... ok
+test ranking::tests::ranking_deduplicates_versions_and_has_stable_tie_breaks ... ok
+test ranking::tests::ranking_excludes_candidates_without_a_complete_current_intent_match ... ok
+test ranking::tests::selective_conference_venue_bonus_is_small_and_source_specific ... ok
+test ranking::tests::semantic_review_keeps_source_attributed_groups_without_faking_literal_hits ... ok
+test ranking::tests::source_attribution_does_not_create_a_group_match_without_keyword_evidence ... ok
+test ranking::tests::unseen_daily_appearance_penalty_increases_gradually_and_is_bounded ... ok
+test ranking::tests::untouched_or_previewed_prior_appearances_receive_a_soft_penalty ... ok
+test retrieval::tests::arxiv_expression_searches_titles_and_abstracts_without_all_field_noise ... ok
+test retrieval::tests::enabled_query_groups_compile_to_separate_bounded_source_requests ... ok
+test retrieval::tests::group_fetch_budgets_are_dynamic_weighted_and_globally_bounded ... ok
+test retrieval::tests::query_expansion_is_bounded_and_deterministic ... ok
+test retrieval::tests::query_plan_rejects_more_than_six_enabled_groups ... ok
+test retrieval::tests::saved_query_terms_take_priority_and_change_the_plan ... ok
+test retrieval::tests::scientific_agent_intent_builds_expected_phrases_categories_and_fallback ... ok
+test retrieval::tests::source_minimum_scales_with_the_available_budget ... ok
+test retrieval::tests::source_terms_preserve_reviewed_priority_before_the_bound_is_applied ... ok
+test retrieval::tests::time_windows_compile_to_the_complete_user_selected_range ... ok
+test retrieval::tests::unlinked_domains_do_not_pollute_machine_learning_intent ... ok
+test retrieval::tests::unrelated_saved_query_cannot_pollute_current_intent_through_generic_words ... ok
+test search_timing::tests::appends_without_repeating_header ... ok
+test search_timing::tests::writes_header_and_complete_stage_record ... ok
+test sources::arxiv::tests::builds_bounded_keyword_category_and_date_query ... ok
+test sources::arxiv::tests::ignores_cache_entries_older_than_one_day ... ok
+test sources::arxiv::tests::parses_bounded_atom_fixture_and_preserves_version ... ok
+test sources::arxiv::tests::rejects_unbounded_or_unsafe_source_requests ... ok
+test sources::arxiv::tests::reuses_a_fresh_cache_entry_without_network_access ... ok
+test sources::arxiv::tests::rf_n1_r1_single_live_observation ... ignored, one serial production-client live observation; never run in ordinary suites
+test sources::biorxiv::tests::category_filter_uses_only_unambiguous_subject_evidence ... ok
+test sources::biorxiv::tests::parses_and_ranks_realistic_biorxiv_metadata ... ok
+test sources::biorxiv::tests::publication_time_does_not_break_equal_relevance_ties ... ok
+test sources::biorxiv::tests::unrelated_records_are_not_recalled ... ok
+test engine::tests::resume_signature_ignores_trigger_and_locale_but_tracks_sources_and_query_groups ... ok
+test sources::conference::tests::atomic_manifest_write_replaces_the_cache_without_leaving_a_partial ... ok
+test sources::conference::tests::cloud_manifest_fixture_uses_exact_venue_year_ids ... ok
+test sources::conference::tests::conference_level_domain_does_not_count_as_a_paper_keyword_hit ... ok
+test sources::conference::tests::disciplines_survive_catalog_serialization_and_future_ids_are_valid ... ok
+test sources::conference::tests::downloaded_manifest_must_match_the_announced_version ... ok
+test sources::conference::tests::cached_edition_is_loaded_without_startup_sync ... ok
+test engine::tests::previewed_paper_can_be_recommended_again ... FAILED
+test engine::tests::rf_n1_r1_precancelled_focus_request_never_reaches_a_source ... ok
+test sources::conference::tests::malformed_discipline_updates_are_rejected_before_cache_replacement ... ok
+test sources::conference::tests::manifest_versions_refresh_when_the_release_changes ... ok
+test sources::conference::tests::matching_requires_a_real_keyword_hit ... ok
+test sources::conference::tests::metadata_urls_resolve_multiple_conference_pack_paths ... ok
+test sources::conference::tests::online_conference_live_distinguishes_matches_from_successful_empty ... ignored, downloads one CVPR metadata pack from the configured cloud origin
+test engine::tests::daily_archive_keeps_only_the_latest_feed_pointer_for_each_local_day ... FAILED
+test sources::conference::tests::remote_manifest_upgrades_a_stale_local_catalog ... ignored, requires live pinned conference metadata
+test sources::conference::tests::remote_metadata_loads_multiple_conference_packs ... ignored, requires live GitHub conference metadata
+test sources::conference::tests::retrieval_requires_a_supported_source_pdf_url ... ok
+test engine::tests::read_later_paper_is_excluded_before_the_next_ranking_pass ... FAILED
+test sources::conference::tests::retrieval_reuses_the_verified_in_memory_manifest_after_startup ... ok
+test sources::conference::tests::source_group_becomes_the_primary_card_category ... ok
+test sources::conference::tests::valid_empty_catalog_and_partial_pack_availability_are_preserved ... ok
+test sources::conference::tests::venue_name_is_not_synthesized_as_a_paper_category ... ok
+test sources::conference::tests::retrieval_uses_valid_cached_catalog_without_waiting_for_remote_sync ... ok
+test sources::pdf_cache::tests::acl_pdf_can_be_downloaded_and_validated ... ignored, requires access to the public ACL Anthology PDF endpoint
+test sources::pdf_cache::tests::acl_pdf_uses_the_validated_conference_url ... ok
+test sources::pdf_cache::tests::background_and_interactive_downloads_share_a_stable_partition_count ... ok
+test sources::conference::tests::verified_cached_manifest_remains_available_when_remote_sync_fails ... ok
+test sources::pdf_cache::tests::conference_pdf_allows_official_aaai_and_neurips_urls ... ok
+test sources::pdf_cache::tests::conference_pdf_allows_official_rss_and_aamas_urls ... ok
+test sources::pdf_cache::tests::conference_pdf_rejects_untrusted_or_non_https_urls ... ok
+test sources::pdf_cache::tests::conference_record_can_use_a_validated_arxiv_public_copy ... ok
+test sources::pdf_cache::tests::cvf_and_ecva_pdfs_can_be_downloaded_and_validated ... ignored, downloads representative CVPR and ECCV PDFs through the App cache path
+test sources::pdf_cache::tests::iclr_openreview_landing_page_derives_the_matching_pdf_endpoint ... ok
+test sources::pdf_cache::tests::ieee_pdf_allows_only_the_official_api_and_download_hosts ... ok
+test sources::pdf_cache::tests::ieee_pdf_redirect_can_be_downloaded_and_validated ... ignored, requires access to the public IEEE Computer Society PDF endpoint
+test sources::pdf_cache::tests::interactive_pdf_open_preempts_background_only_when_range_is_supported ... ok
+test sources::pdf_cache::tests::interactive_pdf_open_waits_for_background_when_range_is_not_supported ... ok
+test sources::conference::tests::large_catalog_is_bounded_by_bytes_not_a_compiled_source_count ... ok
+test sources::pdf_cache::tests::live_pdf_download_matrix_covers_every_source ... ignored, downloads 20 arXiv, 20 bioRxiv, and 10 random PDFs per cached conference
+test sources::pdf_cache::tests::pdf_download_waits_for_a_slow_response_body_without_a_short_global_deadline ... ok
+test sources::pdf_cache::tests::pmlr_pdf_preserves_the_official_mlresearch_repository_url ... ok
+test sources::pdf_cache::tests::proxy_route_is_preferred_with_one_direct_fallback ... ok
+test sources::pdf_cache::tests::staged_cache_names_map_active_range_parts_to_the_final_pdf ... ok
+test sources::pdf_cache::tests::supported_conference_platform_pdfs_can_be_downloaded_and_validated ... ignored, downloads one public PDF from every supported conference platform
+test starter::preview_tests::deterministic_preview_does_not_truncate_common_abbreviations ... ok
+test storage::tests::conference_venue_alias_is_not_presented_as_a_subject_category ... ok
+test engine::tests::refresh_publishes_atomic_disjoint_feed_and_hides_scores ... FAILED
+test storage::tests::initialization_removes_legacy_academic_search_runs_from_daily_state ... ok
+test engine::tests::repeated_refresh_keeps_soft_lifecycle_states_eligible_and_excludes_dismissed ... FAILED
+test storage::tests::initialization_seeds_profile_and_empty_first_run ... ok
+test engine::tests::rf_n1_r1_daily_cooldown_preserves_checkpoint_and_does_not_retry_fallback ... ok
+test engine::tests::mismatched_detailed_analysis_preserves_the_previous_feed ... ok
+test storage::tests::interrupted_job_with_a_checkpoint_is_recovered_as_resumable_cancellation ... ok
+test storage::tests::interaction_history_survives_read_later_removal_and_feed_replacement ... ok
+test engine::tests::selection_keeps_each_active_query_group_represented ... FAILED
+test engine::tests::successful_refresh_records_stage_counts_and_timings ... FAILED
+test storage::tests::library_link_updates_card_and_repeat_save_is_idempotent ... ok
+test storage::tests::profile_validation_ignores_empty_translations_for_valid_english_terms ... ok
+test util::tests::tokenization_is_stable_and_filters_noise ... ok
+test util::tests::unix_day_parsing_handles_epoch_and_modern_dates ... ok
+test util::tests::unix_day_parsing_rejects_multibyte_input_without_panicking ... ok
+test engine::tests::rf_n1_r1_failed_bucket_is_unfinished_and_completed_bucket_is_not_repeated ... ok
+test storage::tests::profile_validation_rejects_domain_cycles ... ok
+test engine::tests::refresh_publishes_available_candidates_when_relevance_is_underfilled ... FAILED
+test storage::tests::opening_or_dismissing_a_paper_persists_do_not_enroll_state ... ok
+test storage::tests::read_later_plan_rejects_invalid_calendar_dates ... ok
+test storage::tests::reopening_an_initialized_store_does_not_request_a_schema_write_lock ... ok
+test storage::tests::saved_profile_persists_across_store_reopen ... ok
+test storage::tests::read_later_plan_is_canonical_deduplicated_and_persistent ... ok
+test sources::conference::tests::pack_downloads_share_ownership_only_for_the_same_cache_path ... ok
+test sources::pdf_cache::tests::canceled_interactive_pdf_queue_waiter_does_not_block_later_downloads ... ok
+test sources::pdf_cache::tests::interactive_pdf_queue_does_not_let_one_host_occupy_every_boost_slot ... ok
+test sources::conference::tests::first_launch_without_remote_manifest_has_no_conference_catalog ... ok
+test arxiv_transport::tests::rf_n1_r1_actual_start_spacing_and_retry_accounting ... ok
+test sources::conference::tests::legacy_manifest_uses_one_hundred_thousand_record_scan_budget ... ok
+test arxiv_transport::tests::rf_n1_r1_engine_request_counts_cold_cache_page_and_daily_groups ... ok
+
+failures:
+
+---- engine::tests::broader_fallback_recovers_from_an_empty_focused_query stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::broader_fallback_recovers_from_an_empty_focused_query' (12416131) panicked at crates/discovery/src/engine.rs:4941:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- engine::tests::daily_research_search_uses_local_home_and_twelve_item_pages stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::daily_research_search_uses_local_home_and_twelve_item_pages' (12416139) panicked at crates/discovery/src/engine.rs:3806:9:
+assertion `left == right` failed
+  left: 0
+ right: 12
+
+---- engine::tests::newer_version_is_not_blocked_by_seen_manifestation_key stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::newer_version_is_not_blocked_by_seen_manifestation_key' (12416157) panicked at crates/discovery/src/engine.rs:5292:32:
+index out of bounds: the len is 0 but the index is 0
+
+---- engine::tests::opened_paper_is_excluded_before_the_next_ranking_pass stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::opened_paper_is_excluded_before_the_next_ranking_pass' (12416162) panicked at crates/discovery/src/engine.rs:5156:52:
+index out of bounds: the len is 0 but the index is 0
+
+---- engine::tests::previewed_paper_can_be_recommended_again stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::previewed_paper_can_be_recommended_again' (12416168) panicked at crates/discovery/src/engine.rs:5129:52:
+index out of bounds: the len is 0 but the index is 0
+
+---- engine::tests::daily_archive_keeps_only_the_latest_feed_pointer_for_each_local_day stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::daily_archive_keeps_only_the_latest_feed_pointer_for_each_local_day' (12416137) panicked at crates/discovery/src/engine.rs:5017:9:
+assertion `left == right` failed
+  left: 0
+ right: 20
+
+---- engine::tests::read_later_paper_is_excluded_before_the_next_ranking_pass stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::read_later_paper_is_excluded_before_the_next_ranking_pass' (12416171) panicked at crates/discovery/src/engine.rs:5189:52:
+index out of bounds: the len is 0 but the index is 0
+
+---- engine::tests::refresh_publishes_atomic_disjoint_feed_and_hides_scores stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::refresh_publishes_atomic_disjoint_feed_and_hides_scores' (12416172) panicked at crates/discovery/src/engine.rs:4867:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+---- engine::tests::repeated_refresh_keeps_soft_lifecycle_states_eligible_and_excludes_dismissed stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::repeated_refresh_keeps_soft_lifecycle_states_eligible_and_excludes_dismissed' (12416174) panicked at crates/discovery/src/engine.rs:5059:40:
+index out of bounds: the len is 0 but the index is 0
+
+---- engine::tests::selection_keeps_each_active_query_group_represented stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::selection_keeps_each_active_query_group_represented' (12416180) panicked at crates/discovery/src/engine.rs:4811:48:
+index out of bounds: the len is 0 but the index is 0
+
+---- engine::tests::successful_refresh_records_stage_counts_and_timings stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::successful_refresh_records_stage_counts_and_timings' (12416186) panicked at crates/discovery/src/engine.rs:4652:9:
+assertion `left == right` failed
+  left: 0
+ right: 20
+
+---- engine::tests::refresh_publishes_available_candidates_when_relevance_is_underfilled stdout ----
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+DAILY_PAPER_SELECTION_DIAGNOSTICS {"valid_scored_candidates":0,"preferred_candidates":0,"backfill_candidates":0,"below_floor_candidates":0,"unscored_candidates":0,"preferred_selected":0,"backfill_selected":0,"final_unique_published":0}
+
+thread 'engine::tests::refresh_publishes_available_candidates_when_relevance_is_underfilled' (12416173) panicked at crates/discovery/src/engine.rs:4613:9:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+
+failures:
+    engine::tests::broader_fallback_recovers_from_an_empty_focused_query
+    engine::tests::daily_archive_keeps_only_the_latest_feed_pointer_for_each_local_day
+    engine::tests::daily_research_search_uses_local_home_and_twelve_item_pages
+    engine::tests::newer_version_is_not_blocked_by_seen_manifestation_key
+    engine::tests::opened_paper_is_excluded_before_the_next_ranking_pass
+    engine::tests::previewed_paper_can_be_recommended_again
+    engine::tests::read_later_paper_is_excluded_before_the_next_ranking_pass
+    engine::tests::refresh_publishes_atomic_disjoint_feed_and_hides_scores
+    engine::tests::refresh_publishes_available_candidates_when_relevance_is_underfilled
+    engine::tests::repeated_refresh_keeps_soft_lifecycle_states_eligible_and_excludes_dismissed
+    engine::tests::selection_keeps_each_active_query_group_represented
+    engine::tests::successful_refresh_records_stage_counts_and_timings
+
+test result: FAILED. 175 passed; 12 failed; 10 ignored; 0 measured; 0 filtered out; finished in 12.06s
+
+error: test failed, to rerun pass `-p apaper_discovery --lib`

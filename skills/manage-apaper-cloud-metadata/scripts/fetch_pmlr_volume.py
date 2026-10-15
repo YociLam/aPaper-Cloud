@@ -115,7 +115,7 @@ def iso_date(value: str, year: int) -> str:
     match = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", value)
     if match:
         return f"{value}T00:00:00Z"
-    return f"{year:04d}-01-01T00:00:00Z"
+    raise ValueError(f"missing or invalid publisher date: {value!r}")
 
 
 def parse_record(
@@ -135,10 +135,12 @@ def parse_record(
     pdf_url = scalar(lines, "pdf")
     doi = scalar(lines, "doi")
     section = scalar(lines, "section")
+    if scalar(lines, "year") not in ("", str(year)):
+        raise ValueError(f"unexpected publication year for {paper_id}")
     published = iso_date(scalar(lines, "date"), year)
     if expected_title_fragment.casefold() not in container_title.casefold():
         raise ValueError(f"unexpected container title for {paper_id}: {container_title}")
-    if not abstract and section.casefold() == "preface":
+    if section.casefold() == "preface":
         return None
     if not all((paper_id, title, abstract, paper_authors, pdf_url)):
         raise ValueError(f"incomplete PMLR record {paper_id or '<unknown>'}")

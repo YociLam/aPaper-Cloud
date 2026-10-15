@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "dataset": "apaper.app_bundled_translation_resources",
+  "distribution": "app_bundle",
+  "status": "source_resource_snapshot",
+  "architecture": "arm64",
+  "translator_version": "v0.4",
+  "environment_version": "v0.1",
+  "environment_archive_revision": "v0.1-r1",
+  "translator_updated_at": "2026-09-26T13:17:43Z",
+  "environment_updated_at": "2026-08-27T12:30:26Z",
+  "translator_package_sha256": "13882f9040cb02d6890b122a725b71b81addb19950e4b61495f1d857854f7394",
+  "environment_package_sha256": "8b61050c36888dcb79e9fe1af5d9ecb2f00467a6597797d14ca07b500c307867",
+  "resource_manifest_sha256": "0e8630f215366f2db9c1e626d62a1b9edcd814bb484c2267b7cd4c051fafcde7",
+  "translator_package_bytes": 26815
+}
