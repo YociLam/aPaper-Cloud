@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "channel": "qualification",
+  "version": "0.1.2",
+  "build": 9062,
+  "release_tag": "apaper-update-qualification-20261014-9062",
+  "release_id": 412859869,
+  "asset_id": 640749077,
+  "published_at": "2026-10-14T15:16:20Z",
+  "source_commit": "25f640d87e84875452f57184b76a179290bead21",
+  "source_tree": "fa3158bd7fbbd89142dbb6028ad63fb9cafe7ca6",
+  "build_source": {
+    "commit": "25f640d87e84875452f57184b76a179290bead21",
+    "tree": "fa3158bd7fbbd89142dbb6028ad63fb9cafe7ca6",
+    "bookkeepingSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "archive_sha256": "0a780a684d9b2492437c7c928a1b6c03b996cca57464b6afd1dc181a810e0fc9",
+  "archive_bytes": 443854473,
+  "archive_url": "https://github.com/YociLam/aPaper-Cloud/releases/download/apaper-update-qualification-20261014-9062/aPaper-Update-Qualification-0.1.2-9062.zip",
+  "signing": "Apple Development",
+  "notarized": false
+}
