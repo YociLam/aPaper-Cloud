@@ -21,8 +21,7 @@ aPaper Cloud 是 aPaper 的公共分发仓库，统一提供应用安装与更�
 
 ## 应用下载与更新
 
-应用文件通过 GitHub Releases 分发。同一版本可以同时提供用于自动更新的完整 ZIP 包，以及
-供首次安装使用的 DMG；两种包装包含相同版本的应用，网站下载入口链接到对应的 Release 资产。
+新安装 DMG 由 [aPaper Releases](https://github.com/YociLam/aPaper/releases) 提供；本仓库继续提供完整更新 ZIP 与频道元数据。两种包装必须包含同一个封装 App。历史资产与下载地址保持不变。
 
 正式版、测试版与资格验证版使用独立渠道。原生 macOS 更新器读取对应渠道的 Sparkle appcast，
 其中明确指定归档地址、构建号、最低系统版本、准确大小及 EdDSA 签名。仓库包含多个产品，
@@ -127,14 +126,13 @@ src/                                  目录打包与校验工具
 APP-DISTRIBUTION.md                     应用发布与渠道合同
 ```
 
-App ZIP／DMG 与历史环境归档通过 GitHub Release 资产分发。静态服务的规范地址是
+新的 App ZIP 与历史环境归档在本仓库的 Release 资产中分发；新安装 DMG 放在 aPaper Releases，已有 Cloud DMG 保留。静态服务的规范地址是
 `https://cloud.apaper.ai`，会议 Manifest 中的包路径相对于该地址解析。
 
 ## 完整性与发布规范
 
 元数据发布前校验 Schema、记录数、大小和 SHA-256。应用更新归档还需要原生代码签名检查与
-Sparkle EdDSA 签名。正式 App 分发另有 Developer ID 与公证门槛，资格验证通过不等于
-正式稳定版已获准发布。
+生产 Sparkle EdDSA 签名与原生安装资格验证。明确标注的临时签名、未公证分发只支持安全版本检查与手动安装；Apple 付费会员及公证暂缓，既有公证生产通道门槛保留。无生产密钥时，检查信息不包含可执行 enclosure，也不替用资格验证密钥。本次文档修改不代表二进制或稳定频道已发布。
 
 每次发布 App 或内置资源时，必须同步更新**中英文 README 与网站**中对应的版本、构建号、
 更新时间和下载地址。信息以实际签名产物及资源变更记录为准，不用网站部署时间代替引擎

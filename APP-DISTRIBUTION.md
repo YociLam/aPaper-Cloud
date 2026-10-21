@@ -4,6 +4,21 @@ This public repository is the current distribution repository, not the App sourc
 App distribution, conference synchronization and historical Translation Engine assets are separate
 products. Never resolve App updates using `/releases/latest` or global Release ordering.
 
+## Current manual distribution contract (Release-01)
+
+- Product installer: `YociLam/aPaper`, numeric repository ID `1428580757`, independent public documentation history. New `aPaper.dmg` assets use immutable `v<version>-b<build>` tags in that repository.
+- Update archive: this repository, ID `1305956053`, immutable `apaper-macos-v<version>-b<build>` tags. Keep all historical releases, conference/journal packs and translation routes.
+- Source repository is private; it is never a public tag target or export source. Public release JSON contains only product/platform/version, capability, public URLs, byte counts, hashes and reviewed notes.
+- One sealed App is packaged into DMG and ZIP. Recursive file hashes, symlinks, modes and valid code seals must match after unpacking. Full ZIP does not imply a delta or installation eligibility.
+- Apple paid membership/notarization is deferred for explicitly labeled ad-hoc manual installation. The existing Developer ID/notarized production lane below remains intact.
+- The accepted formal client checks the existing **stable** URL below. Without production Ed25519 custody, serve an information-only item with `sparkle:version`, display version, minimum macOS, arm64/stable markers and the product website link, **without any executable enclosure**. The client opens `https://apaper.ai` only after user consent. Automatic checking remains separate from installation; automatic installation is unavailable.
+- The downloadable Cloud ZIP is retained for a future separately qualified installer path. Do not activate an unsigned archive, reuse qualification trust roots, or use repository-global latest.
+- Prepare and validate → upload reconciled drafts → exact combined approval → publish immutable assets → anonymous full-byte hashes → promote stable XML/JSON → verify live MIME/content → promote website last. Draft access is authenticated, not anonymous publication.
+- Resume the same canonical release record, reconciling repository/release/asset IDs and hashes. A different artifact requires a new version/build/tag; no clobber, moved tag, forced ref or historical deletion.
+- Preserve prior website deployment and channel bytes. Withdrawing an offer does not downgrade installed Apps or restore account/research data. Prefer a higher-build forward correction.
+
+These rules establish the route; they do not announce a public binary, activate stable metadata or replace the live website. The canonical private `apaper-release` Skill owns preparation, approval and execution. Third-party notices and necessary runtime material remain in the App; no product open-source license is implied.
+
 ## macOS arm64 channels
 
 | Channel | Sparkle appcast | Immutable full ZIP release tag |

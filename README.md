@@ -22,13 +22,15 @@ are maintained separately.
 
 ## Application downloads and updates
 
-Application archives are distributed through GitHub Releases. A release can provide a full ZIP
-archive for automatic updates and an optional DMG for first-time installation; both contain the
-same application version. The website's download links point to these release assets.
+New installer DMGs are distributed through [aPaper Releases](https://github.com/YociLam/aPaper/releases).
+This repository retains full update ZIP archives and channel metadata. Both containers must hold
+the same sealed App. Historical assets and their download URLs remain available unchanged.
 
 Stable, beta, and qualification channels remain separate. The native macOS updater reads a
-channel-specific Sparkle appcast with a pinned archive URL, build number, minimum system version,
-exact size, and EdDSA signature. It does not infer the App version from this repository's global
+channel-specific appcast. Executable updates require a pinned archive URL, build number, minimum
+system version, exact size and production EdDSA signature. The accepted check-only client can read
+an information-only item without an enclosure and, after consent, open the product website for
+manual installation. No production signing key is replaced by a qualification key. It does not infer the App version from this repository's global
 “latest release”, which may belong to another product.
 
 **Availability:** App distribution is currently being qualified. No stable App release is published
@@ -139,15 +141,18 @@ src/                                  Catalog packaging and validation tools
 APP-DISTRIBUTION.md                     App release and channel contract
 ```
 
-App ZIP/DMG files and historical environment archives are GitHub Release assets. The static public
+New App ZIPs and historical environment archives are GitHub Release assets here; new installer
+DMGs belong in aPaper Releases. Existing Cloud DMGs are retained. The static public
 origin is `https://cloud.apaper.ai`; conference manifest paths remain relative to that origin.
 
 ## Integrity and publication
 
 Published metadata is validated against its schema, record count, size, and SHA-256. App update
 archives additionally require native code-signature checks and a Sparkle EdDSA signature. Stable
-App distribution has its own Developer ID and notarization gate; a qualification result does not
-approve a stable release.
+automatic installation requires its own trusted signature and native qualification. Apple paid
+membership/notarization is deferred for the explicitly labeled ad-hoc manual distribution lane;
+that does not disable safe version checks or waive the existing notarized production lane gates.
+No public binary or stable channel promotion is announced by this documentation change.
 
 Every App or bundled-resource publication must synchronize the relevant version, build, update
 time, and download links in **both READMEs and the website**. Use the actual signed artifacts and
