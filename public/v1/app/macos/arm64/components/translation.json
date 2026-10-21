@@ -4,13 +4,13 @@
   "distribution": "app_bundle",
   "status": "source_resource_snapshot",
   "architecture": "arm64",
-  "translator_version": "v0.4",
+  "translator_version": "v0.6",
   "environment_version": "v0.1",
-  "environment_archive_revision": "v0.1-r1",
-  "translator_updated_at": "2026-09-26T13:17:43Z",
-  "environment_updated_at": "2026-08-27T12:30:26Z",
-  "translator_package_sha256": "13882f9040cb02d6890b122a725b71b81addb19950e4b61495f1d857854f7394",
-  "environment_package_sha256": "8b61050c36888dcb79e9fe1af5d9ecb2f00467a6597797d14ca07b500c307867",
-  "resource_manifest_sha256": "0e8630f215366f2db9c1e626d62a1b9edcd814bb484c2267b7cd4c051fafcde7",
-  "translator_package_bytes": 26815
+  "environment_archive_revision": "v0.2",
+  "translator_updated_at": "2026-10-21T14:19:11Z",
+  "environment_updated_at": "2026-10-21T14:19:11Z",
+  "translator_package_sha256": "3f488425a0697561e0aab1e8b44730acbb8d47c5c93f91c1eb541ed0dbff7e95",
+  "environment_package_sha256": "4da211ef35d97491ba83c5a221c2d69f365adbf002396c9533ea3635072740f0",
+  "resource_manifest_sha256": "d0a167a4d8dfdfe9a9d47d8a345ecfcec3b0a4ae5d9ace8d918d79132171e857",
+  "translator_package_bytes": 30355
 }

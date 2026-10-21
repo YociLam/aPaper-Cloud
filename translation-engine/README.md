@@ -4,6 +4,16 @@ This directory defines and validates the architecture-specific aPaper Translatio
 
 The runtime never needs system Python, Homebrew, Conda, global `pip`, or an existing virtual environment. Build inputs are immutable by version and verified by SHA-256. GitHub Releases contain only final architecture packages and their release metadata; normal Git history contains only environment definitions, locks, schemas, build/validation scripts, checksums, provenance, and release metadata.
 
+## Current engine artifact: v0.2 (macOS arm64)
+
+[Download the immutable v0.2 Release](https://github.com/YociLam/aPaper-Cloud/releases/tag/translation-engine-v0.2). The [release record](releases/translation-engine-v0.2.json) binds the full archive, complete file inventory, deterministic recipe and exact source revision. Artifact revision **v0.2**, translator **v0.6**, dependency environment ABI **v0.1** and worker protocol **1** are separate identities. This release is macOS Apple Silicon only; no new x86_64 distribution is claimed.
+
+The archive includes layout-aware paragraph continuation, bounded repair and independent-block recovery when continuation delimiters are malformed, formula checks, and paired source/translation block regions. Its source, runtime, models, fonts, license notices and integrity inventory are contained in the full package. The published recipe records the source-overlay hashes and immutable base commitments. Source/recipe change time: **2026-10-21 14:19:11 UTC**; GitHub records publication time separately.
+
+This is an explicit maintainer download and verified App-resource snapshot, not a separate automatic engine updater or a new App release. The status-only component record and website describe v0.6/v0.2 from the inspected signed App bundle. Historical manifests, routes, both v0.1 architecture archives and App update feeds are retained unchanged.
+
+## Historical environment distribution
+
 The archived Cloud metadata records translator `v0.3` and required environment `v0.1`; it does not describe the current App translator. Both use the two-component `vX.Y` product version format, but they are independent: changing only the translator version does not reinstall the environment. The environment supports macOS `arm64` and `x86_64`, minimum macOS 13.0, worker protocol 1. The retained historical metadata endpoint is `https://cloud.apaper.ai/v1/translation/v0.1/manifest.json`; GitHub Release assets are available for explicit manual downloads only.
 
 The source copy inside a complete environment archive is a self-contained bootstrap baseline, not the active translator-version authority. The active translator source is maintained in the aPaper repository and shipped inside the signed App bundle; Cloud does not publish a second translator source package. At runtime aPaper deploys only the matching translator and environment resources carried by that App bundle. A translator-only App update therefore replaces only the translator deployment; the environment remains `v0.1` unless a later App bundle declares another required environment version.

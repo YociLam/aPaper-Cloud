@@ -105,14 +105,16 @@ translation manifests or download an environment package from them at runtime.
 
 | App-bundled resource (macOS arm64) | Version | Updated (UTC) |
 | --- | --- | --- |
-| Translator | `v0.4` | 2026-09-26 13:17:43 |
-| Environment package | `v0.1-r1` | 2026-08-27 12:30:26 |
+| Translator | `v0.6` | 2026-10-21 14:19:11 |
+| Environment package | `v0.2` | 2026-10-21 14:19:11 |
 
 These values describe the verified bundled resource snapshot shown on the website, not a separate
-Cloud v0.4 download or a stable App release announcement. Translator and environment versions are
-independent; `v0.1-r1` is a revised archive of environment v0.1. The
+standalone App download or a stable App release announcement. Translator and environment versions are
+independent; `v0.2` is the engine artifact revision and retains environment ABI v0.1. The
 [resource status record](https://cloud.apaper.ai/v1/app/macos/arm64/components/translation.json)
 records their exact package hashes.
+
+[Translation Engine v0.2 (macOS arm64)](https://github.com/YociLam/aPaper-Cloud/releases/tag/translation-engine-v0.2) provides the exact verified full engine archive, file inventory and deterministic recipe for manual download. It includes layout-aware continuation recovery and paired block alignment; x86_64 remains on its historical package. Existing Apps receive translator changes through App updates.
 
 The historical `translation-engine-v0.1` Release and `/v1/translation/` endpoints remain available
 for compatibility, explicit maintainer downloads, and reproducible build inputs. In particular,
