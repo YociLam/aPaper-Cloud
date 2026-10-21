@@ -5,8 +5,8 @@
 
 # aPaper Cloud
 
-aPaper Cloud distributes aPaper application releases, academic literature metadata, and versioned
-runtime resources. It provides the public files and integrity metadata used for software updates
+aPaper Cloud distributes aPaper App update archives and academic literature metadata.
+It provides the public files and integrity metadata used for software updates
 and conference catalog synchronization. Application source code and private research workspaces
 are maintained separately.
 
@@ -16,7 +16,7 @@ are maintained separately.
 
 1. [Application downloads and updates](#application-downloads-and-updates)
 2. [Academic literature metadata](#academic-literature-metadata)
-3. [Translation Engine](#translation-engine)
+3. [App-bundled resources](#app-bundled-resources)
 4. [Repository layout](#repository-layout)
 5. [Integrity and publication](#integrity-and-publication)
 
@@ -31,7 +31,7 @@ channel-specific appcast. Executable updates require a pinned archive URL, build
 system version, exact size and production EdDSA signature. The accepted check-only client can read
 an information-only item without an enclosure and, after consent, open the product website for
 manual installation. No production signing key is replaced by a qualification key. It does not infer the App version from this repository's global
-“latest release”, which may belong to another product.
+“latest release” ordering.
 
 **Availability:** App distribution is currently being qualified. No stable App release is published
 through this repository. Qualification prereleases are isolated test builds and are not the normal
@@ -99,29 +99,18 @@ runtime connection to Supabase.
 
 The DP-NEW catalog contains: 31 sources (25 conferences and six journals), 77 annual selections, 72 packs. Partial editions are selectable only when they have a valid pack; rows marked no pack are unavailable. Discipline definitions and references share the manifest hash. Venue mappings are reviewed by aPaper, not official OECD venue assignments. See the [execution report](docs/dp-new/DP-NEW-report.md) and [mapping](docs/dp-new/discipline-mapping.md).
 
-## Translation Engine
+## App-bundled resources
 
-The current App installs and repairs its translation runtime from resources inside its signed
-bundle. Translator updates arrive with App releases; the App does not poll historical Cloud
-translation manifests or download an environment package from them at runtime.
+The translation runtime is included in each App archive and updates with the App version.
+The App deploys and repairs the matching resources from its signed bundle.
 
 | App-bundled resource (macOS arm64) | Version | Updated (UTC) |
 | --- | --- | --- |
 | Translator | `v0.6` | 2026-10-21 14:19:11 |
 | Environment package | `v0.2` | 2026-10-21 14:19:11 |
 
-These values describe the verified bundled resource snapshot shown on the website, not a separate
-standalone App download or a stable App release announcement. Translator and environment versions are
-independent; `v0.2` is the engine artifact revision and retains environment ABI v0.1. The
-[resource status record](https://cloud.apaper.ai/v1/app/macos/arm64/components/translation.json)
-records their exact package hashes.
-
-[Translation Engine v0.2 (macOS arm64)](https://github.com/YociLam/aPaper-Cloud/releases/tag/translation-engine-v0.2) provides the exact verified full engine archive, file inventory and deterministic recipe for manual download. It includes layout-aware continuation recovery and paired block alignment; x86_64 remains on its historical package. Existing Apps receive translator changes through App updates.
-
-The historical `translation-engine-v0.1` Release and `/v1/translation/` endpoints remain available
-for compatibility, explicit maintainer downloads, and reproducible build inputs. In particular,
-the original arm64 archive remains the pinned base for the r1 recipe. Historical assets are not
-overwritten or relabeled as newer engine packages. See [Translation Engine distribution](translation-engine/README.md).
+The [resource status record](https://cloud.apaper.ai/v1/app/macos/arm64/components/translation.json)
+records the verified bundled resource versions and checksums.
 
 ## Repository layout
 
@@ -135,13 +124,11 @@ public/
     version.json                       Catalog version and manifest checksum
     manifest.json                      Venues, editions, and pack integrity metadata
     packs/<venue>/<year>.jsonl.zst      Compressed bibliographic records
-  v1/translation/                      Historical compatibility metadata
-translation-engine/                    Environment provenance, recipes, and legacy asset route
 src/                                  Catalog packaging and validation tools
 APP-DISTRIBUTION.md                     App release and channel contract
 ```
 
-New App ZIPs and historical environment archives are GitHub Release assets here; new installer
+App update ZIPs and eligible delta archives are GitHub Release assets here; new installer
 DMGs belong in aPaper Releases. Existing Cloud DMGs are retained. The static public
 origin is `https://cloud.apaper.ai`; conference manifest paths remain relative to that origin.
 
@@ -154,11 +141,11 @@ membership/notarization is deferred for the explicitly labeled ad-hoc manual dis
 that does not disable safe version checks or waive the existing notarized production lane gates.
 No public binary or stable channel promotion is announced by this documentation change.
 
-Every App or bundled-resource publication must synchronize the relevant version, build, update
+Every App publication must synchronize the relevant version, build, update
 time, and download links in **both READMEs and the website**. Use the actual signed artifacts and
 resource-change records; do not use a website deployment time as an engine update time. Upload and
 verify immutable Release assets before publishing an appcast that references them. Preserve
-unrelated conference packs and historical compatibility endpoints.
+unrelated conference packs and App update channels.
 
 Run catalog validation from this repository root:
 
@@ -167,9 +154,7 @@ cargo run --locked -- validate-site public
 cargo test --locked
 ```
 
-GitHub Actions validates the catalog and Translation Engine distribution before publication.
-The legacy asset route has separate tests and a Worker packaging dry-run; updating its development
-tooling does not deploy or remove the production Worker.
+GitHub Actions validates the catalog before publication. App archives include the verified translation runtime and its license notices.
 
 ## E1 journal metadata
 

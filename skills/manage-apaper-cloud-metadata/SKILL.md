@@ -1,6 +1,6 @@
 ---
 name: manage-apaper-cloud-metadata
-description: Maintain and publish aPaper conference metadata packs, edition availability, checksums, and version manifests. Use when adding or refreshing any existing or new conference, validating packs, changing the DailyPaper catalog, publishing to cloud.apaper.ai, or verifying that the App startup version-sync contract can discover a release.
+description: Maintain and publish aPaper conference metadata packs, edition availability, checksums, and version manifests. Use when adding or refreshing any existing or new conference, validating packs, changing the DailyPaper catalog, publishing catalog metadata to cloud.apaper.ai, or verifying the App catalog synchronization contract.
 ---
 
 # Maintain aPaper Cloud Metadata

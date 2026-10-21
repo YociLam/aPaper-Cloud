@@ -5,9 +5,8 @@
 
 # aPaper Cloud
 
-aPaper Cloud 是 aPaper 的公共分发仓库，统一提供应用安装与更新包、学术文献元数据及版本化
-运行资源，为软件更新和会议目录同步提供可校验的文件与版本信息。应用源码与用户的私有
-研究资料在本仓库之外维护。
+aPaper Cloud 提供 aPaper App 更新归档与学术文献元数据，为软件更新和会议目录同步提供
+可校验的文件与版本信息。应用源码与用户的私有研究资料在本仓库之外维护。
 
 [网站](https://cloud.apaper.ai) · [发布版本](https://github.com/YociLam/aPaper-Cloud/releases) · [联系支持](mailto:contact@apaper.ai)
 
@@ -15,7 +14,7 @@ aPaper Cloud 是 aPaper 的公共分发仓库，统一提供应用安装与更�
 
 1. [应用下载与更新](#应用下载与更新)
 2. [学术文献元数据](#学术文献元数据)
-3. [翻译引擎](#翻译引擎)
+3. [App 内置资源](#app-内置资源)
 4. [仓库结构](#仓库结构)
 5. [完整性与发布规范](#完整性与发布规范)
 
@@ -24,8 +23,7 @@ aPaper Cloud 是 aPaper 的公共分发仓库，统一提供应用安装与更�
 新安装 DMG 由 [aPaper Releases](https://github.com/YociLam/aPaper/releases) 提供；本仓库继续提供完整更新 ZIP 与频道元数据。两种包装必须包含同一个封装 App。历史资产与下载地址保持不变。
 
 正式版、测试版与资格验证版使用独立渠道。原生 macOS 更新器读取对应渠道的 Sparkle appcast，
-其中明确指定归档地址、构建号、最低系统版本、准确大小及 EdDSA 签名。仓库包含多个产品，
-因此不会将全局“最新 Release”作为 App 的版本来源。
+其中明确指定归档地址、构建号、最低系统版本、准确大小及 EdDSA 签名。App 版本以对应渠道的更新源为准。
 
 **当前状态：** App 分发正在进行资格验证，本仓库尚未发布正式稳定版 App。资格预发布包是
 独立的测试构建，不是普通用户的安装渠道。
@@ -88,25 +86,16 @@ App 在运行时连接 Supabase。
 
 DP-NEW 目录包含 31 个来源（25 个会议、6 个期刊）、77 个年度选择、72 个数据包。带有效数据包的部分届次仍可选；“无数据包”不可选。分类定义与来源引用共享 Manifest 哈希；映射由 aPaper 审核，不是 OECD 对会议的官方分类。详见[执行报告](docs/dp-new/DP-NEW-report.md)和[分类映射](docs/dp-new/discipline-mapping.md)。
 
-## 翻译引擎
+## App 内置资源
 
-当前 App 从已签名应用包内部署和修复专用翻译环境。翻译器更新随 App 版本一同交付，运行时
-不轮询历史 Cloud 翻译版本接口，也不通过这些接口下载环境包。
+翻译环境随每个 App 归档一同交付，并随 App 版本更新。App 从已签名应用包内部署和修复对应资源。
 
 | App 内置资源（macOS arm64） | 版本 | 更新时间（UTC） |
 | --- | --- | --- |
 | 翻译器 | `v0.6` | 2026-10-21 14:19:11 |
 | 环境包 | `v0.2` | 2026-10-21 14:19:11 |
 
-上述信息对应网站展示的已验证内置资源快照，不代表另行提供了独立 App 下载包，也不构成
-正式 App 发布声明。翻译器与环境分别管理版本；`v0.2` 为引擎产物修订版本，环境 ABI 保持 v0.1。
-[资源状态记录](https://cloud.apaper.ai/v1/app/macos/arm64/components/translation.json)保存准确的包校验值。
-
-[翻译引擎 v0.2（macOS arm64）](https://github.com/YociLam/aPaper-Cloud/releases/tag/translation-engine-v0.2)提供已验证的完整引擎包、文件校验清单与确定性构建配方，可供维护者手动下载。包含版式感知的跨块续接恢复及双侧块映射；x86_64 沿用历史包。已安装 App 的翻译器仍随 App 更新。
-
-历史 `translation-engine-v0.1` Release 与 `/v1/translation/` 接口继续保留，用于兼容已有使用者、
-维护者手动下载及可复现构建。其中，原 arm64 归档仍是 r1 构建配方固定引用的基础输入。
-历史资产不覆盖、不重新标注为新版本环境包。详见[翻译引擎分发说明](translation-engine/README.md)。
+[资源状态记录](https://cloud.apaper.ai/v1/app/macos/arm64/components/translation.json)保存已验证的内置资源版本与校验值。
 
 ## 仓库结构
 
@@ -120,13 +109,11 @@ public/
     version.json                       目录版本与 Manifest 校验值
     manifest.json                      会议、年份及数据包完整性信息
     packs/<venue>/<year>.jsonl.zst      压缩文献元数据
-  v1/translation/                      历史兼容元数据
-translation-engine/                    环境来源、构建配方及历史资产路由
 src/                                  目录打包与校验工具
 APP-DISTRIBUTION.md                     应用发布与渠道合同
 ```
 
-新的 App ZIP 与历史环境归档在本仓库的 Release 资产中分发；新安装 DMG 放在 aPaper Releases，已有 Cloud DMG 保留。静态服务的规范地址是
+App 更新 ZIP 与适用的增量归档在本仓库的 Release 资产中分发；新安装 DMG 放在 aPaper Releases，已有 Cloud DMG 保留。静态服务的规范地址是
 `https://cloud.apaper.ai`，会议 Manifest 中的包路径相对于该地址解析。
 
 ## 完整性与发布规范
@@ -134,10 +121,10 @@ APP-DISTRIBUTION.md                     应用发布与渠道合同
 元数据发布前校验 Schema、记录数、大小和 SHA-256。应用更新归档还需要原生代码签名检查与
 生产 Sparkle EdDSA 签名与原生安装资格验证。明确标注的临时签名、未公证分发只支持安全版本检查与手动安装；Apple 付费会员及公证暂缓，既有公证生产通道门槛保留。无生产密钥时，检查信息不包含可执行 enclosure，也不替用资格验证密钥。本次文档修改不代表二进制或稳定频道已发布。
 
-每次发布 App 或内置资源时，必须同步更新**中英文 README 与网站**中对应的版本、构建号、
+每次发布 App 时，必须同步更新**中英文 README 与网站**中对应的版本、构建号、
 更新时间和下载地址。信息以实际签名产物及资源变更记录为准，不用网站部署时间代替引擎
 更新时间。先上传并验证不可变 Release 资产，再发布引用它的 appcast；保留无关会议包及
-历史兼容接口。
+App 更新渠道。
 
 在本仓库根目录执行目录校验：
 
@@ -146,8 +133,7 @@ cargo run --locked -- validate-site public
 cargo test --locked
 ```
 
-GitHub Actions 负责会议目录和翻译引擎分发校验。历史资产路由另有测试与 Worker 打包 dry-run；
-更新其开发工具依赖不会部署或删除线上 Worker。
+GitHub Actions 在发布前校验目录。App 归档包含经校验的翻译环境及其许可说明。
 
 ## E1 期刊元数据
 
