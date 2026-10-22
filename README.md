@@ -37,7 +37,7 @@ manual installation. No production signing key is replaced by a qualification ke
 
 Current qualification: [0.1.3 (build 9083)](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261015-9083), published **2026-10-15 10:38:05 UTC**.
 
-Current stable: [0.1.4 (build 1005)](https://github.com/YociLam/aPaper/releases/tag/v0.1.4-b1005) · 2026-10-22T08:33:46Z · Apple Development / unnotarized / sparkle-eddsa.
+Current stable: [0.1.5 (build 1006)](https://github.com/YociLam/aPaper/releases/tag/v0.1.5-b1006) · 2026-10-22T10:22:00Z · Apple Development / unnotarized / sparkle-eddsa.
 
 See [App distribution contract](APP-DISTRIBUTION.md) for channel paths, publication order, and
 verification requirements. Full application archives belong in Releases, not Git history or Pages.

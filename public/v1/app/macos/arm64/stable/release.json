@@ -1,8 +1,8 @@
 {
   "schema": "apaper-public-release/1",
   "product": "aPaper",
-  "version": "0.1.4",
-  "build": 1005,
+  "version": "0.1.5",
+  "build": 1006,
   "platform": "macos",
   "architecture": "arm64",
   "minimumOS": "14.6",
@@ -11,28 +11,28 @@
   "notarized": false,
   "installMode": "sparkle-eddsa",
   "automaticInstallation": true,
-  "publishedAt": "2026-10-22T08:33:46Z",
+  "publishedAt": "2026-10-22T10:22:00Z",
   "notes": {
-    "en": "This bridge release uses a fixed Apple Development signing identity. After upgrading from build 1004, sign in once; retained login must be verified in a later update signed with the same certificate. Includes unified dialog spacing and motion, and improved PDF metadata fallback. Supports user-consented in-App updates. Same-Mac verification route; not Developer ID signed or notarized by Apple.",
-    "zh-Hans": "本过渡版采用固定 Apple Development 签名。从1004升级后请重新登录一次；后续同证书版本更新再验证保持登录。包含统一弹窗边距与动画及PDF元数据回退改进。支持用户确认后的应用内更新。当前为同机验证路线，非Developer ID签名，未经Apple公证。",
-    "zh-Hant": "本過渡版採用固定 Apple Development 簽章。從1004升級後請重新登入一次；後續同憑證版本更新再驗證保持登入。包含統一對話框邊距與動畫及PDF中繼資料回退改進。支援使用者確認後的App內更新。目前為同機驗證路線，非Developer ID簽章，未經Apple公證。",
-    "ja": "固定のApple Development署名を使用する移行版です。ビルド1004から更新した後は一度ログインしてください。同じ証明書による次回更新でログインの維持を検証します。ダイアログの余白とアニメーション、PDFメタデータのフォールバックを改善しました。同意後のアプリ内更新に対応します。同一Macでの検証用で、Developer ID署名およびAppleの公証はありません。",
-    "ko": "고정 Apple Development 서명을 사용하는 전환 버전입니다. 빌드1004에서 업데이트한 뒤 한 번 로그인해 주세요. 동일 인증서를 사용하는 다음 업데이트에서 로그인 유지를 검증합니다. 대화상자 여백과 애니메이션, PDF 메타데이터 대체 처리를 개선했습니다. 사용자 동의 후 앱 내 업데이트를 지원합니다. 동일 Mac 검증 경로이며 Developer ID 서명 및 Apple 공증은 없습니다."
+    "en": "Mentor, Insight and Workbench prioritize model configuration guidance when no paper or project is selected. Workbench hides its input without a project; Steward retains its input. The update-check button now uses the shorter “Checking…” label. Application signing, the update channel and account session storage remain unchanged for the signed update test. User-consented in-App download, installation and relaunch remain available. Apple Development signed; not notarized by Apple.",
+    "zh-Hans": "未选择论文或项目时，Mentor、Insight和工作台优先提示配置模型。工作台未选项目时隐藏输入框，Steward保留输入框。检查更新按钮在检查时显示简短的“检查中…”。保持App签名、更新通道和账号会话存储不变，用于同签名升级验证。继续支持用户确认后的应用内下载、安装和重启。采用Apple Development签名，未经Apple公证。",
+    "zh-Hant": "未選擇論文或專案時，Mentor、Insight和工作台優先提示設定模型。工作台未選專案時隱藏輸入框，Steward保留輸入框。檢查更新按鈕在檢查時顯示簡短的「檢查中…」。保持App簽章、更新通道與帳戶工作階段儲存不變，用於同簽章升級驗證。繼續支援使用者確認後的App內下載、安裝和重新啟動。採用Apple Development簽章，未經Apple公證。",
+    "ja": "論文やプロジェクトを選択していない場合も、Mentor、Insight、Workbenchではモデル設定の案内を優先します。Workbenchはプロジェクト未選択時に入力欄を非表示にし、Stewardの入力欄は維持します。更新確認ボタンの実行中の表示を「確認中…」に短縮しました。同じ署名での更新を検証するため、アプリの署名、更新チャネル、アカウントセッションの保存方式は維持しています。同意後のアプリ内ダウンロード、インストール、再起動に対応します。Apple Development署名を使用し、Appleの公証はありません。",
+    "ko": "논문이나 프로젝트를 선택하지 않아도 Mentor, Insight 및 Workbench는 모델 설정 안내를 우선 표시합니다. Workbench는 프로젝트 미선택 시 입력란을 숨기며 Steward의 입력란은 유지합니다. 업데이트 확인 버튼의 진행 문구를 “확인 중…”으로 줄였습니다. 동일 서명 업데이트 검증을 위해 앱 서명, 업데이트 채널 및 계정 세션 저장 방식을 유지합니다. 사용자 동의 후 앱 내 다운로드, 설치 및 재시작을 지원합니다. Apple Development 서명을 사용하며 Apple 공증은 없습니다."
   },
   "installer": {
     "repository": "YociLam/aPaper",
     "repositoryID": 1428580757,
-    "tag": "v0.1.4-b1005",
-    "url": "https://github.com/YociLam/aPaper/releases/download/v0.1.4-b1005/aPaper.dmg",
-    "bytes": 450764914,
-    "sha256": "cabfc20d808b54d68d6ab7dc9e001eae312a85a74a6a0b29048443a6928f15de"
+    "tag": "v0.1.5-b1006",
+    "url": "https://github.com/YociLam/aPaper/releases/download/v0.1.5-b1006/aPaper.dmg",
+    "bytes": 450713089,
+    "sha256": "8dae330f8f922af641f9d1b2ceb74e3192796b2ba71da887eab23106338aaaca"
   },
   "updateArchive": {
     "repository": "YociLam/aPaper-Cloud",
     "repositoryID": 1305956053,
-    "tag": "apaper-macos-v0.1.4-b1005",
-    "url": "https://github.com/YociLam/aPaper-Cloud/releases/download/apaper-macos-v0.1.4-b1005/aPaper-0.1.4-b1005-macos-arm64.zip",
-    "bytes": 436808876,
-    "sha256": "840ab0a38480f8c14fb010aafd9c123bdf795d3fecf92dcbf32db6d5cf6bdad9"
+    "tag": "apaper-macos-v0.1.5-b1006",
+    "url": "https://github.com/YociLam/aPaper-Cloud/releases/download/apaper-macos-v0.1.5-b1006/aPaper-0.1.5-b1006-macos-arm64.zip",
+    "bytes": 436809294,
+    "sha256": "de4b115cd05905d45b200bf0e55371eead19f192f7a55eeb1c79244af824c4c8"
   }
 }
