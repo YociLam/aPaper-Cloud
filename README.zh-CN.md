@@ -29,7 +29,7 @@ aPaper Cloud 提供 aPaper App 更新归档与学术文献元数据，为软件�
 
 当前资格预发布：[0.1.3（构建 9083）](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261015-9083)，发布时间为 **2026-10-15 10:38:05 UTC**。
 
-当前稳定发布： [0.1.2 (build 1003)](https://github.com/YociLam/aPaper/releases/tag/v0.1.2-b1003) · 2026-10-22T04:36:59Z · ad-hoc / unnotarized / sparkle-eddsa.
+当前稳定发布： [0.1.3 (build 1004)](https://github.com/YociLam/aPaper/releases/tag/v0.1.3-b1004) · 2026-10-22T06:27:19Z · ad-hoc / unnotarized / sparkle-eddsa.
 
 渠道路径、发布顺序和校验要求见[应用分发合同](APP-DISTRIBUTION.md)。完整应用归档保存在
 Releases，不进入 Git 历史或 Pages 静态站点。
