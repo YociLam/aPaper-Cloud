@@ -100,18 +100,7 @@
         <h1>aPaper Cloud</h1>
       </div>
       <p>Application updates and research resources for aPaper.</p>
-      <section aria-labelledby="app-heading">
-        <h2 id="app-heading">App updates · qualification</h2>
-        <dl aria-label="Qualification App update status">
-          <dt>Version</dt>
-          <dd id="app-version">Checking…</dd>
-          <dt>Updated</dt>
-          <dd><time id="app-updated">Checking…</time></dd>
-          <dt>Channel</dt>
-          <dd><a id="app-release-link" href="https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261014-9062">Qualification prerelease</a></dd>
-        </dl>
-      </section>
-      <section data-apaper-stable="release"><h2>App · stable</h2><p><a href="https://github.com/YociLam/aPaper/releases/tag/v0.1.1-b1002">aPaper 0.1.1 (1002)</a> · ad-hoc, unnotarized, manual download · 2026-10-22T03:49:03Z</p></section>
+      <section data-apaper-stable="release"><h2 id="app-heading">App updates · stable</h2><dl aria-label="Stable App update status"><dt>Version</dt><dd id="app-version">0.1.2 (1003)</dd><dt>Updated</dt><dd><time id="app-updated" datetime="2026-10-22T04:36:59Z">2026-10-22T04:36:59Z</time></dd><dt>Channel</dt><dd><a id="app-release-link" href="https://github.com/YociLam/aPaper/releases/tag/v0.1.2-b1003">Stable release</a></dd></dl></section>
 <section aria-labelledby="conference-heading">
         <h2 id="conference-heading">Conference catalog</h2>
         <p>DP-NEW v0.16: 31 sources (25 conferences and six journals), 77 annual collections, 72 verified metadata packs. Discipline definitions and source memberships share the verified manifest.</p>
@@ -154,31 +143,8 @@
         }).format(updatedAt);
       }
 
-      const appVersion = document.querySelector("#app-version");
       const appUpdated = document.querySelector("#app-updated");
-      fetch(`/v1/app/macos/arm64/qualification/appcast.xml?check=${Date.now()}`, { cache: "no-store" })
-        .then((response) => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          return response.text();
-        })
-        .then((text) => {
-          const xml = new DOMParser().parseFromString(text, "application/xml");
-          const item = xml.querySelector("rss > channel > item");
-          if (!item || xml.querySelector("parsererror")) throw new Error("Invalid appcast");
-          const ns = "http://www.andymatuschak.org/xml-namespaces/sparkle";
-          const version = item.getElementsByTagNameNS(ns, "shortVersionString")[0]?.textContent;
-          const build = item.getElementsByTagNameNS(ns, "version")[0]?.textContent;
-          if (!version || !build) throw new Error("Missing App identity");
-          appVersion.textContent = `${version} (${build})`;
-          const archiveURL = new URL(item.querySelector("enclosure")?.getAttribute("url"));
-          if (archiveURL.origin !== "https://github.com" || !archiveURL.pathname.startsWith("/YociLam/aPaper-Cloud/releases/download/apaper-update-qualification-")) throw new Error("Invalid App channel");
-          document.querySelector("#app-release-link").href = archiveURL.origin + archiveURL.pathname.split("/").slice(0, 6).join("/").replace("/download/", "/tag/");
-          displayTime(appUpdated, item.querySelector("pubDate")?.textContent);
-        })
-        .catch(() => {
-          appVersion.textContent = "Not published";
-          appUpdated.textContent = "—";
-        });
+      displayTime(appUpdated, appUpdated.dateTime);
 
       const conferenceVersion = document.querySelector("#conference-version");
       const conferenceUpdated = document.querySelector("#conference-updated");

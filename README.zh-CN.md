@@ -25,11 +25,11 @@ aPaper Cloud 提供 aPaper App 更新归档与学术文献元数据，为软件�
 正式版、测试版与资格验证版使用独立渠道。原生 macOS 更新器读取对应渠道的 Sparkle appcast，
 其中明确指定归档地址、构建号、最低系统版本、准确大小及 EdDSA 签名。App 版本以对应渠道的更新源为准。
 
-**当前状态：** 当前稳定发布支持版本检查和 aPaper Releases 手动安装，使用临时签名、未经 Apple 公证，不支持自动安装。资格预发布保持独立。
+**当前状态：** 当前稳定发布通过生产 Ed25519 签名更新包支持用户确认后的应用内安装；App 使用临时签名、未经 Apple 公证。资格预发布保持独立。
 
 当前资格预发布：[0.1.3（构建 9083）](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261015-9083)，发布时间为 **2026-10-15 10:38:05 UTC**。
 
-当前稳定发布： [0.1.1 (build 1002)](https://github.com/YociLam/aPaper/releases/tag/v0.1.1-b1002) · 2026-10-22T03:49:03Z · ad-hoc / unnotarized / manual-download.
+当前稳定发布： [0.1.2 (build 1003)](https://github.com/YociLam/aPaper/releases/tag/v0.1.2-b1003) · 2026-10-22T04:36:59Z · ad-hoc / unnotarized / sparkle-eddsa.
 
 渠道路径、发布顺序和校验要求见[应用分发合同](APP-DISTRIBUTION.md)。完整应用归档保存在
 Releases，不进入 Git 历史或 Pages 静态站点。

@@ -33,11 +33,11 @@ an information-only item without an enclosure and, after consent, open the produ
 manual installation. No production signing key is replaced by a qualification key. It does not infer the App version from this repository's global
 “latest release” ordering.
 
-**Availability:** The current stable release supports version checks and manual installation through aPaper Releases. It is ad-hoc signed and unnotarized; automatic installation is unavailable. Qualification prereleases remain separate.
+**Availability:** The current stable release supports user-consented in-App installation using production Ed25519-signed update archives. The App is ad-hoc signed and unnotarized. Qualification prereleases remain separate.
 
 Current qualification: [0.1.3 (build 9083)](https://github.com/YociLam/aPaper-Cloud/releases/tag/apaper-update-qualification-20261015-9083), published **2026-10-15 10:38:05 UTC**.
 
-Current stable: [0.1.1 (build 1002)](https://github.com/YociLam/aPaper/releases/tag/v0.1.1-b1002) · 2026-10-22T03:49:03Z · ad-hoc / unnotarized / manual-download.
+Current stable: [0.1.2 (build 1003)](https://github.com/YociLam/aPaper/releases/tag/v0.1.2-b1003) · 2026-10-22T04:36:59Z · ad-hoc / unnotarized / sparkle-eddsa.
 
 See [App distribution contract](APP-DISTRIBUTION.md) for channel paths, publication order, and
 verification requirements. Full application archives belong in Releases, not Git history or Pages.
