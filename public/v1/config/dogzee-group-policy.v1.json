@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyId": "dogzee-managed-groups",
-  "revision": 3,
+  "revision": 4,
   "provider": "dogzee",
   "defaultLocale": "en",
   "complete": true,
@@ -94,9 +94,6 @@
     }
   ],
   "reasoningProfiles": {
-    "provider-default": [
-      "automatic"
-    ],
     "openai-full": [
       "none",
       "low",
@@ -156,6 +153,12 @@
       "none",
       "high",
       "max"
+    ],
+    "qwen-38": [
+      "none",
+      "low",
+      "medium",
+      "xhigh"
     ]
   },
   "modelReasoningProfiles": {
@@ -165,7 +168,6 @@
     "gpt-6.1-terra": "openai-full",
     "gpt-5.6-terra": "openai-full",
     "gpt-5.6-sol": "openai-full",
-    "codex-auto-review": "provider-default",
     "claude-opus-4-6": "claude-classic",
     "claude-sonnet-4-6": "claude-classic",
     "claude-opus-4-7": "claude-extended",
@@ -186,7 +188,7 @@
     "glm-5.2": "glm-52",
     "glm-5.3": "mandatory-thinking",
     "glm-5.3-flash": "mandatory-thinking",
-    "qwen3.8-max": "provider-default"
+    "qwen3.8-max": "qwen-38"
   },
   "agentDefaults": {
     "paper-mentor": {
