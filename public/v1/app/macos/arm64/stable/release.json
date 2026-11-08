@@ -34,5 +34,7 @@
     "url": "https://github.com/YociLam/aPaper-Cloud/releases/download/apaper-macos-v0.1.5-b1006/aPaper-0.1.5-b1006-macos-arm64.zip",
     "bytes": 436809294,
     "sha256": "de4b115cd05905d45b200bf0e55371eead19f192f7a55eeb1c79244af824c4c8"
-  }
+  },
+  "status": "withdrawn",
+  "withdrawalReason": "demo_release_without_public_archive"
 }

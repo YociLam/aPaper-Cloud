@@ -100,10 +100,9 @@
         <h1>aPaper Cloud</h1>
       </div>
       <p>Application updates and research resources for aPaper.</p>
-      <section data-apaper-stable="release"><h2 id="app-heading">App updates · stable</h2><dl aria-label="Stable App update status"><dt>Version</dt><dd id="app-version">0.1.5 (1006)</dd><dt>Updated</dt><dd><time id="app-updated" datetime="2026-10-22T10:22:00Z">2026-10-22T10:22:00Z</time></dd><dt>Channel</dt><dd><a id="app-release-link" href="https://github.com/YociLam/aPaper/releases/tag/v0.1.5-b1006">Stable release</a></dd></dl></section>
-<section aria-labelledby="conference-heading">
+      <section data-apaper-stable="release"><h2 id="app-heading">App updates</h2><p>No verified update is currently offered.</p></section>
+      <section aria-labelledby="conference-heading">
         <h2 id="conference-heading">Conference catalog</h2>
-        <p>DP-NEW v0.16: 31 sources (25 conferences and six journals), 77 annual collections, 72 verified metadata packs. Discipline definitions and source memberships share the verified manifest.</p>
         <dl aria-label="Conference catalog status">
           <dt>Manifest</dt>
           <dd id="conference-version">Checking…</dd>
@@ -111,18 +110,9 @@
           <dd><time id="conference-updated">Checking…</time></dd>
         </dl>
       </section>
-      <section aria-labelledby="translation-heading">
-        <h2 id="translation-heading">App-bundled resources</h2>
-        <dl aria-label="App bundled Translation Engine resource status">
-          <dt>Translator</dt>
-          <dd id="translator-version">Checking…</dd>
-          <dt>Environment</dt>
-          <dd id="environment-version">Checking…</dd>
-          <dt>Translator updated</dt>
-          <dd><time id="translator-updated">Checking…</time></dd>
-          <dt>Environment updated</dt>
-          <dd><time id="environment-updated">Checking…</time></dd>
-        </dl>
+      <section aria-labelledby="model-heading">
+        <h2 id="model-heading">Dogzee model groups</h2>
+        <p><a href="/v1/config/dogzee-group-policy.v1.json">Public policy JSON</a> · <span id="model-policy-status">Checking…</span></p>
       </section>
       <footer>
         <span>Contact</span>
@@ -143,9 +133,6 @@
         }).format(updatedAt);
       }
 
-      const appUpdated = document.querySelector("#app-updated");
-      displayTime(appUpdated, appUpdated.dateTime);
-
       const conferenceVersion = document.querySelector("#conference-version");
       const conferenceUpdated = document.querySelector("#conference-updated");
 
@@ -163,29 +150,17 @@
           conferenceUpdated.textContent = "Unavailable";
         });
 
-
-      const translatorVersion = document.querySelector("#translator-version");
-      const environmentVersion = document.querySelector("#environment-version");
-      const translatorUpdated = document.querySelector("#translator-updated");
-      const environmentUpdated = document.querySelector("#environment-updated");
-
-      fetch(`/v1/app/macos/arm64/components/translation.json?check=${Date.now()}`, { cache: "no-store" })
+      const modelPolicyStatus = document.querySelector("#model-policy-status");
+      fetch("/v1/config/dogzee-group-policy.v1.json?check=" + Date.now(), { cache: "no-store" })
         .then((response) => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          if (!response.ok) throw new Error("Policy unavailable");
           return response.json();
         })
-        .then((resource) => {
-          translatorVersion.textContent = resource.translator_version;
-          environmentVersion.textContent = resource.environment_archive_revision;
-          displayTime(translatorUpdated, resource.translator_updated_at);
-          displayTime(environmentUpdated, resource.environment_updated_at);
+        .then((policy) => {
+          if (!Number.isInteger(policy.revision) || !Array.isArray(policy.groups)) throw new Error("Invalid policy");
+          modelPolicyStatus.textContent = "revision " + policy.revision + " · " + policy.groups.length + " groups";
         })
-        .catch(() => {
-          translatorVersion.textContent = "Unavailable";
-          environmentVersion.textContent = "Unavailable";
-          translatorUpdated.textContent = "Unavailable";
-          environmentUpdated.textContent = "Unavailable";
-        });
+        .catch(() => { modelPolicyStatus.textContent = "Unavailable"; });
     </script>
   </body>
 </html>

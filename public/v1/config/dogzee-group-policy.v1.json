@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 2,
+  "policyId": "dogzee-managed-groups",
+  "revision": 3,
+  "provider": "dogzee",
+  "defaultLocale": "en",
+  "complete": true,
+  "allowEmptyRetirement": false,
+  "keyNameTemplate": "aPaper · {canonicalName}",
+  "groups": [
+    {
+      "id": "gpt-budget",
+      "providerGroupName": "限时优惠组",
+      "enabled": true,
+      "order": 10,
+      "displayNames": {
+        "zh-Hans": "GPT（优惠）",
+        "zh-Hant": "GPT（優惠）",
+        "en": "GPT (Value)",
+        "ja": "GPT（お得）",
+        "ko": "GPT(알뜰)"
+      },
+      "canonicalKeyName": "aPaper · GPT (Value)"
+    },
+    {
+      "id": "gpt-professional",
+      "providerGroupName": "企业专用组",
+      "enabled": true,
+      "order": 20,
+      "displayNames": {
+        "zh-Hans": "GPT（专业）",
+        "zh-Hant": "GPT（專業）",
+        "en": "GPT (Pro)",
+        "ja": "GPT（プロ）",
+        "ko": "GPT(프로)"
+      },
+      "canonicalKeyName": "aPaper · GPT (Pro)"
+    },
+    {
+      "id": "claude",
+      "providerGroupName": "0.5折Claude",
+      "enabled": true,
+      "order": 30,
+      "displayNames": {
+        "zh-Hans": "Claude",
+        "zh-Hant": "Claude",
+        "en": "Claude",
+        "ja": "Claude",
+        "ko": "Claude"
+      },
+      "canonicalKeyName": "aPaper · Claude"
+    },
+    {
+      "id": "grok",
+      "providerGroupName": "grok",
+      "enabled": true,
+      "order": 40,
+      "displayNames": {
+        "zh-Hans": "Grok",
+        "zh-Hant": "Grok",
+        "en": "Grok",
+        "ja": "Grok",
+        "ko": "Grok"
+      },
+      "canonicalKeyName": "aPaper · Grok"
+    },
+    {
+      "id": "gemini",
+      "providerGroupName": "gemini",
+      "enabled": true,
+      "order": 50,
+      "displayNames": {
+        "zh-Hans": "Gemini",
+        "zh-Hant": "Gemini",
+        "en": "Gemini",
+        "ja": "Gemini",
+        "ko": "Gemini"
+      },
+      "canonicalKeyName": "aPaper · Gemini"
+    },
+    {
+      "id": "china-models",
+      "providerGroupName": "稳定国产六折",
+      "enabled": true,
+      "order": 60,
+      "displayNames": {
+        "zh-Hans": "国产模型",
+        "zh-Hant": "國產模型",
+        "en": "Chinese Models",
+        "ja": "中国系モデル",
+        "ko": "중국 모델"
+      },
+      "canonicalKeyName": "aPaper · Chinese Models"
+    }
+  ],
+  "reasoningProfiles": {
+    "provider-default": [
+      "automatic"
+    ],
+    "openai-full": [
+      "none",
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "openai-thinking": [
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "claude-classic": [
+      "low",
+      "medium",
+      "high",
+      "max"
+    ],
+    "claude-extended": [
+      "low",
+      "medium",
+      "high",
+      "xhigh",
+      "max"
+    ],
+    "deepseek": [
+      "none",
+      "low",
+      "high",
+      "max"
+    ],
+    "grok-45": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "grok-46": [
+      "low",
+      "medium",
+      "high",
+      "xhigh"
+    ],
+    "gemini-38": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "mandatory-thinking": [
+      "low",
+      "high",
+      "max"
+    ],
+    "glm-52": [
+      "none",
+      "high",
+      "max"
+    ]
+  },
+  "modelReasoningProfiles": {
+    "gpt-6-astra": "openai-thinking",
+    "gpt-6.1-sol": "openai-thinking",
+    "gpt-6-sol": "openai-full",
+    "gpt-6.1-terra": "openai-full",
+    "gpt-5.6-terra": "openai-full",
+    "gpt-5.6-sol": "openai-full",
+    "codex-auto-review": "provider-default",
+    "claude-opus-4-6": "claude-classic",
+    "claude-sonnet-4-6": "claude-classic",
+    "claude-opus-4-7": "claude-extended",
+    "claude-opus-4-8": "claude-extended",
+    "claude-opus-5": "claude-extended",
+    "claude-sonnet-5": "claude-extended",
+    "claude-opus-5-5": "claude-extended",
+    "claude-sonnet-5-5": "claude-extended",
+    "grok-4.5": "grok-45",
+    "grok-4.6": "grok-46",
+    "grok-4.7": "grok-46",
+    "gemini-3.8-flash": "gemini-38",
+    "kimi-k3": "mandatory-thinking",
+    "kimi-k3.1-pro": "mandatory-thinking",
+    "deepseek-v4-flash": "deepseek",
+    "deepseek-v4-pro": "deepseek",
+    "deepseek-v4.1-flash": "deepseek",
+    "glm-5.2": "glm-52",
+    "glm-5.3": "mandatory-thinking",
+    "glm-5.3-flash": "mandatory-thinking",
+    "qwen3.8-max": "provider-default"
+  },
+  "agentDefaults": {
+    "paper-mentor": {
+      "groupID": "gpt-professional",
+      "modelID": "gpt-6.1-terra",
+      "reasoningEffort": "medium"
+    },
+    "research-workbench": {
+      "groupID": "gpt-professional",
+      "modelID": "gpt-6.1-terra",
+      "reasoningEffort": "medium"
+    },
+    "paper-insight": {
+      "groupID": "china-models",
+      "modelID": "deepseek-v4.1-flash",
+      "reasoningEffort": "low"
+    },
+    "knowledge-manager": {
+      "groupID": "china-models",
+      "modelID": "deepseek-v4.1-flash",
+      "reasoningEffort": "low"
+    },
+    "daily-paper-intent": {
+      "groupID": "china-models",
+      "modelID": "deepseek-v4.1-flash",
+      "reasoningEffort": "low"
+    },
+    "translation": {
+      "groupID": "china-models",
+      "modelID": "deepseek-v4.1-flash",
+      "reasoningEffort": "low"
+    }
+  }
+}
