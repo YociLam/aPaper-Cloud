@@ -7,7 +7,7 @@ Never resolve App updates using `/releases/latest` or global Release ordering.
 ## Current manual distribution contract (Release-01)
 
 - Product installer: `YociLam/aPaper`, numeric repository ID `1428580757`, independent public documentation history. New `aPaper.dmg` assets use immutable `v<version>-b<build>` tags in that repository.
-- Update archive: this repository, ID 1305956053, uses immutable version/build tags for verified public assets. The five metadata-only demo Releases for 0.1.1–0.1.5 are retired; their Git tags remain historical. Preserve conference/journal packs and translation compatibility routes.
+- Update archive: this repository, ID 1305956053, uses immutable version/build tags for verified public assets. The five metadata-only demo Releases for 0.1.1–0.1.5 are retired; Release cleanup does not establish whether historical Git tags remain. Preserve conference/journal packs and translation compatibility routes.
 - Source repository is private; it is never a public tag target or export source. Public release JSON contains only product/platform/version, capability, public URLs, byte counts, hashes and reviewed notes.
 - One sealed App is packaged into DMG and ZIP. Recursive file hashes, symlinks, modes and valid code seals must match after unpacking. Full ZIP does not imply a delta or installation eligibility.
 - Apple paid membership/notarization is deferred for explicitly labeled ad-hoc manual installation. The existing Developer ID/notarized production lane below remains intact.
