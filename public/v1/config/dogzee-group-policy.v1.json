@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyId": "dogzee-managed-groups",
-  "revision": 4,
+  "revision": 5,
   "provider": "dogzee",
   "defaultLocale": "en",
   "complete": true,
@@ -212,6 +212,28 @@
       "reasoningEffort": "low"
     },
     "daily-paper-intent": {
+      "groupID": "china-models",
+      "modelID": "deepseek-v4.1-flash",
+      "reasoningEffort": "low"
+    },
+    "translation": {
+      "groupID": "china-models",
+      "modelID": "deepseek-v4.1-flash",
+      "reasoningEffort": "low"
+    }
+  },
+  "familyDefaults": {
+    "interactive-agents": {
+      "groupID": "gpt-professional",
+      "modelID": "gpt-6.1-terra",
+      "reasoningEffort": "medium"
+    },
+    "research-analysis": {
+      "groupID": "china-models",
+      "modelID": "deepseek-v4.1-flash",
+      "reasoningEffort": "low"
+    },
+    "knowledge-curation": {
       "groupID": "china-models",
       "modelID": "deepseek-v4.1-flash",
       "reasoningEffort": "low"
