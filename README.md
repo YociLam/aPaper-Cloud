@@ -27,6 +27,9 @@ Catalog version: **0.16** · Updated (UTC): **2026-10-14T16:12:47Z**
 
 31 sources: 25 conferences and 6 journals, with 72 packs across 77 annual entries. Tables follow the Manifest’s OECD disciplines; interdisciplinary sources appear in each applicable category.
 
+<details>
+<summary><strong>Browse all sources and annual literature packs</strong></summary>
+
 ### Computer and information sciences
 
 | Type | Source | 2022 | 2023 | 2024 | 2025 | 2026 |
@@ -114,6 +117,8 @@ Catalog version: **0.16** · Updated (UTC): **2026-10-14T16:12:47Z**
 | Journal | Journal of Law and the Biosciences | — | — | — | — | [10](https://cloud.apaper.ai/v1/conferences/packs/jlb/2026.jsonl.zst) (partial) |
 
 Linked counts download a pack. “Partial” marks incomplete coverage; “cataloged” and “announced” have no pack; “—” means the Manifest has no entry for that year. Journal data for 2026 is a snapshot from January 1 through October 14, not full-year coverage. The Manifest is authoritative for counts, status, and availability.
+
+</details>
 
 The App uses versioned metadata and checksums to detect catalog changes and verify downloaded packs. The model policy contains public configuration only; account credentials and API keys are never stored here.
 

@@ -27,6 +27,9 @@ App 安装包放在 [aPaper Releases](https://github.com/YociLam/aPaper/releases
 
 共 31 个来源：25 个会议、6 个期刊；77 个年份条目中有 72 个数据包。按 Manifest 的 OECD 学科分类列出，跨学科来源会在多个分类中出现。
 
+<details>
+<summary><strong>浏览全部来源与年度文献包</strong></summary>
+
 ### 计算机与信息科学
 
 | 类型 | 来源 | 2022 | 2023 | 2024 | 2025 | 2026 |
@@ -114,6 +117,8 @@ App 安装包放在 [aPaper Releases](https://github.com/YociLam/aPaper/releases
 | 期刊 | Journal of Law and the Biosciences | — | — | — | — | [10](https://cloud.apaper.ai/v1/conferences/packs/jlb/2026.jsonl.zst)（部分） |
 
 数字链接可下载数据包；“部分”表示覆盖不完整，“已编目／已预告”表示尚无数据包；“—”表示 Manifest 未列出该年份。期刊 2026 年数据为 2026-01-01 至 2026-10-14 的快照，不代表全年。数量、状态及可用性以 Manifest 为准。
+
+</details>
 
 App 使用版本信息与校验值检测文献目录变化并验证下载的数据包。模型策略只包含公开配置，不存储账户凭据或 API 密钥。
 
