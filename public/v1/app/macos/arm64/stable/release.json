@@ -3,9 +3,5 @@
   "product": "aPaper",
   "channel": "stable",
   "status": "withdrawn",
-  "lastDemoVersion": "0.1.5",
-  "lastDemoBuild": 1006,
-  "version": "0.1.5",
-  "build": 1006,
-  "reason": "demo_release_without_public_archive"
+  "reason": "first_public_release_preparation"
 }

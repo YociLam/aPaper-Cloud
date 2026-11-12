@@ -1,73 +1,56 @@
-# aPaper App distribution contract
+# aPaper App distribution
 
-This public repository is the current distribution repository, not the App source repository.
-App updates and conference synchronization use independent versioned interfaces.
-Never resolve App updates using `/releases/latest` or global Release ordering.
+This repository serves public update metadata, update archives, and research resources. Product information, installation guides, feedback, and DMG installers live in [aPaper](https://github.com/YociLam/aPaper).
 
-## Current manual distribution contract (Release-01)
+## Current status
 
-- Product installer: `YociLam/aPaper`, numeric repository ID `1428580757`, independent public documentation history. New `aPaper.dmg` assets use immutable `v<version>-b<build>` tags in that repository.
-- Update archive: this repository, ID 1305956053, uses immutable version/build tags for verified public assets. The five metadata-only demo Releases for 0.1.1–0.1.5 are retired; Release cleanup does not establish whether historical Git tags remain. Preserve conference/journal packs and translation compatibility routes.
-- Source repository is private; it is never a public tag target or export source. Public release JSON contains only product/platform/version, capability, public URLs, byte counts, hashes and reviewed notes.
-- One sealed App is packaged into DMG and ZIP. Recursive file hashes, symlinks, modes and valid code seals must match after unpacking. Full ZIP does not imply a delta or installation eligibility.
-- Apple paid membership/notarization is deferred for explicitly labeled ad-hoc manual installation. The existing Developer ID/notarized production lane below remains intact.
-- The accepted formal client checks the existing **stable** URL below. Without production Ed25519 custody, serve an information-only item with `sparkle:version`, display version, minimum macOS, arm64/stable markers and the product website link, **without any executable enclosure**. The client opens `https://apaper.ai` only after user consent. Automatic checking remains separate from installation; automatic installation is unavailable.
-- The downloadable Cloud ZIP is retained for a future separately qualified installer path. Do not activate an unsigned archive, reuse qualification trust roots, or use repository-global latest.
-- Prepare and validate → upload reconciled drafts → exact combined approval → publish immutable assets → anonymous full-byte hashes → promote stable XML/JSON → verify live MIME/content → promote website last. Draft access is authenticated, not anonymous publication.
-- Resume the same canonical release record, reconciling repository/release/asset IDs and hashes. A different artifact requires a new version/build/tag; no clobber, moved tag, forced ref or historical deletion.
-- Preserve prior website deployment and channel bytes. Withdrawing an offer does not downgrade installed Apps or restore account/research data. Prefer a higher-build forward correction.
+The first public App release, **0.1.0**, is in preparation. No verified App update is currently offered. Stable and qualification feeds contain no release items. Historical test metadata does not establish current download availability.
 
-These rules establish the route; they do not announce a public binary, activate stable metadata or replace the live website. The canonical private `apaper-release` Skill owns preparation, approval and execution. Third-party notices and necessary runtime material remain in the App; no product open-source license is implied.
+App versions and literature catalog versions are independent. Catalog version 0.16 is not an App version. Never use this repository's global latest Release to discover an App update.
 
-## macOS arm64 channels
+## Package locations
 
-| Channel | Sparkle appcast | Immutable full ZIP release tag |
+| Artifact | Repository | Tag / filename |
 | --- | --- | --- |
-| qualification | `https://cloud.apaper.ai/v1/app/macos/arm64/qualification/appcast.xml` | `apaper-update-qualification-<unique-id>` (prerelease, `make_latest=false`) |
-| beta | `https://cloud.apaper.ai/v1/app/macos/arm64/beta/appcast.xml` | `apaper-macos-beta-<unique-id>` (prerelease) |
-| stable | `https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml` | `apaper-macos-v<version>` (separate production approval) |
+| macOS installer | `YociLam/aPaper` (ID `1428580757`) | `v<version>-b<build>` / `aPaper.dmg` |
+| macOS full update | `YociLam/aPaper-Cloud` (ID `1305956053`) | `apaper-macos-v<version>-b<build>` / `aPaper-<version>-b<build>-macos-arm64.zip` |
 
-These are reserved interfaces, not claims that any feed is published. No x86_64 App channel exists
-until that architecture has qualified artifacts. Do not change the App's minimum macOS version.
+Display versions use `MAJOR.MINOR.PATCH`. Internal build numbers increase for every distributed build, including rebuilds and a change in display version. Public artifacts and tags are immutable. New bytes require a new build and tag.
 
-Qualification uses `com.atompaper.APaperUpdateQualification`, its own EdDSA key, isolated install
-container and synthetic AppData. A and B must compile the exact HTTPS feed and public key into
-SUFeedURL/SUPublicEDKey; B has a higher CFBundleVersion. No private keys enter Git, Pages or bundles.
-Apple Development qualification is not Developer ID/notarization readiness.
+The installer and full update archive are packaged from the same sealed App. Recursive file hashes, symlinks, permissions, and code seals are verified after extraction. Signing, notarization, and supported update behavior are stated for each actual release; a package's presence does not establish Apple notarization or installation qualification.
 
-Each feed pins a single Sparkle full-package item: actual build, display version, minimum system
-version, immutable HTTPS GitHub Release archive URL, exact byte length and Sparkle EdDSA signature.
-Use namespaced aPaper significance/translated notes from the release contract. The URL and bytes
-are bound to consent. No archive belongs in Git history or Pages. Never rewrite distributed bytes;
-use a higher build and new tag. Missing/invalid feeds must not mean “latest”.
+GitHub automatically offers ZIP/tar snapshots for tags. These contain the public repository's files, not a macOS installer. The App source remains private.
 
-## Publication order
+## Update interfaces
 
-1. Freeze source commit/tree and build A/B. Review the exact signed bundle, recursive archives,
-   licenses/source-distribution obligations, symbols, credentials, URLs and identifying material.
-2. Verify codesign/entitlements, Sparkle signature, bytes and SHA-256 locally. Obtain any required
-   narrowly scoped disclosure approval before a public binary upload.
-3. Publish B to its unique qualification prerelease, explicitly not latest. Anonymous HEAD/GET
-   must follow HTTPS GitHub asset redirects and reproduce the signed bytes and SHA-256.
-4. Only then commit the small qualification appcast under `public/v1/app/macos/arm64/qualification/`.
-   A main change may deploy the entire public tree automatically. Preserve conference paths and
-   verify actual live XML, cache headers and checksums after deployment; HTTP 200 alone is invalid
-   evidence because the current host uses an HTML fallback for unknown paths.
-5. Stop the loopback server. Run native discovery/no-preconsent-download and one-confirmation
-   A→B installation/relaunch with synthetic data receipts. Record discovery, archive delivery,
-   native relaunch and production readiness separately.
+| Channel | Fixed appcast |
+| --- | --- |
+| stable | `https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml` |
+| qualification | `https://cloud.apaper.ai/v1/app/macos/arm64/qualification/appcast.xml` |
 
-The source repository supplies `scripts/preflight-macos-appcast.py` for repeatable anonymous remote
-validation. Run Sparkle `sign_update --verify` on its downloaded output too; signature metadata alone
-is not cryptographic verification. Record commit/tree, tag/release/asset IDs, feed SHA, archive SHA
-and bytes, UTC publication time, response/cache headers and sanitized redirect chain.
+Each channel also exposes `release.json` beside its appcast. An empty feed offers no update. A withdrawn status record describes availability; it does not identify an installable version. A missing or invalid response is not evidence that an installed client is current.
 
-The static, versioned platform/architecture/channel boundary is independent of the current native
-client implementation. A later approved client can use a separately specified artifact format in
-this namespace; this contract does not implement Tauri, Windows or a dynamic updater backend.
+The supported target is Apple silicon (arm64), macOS 14.6 or later. There is no published Intel Mac, Windows, or Linux update channel. Qualification is isolated testing, with its own bundle identity, trust key, and synthetic data; its results do not establish general macOS distribution readiness.
 
-## Bundled translation resources
+For installer-capable releases, the Sparkle enclosure binds the immutable HTTPS archive URL, byte length, Ed25519 signature, version, build, minimum OS, and reviewed multilingual notes. The App embeds only the public verification key. Private signing keys and signing tools never belong in the distributed App or this repository. Legacy information-only releases have no executable enclosure and require manual installation.
 
-The translator and its runtime environment ship inside the signed App archive and change only with an App release. No separate Cloud binary or download is published. The existing public/v1/app/macos/arm64/components/translation.json remains a compatibility-only status record for the release publisher; it is updated from a verified App bundle, not advertised as a separate release on the homepage or in the README.
+Update checks, consent, download, installation, and relaunch are distinct capabilities. Supported clients require user consent before installation. A completed installation alone does not establish account-session continuity.
 
-Every new App release updates its version, build, time, and verified download links together in the appcast, release record, homepage, and both READMEs. The current demo stable item has been withdrawn because its archive URL no longer resolves. A new offer requires a new verified archive and normal release approval.
+## Publication and verification
+
+1. Freeze and review the intended source, release notes, package contents, and distribution configuration in the canonical private release record.
+2. Verify the DMG and ZIP, code seals, archive signature, sizes, and hashes. Obtain approval for the exact final artifacts and public projections.
+3. Stage and publish immutable versioned assets in the correct repositories. App Releases are explicitly not repository-global latest.
+4. Download the complete public assets anonymously over HTTPS and verify their actual bytes and signatures.
+5. Publish matching channel XML/JSON and Cloud homepage information, then verify the live responses and download links.
+6. Update the product website only after asset and channel verification. Qualify native installation, relaunch, and account continuity separately.
+
+Resume an interrupted publication from the same canonical record and reconcile actual repository, release, asset, and deployment identities. Never overwrite a published asset or reuse a historical tag. Preserve the previous channel bytes and website deployment for a scoped recovery. Withdrawing an offer does not downgrade installed Apps or restore user data.
+
+Public release metadata contains product and platform facts, reviewed notes, public URLs, byte counts, hashes, and signature information. It must not contain private source identities, local paths, approval records, credentials, or private signing material. Third-party notices and required runtime material accompany the App.
+
+## Bundled resources and research data
+
+The translator and its runtime ship inside the App and change through App releases. `public/v1/app/macos/arm64/components/translation.json` remains a compatibility status record, not a separate downloadable engine release.
+
+Conference and journal packs, catalog manifests, model policy, and their maintenance tools have independent lifecycles. An App release or repository cleanup must preserve these resources and their checksums.

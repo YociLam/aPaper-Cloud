@@ -19,7 +19,7 @@ aPaper Cloud 提供 aPaper App 使用的公开更新信息与研究资源。应�
 
 App 安装包放在 [aPaper Releases](https://github.com/YociLam/aPaper/releases)。经过验证的更新归档在可用时发布到本仓库的 [Releases](https://github.com/YociLam/aPaper-Cloud/releases)。翻译器和运行环境包含在每个 App 归档中，随 App 更新，不单独作为 Cloud 下载资源发布。
 
-当前稳定发布：暂无经过核验的可用更新。
+当前稳定发布：暂无经过核验的可用更新。App 首发版本 **0.1.0** 正在准备中。
 
 ## 文献包列表
 

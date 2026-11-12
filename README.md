@@ -19,7 +19,7 @@ aPaper Cloud hosts public update metadata and research resources used by the aPa
 
 App installers are published in [aPaper Releases](https://github.com/YociLam/aPaper/releases). Verified update archives, when available, are published in this repository's [Releases](https://github.com/YociLam/aPaper-Cloud/releases). The translator and its runtime environment are bundled inside each App archive and update with the App; they are not separate Cloud downloads.
 
-Current stable: no verified update is currently offered.
+Current stable: no verified update is currently offered. The first public App release, **0.1.0**, is in preparation.
 
 ## Literature packs
 
