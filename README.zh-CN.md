@@ -9,9 +9,9 @@
 <p align="center">集中提供经过核验的应用更新信息、研究目录与模型配置。</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/aPaper-0.1.0-2f6f62" alt="aPaper 0.1.0">
-  <img src="https://img.shields.io/badge/Windows-coming%20soon-orange" alt="Windows 即将推出">
-  <img src="https://img.shields.io/badge/Linux-coming%20soon-orange" alt="Linux 即将推出">
+  <a href="https://github.com/YociLam/aPaper/releases"><img src="https://img.shields.io/badge/aPaper-0.1.0-2f6f62" alt="aPaper 0.1.0"></a>
+  <a href="https://cloud.apaper.ai/v1/conferences/version.json"><img src="https://img.shields.io/badge/Literature-0.16-2f6f62" alt="文献目录 0.16"></a>
+  <a href="https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json"><img src="https://img.shields.io/badge/Dogzee%20models-revision%205-2f6f62" alt="Dogzee 模型分组修订 5"></a>
 </p>
 
 <p align="center"><a href="https://cloud.apaper.ai">cloud.apaper.ai</a> · <a href="mailto:contact@apaper.ai">联系支持</a></p>
@@ -24,7 +24,7 @@
 | --- | --- | --- |
 | macOS App 更新 | [稳定版更新源](https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml) | 仅在更新归档发布并核验后提供可用更新。 |
 | 文献目录 | [版本记录](https://cloud.apaper.ai/v1/conferences/version.json) · [Manifest](https://cloud.apaper.ai/v1/conferences/manifest.json) | 列出可用的会议、期刊元数据包及其校验值。 |
-| Dogzee 模型分组 | [策略 JSON](https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json) | 提供公开分组名称、模型推理选项与智能体默认配置。 |
+| Dogzee 模型分组 · 修订 5 | [策略 JSON](https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json) | 提供公开分组名称、模型推理选项与智能体默认配置。 |
 
 App 安装包放在 [aPaper Releases](https://github.com/YociLam/aPaper/releases)。经过验证的更新归档在可用时发布到本仓库的 [Releases](https://github.com/YociLam/aPaper-Cloud/releases)。翻译器和运行环境包含在每个 App 归档中，随 App 更新，不单独作为 Cloud 下载资源发布。
 
