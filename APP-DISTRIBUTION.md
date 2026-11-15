@@ -4,11 +4,13 @@ This repository serves public update metadata, update archives, and research res
 
 ## Current status
 
-The first formal App version is **0.1.0**. No verified App update is currently offered. The formal delivery feed (`stable` in its internal URL) and the qualification test feed contain no release items. Historical test metadata does not establish current download availability.
+The first formal App version is **0.1.0**. The installer is published in [aPaper Releases](https://github.com/YociLam/aPaper/releases). No verified App update archive is currently offered through the Appcast feeds.
 
 ## Release categories
 
-User-facing releases are classified as **Alpha/Beta test releases** or **formal releases**. Alpha and Beta are pre-release labels for testing; versions intended for general users are formal releases. There is no separate stable/unstable product classification. Existing `stable` and `qualification` feed paths remain internal compatibility names for formal delivery and isolated testing; this policy does not rename those endpoints or change formal-release verification requirements.
+User-facing release types are **Alpha**, **Beta**, and **Formal**. Use Semantic Versioning prerelease identifiers for test candidates: `MAJOR.MINOR.PATCH-alpha.N` and `MAJOR.MINOR.PATCH-beta.N`. The candidate number starts at `1` for each type and target version and increments for every new published build. For example: `0.2.0-alpha.1` → `0.2.0-alpha.2` → `0.2.0-beta.1` → `0.2.0`. GitHub titles are `aPaper MAJOR.MINOR.PATCH Alpha N`, `aPaper MAJOR.MINOR.PATCH Beta N`, and `aPaper MAJOR.MINOR.PATCH` for Formal; tags append `-b<build>` to the complete release version. Alpha is for early, limited testing while planned functionality may still change. Beta is for broader testing after the planned scope is feature-complete; only release-blocking fixes should be added during Beta. A Beta candidate becomes Formal by publishing the same core version without the prerelease suffix after final checks pass. Build numbers remain in tags and assets, not the user-facing title or release notes.
+
+Keep Apple's bundle version fields numeric: `CFBundleShortVersionString` and `CFBundleVersion` use the core `MAJOR.MINOR.PATCH`; `APaperBuildNumber` carries the monotonically increasing integer build identity. Record the complete prerelease identity (for example, `0.2.0-alpha.1`) separately in release metadata, the GitHub tag, release title, and user-facing release notes. Never put an Alpha/Beta suffix in Apple's bundle version fields. Increment the internal build for every distributed candidate and Formal release. Feed URLs and publisher channel fields are operational configuration; omit them from product README copy and user-facing release notes.
 
 App versions and literature catalog versions are independent. Catalog version 0.16 is not an App version. Never use this repository's global latest Release to discover an App update.
 
@@ -16,8 +18,8 @@ App versions and literature catalog versions are independent. Catalog version 0.
 
 | Artifact | Repository | Tag / filename |
 | --- | --- | --- |
-| macOS installer | `YociLam/aPaper` (ID `1428580757`) | `v<version>-b<build>` / `aPaper.dmg` |
-| macOS full update | `YociLam/aPaper-Cloud` (ID `1305956053`) | `apaper-macos-v<version>-b<build>` / `aPaper-<version>-b<build>-macos-arm64.zip` |
+| macOS installer | `YociLam/aPaper` (ID `1428580757`) | `v<release-version>-b<build>` / `aPaper.dmg` |
+| macOS full update | `YociLam/aPaper-Cloud` (ID `1305956053`) | `apaper-macos-v<release-version>-b<build>` / `aPaper-<release-version>-b<build>-macos-arm64.zip` |
 
 Display versions use `MAJOR.MINOR.PATCH`. Internal build numbers increase for every distributed build, including rebuilds and a change in display version. Public artifacts and tags are immutable. New bytes require a new build and tag.
 
@@ -29,8 +31,8 @@ GitHub automatically offers ZIP/tar snapshots for tags. These contain the public
 
 | Channel | Fixed appcast |
 | --- | --- |
-| Formal delivery (internal path: `stable`) | `https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml` |
-| Alpha/Beta testing (internal path: `qualification`) | `https://cloud.apaper.ai/v1/app/macos/arm64/qualification/appcast.xml` |
+| Formal App updates | [Appcast](https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml) |
+| Alpha/Beta test updates | [Appcast](https://cloud.apaper.ai/v1/app/macos/arm64/qualification/appcast.xml) |
 
 Each channel also exposes `release.json` beside its appcast. An empty feed offers no update. A withdrawn status record describes availability; it does not identify an installable version. A missing or invalid response is not evidence that an installed client is current.
 
@@ -44,7 +46,7 @@ Update checks, consent, download, installation, and relaunch are distinct capabi
 
 1. Freeze and review the intended source, release notes, package contents, and distribution configuration in the canonical private release record.
 2. Verify the DMG and ZIP, code seals, archive signature, sizes, and hashes. Obtain approval for the exact final artifacts and public projections.
-3. Stage and publish immutable versioned assets in the correct repositories. App Releases are explicitly not repository-global latest.
+3. Stage and publish immutable versioned assets in the correct repositories. Alpha/Beta releases are prereleases; a Formal installer release is marked latest in the installer repository. App update discovery always uses its fixed Appcast, never the Cloud repository's global latest Release.
 4. Download the complete public assets anonymously over HTTPS and verify their actual bytes and signatures.
 5. Publish matching channel XML/JSON and Cloud homepage information, then verify the live responses and download links.
 6. Update the product website only after asset and channel verification. Qualify native installation, relaunch, and account continuity separately.
