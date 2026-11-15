@@ -1,2 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:apaper="urn:apaper:update:1" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>aPaper macOS stable</title></channel></rss>
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:apaper="urn:apaper:update:1" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>aPaper macOS arm64 stable — manual download</title><item><title>aPaper 0.1.0</title><link>https://apaper.ai</link><sparkle:version>0.1.0</sparkle:version><sparkle:shortVersionString>0.1.0</sparkle:shortVersionString><apaper:build>1001</apaper:build><sparkle:minimumSystemVersion>14.6</sparkle:minimumSystemVersion><sparkle:channel>stable</sparkle:channel><sparkle:cpuArchitecture>arm64</sparkle:cpuArchitecture><description>aPaper 0.1.0
+
+aPaper is an AI-native research workspace. Discover papers, understand ideas, connect knowledge, and create new research on what you already understand.
+
+DISCOVER AND ORGANIZE
+Follow journals and preprint sources. Keep papers, metadata, and projects together.
+
+READ AND UNDERSTAND
+Annotate PDFs, review structured insights, and ask questions grounded in each paper's evidence.
+
+CONNECT AND CREATE
+Keep knowledge linked to its sources. Write, compile, and preview manuscripts in the Research Workbench.
+
+Windows and Linux support are planned for future releases.</description><apaper:significance>standard</apaper:significance><apaper:notes>{"en": "aPaper 0.1.0\n\naPaper is an AI-native research workspace. Discover papers, understand ideas, connect knowledge, and create new research on what you already understand.\n\nDISCOVER AND ORGANIZE\nFollow journals and preprint sources. Keep papers, metadata, and projects together.\n\nREAD AND UNDERSTAND\nAnnotate PDFs, review structured insights, and ask questions grounded in each paper's evidence.\n\nCONNECT AND CREATE\nKeep knowledge linked to its sources. Write, compile, and preview manuscripts in the Research Workbench.\n\nWindows and Linux support are planned for future releases.", "zh-Hans": "aPaper 0.1.0\n\naPaper 是 AI 原生的研究工作空间：发现文献，理解脉络，沉淀知识，在已有的理解之上创造新的研究。\n\n发现与整理\n关注期刊和预印本来源，将论文、元数据与研究项目集中管理。\n\n阅读与理解\n批注 PDF，查看结构化研究洞察，并围绕论文证据提问，回答可回溯至原文。\n\n连接与创作\n让知识与来源保持关联，在研究工作台撰写、编译并预览稿件。\n\nWindows 和 Linux 版本计划在后续推出。", "zh-Hant": "aPaper 0.1.0\n\naPaper 是 AI 原生的研究工作空間：探索論文、理解脈絡、沉澱知識，在已有理解之上創造新的研究。\n\n探索與整理\n追蹤期刊與預印本來源，集中管理論文、中繼資料與研究專案。\n\n閱讀與理解\n註記 PDF、檢視結構化研究洞察，並根據論文證據提問，回答可追溯至原文。\n\n連結與創作\n讓知識與來源保持連結，在研究工作台撰寫、編譯並預覽稿件。\n\nWindows 與 Linux 版本計畫於後續推出。", "ja": "aPaper 0.1.0\n\naPaper は AI ネイティブな研究ワークスペースです。論文を発見し、研究の文脈を理解し、知識をつなぎ、すでに理解したことから新たな研究を生み出します。\n\n発見と整理\n学術誌やプレプリントをフォローし、論文・メタデータ・研究プロジェクトをまとめて管理できます。\n\n読解と理解\nPDF に注釈を付け、構造化された洞察を確認し、論文中の根拠に基づいて質問できます。回答は原文にたどれます。\n\n知識をつなぎ、創作する\n知識を出典と結び付けて整理し、Research Workbench で原稿を執筆・コンパイル・プレビューできます。\n\nWindows 版と Linux 版は今後のリリースで提供予定です。", "ko": "aPaper 0.1.0\n\naPaper는 AI 네이티브 연구 워크스페이스입니다. 논문을 발견하고 연구 맥락을 이해하며 지식을 연결해 이미 이해한 것에서 새로운 연구를 만들어 갑니다.\n\n발견과 정리\n학술지와 프리프린트 출처를 팔로우하고 논문, 메타데이터, 연구 프로젝트를 한곳에서 관리할 수 있습니다.\n\n읽기와 이해\nPDF에 주석을 달고 구조화된 인사이트를 살펴보며 논문의 근거에 기반해 질문할 수 있습니다. 답변은 원문 근거로 되짚을 수 있습니다.\n\n연결과 창작\n지식을 출처와 연결해 보관하고 Research Workbench에서 원고를 작성·컴파일·미리 볼 수 있습니다.\n\nWindows 및 Linux 버전은 향후 릴리스에서 제공될 예정입니다."}</apaper:notes><apaper:installMode>manual-download</apaper:installMode><pubDate>Sun, 15 Nov 2026 16:35:59 +0000</pubDate></item></channel></rss>
