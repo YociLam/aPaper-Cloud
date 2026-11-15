@@ -4,7 +4,11 @@ This repository serves public update metadata, update archives, and research res
 
 ## Current status
 
-The first public App release, **0.1.0**, is in preparation. No verified App update is currently offered. Stable and qualification feeds contain no release items. Historical test metadata does not establish current download availability.
+The first formal App version is **0.1.0**. No verified App update is currently offered. The formal delivery feed (`stable` in its internal URL) and the qualification test feed contain no release items. Historical test metadata does not establish current download availability.
+
+## Release categories
+
+User-facing releases are classified as **Alpha/Beta test releases** or **formal releases**. Alpha and Beta are pre-release labels for testing; versions intended for general users are formal releases. There is no separate stable/unstable product classification. Existing `stable` and `qualification` feed paths remain internal compatibility names for formal delivery and isolated testing; this policy does not rename those endpoints or change formal-release verification requirements.
 
 App versions and literature catalog versions are independent. Catalog version 0.16 is not an App version. Never use this repository's global latest Release to discover an App update.
 
@@ -17,7 +21,7 @@ App versions and literature catalog versions are independent. Catalog version 0.
 
 Display versions use `MAJOR.MINOR.PATCH`. Internal build numbers increase for every distributed build, including rebuilds and a change in display version. Public artifacts and tags are immutable. New bytes require a new build and tag.
 
-The installer and full update archive are packaged from the same sealed App. Recursive file hashes, symlinks, permissions, and code seals are verified after extraction. Signing, notarization, and supported update behavior are stated for each actual release; a package's presence does not establish Apple notarization or installation qualification.
+The installer and full update archive are packaged from the same sealed App. Recursive file hashes, symlinks, permissions, and code seals are verified after extraction. Signing and supported update behavior are stated for each actual release; a package's presence does not establish its signing or installation qualification.
 
 GitHub automatically offers ZIP/tar snapshots for tags. These contain the public repository's files, not a macOS installer. The App source remains private.
 
@@ -25,12 +29,12 @@ GitHub automatically offers ZIP/tar snapshots for tags. These contain the public
 
 | Channel | Fixed appcast |
 | --- | --- |
-| stable | `https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml` |
-| qualification | `https://cloud.apaper.ai/v1/app/macos/arm64/qualification/appcast.xml` |
+| Formal delivery (internal path: `stable`) | `https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml` |
+| Alpha/Beta testing (internal path: `qualification`) | `https://cloud.apaper.ai/v1/app/macos/arm64/qualification/appcast.xml` |
 
 Each channel also exposes `release.json` beside its appcast. An empty feed offers no update. A withdrawn status record describes availability; it does not identify an installable version. A missing or invalid response is not evidence that an installed client is current.
 
-The supported target is Apple silicon (arm64), macOS 14.6 or later. There is no published Intel Mac, Windows, or Linux update channel. Qualification is isolated testing, with its own bundle identity, trust key, and synthetic data; its results do not establish general macOS distribution readiness.
+The supported target is Apple silicon (arm64), macOS 14.6 or later. There is no published Intel Mac, Windows, or Linux update channel. Alpha/Beta builds use isolated testing, with their own bundle identity, trust key, and synthetic data; their results do not establish formal-release qualification.
 
 For installer-capable releases, the Sparkle enclosure binds the immutable HTTPS archive URL, byte length, Ed25519 signature, version, build, minimum OS, and reviewed multilingual notes. The App embeds only the public verification key. Private signing keys and signing tools never belong in the distributed App or this repository. Legacy information-only releases have no executable enclosure and require manual installation.
 

@@ -22,13 +22,13 @@
 
 | 资源 | 公开路径 | 用途 |
 | --- | --- | --- |
-| macOS App 更新 | [稳定版更新源](https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml) | 仅在更新归档发布并核验后提供可用更新。 |
+| macOS App 更新 | [正式版更新源（内部路径：stable）](https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml) | 仅在更新归档发布并核验后提供可用更新。 |
 | 文献目录 | [版本记录](https://cloud.apaper.ai/v1/conferences/version.json) · [Manifest](https://cloud.apaper.ai/v1/conferences/manifest.json) | 列出可用的会议、期刊元数据包及其校验值。 |
 | Dogzee 模型分组 · 5 | [策略 JSON](https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json) | 提供公开分组名称、模型推理选项与智能体默认配置。 |
 
 App 安装包放在 [aPaper Releases](https://github.com/YociLam/aPaper/releases)。经过验证的更新归档在可用时发布到本仓库的 [Releases](https://github.com/YociLam/aPaper-Cloud/releases)。翻译器和运行环境包含在每个 App 归档中，随 App 更新，不单独作为 Cloud 下载资源发布。
 
-当前稳定发布：暂无经过核验的可用更新。App 首发版本号为 **0.1.0**。
+正式版版本号：**0.1.0**。目前暂无经过核验的 App 内更新包。
 
 ## 文献包列表
 

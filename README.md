@@ -22,13 +22,13 @@
 
 | Resource | Public path | Purpose |
 | --- | --- | --- |
-| macOS App updates | [Stable appcast](https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml) | Offers an App update only after its archive has been published and verified. |
+| macOS App updates | [Formal appcast (internal path: stable)](https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml) | Offers an App update only after its archive has been published and verified. |
 | Literature catalog | [Version](https://cloud.apaper.ai/v1/conferences/version.json) · [Manifest](https://cloud.apaper.ai/v1/conferences/manifest.json) | Lists available conference and journal metadata packs with checksums. |
 | Dogzee model groups · 5 | [Policy JSON](https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json) | Public group names, model reasoning options, and agent defaults. |
 
 App installers are published in [aPaper Releases](https://github.com/YociLam/aPaper/releases). Verified update archives, when available, are published in this repository's [Releases](https://github.com/YociLam/aPaper-Cloud/releases). The translator and its runtime environment are bundled inside each App archive and update with the App; they are not separate Cloud downloads.
 
-Current stable: no verified App update is currently offered. The first public App version is **0.1.0**.
+Formal App version: **0.1.0**. No verified App update is currently offered.
 
 ## Literature packs
 
