@@ -1,15 +1,24 @@
-<div align="center">
+<p align="center">
   <img src="./assets/aPaper.png" alt="aPaper Cloud" width="980">
-  <p><strong>English</strong> · <a href="./README.zh-CN.md">简体中文</a></p>
-</div>
+</p>
 
-# aPaper Cloud
+<h1 align="center">aPaper Cloud</h1>
 
-aPaper Cloud hosts public update metadata and research resources used by the aPaper App. The App source and private user data are maintained separately.
+<h3 align="center">Public updates and research resources for aPaper</h3>
 
-[Website](https://cloud.apaper.ai) · [Contact](mailto:contact@apaper.ai)
+<p align="center">A shared home for verified App update metadata, research catalogs, and model configuration.</p>
 
-## Public resources
+<p align="center">
+  <img src="https://img.shields.io/badge/aPaper-0.1.0-2f6f62" alt="aPaper 0.1.0">
+  <img src="https://img.shields.io/badge/Windows-coming%20soon-orange" alt="Windows coming soon">
+  <img src="https://img.shields.io/badge/Linux-coming%20soon-orange" alt="Linux coming soon">
+</p>
+
+<p align="center"><a href="https://cloud.apaper.ai">cloud.apaper.ai</a> · <a href="mailto:contact@apaper.ai">Contact</a></p>
+
+<p align="center">English · <a href="./README.zh-CN.md">简体中文</a></p>
+
+## Resources
 
 | Resource | Public path | Purpose |
 | --- | --- | --- |
@@ -19,7 +28,7 @@ aPaper Cloud hosts public update metadata and research resources used by the aPa
 
 App installers are published in [aPaper Releases](https://github.com/YociLam/aPaper/releases). Verified update archives, when available, are published in this repository's [Releases](https://github.com/YociLam/aPaper-Cloud/releases). The translator and its runtime environment are bundled inside each App archive and update with the App; they are not separate Cloud downloads.
 
-Current stable: no verified update is currently offered. The first public App release, **0.1.0**, is in preparation.
+Current stable: no verified App update is currently offered. The first public App version is **0.1.0**.
 
 ## Literature packs
 
