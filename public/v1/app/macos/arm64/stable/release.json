@@ -22,8 +22,10 @@
     "repositoryID": 1428580757,
     "tag": "v0.1.0-b1001",
     "url": "https://github.com/YociLam/aPaper/releases/download/v0.1.0-b1001/aPaper.dmg",
-    "bytes": 463981282,
-    "sha256": "ed7d213f29734dc868bfd77a415360ea05ce4e458d086cb47bf6a26aec3455e4"
+    "bytes": 463952921,
+    "sha256": "d81a5f5086404c849625e2d05d8e6c77be77040bfe90994e90596ecdab1fc6bd"
   },
-  "updateArchive": null
+  "updateArchive": null,
+  "signing": "Apple Development",
+  "notarized": false
 }
