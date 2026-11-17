@@ -31,7 +31,7 @@
 
 App 安装包放在 [aPaper Releases](https://github.com/YociLam/aPaper/releases)。经过验证的更新归档在可用时发布到本仓库的 [Releases](https://github.com/YociLam/aPaper-Cloud/releases)。翻译器和运行环境包含在每个 App 归档中，随 App 更新，不单独作为 Cloud 下载资源发布。
 
-当前稳定发布： [0.1.0 (build 1001)](https://github.com/YociLam/aPaper/releases/tag/v0.1.0-b1001) · Apple Development / unnotarized / manual-download.
+当前稳定发布： [0.1.1 (build 1007)](https://github.com/YociLam/aPaper/releases/tag/v0.1.1-b1007) · 2026-11-17T10:35:06Z · Apple Development / unnotarized / sparkle-eddsa.
 
 ## 文献包列表
 
