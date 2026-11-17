@@ -12,7 +12,7 @@
 <p align="center">集中提供经过核验的应用更新信息、研究目录与模型配置。</p>
 
 <p align="center">
-  <a href="https://github.com/YociLam/aPaper/releases"><img src="https://img.shields.io/badge/aPaper-0.1.0-2f6f62" alt="aPaper 0.1.0"></a>
+  <a href="https://github.com/YociLam/aPaper/releases"><img src="https://img.shields.io/badge/aPaper-0.1.1-2f6f62" alt="aPaper 0.1.1"></a>
   <a href="https://cloud.apaper.ai/v1/conferences/version.json"><img src="https://img.shields.io/badge/Literature-0.16-2f6f62" alt="文献目录 0.16"></a>
   <a href="https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json"><img src="https://img.shields.io/badge/Dogzee%20models-5-2f6f62" alt="Dogzee 模型分组 5"></a>
 </p>
