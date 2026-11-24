@@ -113,6 +113,12 @@
       <section aria-labelledby="model-heading">
         <h2 id="model-heading">Dogzee model groups</h2>
         <p><a href="/v1/config/dogzee-group-policy.v1.json">Public policy JSON</a> · <span id="model-policy-status">Checking…</span></p>
+        <dl aria-label="Dogzee defaults">
+          <dt>Interactive agents</dt>
+          <dd id="model-policy-default">Checking…</dd>
+          <dt>Reasoning levels</dt>
+          <dd id="model-policy-levels">Checking…</dd>
+        </dl>
       </section>
       <footer>
         <span>Contact</span>
@@ -151,6 +157,8 @@
         });
 
       const modelPolicyStatus = document.querySelector("#model-policy-status");
+      const modelPolicyDefault = document.querySelector("#model-policy-default");
+      const modelPolicyLevels = document.querySelector("#model-policy-levels");
       fetch("/v1/config/dogzee-group-policy.v1.json?check=" + Date.now(), { cache: "no-store" })
         .then((response) => {
           if (!response.ok) throw new Error("Policy unavailable");
@@ -159,8 +167,22 @@
         .then((policy) => {
           if (!Number.isInteger(policy.revision) || !Array.isArray(policy.groups)) throw new Error("Invalid policy");
           modelPolicyStatus.textContent = "revision " + policy.revision + " · " + policy.groups.length + " groups";
+          const target = policy.familyDefaults?.["interactive-agents"];
+          const group = policy.groups.find((entry) => entry.id === target?.groupID);
+          const profile = policy.modelReasoningProfiles?.[target?.modelID];
+          const levels = policy.reasoningProfiles?.[profile];
+          modelPolicyDefault.textContent = target
+            ? [group?.displayNames?.en, target.modelID, target.reasoningEffort].filter(Boolean).join(" · ")
+            : "Unavailable";
+          modelPolicyLevels.textContent = Array.isArray(levels) && levels.length
+            ? levels.join(" · ")
+            : "Unavailable";
         })
-        .catch(() => { modelPolicyStatus.textContent = "Unavailable"; });
+        .catch(() => {
+          modelPolicyStatus.textContent = "Unavailable";
+          modelPolicyDefault.textContent = "Unavailable";
+          modelPolicyLevels.textContent = "Unavailable";
+        });
     </script>
   </body>
 </html>

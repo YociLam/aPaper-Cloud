@@ -14,7 +14,7 @@
 <p align="center">
   <a href="https://github.com/YociLam/aPaper/releases"><img src="https://img.shields.io/badge/aPaper-0.1.3-2f6f62" alt="aPaper 0.1.3"></a>
   <a href="https://cloud.apaper.ai/v1/conferences/version.json"><img src="https://img.shields.io/badge/Literature-0.16-2f6f62" alt="Literature catalog 0.16"></a>
-  <a href="https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json"><img src="https://img.shields.io/badge/Dogzee%20models-5-2f6f62" alt="Dogzee model groups 5"></a>
+  <a href="https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json"><img src="https://img.shields.io/badge/Dogzee%20models-7-2f6f62" alt="Dogzee model policy revision 7"></a>
 </p>
 
 <p align="center"><a href="https://cloud.apaper.ai">cloud.apaper.ai</a> · <a href="mailto:contact@apaper.ai">Contact</a></p>
@@ -27,7 +27,9 @@
 | --- | --- | --- |
 | macOS App updates | [Available updates](https://cloud.apaper.ai/v1/app/macos/arm64/stable/appcast.xml) | Offers an App update only after its archive has been published and verified. |
 | Literature catalog | [Version](https://cloud.apaper.ai/v1/conferences/version.json) · [Manifest](https://cloud.apaper.ai/v1/conferences/manifest.json) | Lists available conference and journal metadata packs with checksums. |
-| Dogzee model groups · 5 | [Policy JSON](https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json) | Public group names, model reasoning options, and agent defaults. |
+| Dogzee model groups · revision 7 | [Policy JSON](https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json) | Public group names, model reasoning options, and agent defaults. |
+
+The Dogzee policy sets **GPT-6.2 Sol at Medium** in the GPT (Pro) group as the default for Paper Mentor, Research Assistant, and Knowledge Steward when they need a Dogzee model. GPT-6.2 Sol and Astra offer `low`, `medium`, `high`, `xhigh`, and `max`. Manage your own selections in the App under **Settings → Models**.
 
 App installers are published in [aPaper Releases](https://github.com/YociLam/aPaper/releases). Verified update archives, when available, are published in this repository's [Releases](https://github.com/YociLam/aPaper-Cloud/releases). The translator and its runtime environment are bundled inside each App archive and update with the App; they are not separate Cloud downloads.
 
