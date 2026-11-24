@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "policyId": "dogzee-managed-groups",
-  "revision": 5,
+  "revision": 7,
   "provider": "dogzee",
   "defaultLocale": "en",
   "complete": true,
@@ -164,6 +164,8 @@
   "modelReasoningProfiles": {
     "gpt-6-astra": "openai-thinking",
     "gpt-6.1-sol": "openai-thinking",
+    "gpt-6.2-sol": "openai-thinking",
+    "gpt-6.2-astra": "openai-thinking",
     "gpt-6-sol": "openai-full",
     "gpt-6.1-terra": "openai-full",
     "gpt-5.6-terra": "openai-full",
@@ -225,7 +227,7 @@
   "familyDefaults": {
     "interactive-agents": {
       "groupID": "gpt-professional",
-      "modelID": "gpt-6.1-terra",
+      "modelID": "gpt-6.2-sol",
       "reasoningEffort": "medium"
     },
     "research-analysis": {
