@@ -1,8 +1,8 @@
 {
   "schema": "apaper-public-release/1",
   "product": "aPaper",
-  "version": "0.1.3",
-  "build": 1009,
+  "version": "0.1.4",
+  "build": 1010,
   "platform": "macos",
   "architecture": "arm64",
   "minimumOS": "14.6",
@@ -11,28 +11,28 @@
   "notarized": false,
   "installMode": "sparkle-eddsa",
   "automaticInstallation": true,
-  "publishedAt": "2026-11-21T10:53:37Z",
+  "publishedAt": "2026-11-25T04:38:17Z",
   "notes": {
-    "en": "aPaper 0.1.3\n\n• The update dialog shows the selected package size and skips known-incompatible deltas before download.\n• Setup asks for Documents access only after authorization and remembers the chosen language outside workspace data.\n• The Quick Research shortcut button fits its label.\n• Fixed a crash when reading appcasts containing structured delta metadata.\n• Reuse a linked Dogzee management token when local credentials are missing.\n• Fixed the Dogzee account-token recovery path for optional account-service bindings.",
-    "zh-Hans": "aPaper 0.1.3\n\n• 更新弹窗显示所选包大小，下载前跳过已知不兼容的差分包。\n• 仅在授权后请求文稿访问权限，并在工作区之外保存语言选择。\n• 快捷研究快捷键按钮宽度适配文字。\n• 修复读取含结构化差分元数据的更新清单时可能崩溃的问题。\n• 本地凭据缺失时复用已绑定二狗子的管理令牌。\n• 修正二狗子账号服务返回可选绑定时的账号令牌恢复路径。",
-    "zh-Hant": "aPaper 0.1.3\n\n• 更新視窗顯示所選套件大小，下載前略過已知不相容的差分套件。\n• 僅在授權後要求文件存取權限，並在工作區外保存語言選擇。\n• 快速研究快速鍵按鈕寬度適配文字。\n• 修正讀取含結構化差分中繼資料的更新清單時可能崩潰的問題。\n• 本機憑據缺失時複用已綁定二狗子的管理權杖。\n• 修正二狗子帳號服務回傳可選繫結時的帳號權杖恢復路徑。",
-    "ja": "aPaper 0.1.3\n\n• 更新ダイアログに選択パッケージのサイズを表示し、既知の非互換な差分をダウンロード前に除外します。\n• 許可後のみ書類フォルダへのアクセスを求め、言語選択を作業領域外に保存します。\n• クイックリサーチのショートカットボタンをラベル幅に合わせました。\n• 構造化された差分メタデータを含む更新一覧の読み込みで終了する問題を修正しました。\n• ローカル資格情報がない場合、リンク済みDogzeeの管理トークンを再利用します。\n• 二狗子のアカウントサービスが任意のバインディングを返す場合のトークン復旧を修正しました。",
-    "ko": "aPaper 0.1.3\n\n• 업데이트 창에 선택한 패키지 크기를 표시하고 호환되지 않는 차등 패키지는 다운로드 전에 건너뜁니다.\n• 권한을 허용한 뒤에만 문서 폴더 접근을 요청하고 언어 선택을 작업 공간 밖에 저장합니다.\n• 빠른 연구 단축키 버튼 너비가 레이블에 맞습니다.\n• 구조화된 차등 메타데이터가 포함된 업데이트 목록을 읽을 때 종료되는 문제를 수정했습니다.\n• 로컬 자격 증명이 없으면 연결된 Dogzee 관리 토큰을 재사용합니다.\n• 계정 서비스가 선택적 바인딩을 반환할 때 Dogzee 토큰 복구 경로를 수정했습니다."
+    "en": "Language-specific announcements appear in the island while you work. Unread messages stay available from the bell and open on the next launch. The QQ group invitation is available in About in Simplified and Traditional Chinese.\nNarrowing the reader hides the library sidebar, switches to one reading pane, then hides the inspector. Widening restores your layout in reverse order.\nScroll long drafts inside the composer and keep its height after sending. Reopening the window restores the workspace even when optional assistant setup fails. Dogzee uses GPT 6.2 Sol at Medium by default and can retry supported reasoning levels.",
+    "zh-Hans": "新增按语言推送的通知。使用中由灵动岛提醒，未读消息可从铃铛查看，下次启动会自动打开。简繁中文的「关于」页可找到 QQ 群邀请。\n缩窄窗口时依次收起文献侧栏、双栏阅读和右侧面板，拉宽后逆序恢复。\n长草稿可在输入框内滚动，发送后保留高度。重新打开窗口可恢复工作区，可选助手配置失败时也能进入。Dogzee 默认使用 GPT 6.2 Sol 的中等推理级别，可在服务拒绝当前级别时重试。",
+    "zh-Hant": "新增依語言推送的通知。使用時由動態島提醒，未讀訊息可從鈴鐺查看，下次啟動會自動開啟。繁簡中文的「關於」頁可找到 QQ 群邀請。\n縮窄視窗時依序收合文獻側欄、雙欄閱讀與右側面板，拉寬後依相反順序還原。\n長草稿可在輸入框內捲動，送出後保留高度。重新開啟視窗可還原工作區，選用的助理設定失敗時也能進入。Dogzee 預設使用 GPT 6.2 Sol 的中等推理層級，可在服務拒絕目前層級時重試。",
+    "ja": "作業中はアイランドに言語別のお知らせを表示します。未読のお知らせはベルから確認でき、次回の起動時にも開きます。簡体字・繁体字中国語の「このアプリについて」に QQ グループへの招待を追加しました。\nウィンドウを狭めると、文献サイドバー、見開き表示、右パネルの順に折りたたみ、広げると逆順に復元します。\n長い下書きは入力欄内でスクロールでき、送信後も高さを保持します。ウィンドウを開き直すと作業領域を復元し、任意のアシスタント設定に失敗しても利用できます。Dogzee の既定は GPT 6.2 Sol の中程度の推論で、選んだレベルが拒否された場合は対応するレベルで再試行します。",
+    "ko": "작업 중에는 언어별 공지를 아일랜드에 표시합니다. 읽지 않은 공지는 종 아이콘에서 확인할 수 있고 다음 실행 때 열립니다. 중국어 간체와 번체의 앱 정보에 QQ 그룹 초대를 추가했습니다.\n창을 좁히면 문헌 사이드바, 두 칸 읽기, 오른쪽 패널 순서로 접고 넓히면 역순으로 복원합니다.\n긴 초안은 입력창 안에서 스크롤할 수 있고 전송 후에도 높이가 유지됩니다. 창을 다시 열면 작업 공간이 복원되며 선택적 도우미 설정에 실패해도 사용할 수 있습니다. Dogzee는 기본으로 GPT 6.2 Sol의 중간 추론 수준을 사용하며 서비스가 해당 수준을 거부하면 지원하는 수준으로 다시 시도합니다."
   },
   "installer": {
     "repository": "YociLam/aPaper",
     "repositoryID": 1428580757,
-    "tag": "v0.1.3-b1009",
-    "url": "https://github.com/YociLam/aPaper/releases/download/v0.1.3-b1009/aPaper.dmg",
-    "bytes": 464600236,
-    "sha256": "3901a310e7de53c944924ff603d583dacda843221987351ced5a4bc398d025a1"
+    "tag": "v0.1.4-b1010",
+    "url": "https://github.com/YociLam/aPaper/releases/download/v0.1.4-b1010/aPaper.dmg",
+    "bytes": 465302294,
+    "sha256": "007a5c20e0b9dc65abd390926052cbd435af83f68e31cfc15c18129b04615334"
   },
   "updateArchive": {
     "repository": "YociLam/aPaper-Cloud",
     "repositoryID": 1305956053,
-    "tag": "apaper-macos-v0.1.3-b1009",
-    "url": "https://github.com/YociLam/aPaper-Cloud/releases/download/apaper-macos-v0.1.3-b1009/aPaper-0.1.3-b1009-macos-arm64.zip",
-    "bytes": 449196823,
-    "sha256": "d818d3118ca29d1bae88af90c5bd366e1f56164e92fe832c4ec72bc18bff9c92"
+    "tag": "apaper-macos-v0.1.4-b1010",
+    "url": "https://github.com/YociLam/aPaper-Cloud/releases/download/apaper-macos-v0.1.4-b1010/aPaper-0.1.4-b1010-macos-arm64.zip",
+    "bytes": 449889745,
+    "sha256": "8d3942243c9a0be889826fc51e8d9ff3964fdcdcef414bcfc4231f0d002421e4"
   }
 }
