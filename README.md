@@ -31,6 +31,8 @@
 
 The Dogzee policy sets **GPT-6.2 Sol at Medium** in the GPT (Pro) group as the default for Paper Mentor, Research Assistant, and Knowledge Steward when they need a Dogzee model. GPT-6.2 Sol and Astra offer `low`, `medium`, `high`, `xhigh`, and `max`. Manage your own selections in the App under **Settings → Models**.
 
+Current stable: [0.1.4 (build 1010)](https://github.com/YociLam/aPaper/releases/tag/v0.1.4-b1010) · 2026-11-25T04:38:17Z · Apple Development / unnotarized / sparkle-eddsa.
+
 App installers are published in [aPaper Releases](https://github.com/YociLam/aPaper/releases). Verified update archives, when available, are published in this repository's [Releases](https://github.com/YociLam/aPaper-Cloud/releases). The translator and its runtime environment are bundled inside each App archive and update with the App; they are not separate Cloud downloads.
 
 ## Literature packs

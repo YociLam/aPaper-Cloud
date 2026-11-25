@@ -31,6 +31,8 @@
 
 研究导师、研究助理和知识管家默认使用 Dogzee 时，策略为它们选择 GPT（专业）组的 **GPT-6.2 Sol · 中（`medium`）**。GPT-6.2 Sol 与 Astra 提供 `low`、`medium`、`high`、`xhigh` 和 `max`。在 App 的「设置 › 模型」中可以调整自己的选择。
 
+当前稳定发布： [0.1.4 (build 1010)](https://github.com/YociLam/aPaper/releases/tag/v0.1.4-b1010) · 2026-11-25T04:38:17Z · Apple Development / unnotarized / sparkle-eddsa.
+
 App 安装包放在 [aPaper Releases](https://github.com/YociLam/aPaper/releases)。经过验证的更新归档在可用时发布到本仓库的 [Releases](https://github.com/YociLam/aPaper-Cloud/releases)。翻译器和运行环境包含在每个 App 归档中，随 App 更新，不单独作为 Cloud 下载资源发布。
 
 ## 文献包列表
