@@ -12,7 +12,7 @@
 <p align="center">A shared home for verified App update metadata, research catalogs, and model configuration.</p>
 
 <p align="center">
-  <a href="https://github.com/YociLam/aPaper/releases"><img src="https://img.shields.io/badge/aPaper-0.1.3-2f6f62" alt="aPaper 0.1.3"></a>
+  <a href="https://github.com/YociLam/aPaper/releases"><img src="https://img.shields.io/badge/aPaper-0.1.4-2f6f62" alt="aPaper 0.1.4"></a>
   <a href="https://cloud.apaper.ai/v1/conferences/version.json"><img src="https://img.shields.io/badge/Literature-0.16-2f6f62" alt="Literature catalog 0.16"></a>
   <a href="https://cloud.apaper.ai/v1/config/dogzee-group-policy.v1.json"><img src="https://img.shields.io/badge/Dogzee%20models-7-2f6f62" alt="Dogzee model policy revision 7"></a>
 </p>
