@@ -1,0 +1,49 @@
+{
+  "notifications" : [
+    {
+      "actions" : [
+        {
+          "id" : "join-group",
+          "style" : "primary",
+          "title" : "加入交流群",
+          "type" : "link",
+          "url" : "https://qm.qq.com/q/plkL1IeDQs"
+        }
+      ],
+      "blocks" : [
+        {
+          "id" : "incentive",
+          "style" : "callout",
+          "type" : "text",
+          "value" : "**限时研究激励额度**\n加入群后联系群主，领取 aPaper 提供的限时研究激励额度。"
+        },
+        {
+          "alt" : "扫描二维码加入 aPaper QQ 群 413071710",
+          "assetName" : "APaperQQGroupQR",
+          "id" : "qr",
+          "type" : "image"
+        },
+        {
+          "id" : "group-number",
+          "style" : "notice",
+          "type" : "text",
+          "value" : "QQ 群号：413071710\n\n加入完全自愿。群聊用于 aPaper 产品交流与反馈，请勿在群内分享不适合公开的研究资料或个人信息。"
+        }
+      ],
+      "clients" : [
+        "macos"
+      ],
+      "dismissLabel" : "关闭",
+      "eyebrow" : "aPaper 社区",
+      "id" : "qq-group-invite-2026-11",
+      "languages" : [
+        "zh-Hans",
+        "zh-Hant"
+      ],
+      "message" : "感谢您关注 aPaper！欢迎加入交流群，交流产品使用体验、获取产品动态，也欢迎分享您的想法与建议。",
+      "title" : "加入 aPaper 交流群"
+    }
+  ],
+  "schemaVersion" : 1,
+  "updatedAt" : "2026-11-25T02:21:08Z"
+}
